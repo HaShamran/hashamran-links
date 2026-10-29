@@ -222,6 +222,9 @@ def run(dry_run=False, now=None, archive=None):
     now = now or utcnow()
     posts = load_posts()
     live = load_json(STATE / "live.json", {})
+    # dud reports each post it sees live (Substack refuses GitHub Actions); those records win.
+    for f in sorted((STATE / "live").glob("*.json")):
+        live.setdefault(f.stem, load_json(f))
     log = load_json(STATE / "tweets.json", [])
     report = {"at": iso(now), "newly_live": [], "relays_written": [], "tweet": None, "alerts": []}
 
