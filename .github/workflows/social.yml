@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install --quiet requests twitter-text-parser tzdata setuptools
+      - run: pip install --quiet requests
       - name: Relay pages and tweets
         id: run
         env:
@@ -53,18 +53,24 @@ jobs:
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
+          RUN_OUTCOME: ${{ steps.run.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           python - <<'PY'
-          import json, subprocess
-          s = json.load(open("state/social-status.json"))
-          alerts = s.get("alerts") or []
-          if not alerts:
-              raise SystemExit
-          body = "\n".join(f"- {a}" for a in alerts)
+          import json, os, subprocess
+          if os.environ["RUN_OUTCOME"] == "success":
+              alerts = json.load(open("state/social-status.json")).get("alerts") or []
+          else:
+              alerts = [f"The social run failed: {os.environ['RUN_URL']}"]
           title = "HaShamran alert"
           found = subprocess.run(["gh", "issue", "list", "--state", "open", "--search", f"in:title {title}",
                                   "--json", "number,body"], capture_output=True, text=True, check=True)
           issues = json.loads(found.stdout or "[]")
+          if not alerts:
+              for i in issues:  # all clear: close the open alert
+                  subprocess.run(["gh", "issue", "close", str(i["number"]), "--comment", "All clear."], check=True)
+              raise SystemExit
+          body = "\n".join(f"- {a}" for a in alerts)
           if not issues:
               subprocess.run(["gh", "issue", "create", "--title", title, "--body", body], check=True)
           elif issues[0]["body"].strip() != body.strip():

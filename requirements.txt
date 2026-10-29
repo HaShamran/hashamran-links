@@ -4,6 +4,5 @@ trafilatura>=2.0
 pypdf>=4
 playwright>=1.40
 python-substack>=0.1.17
-twitter-text-parser>=3.0
 tzdata
 pytest>=8
