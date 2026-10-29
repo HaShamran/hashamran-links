@@ -5,8 +5,10 @@ which posts through X's API on our behalf. Auth: env var BUFFER_API_KEY (a GitHu
 """
 import os
 
+import re
+import unicodedata
+
 import requests
-from twitter_text import parse_tweet
 
 from common import X_HANDLE
 
@@ -20,12 +22,28 @@ def compose(quote, url):
     return f"{quote.strip()}\n\n{url}"
 
 
+# X's counting rules (twitter-text config v3): any link counts 23; Latin, Hebrew and most punctuation count 1;
+# other characters (CJK, emoji) count 2; the limit is 280.
+MAX_WEIGHT = 280
+URL_WEIGHT = 23
+LIGHT_RANGES = ((0, 4351), (8192, 8205), (8208, 8223), (8242, 8247))
+URL_RE = re.compile(r"https?://\S+")
+
+
+def tweet_weight(text):
+    text = unicodedata.normalize("NFC", text)
+    links = URL_RE.findall(text)
+    rest = URL_RE.sub("", text)
+    light = lambda c: any(lo <= ord(c) <= hi for lo, hi in LIGHT_RANGES)
+    return URL_WEIGHT * len(links) + sum(1 if light(c) else 2 for c in rest)
+
+
 def weighted_length(quote):
-    return parse_tweet(compose(quote, URL_PLACEHOLDER)).weightedLength
+    return tweet_weight(compose(quote, URL_PLACEHOLDER))
 
 
 def fits(quote):
-    return parse_tweet(compose(quote, URL_PLACEHOLDER)).valid
+    return weighted_length(quote) <= MAX_WEIGHT
 
 
 class BufferError(RuntimeError):
