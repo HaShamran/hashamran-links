@@ -253,10 +253,8 @@ def run(dry_run=False, now=None, archive=None):
             log.append(entry)
             save_json(STATE / "tweets.json", log)
             report["tweet"] = entry
+    # Substack usually refuses GitHub Actions; that is expected, since dud reports live posts (state/live/).
     report["alerts"] = alerts(posts, live, now)
-    if report.get("substack_unreachable"):
-        report["alerts"] = ["Substack refused both its archive and its RSS feed to GitHub Actions, so new posts "
-                            "can't be detected and no tweets go out until it answers again"]
     # No timestamp in the saved copy, so the file (and the repo) only changes when something happens.
     save_json(STATE / "social-status.json", {k: v for k, v in report.items() if k != "at"})
     return report
