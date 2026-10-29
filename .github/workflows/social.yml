@@ -10,6 +10,10 @@ on:
         description: "Decide but send nothing"
         type: boolean
         default: true
+      check_buffer:
+        description: "Only check the Buffer key and the @HaShamran1948 channel"
+        type: boolean
+        default: false
 
 concurrency:
   group: social
@@ -34,7 +38,10 @@ jobs:
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+          if [ "${{ inputs.check_buffer }}" = "true" ]; then
+            python pipeline/social.py --check-buffer
+            exit $?
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
             python pipeline/social.py --dry-run
           else
             python pipeline/social.py
