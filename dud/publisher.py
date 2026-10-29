@@ -139,15 +139,27 @@ def login():
     return check()
 
 
+def github_ok():
+    try:
+        return subprocess.run([gh(), "auth", "status"], capture_output=True, text=True).returncode == 0
+    except Exception:
+        return False
+
+
 def check():
     try:
         api = connect()
         print(f"Signed in to Substack (user {api.get_user_id()}).")
-        status("signed in to Substack")
-        return 0
     except LoginNeeded as e:
         print(f"Not signed in: {e}. Run login.cmd.")
+        status("ACTION NEEDED: double-click login.cmd and sign in to Substack")
         return 3
+    if not github_ok():
+        print("GitHub CLI is not signed in. Run setup.cmd again.")
+        status("ACTION NEEDED: GitHub sign-in missing; run the installer line again")
+        return 3
+    status("OK, signed in to Substack and GitHub")
+    return 0
 
 
 def connect():
@@ -335,16 +347,21 @@ def _run():
     state = load(STATE_FILE, {})
     index = requests.get(f"{RAW}/posts/index.json", params={"t": int(time.time())}, timeout=60).json()
     arch = archive()
-    report_live(index, arch, state)
+    api = connect()  # every run proves the Substack sign-in still works, so the status file is a real health check
+    gh_ok = github_ok()
+    if gh_ok:
+        report_live(index, arch, state)
     post_meta, reason = due_post(now, arch, index, state)
     if not post_meta:
         log(f"nothing to publish: {reason}")
-        status(f"OK, nothing to publish ({reason})")
+        if gh_ok:
+            status(f"OK, signed in; nothing to publish ({reason})")
+        else:
+            status("ACTION NEEDED: GitHub sign-in missing; run the installer line again")
         return 0
     slug = post_meta["slug"]
     log(f"due: {slug} ({reason})")
     post = requests.get(f"{RAW}/posts/{slug}/post.json", params={"t": int(time.time())}, timeout=60).json()
-    api = connect()
     entry = state.setdefault(slug, {})
     draft_id = entry.get("draft_id") or post.get("substack_draft_id")
     if draft_id and int(draft_id) in EXCLUDED_DRAFTS:

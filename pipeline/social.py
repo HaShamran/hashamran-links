@@ -263,7 +263,15 @@ def run(dry_run=False, now=None, archive=None):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--check-buffer", action="store_true", help="only check the Buffer key and the X channel")
     args = ap.parse_args(argv)
+    if args.check_buffer:
+        try:
+            print(json.dumps({"buffer": "ok", "x_channel_id": tweets.Buffer().x_channel_id()}))
+            return 0
+        except tweets.BufferError as e:
+            print(json.dumps({"buffer": "error", "error": str(e)}, ensure_ascii=False))
+            return 3
     try:
         report = run(dry_run=args.dry_run)
     except tweets.BufferError as e:
