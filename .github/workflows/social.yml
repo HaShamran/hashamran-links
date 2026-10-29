@@ -1,0 +1,73 @@
+# Relay pages, tweets and alerts. Runs every 15 minutes; see pipeline/social.py for the rules.
+name: social
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Decide but send nothing"
+        type: boolean
+        default: true
+
+concurrency:
+  group: social
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  social:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet requests twitter-text-parser tzdata setuptools
+      - name: Relay pages and tweets
+        id: run
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            python pipeline/social.py --dry-run
+          else
+            python pipeline/social.py
+          fi
+      - name: Save state
+        if: always()
+        run: |
+          git config user.name "hashamran-bot"
+          git config user.email "hashamran-bot@users.noreply.github.com"
+          git add -A state/live.json state/tweets.json state/social-status.json ./*.html 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -q -m "social: $(date -u +%FT%RZ)"
+            for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep $((i*3)); done
+          fi
+      - name: Raise alerts as an issue (GitHub emails the owner)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          s = json.load(open("state/social-status.json"))
+          alerts = s.get("alerts") or []
+          if not alerts:
+              raise SystemExit
+          body = "\n".join(f"- {a}" for a in alerts)
+          title = "HaShamran alert"
+          found = subprocess.run(["gh", "issue", "list", "--state", "open", "--search", f"in:title {title}",
+                                  "--json", "number,body"], capture_output=True, text=True, check=True)
+          issues = json.loads(found.stdout or "[]")
+          if not issues:
+              subprocess.run(["gh", "issue", "create", "--title", title, "--body", body], check=True)
+          elif issues[0]["body"].strip() != body.strip():
+              subprocess.run(["gh", "issue", "edit", str(issues[0]["number"]), "--body", body], check=True)
+              subprocess.run(["gh", "issue", "comment", str(issues[0]["number"]), "--body", "Alerts changed:\n" + body], check=True)
+          PY
