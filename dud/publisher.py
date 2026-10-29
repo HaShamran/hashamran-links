@@ -113,14 +113,39 @@ def _context(pw, headless=True):
                                                  viewport={"width": 1280, "height": 900})
 
 
-def substack_cookies():
+COOKIE_FILE = DATA / "substack-cookies.json"
+
+
+def _jar(cookies):
+    return {c["name"]: c["value"] for c in cookies if c["domain"].endswith("substack.com")}
+
+
+def _save_jar(jar):
+    if "substack.sid" in jar:
+        save(COOKIE_FILE, jar)
+
+
+def cookies_from_chrome():
+    """Read the Substack sign-in from the automation Chrome profile (needs the profile not to be open)."""
     from playwright.sync_api import sync_playwright
     with sync_playwright() as pw:
         ctx = _context(pw)
-        cookies = ctx.cookies(["https://substack.com", PUB])
+        jar = _jar(ctx.cookies(["https://substack.com", PUB]))
         ctx.close()
-    jar = {c["name"]: c["value"] for c in cookies if c["domain"].endswith("substack.com")}
     log(f"substack cookies in the automation profile: {sorted(jar)}")  # names only, never values
+    _save_jar(jar)
+    return jar
+
+
+def substack_cookies(refresh=False):
+    """The saved sign-in (written when Hadar signs in with login.cmd), else read fresh from Chrome."""
+    jar = {} if refresh else load(COOKIE_FILE, {})
+    if "substack.sid" not in jar:
+        try:
+            jar = cookies_from_chrome()
+        except Exception as e:
+            raise LoginNeeded(f"could not open the automation Chrome profile ({type(e).__name__}); "
+                              "close any Chrome window that login.cmd opened") from None
     if "substack.sid" not in jar:
         raise LoginNeeded("the automation Chrome profile has no substack.sid cookie")
     return "; ".join(f"{k}={v}" for k, v in jar.items())
@@ -128,13 +153,15 @@ def substack_cookies():
 
 def login():
     from playwright.sync_api import sync_playwright
-    print("A Chrome window will open. Sign in to Substack there, then close the window.")
+    print("A Chrome window will open. Sign in to Substack there (if you already are, just wait a few")
+    print("seconds), then close the window.")
     with sync_playwright() as pw:
         ctx = _context(pw, headless=False)
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
-        page.goto(f"https://substack.com/sign-in?redirect=%2Fpublish&for_pub=hashamran")
+        page.goto("https://substack.com/sign-in?redirect=%2Fpublish&for_pub=hashamran")
         try:
             while ctx.pages:
+                _save_jar(_jar(ctx.cookies(["https://substack.com", PUB])))  # keep the latest sign-in
                 time.sleep(1)
         except Exception:
             pass
@@ -170,14 +197,17 @@ def check():
 
 def connect():
     from substack import Api
-    try:
-        api = Api(cookies_string=substack_cookies(), publication_url=PUB)
-        api.get_user_id()
-    except LoginNeeded:
-        raise
-    except Exception as e:
-        raise LoginNeeded(f"Substack rejected the saved sign-in ({type(e).__name__}: {str(e)[:200]})") from None
-    return api
+    last = None
+    for refresh in (False, True):  # saved sign-in first; if Substack refuses it, read a fresh one from Chrome
+        try:
+            api = Api(cookies_string=substack_cookies(refresh=refresh), publication_url=PUB)
+            api.get_user_id()
+            return api
+        except LoginNeeded:
+            raise
+        except Exception as e:
+            last = e
+    raise LoginNeeded(f"Substack rejected the saved sign-in ({type(last).__name__}: {str(last)[:200]})")
 
 
 # ---------- what is due ----------
