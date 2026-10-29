@@ -43,8 +43,11 @@ if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
     winget install -e --id GitHub.cli --silent --accept-package-agreements --accept-source-agreements
     $env:Path = [Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [Environment]::GetEnvironmentVariable("Path", "User")
 }
-gh auth status 2>$null
-if ($LASTEXITCODE -ne 0) { gh auth login --hostname github.com --web --git-protocol https }
+# gh writes to stderr when signed out; under "Stop" Windows PowerShell treats that as fatal, so relax it here.
+$ErrorActionPreference = "Continue"
+$null = & gh auth status 2>&1
+if ($LASTEXITCODE -ne 0) { & gh auth login --hostname github.com --web --git-protocol https }
+$ErrorActionPreference = "Stop"
 
 Write-Host "6/6 Opening Chrome: sign in to Substack in that window, then close it."
 & $python (Join-Path $app "publisher.py") login
