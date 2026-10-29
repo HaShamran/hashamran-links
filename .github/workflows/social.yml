@@ -57,7 +57,7 @@ jobs:
             for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep $((i*3)); done
           fi
       - name: Raise alerts as an issue (GitHub emails the owner)
-        if: always()
+        if: always() && inputs.check_buffer != true
         env:
           GH_TOKEN: ${{ github.token }}
           RUN_OUTCOME: ${{ steps.run.outcome }}
@@ -66,7 +66,10 @@ jobs:
           python - <<'PY'
           import json, os, subprocess
           if os.environ["RUN_OUTCOME"] == "success":
-              alerts = json.load(open("state/social-status.json")).get("alerts") or []
+              try:
+                  alerts = json.load(open("state/social-status.json")).get("alerts") or []
+              except FileNotFoundError:
+                  alerts = []
           else:
               alerts = [f"The social run failed: {os.environ['RUN_URL']}"]
           title = "HaShamran alert"
