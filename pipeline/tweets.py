@@ -72,14 +72,15 @@ class Buffer:
     def x_channel_id(self):
         """The id of the one X channel named @HaShamran1948; refuses anything else."""
         orgs = self._q("query { account { organizations { id } } }")["account"]["organizations"]
-        found = []
+        everything = []
         for org in orgs:
-            chans = self._q("query($o: OrganizationId!) { channels(input: {organizationId: $o}) { id name service } }",
-                            {"o": org["id"]})["channels"]
-            found += [c for c in chans if c["service"] == "twitter"]
+            everything += self._q("query($o: OrganizationId!) { channels(input: {organizationId: $o}) { id name service } }",
+                                  {"o": org["id"]})["channels"]
+        found = [c for c in everything if str(c["service"]).lower() in ("twitter", "x")]
         mine = [c for c in found if c["name"].lstrip("@").lower() == X_HANDLE.lower()]
         if not mine:
-            raise BufferError(f"No X channel @{X_HANDLE} in Buffer (found: {[c['name'] for c in found]})")
+            seen = [f"{c['service']}:{c['name']}" for c in everything]
+            raise BufferError(f"No X channel @{X_HANDLE} in Buffer ({len(orgs)} organizations; channels: {seen})")
         return mine[0]["id"]
 
     def post_now(self, channel_id, text):
