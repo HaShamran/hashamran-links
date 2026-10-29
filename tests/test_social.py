@@ -59,3 +59,14 @@ def test_overdue_alert():
     posts = {POST["slug"]: POST}
     assert social.alerts(posts, {}, at(2, day=30)) == []
     assert "waited" in social.alerts(posts, {}, at(9, day=31))[0]
+
+
+FEED = """<?xml version="1.0"?><rss version="2.0"><channel><item><title><![CDATA[כותרת]]></title>
+<link>https://hashamran.substack.com/p/abc</link><pubDate>Thu, 29 Oct 2026 05:00:00 GMT</pubDate>
+<enclosure url="https://cdn/x.jpg" length="0" type="image/jpeg"/></item></channel></rss>"""
+
+
+def test_parse_feed():
+    [a] = social.parse_feed(FEED)
+    assert a == {"title": "כותרת", "slug": "abc", "post_date": "2026-10-29T05:00:00+00:00",
+                 "canonical_url": "https://hashamran.substack.com/p/abc", "cover_image": "https://cdn/x.jpg"}

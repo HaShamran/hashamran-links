@@ -19,7 +19,7 @@ import sys
 import requests
 
 import tweets
-from common import (ISRAEL, PAGES_URL, POSTS, PUBLICATION_URL, ROOT, STATE, iso, israel_date, load_json,
+from common import (BROWSER_UA, ISRAEL, PAGES_URL, POSTS, PUBLICATION_URL, ROOT, STATE, iso, israel_date, load_json,
                     parse_iso, save_json, utcnow)
 
 SLOTS = [(11, 0), (16, 0), (21, 0)]
@@ -44,9 +44,37 @@ def load_posts():
 
 
 def substack_archive(limit=50):
-    r = requests.get(f"{PUBLICATION_URL}/api/v1/archive", params={"sort": "new", "limit": limit}, timeout=60)
-    r.raise_for_status()
-    return r.json()
+    """Recent posts as [{title, slug, post_date, canonical_url, cover_image}]. Substack's JSON archive refuses
+    some cloud IPs (GitHub Actions gets 403), so the RSS feed is the fallback. None when both fail."""
+    headers = {"User-Agent": BROWSER_UA, "Accept-Language": "he,en;q=0.8"}
+    try:
+        r = requests.get(f"{PUBLICATION_URL}/api/v1/archive", params={"sort": "new", "limit": limit},
+                         headers=headers, timeout=60)
+        if r.ok:
+            return r.json()
+    except requests.RequestException:
+        pass
+    try:
+        r = requests.get(f"{PUBLICATION_URL}/feed", headers=headers, timeout=60)
+        if r.ok and "<rss" in r.text[:500]:
+            return parse_feed(r.text)
+    except requests.RequestException:
+        pass
+    return None
+
+
+def parse_feed(xml):
+    import email.utils
+    import xml.etree.ElementTree as ET
+    out = []
+    for item in ET.fromstring(xml).iter("item"):
+        link = (item.findtext("link") or "").strip()
+        enc = item.find("enclosure")
+        date = email.utils.parsedate_to_datetime(item.findtext("pubDate"))
+        out.append({"title": item.findtext("title") or "", "slug": link.rstrip("/").rsplit("/", 1)[-1],
+                    "post_date": iso(date), "canonical_url": link,
+                    "cover_image": enc.get("url") if enc is not None else ""})
+    return out
 
 
 def match_live(posts, archive, live):
@@ -198,6 +226,9 @@ def run(dry_run=False, now=None, archive=None):
     report = {"at": iso(now), "newly_live": [], "relays_written": [], "tweet": None, "alerts": []}
 
     archive = archive if archive is not None else substack_archive()
+    if archive is None:
+        report["substack_unreachable"] = True
+        archive = []
     report["newly_live"] = match_live(posts, archive, live)
     report["relays_written"] = write_relays(posts, live)
     save_json(STATE / "live.json", live)
@@ -220,6 +251,9 @@ def run(dry_run=False, now=None, archive=None):
             save_json(STATE / "tweets.json", log)
             report["tweet"] = entry
     report["alerts"] = alerts(posts, live, now)
+    if report.get("substack_unreachable"):
+        report["alerts"] = ["Substack refused both its archive and its RSS feed to GitHub Actions, so new posts "
+                            "can't be detected and no tweets go out until it answers again"]
     # No timestamp in the saved copy, so the file (and the repo) only changes when something happens.
     save_json(STATE / "social-status.json", {k: v for k, v in report.items() if k != "at"})
     return report
