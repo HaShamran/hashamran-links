@@ -54,8 +54,13 @@ class LoginNeeded(RuntimeError):
 def log(msg):
     LOGS.mkdir(parents=True, exist_ok=True)
     line = f"{dt.datetime.now(ISRAEL):%Y-%m-%d %H:%M:%S} {msg}"
-    with open(LOGS / f"publisher-{dt.date.today():%Y-%m}.log", "a", encoding="utf-8") as f:
-        f.write(line + "\n")
+    # One copy in the app's data folder, one next to the status file where Hadar (and Claude) can read it.
+    for folder in {LOGS, STATUS_FILE.parent}:
+        try:
+            with open(folder / f"publisher-{dt.date.today():%Y-%m}.log", "a", encoding="utf-8") as f:
+                f.write(line + "\n")
+        except OSError:
+            pass
     print(line)
 
 
@@ -115,8 +120,9 @@ def substack_cookies():
         cookies = ctx.cookies(["https://substack.com", PUB])
         ctx.close()
     jar = {c["name"]: c["value"] for c in cookies if c["domain"].endswith("substack.com")}
+    log(f"substack cookies in the automation profile: {sorted(jar)}")  # names only, never values
     if "substack.sid" not in jar:
-        raise LoginNeeded("the automation Chrome profile is not signed in to Substack")
+        raise LoginNeeded("the automation Chrome profile has no substack.sid cookie")
     return "; ".join(f"{k}={v}" for k, v in jar.items())
 
 
@@ -170,7 +176,7 @@ def connect():
     except LoginNeeded:
         raise
     except Exception as e:
-        raise LoginNeeded(f"Substack rejected the saved sign-in ({type(e).__name__})") from None
+        raise LoginNeeded(f"Substack rejected the saved sign-in ({type(e).__name__}: {str(e)[:200]})") from None
     return api
 
 
@@ -414,7 +420,7 @@ def main(argv=None):
         return run()
     except LoginNeeded as e:
         log(f"SIGN-IN NEEDED: {e}")
-        status("ACTION NEEDED: double-click login.cmd and sign in to Substack")
+        status(f"ACTION NEEDED: double-click login.cmd and sign in to Substack ({str(e)[:200]})")
         return 3
     except Exception as e:
         log("ERROR " + "".join(traceback.format_exception_only(type(e), e)).strip())
