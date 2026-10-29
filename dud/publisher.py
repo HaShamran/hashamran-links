@@ -13,11 +13,14 @@ If Substack still refuses the API call, the script presses Publish in that Chrom
 Pace (Hadar): 1 post a day, 2 when more than 5 are waiting; the second not before 12:00 Israel time.
 Hours: 06:00 to 22:00 Israel time. Every file it writes lives in %LOCALAPPDATA%\\HaShamran.
 """
+import base64
 import datetime as dt
 import json
 import os
 import pathlib
 import re
+import shutil
+import subprocess
 import sys
 import tempfile
 import time
@@ -191,6 +194,47 @@ def due_post(now, arch, index, state):
     return waiting[0], f"{len(waiting)} waiting, {today} published today"
 
 
+# ---------- telling the repo what is live ----------
+# Substack refuses its archive and feed to GitHub Actions, so dud (which can read them) writes one small file
+# per live post, state/live/<slug>.json, through the GitHub CLI that setup signed in. The Action reads those.
+
+REPO = "HaShamran/hashamran-links"
+
+
+def gh():
+    exe = shutil.which("gh") or r"C:\Program Files\GitHub CLI\gh.exe"
+    if not pathlib.Path(exe).exists() and not shutil.which("gh"):
+        raise RuntimeError("GitHub CLI (gh) is not installed; run setup.cmd again")
+    return exe
+
+
+def report_live(index, arch, state):
+    """Write state/live/<slug>.json for every ready post that is live on Substack and not yet reported."""
+    by_title = {norm(a["title"]): a for a in arch}
+    by_slug = {a["slug"]: a for a in arch}
+    for p in index:
+        a = by_slug.get(p.get("substack_slug")) or by_title.get(norm(p["title_he"]))
+        entry = state.setdefault(p["slug"], {}) if a else None
+        if not a or entry.get("reported"):
+            continue
+        record = {"url": a.get("canonical_url") or f"{PUB}/p/{a['slug']}",
+                  "live_at": dt.datetime.fromisoformat(a["post_date"].replace("Z", "+00:00")).isoformat(timespec="seconds"),
+                  "cover": a.get("cover_image") or ""}
+        content = base64.b64encode((json.dumps(record, ensure_ascii=False, indent=2) + "\n").encode()).decode()
+        path = f"repos/{REPO}/contents/state/live/{p['slug']}.json"
+        exists = subprocess.run([gh(), "api", path, "--jq", ".sha"], capture_output=True, text=True)
+        args = [gh(), "api", "-X", "PUT", path, "-f", f"message=live: {p['slug']}", "-f", f"content={content}"]
+        if exists.returncode == 0 and exists.stdout.strip():
+            args += ["-f", f"sha={exists.stdout.strip()}"]
+        res = subprocess.run(args, capture_output=True, text=True)
+        if res.returncode != 0:
+            log(f"could not report {p['slug']} as live: {res.stderr.strip()[:200]}")
+            continue
+        entry.update(reported=True, published=True, url=record["url"])
+        save(STATE_FILE, state)
+        log(f"reported live: {p['slug']} -> {record['url']}")
+
+
 # ---------- building and publishing ----------
 
 def _downloader(tmpdir):
@@ -290,7 +334,9 @@ def _run():
     now = dt.datetime.now(dt.timezone.utc)
     state = load(STATE_FILE, {})
     index = requests.get(f"{RAW}/posts/index.json", params={"t": int(time.time())}, timeout=60).json()
-    post_meta, reason = due_post(now, archive(), index, state)
+    arch = archive()
+    report_live(index, arch, state)
+    post_meta, reason = due_post(now, arch, index, state)
     if not post_meta:
         log(f"nothing to publish: {reason}")
         status(f"OK, nothing to publish ({reason})")
@@ -332,6 +378,7 @@ def _run():
     entry.update(published=True, url=url, published_at=now.isoformat(timespec="seconds"), how=how)
     save(STATE_FILE, state)
     log(f"PUBLISHED {slug} -> {url} (via {how})")
+    report_live(index, archive(), state)
     status(f"OK, published {url}")
     return 0
 
