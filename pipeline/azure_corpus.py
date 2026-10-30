@@ -1,10 +1,12 @@
 """Parallel reference corpus: 100 essays that appeared in both Azure (English) and תכלת (Hebrew), Shalem Press.
 
-The texts are not stored in this public repo (they are Shalem Press's copyright). `fetch` downloads them from
-azure.org.il and tchelet.org.il into a local cache; `search` shows how תכלת rendered an English word or phrase.
+The texts are not stored in this public repo (they are Shalem Press's copyright). Their permanent private copy is
+the project folder /mnt/project-files/hashamran/translation-guide/pairs/, which the daily run reads directly.
+Anywhere that folder is missing, `fetch` downloads them from azure.org.il and tchelet.org.il into a local cache.
+`search` shows how תכלת rendered an English word or phrase.
 
 Usage:
-    python3 pipeline/azure_corpus.py fetch                  # ~1 min, cache in /tmp/azure-corpus
+    python3 pipeline/azure_corpus.py fetch                  # no-op when the project folder is there
     python3 pipeline/azure_corpus.py search "sovereignty"   # English paragraph + matching Hebrew paragraphs
     python3 pipeline/azure_corpus.py search "ריבונות" --he  # search the Hebrew side instead
     python3 pipeline/azure_corpus.py show 17                # print pair 17 (see pipeline/azure/index.csv)
@@ -21,6 +23,7 @@ import urllib.request
 
 INDEX = pathlib.Path(__file__).with_name("azure") / "index.csv"
 CACHE = pathlib.Path(os.environ.get("AZURE_CORPUS", "/tmp/azure-corpus"))
+STORE = pathlib.Path(os.environ.get("AZURE_STORE", "/mnt/project-files/hashamran/translation-guide/pairs"))
 
 
 def rows():
@@ -49,7 +52,19 @@ def get(url):
         return r.read().decode("utf-8", "ignore")
 
 
+def stored(n, lang):
+    """Text of pair n from the private project folder (pairs/NNN-slug/en.md, header above the --- line)."""
+    hits = sorted(STORE.glob(f"{n:03d}-*/{lang}.md")) if STORE.is_dir() else []
+    if not hits:
+        return None
+    text = hits[0].read_text(encoding="utf-8")
+    return text.split("\n---\n", 1)[-1].strip()
+
+
 def fetch():
+    if all(stored(int(r["n"]), "en") and stored(int(r["n"]), "he") for r in rows()):
+        print(f"all {2 * len(rows())} texts already stored in {STORE}")
+        return 0
     CACHE.mkdir(parents=True, exist_ok=True)
 
     def one(r):
@@ -72,8 +87,11 @@ def fetch():
 
 
 def paras(n, lang):
-    p = CACHE / f"{n:03d}.{lang}.txt"
-    return [x for x in p.read_text(encoding="utf-8").split("\n\n") if len(x) > 40] if p.exists() else []
+    text = stored(n, lang)
+    if text is None:
+        p = CACHE / f"{n:03d}.{lang}.txt"
+        text = p.read_text(encoding="utf-8") if p.exists() else ""
+    return [x for x in text.split("\n\n") if len(x) > 40]
 
 
 def aligned(src, dst, i):
