@@ -110,3 +110,7 @@ qc.py and by fresh reviewer and back-translator subagents (REVIEWER.md). 11 majo
 - 72 English–Hebrew pairs from the Kohelet Policy Forum, verified before adding: 71 linked as translations by the
   site itself, 1 matched by author and numbers; 32 more candidates were rejected (summaries, abridged versions,
   mismatched lengths or numbers). Most were written in Hebrew first, so they settle term pairs, not style.
+- Misgav (210 pairs) and JISS (509 pairs) added to the fourth guide, searched with `policy_corpus.py`. JISS pairs
+  are linked as translations by the site; Misgav pairs were matched by date, author and numbers, and their
+  openings read side by side (37 of 247 rejected). Example of what it settles: "campaign between the wars" =
+  המערכה בין המלחמות (מב״ם).
