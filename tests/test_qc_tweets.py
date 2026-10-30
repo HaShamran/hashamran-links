@@ -41,3 +41,13 @@ def test_glossary_avoid_and_english_quotes():
     assert any("quotation" in p for p in qc.check(quoted)["problems"])
     linked = {**GOOD, "body_he": GOOD["body_he"] + '\n\n[קישור](https://x/?q="a")'}
     assert qc.check(linked)["pass"], qc.check(linked)["problems"]
+
+
+def test_azure_corpus_cleaner_and_alignment():
+    import azure_corpus
+    page = ('<div class="pages">(page 1 of 1)</div><p>First <em>para</em> of the essay, long enough to keep.</p>'
+            '<p>Second para.<sup>1</sup></p><a href="include/print.php?id=1">Print</a>footer')
+    assert azure_corpus.clean(page) == "First *para* of the essay, long enough to keep.\n\nSecond para."
+    src, dst = ["a" * 10] * 10, ["b" * 10] * 5
+    assert azure_corpus.aligned(src, dst, 9)[-1] == dst[-1]
+    assert len(azure_corpus.rows()) == 100

@@ -106,5 +106,203 @@
   "he": "המפלגה הרפובליקנית, הרפובליקנים, הדמוקרטים",
   "avoid": [],
   "note": ""
+ },
+ {
+  "en": "liberty, freedom (political)",
+  "he": "חירות",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "rule of law",
+  "he": "שלטון החוק",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "civil society",
+  "he": "החברה האזרחית",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "judicial activism",
+  "he": "אקטיביזם שיפוטי",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "self-determination",
+  "he": "הגדרה עצמית",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "the Enlightenment",
+  "he": "הנאורות",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "Diaspora",
+  "he": "הגולה, התפוצות",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "exile (Jewish)",
+  "he": "הגלות",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "natural law",
+  "he": "המשפט הטבעי",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "just war",
+  "he": "מלחמה צודקת (תורת המלחמה הצודקת)",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "political correctness",
+  "he": "התקינות הפוליטית",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "liberal democracy",
+  "he": "דמוקרטיה ליברלית",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "assimilation",
+  "he": "התבוללות",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "the Bible, biblical",
+  "he": "המקרא, מקראי (התנ\"ך in everyday contexts)",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "separation of powers",
+  "he": "הפרדת רשויות",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "public sphere",
+  "he": "המרחב הציבורי",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "multiculturalism",
+  "he": "רב־תרבותיות",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "moral relativism",
+  "he": "רלטיביזם מוסרי",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "intellectuals",
+  "he": "אינטלקטואלים, אנשי רוח",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "the Jewish state",
+  "he": "המדינה היהודית",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "Land of Israel",
+  "he": "ארץ ישראל",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "national identity",
+  "he": "זהות לאומית",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "tradition, traditional",
+  "he": "מסורת, מסורתי",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "statesman",
+  "he": "מדינאי",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "the public good",
+  "he": "טובת הציבור",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "self-government",
+  "he": "ממשל עצמי",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "the Emancipation",
+  "he": "האמנציפציה",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "totalitarianism",
+  "he": "טוטליטריות",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "tyranny",
+  "he": "עריצות",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "freedom of speech",
+  "he": "חופש הביטוי",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "deterrence",
+  "he": "הרתעה",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "Christianity, Christian",
+  "he": "הנצרות, נוצרי",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "the Sages, rabbinic",
+  "he": "חז\"ל, חכמים; רבני",
+  "avoid": [],
+  "note": "as in תכלת (azure corpus)"
  }
 ]

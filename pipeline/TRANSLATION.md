@@ -4,6 +4,9 @@ The daily run follows this guide for every essay. Translator = Claude, inside th
 
 ## Register: תכלת (Azure)
 Write the way the Hebrew edition of תכלת (Shalem Center, 1996–2012) read: serious, literate Israeli Hebrew for an educated general reader.
+**`pipeline/azure/STYLE.md` is the detailed model**, drawn from 100 essays published in both Azure and תכלת: syntax,
+connectives, idiom, typography and a term bank. `pipeline/azure_corpus.py` searches those pairs to show how תכלת
+rendered a word or phrase.
 - Elevated but clear. Rich vocabulary and well-built sentences, never archaic, never bureaucratic, never slangy.
 - Natural Hebrew syntax. Rebuild long English sentences into Hebrew ones rather than mirroring English word order. Prefer verbs over strings of nominal constructions (avoid "ביצוע של הבדיקה של").
 - Full spelling (כתיב מלא) per the Academy's rules. Minimal niqqud, only to prevent a misreading.
@@ -31,15 +34,17 @@ When a term has been used the same way twice, or Hadar settles it, add it to `gl
 variants under `avoid`) and mark the log entry `→ glossary`. A recurring style lesson goes into this guide.
 
 ## Procedure (three passes)
-0. **Read** `pipeline/glossary.json` and `pipeline/TRANSLATION-LOG.md`.
+0. **Read** `pipeline/azure/STYLE.md`, `pipeline/glossary.json` and `pipeline/TRANSLATION-LOG.md`, and run
+   `python3 pipeline/azure_corpus.py fetch` once per run.
 1. **Clean the source.** From the extracted JSON, keep only the essay itself: title, subtitle, body, and images that belong to the essay with their captions. Drop site navigation, teasers for other articles, "related" images, newsletter and subscription prompts, reprint notices,  and PDF page headers and footers. If the essay is behind a paywall or cut short, stop and mark it `paywalled`.
-2. **Pass 1: translate** the cleaned essay completely, paragraph for paragraph, following this guide. Note every term you had to decide on.
+2. **Pass 1: translate** the cleaned essay completely, paragraph for paragraph, following this guide. Note every term you had to decide on. For any term or idiom the glossary does not settle, run `python3 pipeline/azure_corpus.py search "<english>"` and follow תכלת where it is consistent.
 2b. **Author bio and photo.** If the original ends with an author bio and/or photo (extract.py returns `author_bio` and `author_photo`, and check the page itself if those look wrong), reproduce them: translate the bio into Hebrew (`author_bio_he`) and keep the photo URL (`author_photo`). The publisher adds them as a "על המחבר" section after the essay, before the credit line. Skip anything that is a newsletter or subscription prompt rather than a bio.
 3. **Pass 2: review**, in two readings. Fix in place.
    - **2a. Fidelity, against the English**, paragraph by paragraph: nothing missing or added, numbers, names, dates and quotations exact, tone and irony kept.
-   - **2b. Hebrew only, as an editor of תכלת would read it**, without looking at the English:
+   - **2b. Hebrew only, as an editor of תכלת would read it**, without looking at the English, against `pipeline/azure/STYLE.md`:
      - Glossary consistency: every glossary term in its house form, and every new term rendered the same way throughout (names, institutions, recurring phrases). Same person, same spelling.
      - Grammar: gender and number agreement (verbs, adjectives, numerals), construct state (סמיכות), the definite article in construct, prepositions governed by the verb, the ־ש/אשר clauses, tense consistency.
+     - The תכלת voice: verb-first sentences where natural, formal negation (אינו, אין הוא), varied connectives (ואולם, ברם, אפוא, שהרי), sentences of moderate length.
      - Translationese: English word order, chains of nominal constructions, "עושה שימוש", "הוא זה ש", calques of English idioms, too many possessive "של".
      - Spelling and punctuation: full spelling (כתיב מלא), ״ ״ quotation marks (never "), maqaf before numbers and Latin script, no stray Latin words except where the guide keeps them.
 4. **Pass 3: the title.** A separate pass, after the body is final:
