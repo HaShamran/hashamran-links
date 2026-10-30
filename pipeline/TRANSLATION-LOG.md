@@ -105,3 +105,8 @@ qc.py and by fresh reviewer and back-translator subagents (REVIEWER.md). 11 majo
 - `grammar.py` (DictaBERT) now lists agreement clashes for the reviewer, as an optional extra layer. It found the
   planted errors ״הממשלה החליטו״ and ״שלוש ספרים״ and none in the Murray post. It does not yet catch every
   adjective error (״החלטה חשוב״ was missed), so the reviewer's own grammar read stays.
+
+### 2026-10-30 · Kohelet bank (fourth guide, legal and policy terms)
+- 72 English–Hebrew pairs from the Kohelet Policy Forum, verified before adding: 71 linked as translations by the
+  site itself, 1 matched by author and numbers; 32 more candidates were rejected (summaries, abridged versions,
+  mismatched lengths or numbers). Most were written in Hebrew first, so they settle term pairs, not style.

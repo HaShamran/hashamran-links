@@ -96,7 +96,7 @@ def count(terms):
 
 def show(n):
     r = next(x for x in rows() if x["n"] == str(n))
-    print(f"{r['title_en']}  /  {r['title_he']}  ({r['publication']}, {r['date']}){'  [abridged]' if r['abridged'] == '1' else ''}\n")
+    print(f"{r['title_en']}  /  {r['title_he']}  ({r.get('publication') or 'Kohelet'}, {r['date']}){'  [abridged]' if r.get('abridged') == '1' else ''}\n")
     en, he = paras(r, "en"), paras(r, "he")
     for i, p in enumerate(en):
         print(f"EN {i + 1}: {p}")

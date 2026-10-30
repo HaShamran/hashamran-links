@@ -179,3 +179,11 @@ def test_grammar_agreement_rules():
                  tok("הכנסת", "NOUN", "conj", 0, Gender="Fem", Number="Sing"),
                  tok("החליטו", "VERB", "root", -1, Number="Plur", Person="3"))
     assert grammar.agreement(conj) == []
+
+
+def test_kohelet_index():
+    import kohelet_corpus, mida_corpus
+    rows = mida_corpus.rows()
+    assert len(rows) == 72 and {"original", "he_url", "en_url"} <= set(rows[0])
+    assert {r["original"] for r in rows} <= {"he", "en", ""}
+    assert kohelet_corpus.mida_corpus.INDEX.name == "index.csv"
