@@ -4,15 +4,37 @@ Usage:
     python pipeline/qc.py posts/<slug>/post.json      # prints a report, exit 0 = pass, 2 = fail
 """
 import json
+import pathlib
 import re
 import sys
 
 import tweets
 
+GLOSSARY = pathlib.Path(__file__).with_name("glossary.json")
+
 REQUIRED = ("slug", "source_url", "author", "author_he", "publication", "title_he", "byline_he", "body_he")
 HEBREW = re.compile(r"[֐-׿]")
 LATIN_WORD = re.compile(r"[A-Za-z]{2,}")
 SLUG_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-[a-z0-9-]+$")
+URL = re.compile(r"\]\([^)]*\)|https?://\S+")
+TITLE_MAX = 80  # characters; a Hebrew headline, not a sentence
+
+
+def load_glossary():
+    try:
+        return json.loads(GLOSSARY.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+
+
+def glossary_problems(text, glossary):
+    """House terms used in a variant the glossary lists under "avoid" (pass 2b, glossary consistency)."""
+    out = []
+    for entry in glossary:
+        for bad in entry.get("avoid", []):
+            if bad and bad in text:
+                out.append(f"glossary: use {entry['he']!r} for {entry['en']!r}, not {bad!r}")
+    return out
 
 
 def paragraphs(md):
@@ -32,8 +54,19 @@ def check(post):
         problems.append("slug must look like YYYY-MM-DD-surname-title-words (lowercase ASCII)")
     body = post.get("body_he", "")
     paras = [p for p in paragraphs(body) if not is_media(p)]
-    if not HEBREW.search(post.get("title_he", "")):
+    title = post.get("title_he", "")
+    if not HEBREW.search(title):
         problems.append("title is not in Hebrew")
+    if len(title) > TITLE_MAX:
+        problems.append(f"title is {len(title)} characters; keep it under {TITLE_MAX} (pass 3)")
+    options = [t for t in post.get("title_options_he") or [] if str(t).strip()]
+    if len(options) < 3 or title not in options:
+        problems.append("title_options_he needs at least 3 candidate titles including the chosen title_he (pass 3)")
+    texts = [title, post.get("subtitle_he", ""), body, post.get("author_bio_he", "")] + list(post.get("quotes_he") or [])
+    plain = URL.sub("", "\n".join(texts))
+    if '"' in plain:
+        problems.append('English quotation marks (") in the Hebrew text; use ״ ״')
+    problems += glossary_problems(plain, load_glossary())
     # A paragraph that is mostly Latin script was probably left untranslated.
     for i, p in enumerate(paras, 1):
         heb = len(HEBREW.findall(p))

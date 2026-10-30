@@ -28,14 +28,17 @@ For each:
    - `paywalled`: set the queue item's status to `paywalled` with a note; no bypass. Next item.
    - `too_short` / `failed`: set `failed` with the error; next item. A PDF without a text layer: look for the
      same essay on the publication's own site and extract that URL instead.
-2. Translate following `pipeline/TRANSLATION.md` (clean, pass 1, pass 2), including author bio and photo and
-   the 3 tweet quotes, and write `posts/<slug>/post.json`.
+2. Read `pipeline/glossary.json` and `pipeline/TRANSLATION-LOG.md`. Translate following `pipeline/TRANSLATION.md`
+   (clean, pass 1 translate, pass 2 review: fidelity then Hebrew-only glossary and grammar, pass 3 title),
+   including author bio and photo and the 3 tweet quotes, and write `posts/<slug>/post.json`.
 3. `python3 pipeline/finalize.py posts/<slug>/post.json`. On failure fix once and rerun; if it still fails, leave
    it (it is held as `draft_failed_qc`) and alert.
+4. Add an entry to `pipeline/TRANSLATION-LOG.md` (terms, title choice, what passes 2 and 3 caught), and move
+   settled terms into `pipeline/glossary.json`.
 
 ## 4. Commit
 ```
-git add state posts && git commit -m "daily run: <date>" && git push origin HEAD:main
+git add state posts pipeline/TRANSLATION-LOG.md pipeline/glossary.json && git commit -m "daily run: <date>" && git push origin HEAD:main
 ```
 If the push is rejected, `git pull --rebase origin main` and push again (the GitHub Action also commits).
 

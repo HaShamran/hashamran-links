@@ -14,33 +14,41 @@ Write the way the Hebrew edition of תכלת (Shalem Center, 1996–2012) read: 
 - Keep the author's argument, tone and irony intact. Do not soften, sharpen, summarise or add commentary.
 - American-specific terms that an Israeli reader would not know: one short explanatory phrase in the text the first time, never a translator's essay.
 
-## Glossary (extend as needed, keep consistent)
-| English | Hebrew |
-|---|---|
-| nationalism / national conservatism | לאומיות / שמרנות לאומית |
-| conservative, conservatism | שמרן, שמרנות |
-| liberalism, liberal (classical) | ליברליזם, ליברלי |
-| progressive, progressivism | פרוגרסיבי, פרוגרסיביזם |
-| the West, Western civilization | המערב, הציוויליזציה המערבית |
-| nation-state | מדינת לאום |
-| sovereignty | ריבונות |
-| the Founders | האבות המייסדים |
-| the Constitution (US) | החוקה האמריקנית |
-| Congress, Senate, House | הקונגרס, הסנאט, בית הנבחרים |
-| Secretary of State | מזכיר המדינה |
-| woke | ווֹק (first time: ״ווֹק״, התודעה הפרוגרסיבית החדשה) |
-| elites | האליטות |
-| net zero | אפס פליטות נטו |
-| identity politics | פוליטיקת זהויות |
-| the Right, the Left | הימין, השמאל |
-| GOP, Republicans, Democrats | המפלגה הרפובליקנית, הרפובליקנים, הדמוקרטים |
+## Glossary
+The house glossary is `pipeline/glossary.json`: for each term, the English (`en`), our Hebrew (`he`), variants we
+do not use (`avoid`) and a `note`. Follow it everywhere, keep it consistent, and extend it (see the translation
+log below). `qc.py` fails a post that uses an `avoid` variant.
 
-## Procedure (two passes)
+## Translation log
+`pipeline/TRANSLATION-LOG.md` is our memory between runs. **Read it before translating** and **add to it after
+each essay** (format at the top of the log). Record anything that will help the next translation:
+- Terms unique to our sphere of discourse (movements, institutions, slogans, people, coined phrases) and the
+  Hebrew we chose, with the reason.
+- Hard calls: idioms, irony, puns, American references, titles of books and articles.
+- What passes 2 and 3 caught in pass 1 (recurring errors are the most useful entries).
+- Every correction from Hadar or a reader, verbatim, and what rule it implies.
+When a term has been used the same way twice, or Hadar settles it, add it to `glossary.json` (with any wrong
+variants under `avoid`) and mark the log entry `→ glossary`. A recurring style lesson goes into this guide.
+
+## Procedure (three passes)
+0. **Read** `pipeline/glossary.json` and `pipeline/TRANSLATION-LOG.md`.
 1. **Clean the source.** From the extracted JSON, keep only the essay itself: title, subtitle, body, and images that belong to the essay with their captions. Drop site navigation, teasers for other articles, "related" images, newsletter and subscription prompts, reprint notices,  and PDF page headers and footers. If the essay is behind a paywall or cut short, stop and mark it `paywalled`.
-2. **Pass 1: translate** the cleaned essay completely, paragraph for paragraph, following this guide.
+2. **Pass 1: translate** the cleaned essay completely, paragraph for paragraph, following this guide. Note every term you had to decide on.
 2b. **Author bio and photo.** If the original ends with an author bio and/or photo (extract.py returns `author_bio` and `author_photo`, and check the page itself if those look wrong), reproduce them: translate the bio into Hebrew (`author_bio_he`) and keep the photo URL (`author_photo`). The publisher adds them as a "על המחבר" section after the essay, before the credit line. Skip anything that is a newsletter or subscription prompt rather than a bio.
-3. **Pass 2: review** against the English, paragraph by paragraph: nothing missing or added, numbers, names, dates and quotations exact, register consistent, glossary followed, Hebrew reads as written in Hebrew. Fix in place.
-4. **Write the post file** (`posts/<slug>/post.json`, see below) with 3 tweet quotes, and run `python3 pipeline/finalize.py posts/<slug>/post.json`. If it fails, fix and rerun once; if it still fails, the post is held (never published) and the run raises an alert.
+3. **Pass 2: review**, in two readings. Fix in place.
+   - **2a. Fidelity, against the English**, paragraph by paragraph: nothing missing or added, numbers, names, dates and quotations exact, tone and irony kept.
+   - **2b. Hebrew only, as an editor of תכלת would read it**, without looking at the English:
+     - Glossary consistency: every glossary term in its house form, and every new term rendered the same way throughout (names, institutions, recurring phrases). Same person, same spelling.
+     - Grammar: gender and number agreement (verbs, adjectives, numerals), construct state (סמיכות), the definite article in construct, prepositions governed by the verb, the ־ש/אשר clauses, tense consistency.
+     - Translationese: English word order, chains of nominal constructions, "עושה שימוש", "הוא זה ש", calques of English idioms, too many possessive "של".
+     - Spelling and punctuation: full spelling (כתיב מלא), ״ ״ quotation marks (never "), maqaf before numbers and Latin script, no stray Latin words except where the guide keeps them.
+4. **Pass 3: the title.** A separate pass, after the body is final:
+   - Write at least 3 candidate Hebrew titles (`title_options_he`): one close to the original, and others that carry its punch the way a Hebrew editor would headline it (wordplay, a Hebrew or Jewish echo only when it fits the essay, a sharp claim from the body).
+   - Choose the one that is accurate to the argument, idiomatic, short (under 80 characters), and makes an Israeli reader want to read. No clickbait the essay doesn't support. Put it in `title_he` (it stays in `title_options_he`).
+   - Then check the subtitle (`subtitle_he`) against the chosen title: it should complete it, not repeat it.
+   - Log the candidates and why the winner won in the translation log.
+5. **Write the post file** (`posts/<slug>/post.json`, see below) with 3 tweet quotes, and run `python3 pipeline/finalize.py posts/<slug>/post.json`. If it fails, fix and rerun once; if it still fails, the post is held (never published) and the run raises an alert.
+6. **Update the translation log** (and the glossary, when a term is settled).
 
 ## Post file
 Write `posts/<slug>/post.json` (slug = `YYYY-MM-DD-<author surname>-<title words>`, lowercase ASCII, date = the essay's date):
@@ -49,7 +57,7 @@ Write `posts/<slug>/post.json` (slug = `YYYY-MM-DD-<author surname>-<title words
   "slug": "2026-10-20-murray-france-stares-down-the-abyss-of-history",
   "source_url": "...", "queue_url": "<the url exactly as in state/queue.json>",
   "source_title": "...", "author": "...", "author_he": "...", "publication": "...", "date": "October 20, 2026",
-  "title_he": "...", "subtitle_he": "...",
+  "title_he": "...", "title_options_he": ["<chosen title>", "...", "..."], "subtitle_he": "...",
   "byline_he": "מאת ... | פורסם לראשונה ב־<publication> ב־<date in Hebrew>",
   "body_he": "Markdown body in Hebrew. The article's own images as ![כיתוב בעברית](url), in place. Embeds on their own line as the bare URL. Never the author photo.",
   "author_bio_he": "Hebrew translation of the author bio, if the original has one", "author_photo": "URL or empty",
