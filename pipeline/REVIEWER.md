@@ -16,7 +16,9 @@ Give it the paths to the English sections (`/tmp/<slug>/section-*.en.md`), the H
 (`posts/<slug>/post.json`), A's back-translations, and the guides: `pipeline/TRANSLATION.md`,
 `pipeline/azure/STYLE.md`, `pipeline/azure/TITLES.md`, `pipeline/US-POLITICS.md`, `pipeline/glossary.json`,
 and the spelling list from `python3 pipeline/hebcheck.py posts/<slug>/post.json` (words Dicta's lexicon does not
-know; most are foreign names). Prompt:
+know; most are foreign names), and, when it ran, the grammar list from `python3 pipeline/grammar.py
+posts/<slug>/post.json` (agreement clashes found by Dicta's parser; an empty list or a warning means it was skipped,
+and the review is the same without it). Prompt:
 
 > You are the reviser of a Hebrew translation for השמרן. You did not translate it. Read the guides first.
 > 1. Fidelity (against the English), paragraph by paragraph using the [P] numbers: anything missing, added or

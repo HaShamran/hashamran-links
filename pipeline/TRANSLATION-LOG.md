@@ -94,3 +94,14 @@ qc.py and by fresh reviewer and back-translator subagents (REVIEWER.md). 11 majo
   echo it.
 - Source cleaning: today's extraction of WORLD and UnHerd pages included hundreds of reader comments, and the WSJ
   PDF included reprint boilerplate. `prepare.essay()` now cuts the page at the end of the essay.
+
+### 2026-10-30 · השילוח pairs and the Dicta grammar layer
+- The terminology bank gained 5 English–Hebrew pairs from השילוח: Levin "Taking the Long Way" and Scruton "The
+  Good of Government" (First Things, 2014), "Transgender Conformity" (First Things, 2016), Continetti "The Trump
+  Revolution" (Free Beacon, 2016), Haivry and Hazony "What Is Conservatism?" (American Affairs, 2017). About 20
+  more השילוח translations exist, but their Mosaic and Commentary originals are behind paywalls, so they were left out.
+- From the השילוח translator's notes: Burke's "little platoons" is ״המחלקות הקטנות״ (gloss it on first use);
+  "government" in general is ממשל or ממשלה, and "administration" is one president's ממשל. → glossary
+- `grammar.py` (DictaBERT) now lists agreement clashes for the reviewer, as an optional extra layer. It found the
+  planted errors ״הממשלה החליטו״ and ״שלוש ספרים״ and none in the Murray post. It does not yet catch every
+  adjective error (״החלטה חשוב״ was missed), so the reviewer's own grammar read stays.
