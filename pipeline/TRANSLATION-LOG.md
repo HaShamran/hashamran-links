@@ -152,3 +152,6 @@ every essay, and Smith (never audited) improved as much as any.
 - Open question for Hadar: when Hebrew Wikipedia and common press usage differ on a name (למברט/למבר, הנערים/הבנים
   הגאים, ארון/אהרון), which wins? US-POLITICS.md already says the press form wins for American terms.
 Full report: reports/retranslation-evaluation-2026-10-30.md in the project folder.
+- Hadar settled both open questions (2026-10-30): when Hebrew Wikipedia and the press spell a name differently,
+  Hebrew Wikipedia wins; when the essay's page has no author bio, the post has none, and no one goes looking for
+  one elsewhere. → TRANSLATION.md
