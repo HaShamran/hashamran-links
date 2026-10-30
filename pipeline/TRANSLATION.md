@@ -11,8 +11,8 @@ rendered a word or phrase.
 - Natural Hebrew syntax. Rebuild long English sentences into Hebrew ones rather than mirroring English word order. Prefer verbs over strings of nominal constructions (avoid "ביצוע של הבדיקה של").
 - Full spelling (כתיב מלא) per the Academy's rules. Minimal niqqud, only to prevent a misreading.
 - Hebrew punctuation: Hebrew quotation marks ״ ״ for quotes, a hyphen-less prefix before numbers and Latin script (ב־1983 with maqaf, or ב-1983).
-- Biblical, Talmudic and classical Jewish sources: quote the original Hebrew text, not a back-translation.
-- Well-known works and people: use the established Hebrew title or spelling (e.g. ״הרפובליקה״ לאפלטון, ג׳ון לוק, אדמונד ברק). Lesser-known English titles: translate, then give the original in parentheses the first time.
+- Biblical, Talmudic and classical Jewish sources: quote the original Hebrew text, not a back-translation. Get it with `python3 pipeline/lookup.py source "Deuteronomy 17:13"` (Sefaria); give the reference in Hebrew form if the author gives one.
+- Well-known works and people: check `python3 pipeline/lookup.py name "John Locke" "Democracy in America"` (Hebrew Wikipedia) and use the established Hebrew title or spelling (e.g. ״הרפובליקה״ לאפלטון, ג׳ון לוק, אדמונד ברק). Lesser-known English titles: translate, then give the original in parentheses the first time.
 - Titles and subtitles: translate idiomatically, with a headline's punch. Do not translate word for word.
 - Keep the author's argument, tone and irony intact. Do not soften, sharpen, summarise or add commentary.
 - American-specific terms that an Israeli reader would not know: one short explanatory phrase in the text the first time, never a translator's essay.
@@ -48,7 +48,7 @@ variants under `avoid`) and mark the log entry `→ glossary`. A recurring style
      - Translationese: English word order, chains of nominal constructions, "עושה שימוש", "הוא זה ש", calques of English idioms, too many possessive "של".
      - Spelling and punctuation: full spelling (כתיב מלא), ״ ״ quotation marks (never "), maqaf before numbers and Latin script, no stray Latin words except where the guide keeps them.
 4. **Pass 3: the title.** A separate pass, after the body is final:
-   - Write at least 3 candidate Hebrew titles (`title_options_he`): one close to the original, and others that carry its punch the way a Hebrew editor would headline it (wordplay, a Hebrew or Jewish echo only when it fits the essay, a sharp claim from the body).
+   - Read `pipeline/azure/TITLES.md` (how תכלת retitled 100 essays). Write at least 3 candidate Hebrew titles (`title_options_he`): one close to the original, and at least one using a תכלת move from TITLES.md (a Hebrew pun in place of an English one, a Hebrew or Jewish echo, the real subject in place of an American allusion, antithesis, topic: angle).
    - Choose the one that is accurate to the argument, idiomatic, short (under 80 characters), and makes an Israeli reader want to read. No clickbait the essay doesn't support. Put it in `title_he` (it stays in `title_options_he`).
    - Then check the subtitle (`subtitle_he`) against the chosen title: it should complete it, not repeat it.
    - Log the candidates and why the winner won in the translation log.
