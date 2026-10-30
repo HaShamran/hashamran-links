@@ -6,14 +6,15 @@ This page is what those pairs teach. Read it before every translation, together 
 
 ## Using the corpus during a run
 ```
-python3 pipeline/azure_corpus.py fetch                   # once per run, ~1 min
+python3 pipeline/azure_corpus.py fetch                   # checks the stored copy; downloads only if missing
 python3 pipeline/azure_corpus.py search "civil society"  # how תכלת rendered it, in context
 python3 pipeline/azure_corpus.py search "אפוא" --he      # how a Hebrew word is used
 python3 pipeline/azure_corpus.py show 42                 # a whole pair
 ```
 Search whenever a term, idiom or construction is not settled in `pipeline/glossary.json`. If תכלת used it
-consistently, follow it and add it to the glossary. The texts are Shalem Press's copyright: they are fetched
-from the public archives at run time and never committed to this public repo. Quote at most a phrase or two
+consistently, follow it and add it to the glossary. The texts are Shalem Press's copyright: the permanent copy is the
+private project folder `/mnt/project-files/hashamran/translation-guide/pairs/`, and they are never committed to
+this public repo. Quote at most a phrase or two
 of them in the log.
 
 ## 1. A Hebrew essay, not a translated one

@@ -9,7 +9,8 @@ commit here. Your job: find new essays, translate, choose tweet quotes, commit, 
 pip install -q -r requirements.txt
 ```
 Chromium is preinstalled at /opt/pw-browsers/chromium; never run `playwright install`.
-Then `python3 pipeline/azure_corpus.py fetch` (the תכלת reference corpus, ~1 min; if it fails, translate anyway).
+Then `python3 pipeline/azure_corpus.py fetch` (the תכלת reference corpus; it reads the permanent copy in the project
+folder and downloads only if that is missing; if it fails, translate anyway).
 Firecrawl needs no key here (the network proxy adds it for api.firecrawl.dev).
 
 ## 2. Detect
