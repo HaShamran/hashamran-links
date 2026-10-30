@@ -31,9 +31,10 @@ For each:
    - `too_short` / `failed`: set `failed` with the error; next item. A PDF without a text layer: look for the
      same essay on the publication's own site and extract that URL instead.
 2. Read `pipeline/azure/STYLE.md`, `pipeline/US-POLITICS.md`, `pipeline/glossary.json` and `pipeline/TRANSLATION-LOG.md`. Translate following `pipeline/TRANSLATION.md`
-   (clean, pass 1 translate, pass 2 review: fidelity then Hebrew-only glossary and grammar, pass 3 title),
+   (clean, prepare and brief, pass 1 section by section with memory, title and quotes, independent review and
+   blind back-translation by fresh subagents per `pipeline/REVIEWER.md`),
    including author bio and photo and the 3 tweet quotes, and write `posts/<slug>/post.json`.
-3. `python3 pipeline/finalize.py posts/<slug>/post.json`. On failure fix once and rerun; if it still fails, leave
+3. `python3 pipeline/finalize.py posts/<slug>/post.json /tmp/<slug>.src.json`. On failure fix once and rerun; if it still fails, leave
    it (it is held as `draft_failed_qc`) and alert.
 4. Add an entry to `pipeline/TRANSLATION-LOG.md` (terms, title choice, what passes 2 and 3 caught), and move
    settled terms into `pipeline/glossary.json`.

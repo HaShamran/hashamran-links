@@ -63,3 +63,10 @@ Settled terms move to `pipeline/glossary.json`; mark the entry `→ glossary` wh
 - Settled from השילוח: פוליטיקת הזהויות (14 uses, over פוליטיקת זהויות 2); ״דיפ סטייט״ glossed as מדינת צללים /
   המדינה העמוקה; הפנטגון over Wikipedia's מחומש (press usage wins).
 - Open question: pro-life → ״תנועת החיים (פרו־לייף)״ proposed; Hadar may prefer another form.
+
+### 2026-10-30 · process from research (ISO 17100, LLM-translation studies)
+- New steps: translation brief; section-by-section pass 1 with a names-and-terms memory (`prepare.py`);
+  independent reviewer and blind back-translator as fresh subagents (`REVIEWER.md`); fidelity check of
+  paragraphs and numbers against the English in `qc.py` (`fidelity_waivers` for numbers rendered as words).
+- Why: self-review misses most of a model's own errors; whole-document translation silently skips sentences;
+  error scoring catches accuracy better than style, so the תכלת style measures stay.
