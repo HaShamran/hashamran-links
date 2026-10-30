@@ -83,7 +83,7 @@ qc.py and by fresh reviewer and back-translator subagents (REVIEWER.md). 11 majo
     הפניקס), which the source does not say.
 - Word errors caught: ״הצטדקות בשם היטלר״ for apologism (→ סנגוריה), ״אוהדתו״ for sympathy (→ אהדתו),
   ״התבצרות לאומית״ for national self-assertion (→ תביעת העוצמה הלאומית), ״הליברל לדוגמה״ for token liberal
-  (→ הליברל התורן), ״אלגיה להילבילי״ for Hillbilly Elegy (the Hebrew edition is ״אמריקה השנייה״). → glossary
+  (→ הליברל התורן), ״אלגיה להילבילי״ for Hillbilly Elegy. → glossary [Corrected 2026-10-30: ״אמריקה השנייה״ is only the Hebrew Wikipedia article title; no Hebrew edition was found, so the literal title with the English in parentheses stands.]
 - Byline: ״מאת ר׳ אלברט מוהלר״ made a Baptist leader a rabbi. Rule: never write an English initial R. as ר׳; drop
   the initial or spell it out.
 - Names: several spellings differed from Hebrew Wikipedia (קת׳י הוקול, אית׳קה, קאי פאי for Chi Phi,
@@ -129,3 +129,26 @@ qc.py and by fresh reviewer and back-translator subagents (REVIEWER.md). 11 majo
   of each were downloaded and checked (length, paragraph structure, shared numbers and their order); 1,201 kept.
   Mostly security research, written in Hebrew first. Example: "Campaign between Wars" = המערכה בין המלחמות (מב״ם),
   the same as Misgav and JISS.
+
+### 2026-10-30 · retranslation of the 8 earlier posts, and what it taught
+The 8 posts translated 5–21 Oct (Mohler, Rubio, Roberts, Galston, Pinkoski, Renn, Darwall, Smith) were retranslated
+from scratch with the current workflow and compared blind (the judging editor did not know which was which).
+The new version won all 8 (4 by a large margin, 4 clearly), and 186 of 227 paragraph-level differences favoured
+it. All 8 new versions pass qc; all 8 old ones fail it. Argument connectives went from 2.6–6.6 to 6.2–14.5 per
+1,000 words. About a dozen wins came from answers already in this log; without them the new version still wins
+every essay, and Smith (never audited) improved as much as any.
+- Where the old version was still better: construct forms and Hebrew words over ״של״ and loanwords
+  (״קמפוסי העילית״, ״אסון״), the maqaf in compound names. → TRANSLATION.md
+- Still going wrong in new drafts: הסכם for treaty where the argument turns on it (Darwall); אולי for "might well"
+  and for a concessive "may"; an added אפוא or ואמנם; יום הזיכרון for 11 November (both old and new first drafts);
+  ״בשלום״ for "win the peace"; a rape allegation stated as fact in a tweet hook; paraphrase in quotation marks.
+  → TRANSLATION.md rules, glossary
+- Process gaps: the reviewer graded everything minor (0 majors in 92 findings) because "major" was undefined; 5
+  of 8 back-translations were stale after the titles and quotes changed; two fixes introduced new errors.
+  → REVIEWER.md (severity, argument-critical terms, fix check, rerun), qc.py (stale back-translation fails,
+  titles over 8 words warn)
+- Correction: ״אמריקה השנייה״ is not a Hebrew edition of Hillbilly Elegy (only the Wikipedia article title). The
+  glossary entry was removed; glossary entries now record their evidence.
+- Open question for Hadar: when Hebrew Wikipedia and common press usage differ on a name (למברט/למבר, הנערים/הבנים
+  הגאים, ארון/אהרון), which wins? US-POLITICS.md already says the press form wins for American terms.
+Full report: reports/retranslation-evaluation-2026-10-30.md in the project folder.
