@@ -17,6 +17,10 @@ private project folder `/mnt/project-files/hashamran/translation-guide/pairs/`, 
 this public repo. Quote at most a phrase or two
 of them in the log.
 
+For words תכלת never needed (it closed in 2012), the secondary guide is 100 recent השילוח essays
+(`pipeline/hashiloach_corpus.py`), and American terms are in `pipeline/US-POLITICS.md`. They settle vocabulary
+only. For voice and style, this page wins.
+
 ## 1. A Hebrew essay, not a translated one
 תכלת's editors rewrote for the Israeli reader. The Hebrew is about 20% shorter than the English (750 vs 940
 thousand words). Part of that is Hebrew's compactness and part is editing: the Jenin essay, for example, drops

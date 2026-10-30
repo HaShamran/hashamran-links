@@ -53,3 +53,13 @@ Settled terms move to `pipeline/glossary.json`; mark the entry `→ glossary` wh
 - `pipeline/lookup.py name`: Hebrew Wikipedia spellings (ג׳ון לוק, כתבי הפדרליסט, הריטג׳ פאונדיישן). A "-" means no
   Hebrew article: transliterate, give the English in parentheses the first time, and log it.
 - `pipeline/lookup.py source`: original Hebrew of a verse or passage from Sefaria, without cantillation or niqqud.
+
+### 2026-10-30 · השילוח and American politics
+- Hadar: השילוח is a secondary guide only, mainly for political terms that did not exist in תכלת's day. תכלת stays
+  primary for voice. Classic-quotations bank not wanted (we rarely quote classics).
+- Added 100 השילוח essays (2017–2026, 34 on the US; private project folder) and `pipeline/hashiloach_corpus.py`.
+- Added `pipeline/US-POLITICS.md`: ~80 American institutions, offices, procedures and slang, each with one Hebrew
+  form and one standard first-use explanation. 14 of them → glossary.
+- Settled from השילוח: פוליטיקת הזהויות (14 uses, over פוליטיקת זהויות 2); ״דיפ סטייט״ glossed as מדינת צללים /
+  המדינה העמוקה; הפנטגון over Wikipedia's מחומש (press usage wins).
+- Open question: pro-life → ״תנועת החיים (פרו־לייף)״ proposed; Hadar may prefer another form.

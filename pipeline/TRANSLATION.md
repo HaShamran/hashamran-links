@@ -7,6 +7,8 @@ Write the way the Hebrew edition of תכלת (Shalem Center, 1996–2012) read: 
 **`pipeline/azure/STYLE.md` is the detailed model**, drawn from 100 essays published in both Azure and תכלת: syntax,
 connectives, idiom, typography and a term bank. `pipeline/azure_corpus.py` searches those pairs to show how תכלת
 rendered a word or phrase.
+**Secondary guide, for terms תכלת never needed** (woke, populism, DEI, the deep state): 100 recent essays from
+השילוח, searched with `pipeline/hashiloach_corpus.py`. Where the two differ on voice or style, תכלת wins.
 - Elevated but clear. Rich vocabulary and well-built sentences, never archaic, never bureaucratic, never slangy.
 - Natural Hebrew syntax. Rebuild long English sentences into Hebrew ones rather than mirroring English word order. Prefer verbs over strings of nominal constructions (avoid "ביצוע של הבדיקה של").
 - Full spelling (כתיב מלא) per the Academy's rules. Minimal niqqud, only to prevent a misreading.
@@ -15,7 +17,7 @@ rendered a word or phrase.
 - Well-known works and people: check `python3 pipeline/lookup.py name "John Locke" "Democracy in America"` (Hebrew Wikipedia) and use the established Hebrew title or spelling (e.g. ״הרפובליקה״ לאפלטון, ג׳ון לוק, אדמונד ברק). Lesser-known English titles: translate, then give the original in parentheses the first time.
 - Titles and subtitles: translate idiomatically, with a headline's punch. Do not translate word for word.
 - Keep the author's argument, tone and irony intact. Do not soften, sharpen, summarise or add commentary.
-- American-specific terms that an Israeli reader would not know: one short explanatory phrase in the text the first time, never a translator's essay.
+- American-specific terms: use the Hebrew form and the standard first-use explanation in `pipeline/US-POLITICS.md`, so the same term is explained the same way in every post. One short phrase in the text, the first time only, never a translator's essay.
 
 ## Glossary
 The house glossary is `pipeline/glossary.json`: for each term, the English (`en`), our Hebrew (`he`), variants we
@@ -37,7 +39,7 @@ variants under `avoid`) and mark the log entry `→ glossary`. A recurring style
 0. **Read** `pipeline/azure/STYLE.md`, `pipeline/glossary.json` and `pipeline/TRANSLATION-LOG.md`, and run
    `python3 pipeline/azure_corpus.py fetch` once per run.
 1. **Clean the source.** From the extracted JSON, keep only the essay itself: title, subtitle, body, and images that belong to the essay with their captions. Drop site navigation, teasers for other articles, "related" images, newsletter and subscription prompts, reprint notices,  and PDF page headers and footers. If the essay is behind a paywall or cut short, stop and mark it `paywalled`.
-2. **Pass 1: translate** the cleaned essay completely, paragraph for paragraph, following this guide. Note every term you had to decide on. For any term or idiom the glossary does not settle, run `python3 pipeline/azure_corpus.py search "<english>"` and follow תכלת where it is consistent.
+2. **Pass 1: translate** the cleaned essay completely, paragraph for paragraph, following this guide. Note every term you had to decide on. For any term or idiom the glossary and US-POLITICS.md do not settle, run `python3 pipeline/azure_corpus.py search "<english>"` and follow תכלת where it is consistent. For a term newer than 2012, check `python3 pipeline/hashiloach_corpus.py count <Hebrew candidates>` and use השילוח's form.
 2b. **Author bio and photo.** If the original ends with an author bio and/or photo (extract.py returns `author_bio` and `author_photo`, and check the page itself if those look wrong), reproduce them: translate the bio into Hebrew (`author_bio_he`) and keep the photo URL (`author_photo`). The publisher adds them as a "על המחבר" section after the essay, before the credit line. Skip anything that is a newsletter or subscription prompt rather than a bio.
 3. **Pass 2: review**, in two readings. Fix in place.
    - **2a. Fidelity, against the English**, paragraph by paragraph: nothing missing or added, numbers, names, dates and quotations exact, tone and irony kept.

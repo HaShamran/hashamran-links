@@ -70,3 +70,11 @@ def test_lookup_text_helpers():
     raw = 'וְכׇל־הָעָ֖ם יִשְׁמְע֣וּ&nbsp;<span class="x">{ס}</span>'
     assert lookup.plain_hebrew(raw) == "וכל־העם ישמעו"
     assert lookup.plain_hebrew(raw, niqqud=True).startswith("וְכׇל־הָעָם")
+
+
+def test_hashiloach_pattern_and_index():
+    import hashiloach_corpus as h
+    p = h.pattern("דיפ־סטייט")
+    assert p.search("מה שמכונה ״הדיפ סטייט״ בוושינגטון") and p.search("ובדיפ-סטייט")
+    assert not h.pattern("ווק").search("הווקאלי")
+    assert len(h.rows()) == 100
