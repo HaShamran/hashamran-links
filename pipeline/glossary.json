@@ -89,11 +89,11 @@
  },
  {
   "en": "identity politics",
-  "he": "פוליטיקת זהויות",
+  "he": "פוליטיקת הזהויות",
   "avoid": [
    "פוליטיקת זהות"
   ],
-  "note": ""
+  "note": "השילוח form; פוליטיקת זהויות also fine"
  },
  {
   "en": "the Right, the Left",
@@ -304,5 +304,85 @@
   "he": "חז\"ל, חכמים; רבני",
   "avoid": [],
   "note": "as in תכלת (azure corpus)"
+ },
+ {
+  "en": "the Pentagon",
+  "he": "הפנטגון",
+  "avoid": [
+   "המחומש"
+  ],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "Attorney General (US)",
+  "he": "התובע הכללי",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "primaries",
+  "he": "הפריימריז",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "midterms",
+  "he": "בחירות האמצע",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "swing states",
+  "he": "מדינות מתנדנדות",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "executive order",
+  "he": "צו נשיאותי",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "the deep state",
+  "he": "המדינה העמוקה",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "DEI",
+  "he": "גיוון, שוויון והכלה (DEI)",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "cancel culture",
+  "he": "תרבות הביטול",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "populism",
+  "he": "פופוליזם",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "Ivy League",
+  "he": "ליגת הקיסוס",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "evangelicals",
+  "he": "האוונגליסטים",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "the administrative state",
+  "he": "המדינה המנהלית",
+  "avoid": [],
+  "note": "see pipeline/US-POLITICS.md"
  }
 ]
