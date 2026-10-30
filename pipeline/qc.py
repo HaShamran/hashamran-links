@@ -19,6 +19,50 @@ SLUG_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-[a-z0-9-]+$")
 URL = re.compile(r"\]\([^)]*\)|https?://\S+")
 TITLE_MAX = 80  # characters; a Hebrew headline, not a sentence
 
+# The תכלת voice, measured (pipeline/azure/STYLE.md). Limits sit near the 5th/95th percentile of the 100 תכלת
+# essays, so real תכלת prose passes and flat, translated-sounding Hebrew does not.
+CONNECTIVES = ("אלא", "אך", "אף", "אולם", "ואולם", "אפוא", "ברם", "שהרי", "הרי", "כלומר", "שכן", "לפיכך", "על כן",
+               "יתר על כן", "עם זאת", "ואמנם", "אמנם", "דהיינו", "לכן", "ממילא", "זאת ועוד", "לא זו בלבד",
+               "מכל מקום", "כאמור")
+CONNECTIVES_MIN = 5.0    # per 1,000 words (תכלת median 11)
+SHEL_MAX = 4.2           # "של" per 100 words (תכלת median 3.1); more reads as translationese
+SENTENCE_MAX = 30        # average words per sentence (תכלת 20)
+STYLE_MIN_WORDS = 600    # shorter pieces are too small to measure
+
+
+def word(w):
+    return re.compile(r"(?<![א-ת])" + w + r"(?![א-ת])")
+
+
+def style(text):
+    """Style measures of a Hebrew text, compared with תכלת in STYLE.md."""
+    words = len(re.findall(r"[א-ת]+", text)) or 1
+    hits = {c: len(word(c).findall(text)) for c in CONNECTIVES}
+    sentences = [x for x in re.split(r"[.?!]\s", text) if len(x.split()) > 2] or [text]
+    return {"words": words,
+            "connectives_per_1000": round(sum(hits.values()) * 1000 / words, 1),
+            "distinct_connectives": sum(1 for v in hits.values() if v),
+            "shel_per_100": round(len(word("של").findall(text)) * 100 / words, 2),
+            "sentence_words": round(sum(len(x.split()) for x in sentences) / len(sentences), 1)}
+
+
+def style_problems(m):
+    if m["words"] < STYLE_MIN_WORDS:
+        return []
+    out = []
+    if m["connectives_per_1000"] < CONNECTIVES_MIN:
+        out.append(f"style: {m['connectives_per_1000']} argument connectives per 1,000 words, תכלת has at least "
+                   f"{CONNECTIVES_MIN} (rebuild the joints of the argument: ואולם, ברם, אפוא, שהרי, יתר על כן...)")
+    need = min(10, m["words"] // 150)
+    if m["distinct_connectives"] < need:
+        out.append(f"style: only {m['distinct_connectives']} different connectives; use at least {need}")
+    if m["shel_per_100"] > SHEL_MAX:
+        out.append(f"style: {m['shel_per_100']} \"של\" per 100 words, over {SHEL_MAX}; use construct forms and "
+                   "possessive suffixes (הוצאותיה, not ההוצאות שלה)")
+    if m["sentence_words"] > SENTENCE_MAX:
+        out.append(f"style: sentences average {m['sentence_words']} words; split them (תכלת averages 20)")
+    return out
+
 
 def load_glossary():
     try:
@@ -96,7 +140,9 @@ def check(post):
         if not tweets.fits(q):
             n = tweets.weighted_length(q)
             problems.append(f"quote {i} is too long for a tweet with its link ({n} of 280 weighted chars)")
-    return {"pass": not problems, "problems": problems, "he_paragraphs": len(paras), "words": words}
+    measures = style("\n\n".join(paras))
+    problems += style_problems(measures)
+    return {"pass": not problems, "problems": problems, "he_paragraphs": len(paras), "words": words, "style": measures}
 
 
 def main(argv=None):
