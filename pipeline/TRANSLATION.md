@@ -23,7 +23,7 @@ first, so they show which Hebrew term goes with which English one, not how to tr
 - Full spelling (כתיב מלא) per the Academy's rules. Minimal niqqud, only to prevent a misreading.
 - Hebrew punctuation: Hebrew quotation marks ״ ״ for quotes, a hyphen-less prefix before numbers and Latin script (ב־1983 with maqaf, or ב-1983).
 - Biblical, Talmudic and classical Jewish sources: quote the original Hebrew text, not a back-translation. Get it with `python3 pipeline/lookup.py source "Deuteronomy 17:13"` (Sefaria); give the reference in Hebrew form if the author gives one.
-- Well-known works and people: check `python3 pipeline/lookup.py name "John Locke" "Democracy in America"` (Hebrew Wikipedia) and use the established Hebrew title or spelling (e.g. ״הרפובליקה״ לאפלטון, ג׳ון לוק, אדמונד ברק). Lesser-known English titles: translate, then give the original in parentheses the first time.
+- Well-known works and people: check `python3 pipeline/lookup.py name "John Locke" "Democracy in America"` (Hebrew Wikipedia) and use the established Hebrew title or spelling (e.g. ״הרפובליקה״ לאפלטון, ג׳ון לוק, אדמונד ברק). Lesser-known English titles: translate, then give the original in parentheses the first time. When Hebrew Wikipedia's spelling of a name differs from common press usage, Hebrew Wikipedia wins (Hadar, 2026-10-30).
 - Bylines and names: never write an English initial as a Hebrew abbreviation (R. Albert Mohler is ״אלברט מוהלר״, never ״ר׳ אלברט מוהלר״, which reads as a rabbi). Facts in the byline (place, date, venue) come from the source only.
 - Titles and subtitles: translate idiomatically, with a headline's punch. Do not translate word for word.
 - Keep the author's argument, tone and irony intact. Do not soften, sharpen, summarise or add commentary.
@@ -72,7 +72,7 @@ translator; a model checking its own fresh work misses most of its errors). Ever
    <Hebrew candidates>` and use השילוח's form. For a current American term, also check
    `python3 pipeline/mida_corpus.py search "<english>"` to see it rendered in a real translation (for a legal, policy
    or security term, also `python3 pipeline/policy_corpus.py search "<english>"`).
-3b. **Author bio and photo.** If the original ends with an author bio and/or photo (extract.py returns `author_bio` and `author_photo`, and check the page itself if those look wrong), reproduce them: translate the bio into Hebrew (`author_bio_he`) and keep the photo URL (`author_photo`). The publisher adds them as a "על המחבר" section after the essay, before the credit line. Skip anything that is a newsletter or subscription prompt rather than a bio.
+3b. **Author bio and photo.** If the original ends with an author bio and/or photo (extract.py returns `author_bio` and `author_photo`, and check the page itself if those look wrong), reproduce them: translate the bio into Hebrew (`author_bio_he`) and keep the photo URL (`author_photo`). The publisher adds them as a "על המחבר" section after the essay, before the credit line. Skip anything that is a newsletter or subscription prompt rather than a bio. If the essay's own page has no bio, leave `author_bio_he` empty: never look for one elsewhere (Hadar, 2026-10-30).
 4. **Title, subtitle and tweet quotes (draft).** Read `pipeline/azure/TITLES.md`. Write at least 3 candidate titles
    (`title_options_he`): one close to the original and at least one using a תכלת move (a Hebrew pun in place of
    an English one, a Hebrew or Jewish echo, the real subject in place of an American allusion, antithesis,
