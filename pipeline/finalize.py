@@ -1,7 +1,9 @@
 """Last step of the daily cloud run for each translated post: quality check, cover choice, mark ready.
 
 Usage:
-    python pipeline/finalize.py posts/<slug>/post.json
+    python pipeline/finalize.py posts/<slug>/post.json /tmp/<slug>.src.json
+
+The second argument is extract.py's output for the essay: the quality check compares the Hebrew with it.
 
 Passing posts become status "ready" and appear in posts/index.json, which the publisher on dud reads.
 Failing posts become "draft_failed_qc" (never published; the morning report and the Action raise an alert).
@@ -64,10 +66,10 @@ def rebuild_index():
     return index
 
 
-def finalize(path, render=True):
+def finalize(path, source_markdown, render=True):
     path = pathlib.Path(path)
     post = load_json(path)
-    report = qc.check(post)
+    report = qc.check(post, source_markdown)
     post["style"] = report["style"]
     if not report["pass"]:
         post["status"] = "draft_failed_qc"
@@ -96,7 +98,11 @@ def finalize(path, render=True):
 
 def main(argv=None):
     argv = argv if argv is not None else sys.argv[1:]
-    status, report = finalize(argv[0])
+    if len(argv) < 2:
+        print("usage: finalize.py posts/<slug>/post.json /tmp/<slug>.src.json (the English is required)")
+        return 2
+    source = load_json(pathlib.Path(argv[1])).get("markdown", "")
+    status, report = finalize(argv[0], source)
     print(json.dumps({"status": status, **report}, ensure_ascii=False, indent=2))
     return 0 if status == "ready" else 2
 

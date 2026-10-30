@@ -1,13 +1,17 @@
 """Automatic quality checks for a translated post (see TRANSLATION.md).
 
 Usage:
-    python pipeline/qc.py posts/<slug>/post.json      # prints a report, exit 0 = pass, 2 = fail
+    python pipeline/qc.py posts/<slug>/post.json [/tmp/<slug>.src.json]   # report; exit 0 = pass, 2 = fail
+
+With the extracted English (the second argument), it also checks fidelity: paragraph count, and every number
+of two or more digits kept in the Hebrew (or listed in `fidelity_waivers` with the reason).
 """
 import json
 import pathlib
 import re
 import sys
 
+import prepare
 import tweets
 
 GLOSSARY = pathlib.Path(__file__).with_name("glossary.json")
@@ -89,7 +93,42 @@ def is_media(p):
     return p.startswith("![") or re.fullmatch(r"https?://\S+", p) is not None
 
 
-def check(post):
+def process_problems(post):
+    """The brief, the independent review and the blind back-translation (TRANSLATION.md, REVIEWER.md)."""
+    out = []
+    if not post.get("brief"):
+        out.append("missing translation brief (brief): write it before translating")
+    review = post.get("review") or {}
+    if not review.get("independent"):
+        out.append("missing independent review (review.independent): run the reviewer in REVIEWER.md")
+    elif review.get("fixed", 0) + len(review.get("not_fixed") or []) < review.get("findings", 0):
+        out.append("review findings left open: fix each one or list it in review.not_fixed with the reason")
+    bt = post.get("back_translation") or {}
+    if not (bt.get("title") and len(bt.get("quotes") or []) == 3):
+        out.append("missing blind back-translation of the title and the 3 quotes (back_translation)")
+    elif bt.get("meaning_kept") is not True:
+        out.append("back-translation shows a shift in meaning: fix it, then set back_translation.meaning_kept")
+    return out
+
+
+def fidelity_problems(post, source_markdown):
+    """Mechanical comparison with the English: nothing dropped in bulk, every number kept."""
+    out = []
+    src_paras = len(prepare.text_paragraphs(source_markdown))
+    he = [p for p in paragraphs(post.get("body_he", "")) if not is_media(p)]
+    if src_paras and not (0.8 * src_paras <= len(he) <= 1.25 * src_paras):
+        out.append(f"fidelity: {len(he)} Hebrew paragraphs for {src_paras} in the English: something may be missing")
+    he_text = "\n".join([post.get("body_he", ""), post.get("subtitle_he", ""), post.get("title_he", "")])
+    he_nums = set(prepare.numbers(he_text)) | {n.replace(",", "") for n in re.findall(r"\d[\d,.]*", he_text)}
+    waived = {str(w.get("number")) for w in post.get("fidelity_waivers") or [] if w.get("reason")}
+    missing = [n for n in prepare.numbers(source_markdown) if n not in he_nums and n not in waived]
+    if missing:
+        out.append(f"fidelity: numbers in the English missing from the Hebrew: {', '.join(missing[:12])} "
+                   "(restore them, or add each to fidelity_waivers with the reason, e.g. 1960s → שנות השישים)")
+    return out
+
+
+def check(post, source_markdown=None):
     problems = []
     for key in REQUIRED:
         if not str(post.get(key, "")).strip():
@@ -142,13 +181,16 @@ def check(post):
             problems.append(f"quote {i} is too long for a tweet with its link ({n} of 280 weighted chars)")
     measures = style("\n\n".join(paras))
     problems += style_problems(measures)
+    if source_markdown is not None:
+        problems += process_problems(post) + fidelity_problems(post, source_markdown)
     return {"pass": not problems, "problems": problems, "he_paragraphs": len(paras), "words": words, "style": measures}
 
 
 def main(argv=None):
     argv = argv if argv is not None else sys.argv[1:]
     post = json.load(open(argv[0], encoding="utf-8"))
-    report = check(post)
+    source = json.load(open(argv[1], encoding="utf-8")).get("markdown", "") if len(argv) > 1 else None
+    report = check(post, source)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0 if report["pass"] else 2
 

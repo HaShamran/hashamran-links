@@ -78,3 +78,35 @@ def test_hashiloach_pattern_and_index():
     assert p.search("מה שמכונה ״הדיפ סטייט״ בוושינגטון") and p.search("ובדיפ-סטייט")
     assert not h.pattern("ווק").search("הווקאלי")
     assert len(h.rows()) == 100
+
+
+def test_prepare_sections_and_numbers(tmp_path):
+    import json
+    import prepare
+    md = "\n\n".join([f"Paragraph {i} says that in 1,250 cases out of 57 percent of {i * 10} things happened." * 3
+                      for i in range(1, 41)] + ["![](https://x/img.png)", "https://youtu.be/abc"])
+    src = tmp_path / "src.json"
+    src.write_text(json.dumps({"title": "T", "markdown": md}))
+    assert prepare.main([str(src), str(tmp_path / "w")]) == 0
+    secs = sorted((tmp_path / "w").glob("section-*.en.md"))
+    assert len(secs) >= 2 and "[P1]" in secs[0].read_text() and (tmp_path / "w" / "brief.md").exists()
+    assert "1250" in prepare.numbers(md) and "57" in prepare.numbers(md) and "5" not in prepare.numbers(md)
+    assert len(prepare.text_paragraphs(md)) == 40
+
+
+def test_fidelity_and_process_checks():
+    process = {"brief": {"tone": "polemical"},
+               "review": {"independent": True, "findings": 2, "major": 1, "fixed": 2, "not_fixed": []},
+               "back_translation": {"title": "t", "subtitle": "s", "quotes": ["a", "b", "c"], "meaning_kept": True}}
+    source = "\n\n".join(["In 1977 the debt reached 115 percent of output and kept rising for years after that."] * 8)
+    body = "\n\n".join(["בשנת 1977 הגיע החוב ל־115 אחוזים מן התוצר והמשיך לעלות שנים רבות לאחר מכן."] * 8)
+    good = {**GOOD, **process, "body_he": body}
+    assert not [p for p in qc.check(good, source)["problems"] if "fidelity" in p or "review" in p or "brief" in p]
+    dropped = {**good, "body_he": body.replace("115", "")}
+    assert any("115" in p for p in qc.check(dropped, source)["problems"])
+    waived = {**dropped, "fidelity_waivers": [{"number": "115", "reason": "test"}]}
+    assert not any("115" in p for p in qc.check(waived, source)["problems"])
+    assert any("independent review" in p for p in qc.check({**good, "review": {}}, source)["problems"])
+    assert any("meaning" in p for p in qc.check(
+        {**good, "back_translation": {**process["back_translation"], "meaning_kept": False}}, source)["problems"])
+    assert any("paragraphs" in p for p in qc.check({**good, "body_he": body.split("\n\n")[0]}, source)["problems"])

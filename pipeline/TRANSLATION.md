@@ -35,31 +35,52 @@ each essay** (format at the top of the log). Record anything that will help the 
 When a term has been used the same way twice, or Hadar settles it, add it to `glossary.json` (with any wrong
 variants under `avoid`) and mark the log entry `→ glossary`. A recurring style lesson goes into this guide.
 
-## Procedure (three passes)
-0. **Read** `pipeline/azure/STYLE.md`, `pipeline/glossary.json` and `pipeline/TRANSLATION-LOG.md`, and run
-   `python3 pipeline/azure_corpus.py fetch` once per run.
-1. **Clean the source.** From the extracted JSON, keep only the essay itself: title, subtitle, body, and images that belong to the essay with their captions. Drop site navigation, teasers for other articles, "related" images, newsletter and subscription prompts, reprint notices,  and PDF page headers and footers. If the essay is behind a paywall or cut short, stop and mark it `paywalled`.
-2. **Pass 1: translate** the cleaned essay completely, paragraph for paragraph, following this guide. Note every term you had to decide on. For any term or idiom the glossary and US-POLITICS.md do not settle, run `python3 pipeline/azure_corpus.py search "<english>"` and follow תכלת where it is consistent. For a term newer than 2012, check `python3 pipeline/hashiloach_corpus.py count <Hebrew candidates>` and use השילוח's form.
-2b. **Author bio and photo.** If the original ends with an author bio and/or photo (extract.py returns `author_bio` and `author_photo`, and check the page itself if those look wrong), reproduce them: translate the bio into Hebrew (`author_bio_he`) and keep the photo URL (`author_photo`). The publisher adds them as a "על המחבר" section after the essay, before the credit line. Skip anything that is a newsletter or subscription prompt rather than a bio.
-3. **Pass 2: review**, in two readings. Fix in place.
-   - **2a. Fidelity, against the English**, paragraph by paragraph: nothing missing or added, numbers, names, dates and quotations exact, tone and irony kept.
-   - **2b. Hebrew only, as an editor of תכלת would read it**, without looking at the English, against `pipeline/azure/STYLE.md`:
-     - Glossary consistency: every glossary term in its house form, and every new term rendered the same way throughout (names, institutions, recurring phrases). Same person, same spelling.
-     - Grammar: gender and number agreement (verbs, adjectives, numerals), construct state (סמיכות), the definite article in construct, prepositions governed by the verb, the ־ש/אשר clauses, tense consistency.
-     - The תכלת voice: verb-first sentences where natural, formal negation (אינו, אין הוא), varied connectives (ואולם, ברם, אפוא, שהרי), sentences of moderate length.
-     - Translationese: English word order, chains of nominal constructions, "עושה שימוש", "הוא זה ש", calques of English idioms, too many possessive "של".
-     - Spelling and punctuation: full spelling (כתיב מלא), ״ ״ quotation marks (never "), maqaf before numbers and Latin script, no stray Latin words except where the guide keeps them.
-4. **Pass 3: the title.** A separate pass, after the body is final:
-   - Read `pipeline/azure/TITLES.md` (how תכלת retitled 100 essays). Write at least 3 candidate Hebrew titles (`title_options_he`): one close to the original, and at least one using a תכלת move from TITLES.md (a Hebrew pun in place of an English one, a Hebrew or Jewish echo, the real subject in place of an American allusion, antithesis, topic: angle).
-   - Choose the one that is accurate to the argument, idiomatic, short (under 80 characters), and makes an Israeli reader want to read. No clickbait the essay doesn't support. Put it in `title_he` (it stays in `title_options_he`).
-   - Then check the subtitle (`subtitle_he`) against the chosen title: it should complete it, not repeat it.
-   - Log the candidates and why the winner won in the translation log.
-5. **Write the post file** (`posts/<slug>/post.json`, see below) with 3 tweet quotes, and run `python3 pipeline/finalize.py posts/<slug>/post.json`. If it fails, fix and rerun once; if it still fails, the post is held (never published) and the run raises an alert.
-   `qc.py` also measures the תכלת voice (argument connectives, variety of connectives, density of ״של״, sentence
-   length; limits in `qc.py`, calibrated so 92 of the 100 תכלת essays pass). If a style check fails, revise the
-   prose itself: rebuild the joints of the argument and the possessives as STYLE.md describes. Never sprinkle
-   connectives in to reach the number. The measures are saved in `post.json` as `style`; note them in the log.
-6. **Update the translation log** (and the glossary, when a term is settled).
+## Procedure
+The translator translates. A separate reviewer revises (ISO 17100: revision by someone other than the
+translator; a model checking its own fresh work misses most of its errors). Everything is automatic.
+
+0. **Read** `pipeline/azure/STYLE.md`, `pipeline/US-POLITICS.md`, `pipeline/glossary.json` and
+   `pipeline/TRANSLATION-LOG.md`, and run `python3 pipeline/azure_corpus.py fetch && python3 pipeline/hashiloach_corpus.py fetch`.
+1. **Clean the source.** From the extracted JSON, keep only the essay itself: title, subtitle, body, and images that belong to the essay with their captions. Drop site navigation, teasers for other articles, "related" images, newsletter and subscription prompts, reprint notices,  and PDF page headers and footers (edit the `markdown` field of `/tmp/<slug>.src.json` in place). If the essay is behind a paywall or cut short, stop and mark it `paywalled`.
+2. **Prepare and brief.** `python3 pipeline/prepare.py /tmp/<slug>.src.json /tmp/<slug>/` splits the essay into
+   numbered paragraphs ([P1], [P2]...) and sections of about 1,400 words, and starts `brief.md` and `memory.md`.
+   Before translating a word, fill in the brief: the author's tone, what an Israeli reader will not know, the
+   American allusions to localize and how, the hard terms, and the names with their Hebrew spelling
+   (`lookup.py name`). It goes into `post.json` as `brief` (an object with those five keys).
+3. **Pass 1: translate section by section.** For each section, read `memory.md` first, translate the section
+   completely, paragraph for paragraph, following this guide, then add to `memory.md` every name and term
+   settled in it. A name or term in memory is never rendered differently later. For any term or idiom the
+   glossary and US-POLITICS.md do not settle, run `python3 pipeline/azure_corpus.py search "<english>"` and follow
+   תכלת where it is consistent; for a term newer than 2012, check `python3 pipeline/hashiloach_corpus.py count
+   <Hebrew candidates>` and use השילוח's form.
+3b. **Author bio and photo.** If the original ends with an author bio and/or photo (extract.py returns `author_bio` and `author_photo`, and check the page itself if those look wrong), reproduce them: translate the bio into Hebrew (`author_bio_he`) and keep the photo URL (`author_photo`). The publisher adds them as a "על המחבר" section after the essay, before the credit line. Skip anything that is a newsletter or subscription prompt rather than a bio.
+4. **Title, subtitle and tweet quotes (draft).** Read `pipeline/azure/TITLES.md`. Write at least 3 candidate titles
+   (`title_options_he`): one close to the original and at least one using a תכלת move (a Hebrew pun in place of
+   an English one, a Hebrew or Jewish echo, the real subject in place of an American allusion, antithesis,
+   topic: angle). Choose the one that is accurate, idiomatic, under 80 characters and makes an Israeli reader
+   want to read; no clickbait. The subtitle completes the title, never repeats it. Choose the 3 tweet quotes
+   (below). Write the draft `posts/<slug>/post.json`.
+5. **Independent review: passes 2 and 3, and the back-translation**, exactly as `pipeline/REVIEWER.md` says:
+   a blind back-translator (Hebrew title, subtitle and quotes only), then a reviewer that checks fidelity
+   against the English paragraph by paragraph, the Hebrew as a תכלת editor would read it, the title, and the
+   back-translation. The reviewer's checklist:
+   - **Fidelity:** nothing missing or added, numbers, names, dates and quotations exact, tone and irony kept.
+   - **Glossary consistency:** every glossary and US-POLITICS.md term in its house form, every name as in memory.
+   - **Grammar:** gender and number agreement (verbs, adjectives, numerals), construct state (סמיכות), the definite article in construct, prepositions governed by the verb, the ־ש/אשר clauses, tense consistency.
+   - **The תכלת voice:** verb-first sentences where natural, formal negation (אינו, אין הוא), varied connectives (ואולם, ברם, אפוא, שהרי), sentences of moderate length.
+   - **Translationese:** English word order, chains of nominal constructions, "עושה שימוש", "הוא זה ש", calques of English idioms, too many possessive "של".
+   - **Spelling and punctuation:** full spelling (כתיב מלא), ״ ״ quotation marks (never "), maqaf before numbers and Latin script, no stray Latin words except where the guide keeps them.
+   Fix the findings and record `review` and `back_translation` in `post.json`.
+6. **Quality check.** `python3 pipeline/finalize.py posts/<slug>/post.json /tmp/<slug>.src.json`. Besides the
+   format checks, it compares the Hebrew with the English (paragraph count; every number of two or more digits
+   kept, or listed in `fidelity_waivers` as `{"number": "1960", "reason": "שנות השישים"}`), requires the brief,
+   the independent review and the back-translation, and measures the תכלת voice (argument connectives, variety
+   of connectives, density of ״של״, sentence length; calibrated so 92 of the 100 תכלת essays pass). If a style
+   check fails, revise the prose itself as STYLE.md describes; never sprinkle connectives in to reach the
+   number. If it fails, fix and rerun once; if it still fails, the post is held (never published) and the run
+   raises an alert.
+7. **Update the translation log**: the reviewer's major findings, the title choice, the style measures, and any
+   term settled (move settled terms into the glossary).
 
 ## Post file
 Write `posts/<slug>/post.json` (slug = `YYYY-MM-DD-<author surname>-<title words>`, lowercase ASCII, date = the essay's date):
@@ -73,10 +94,14 @@ Write `posts/<slug>/post.json` (slug = `YYYY-MM-DD-<author surname>-<title words
   "body_he": "Markdown body in Hebrew. The article's own images as ![כיתוב בעברית](url), in place. Embeds on their own line as the bare URL. Never the author photo.",
   "author_bio_he": "Hebrew translation of the author bio, if the original has one", "author_photo": "URL or empty",
   "quotes_he": ["tweet 1", "tweet 2", "tweet 3"],
+  "brief": {"tone": "...", "audience_gap": "...", "allusions": "...", "hard_terms": "...", "names": "..."},
+  "review": {"independent": true, "findings": 0, "major": 0, "fixed": 0, "not_fixed": []},
+  "back_translation": {"title": "...", "subtitle": "...", "quotes": ["...", "...", "..."], "meaning_kept": true},
+  "fidelity_waivers": [],
   "source_paragraphs": 0, "he_paragraphs": 0
 }
 ```
-Then run `python3 pipeline/finalize.py posts/<slug>/post.json`: it runs the quality check, picks the cover (the article's first image, or a brand-kit cover when there is none), and marks the post `ready` for the publisher on dud.
+Then run `python3 pipeline/finalize.py posts/<slug>/post.json /tmp/<slug>.src.json`: it runs the quality check, picks the cover (the article's first image, or a brand-kit cover when there is none), and marks the post `ready` for the publisher on dud.
 
 ## Tweet quotes (`quotes_he`)
 Exactly 3, each a complete tweet without the link (the link is added automatically on its own line, and X shows the post's thumbnail):
