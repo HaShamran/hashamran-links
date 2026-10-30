@@ -15,8 +15,8 @@ translated by השילוח (Levin, Scruton, Haivry and Hazony, Continetti). Sear
 term was rendered in Hebrew, next to the English. It never sets voice or style, Mida abridges and errs, so verify
 what you take.
 **Fourth guide, for legal, policy and security terms only:** Israeli think tanks that publish in both English and
-Hebrew: Kohelet (72 pairs; law, courts, economy), Misgav (210; Iran, Gaza, US-Israel) and JISS (509; strategy and
-security), searched together with `pipeline/policy_corpus.py search "<English term>"`. Many were written in Hebrew
+Hebrew: Kohelet (72 pairs; law, courts, economy), Misgav (210; Iran, Gaza, US-Israel), JISS (509; strategy and
+security) and INSS (1,201; security research and the region), searched together with `pipeline/policy_corpus.py search "<English term>"`. Many were written in Hebrew
 first, so they show which Hebrew term goes with which English one, not how to translate; never a guide for voice.
 - Elevated but clear. Rich vocabulary and well-built sentences, never archaic, never bureaucratic, never slangy.
 - Natural Hebrew syntax. Rebuild long English sentences into Hebrew ones rather than mirroring English word order. Prefer verbs over strings of nominal constructions (avoid "ביצוע של הבדיקה של").

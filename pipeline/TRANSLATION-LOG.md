@@ -123,3 +123,9 @@ qc.py and by fresh reviewer and back-translator subagents (REVIEWER.md). 11 majo
 - The new pairs include many shorter pieces (reviews, columns, 1,000–3,000 words). With them, the rule "at least
   one different connective per 150 words, up to 10" failed real תכלת prose 17% of the time. It is now one per
   200 words, up to 8 (the 5th percentile of the 224); 200 of 224 תכלת essays pass the whole style check.
+
+### 2026-10-30 · INSS added to the fourth guide (1,201 pairs)
+- INSS has no public API for publications, but its English and Hebrew sitemaps share 1,474 slugs. Both versions
+  of each were downloaded and checked (length, paragraph structure, shared numbers and their order); 1,201 kept.
+  Mostly security research, written in Hebrew first. Example: "Campaign between Wars" = המערכה בין המלחמות (מב״ם),
+  the same as Misgav and JISS.

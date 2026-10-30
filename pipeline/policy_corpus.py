@@ -5,7 +5,7 @@ Banks (index files in this folder; private texts under /mnt/project-files/hasham
 - kohelet  Kohelet Policy Forum: Israeli law, the courts, international law, economy, education
 - misgav   Misgav Institute for National Security and Zionist Strategy: Iran, Hezbollah, Gaza, US-Israel relations
 - jiss     Jerusalem Institute for Strategy and Security: strategy, security, the region
-- inss     Institute for National Security Studies: security research (added when its index exists)
+- inss     Institute for National Security Studies: security research, the region, society and security
 
 Every pair was checked before it was added (see each bank's README in the project folder). Many were written in
 Hebrew first, so read a pair as "this Hebrew term goes with this English one", not as a model translation. None of
