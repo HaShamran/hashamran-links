@@ -1,0 +1,110 @@
+[
+ {
+  "en": "nationalism / national conservatism",
+  "he": "לאומיות / שמרנות לאומית",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "conservative, conservatism",
+  "he": "שמרן, שמרנות",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "liberalism, liberal (classical)",
+  "he": "ליברליזם, ליברלי",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "progressive, progressivism",
+  "he": "פרוגרסיבי, פרוגרסיביזם",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "the West, Western civilization",
+  "he": "המערב, הציוויליזציה המערבית",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "nation-state",
+  "he": "מדינת לאום",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "sovereignty",
+  "he": "ריבונות",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "the Founders",
+  "he": "האבות המייסדים",
+  "avoid": [
+   "האבות המכוננים"
+  ],
+  "note": ""
+ },
+ {
+  "en": "the Constitution (US)",
+  "he": "החוקה האמריקנית",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "Congress, Senate, House",
+  "he": "הקונגרס, הסנאט, בית הנבחרים",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "Secretary of State",
+  "he": "מזכיר המדינה",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "woke",
+  "he": "ווֹק (first time: ״ווֹק״, התודעה הפרוגרסיבית החדשה)",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "elites",
+  "he": "האליטות",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "net zero",
+  "he": "אפס פליטות נטו",
+  "avoid": [
+   "אפס נטו"
+  ],
+  "note": ""
+ },
+ {
+  "en": "identity politics",
+  "he": "פוליטיקת זהויות",
+  "avoid": [
+   "פוליטיקת זהות"
+  ],
+  "note": ""
+ },
+ {
+  "en": "the Right, the Left",
+  "he": "הימין, השמאל",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "GOP, Republicans, Democrats",
+  "he": "המפלגה הרפובליקנית, הרפובליקנים, הדמוקרטים",
+  "avoid": [],
+  "note": ""
+ }
+]
