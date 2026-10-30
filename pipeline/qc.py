@@ -111,6 +111,64 @@ def process_problems(post):
     return out
 
 
+UNITS = {"אחד": 1, "אחת": 1, "שניים": 2, "שתיים": 2, "שני": 2, "שתי": 2, "שלושה": 3, "שלוש": 3, "ארבעה": 4,
+         "ארבע": 4, "חמישה": 5, "חמש": 5, "שישה": 6, "שש": 6, "שבעה": 7, "שבע": 7, "שמונה": 8, "תשעה": 9, "תשע": 9}
+TENS = {"עשרים": 20, "שלושים": 30, "ארבעים": 40, "חמישים": 50, "שישים": 60, "שבעים": 70, "שמונים": 80, "תשעים": 90}
+BIG = {"מאה": 100, "מאתיים": 200, "אלף": 1000, "אלפיים": 2000}
+
+
+def _word_value(w):
+    """(word, kind) for a Hebrew number word, with or without a one-letter prefix (ו, ה, ב...)."""
+    for cand in (w, w[1:]) if len(w) > 2 and w[0] in "ובהלמשכ" else (w,):
+        for kind, table in (("unit", UNITS), ("tens", TENS), ("big", BIG)):
+            if cand in table:
+                return table[cand], kind
+        if cand in ("עשר", "עשרה"):
+            return 10, "teen"
+        if cand in ("מאות", "אלפים"):
+            return (100 if cand == "מאות" else 1000), "mult"
+    return None, None
+
+
+def _spoken(words):
+    """Every partial value of each run of number words: עשרים וחמש מאות → 20, 25, 2500."""
+    out, total = set(), None
+    for w in words:
+        n, kind = _word_value(w)
+        if kind is None:
+            total = None
+            continue
+        if kind == "mult" or (kind == "big" and n == 1000 and total and total < 1000):
+            total = total * n if total else None
+        else:
+            total = (total or 0) + n
+        if total and total >= 10:
+            out.add(str(total))
+    return out
+
+
+def hebrew_numbers(text):
+    """Numbers written in Hebrew words (שלושה עשר, עשרים וחמש, שלוש מאות, שנות השלושים), as digit strings.
+
+    Loose on purpose: every partial value of a number phrase counts, so the check flags only numbers that are
+    truly absent.
+    """
+    out = set()
+    for m in re.finditer(r"שנות ה([א-ת]+)((?:\s+וה[א-ת]+)*)", text):  # שנות השלושים והארבעים = the 1930s and 1940s
+        for decade in [m.group(1)] + re.findall(r"וה([א-ת]+)", m.group(2)):
+            if decade in TENS:
+                out |= {str(c + TENS[decade]) for c in (1800, 1900, 2000)}
+            elif decade == "אלפיים":
+                out.add("2000")
+            elif decade == "עשרה":
+                out |= {"1910", "2010"}
+    for m in re.finditer(r"מאה ה([א-ת]+(?:\s+ו?[א-ת]+)?)", text):  # המאה התשע עשרה = the 19th century
+        out |= _spoken(m.group(1).split())
+    for clause in re.split(r"[^\sא-ת]+", text):  # punctuation ends a number phrase
+        out |= _spoken(clause.split())
+    return out
+
+
 def fidelity_problems(post, source_markdown):
     """Mechanical comparison with the English: nothing dropped in bulk, every number kept."""
     out = []
@@ -120,8 +178,9 @@ def fidelity_problems(post, source_markdown):
         out.append(f"fidelity: {len(he)} Hebrew paragraphs for {src_paras} in the English: something may be missing")
     he_text = "\n".join([post.get("body_he", ""), post.get("subtitle_he", ""), post.get("title_he", "")])
     he_nums = set(prepare.numbers(he_text)) | {n.replace(",", "") for n in re.findall(r"\d[\d,.]*", he_text)}
+    he_nums |= hebrew_numbers(he_text)
     waived = {str(w.get("number")) for w in post.get("fidelity_waivers") or [] if w.get("reason")}
-    missing = [n for n in prepare.numbers(source_markdown) if n not in he_nums and n not in waived]
+    missing = [n for n in prepare.numbers(prepare.essay(source_markdown)) if n not in he_nums and n not in waived]
     if missing:
         out.append(f"fidelity: numbers in the English missing from the Hebrew: {', '.join(missing[:12])} "
                    "(restore them, or add each to fidelity_waivers with the reason, e.g. 1960s → שנות השישים)")

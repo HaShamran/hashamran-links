@@ -15,6 +15,7 @@ rendered a word or phrase.
 - Hebrew punctuation: Hebrew quotation marks ״ ״ for quotes, a hyphen-less prefix before numbers and Latin script (ב־1983 with maqaf, or ב-1983).
 - Biblical, Talmudic and classical Jewish sources: quote the original Hebrew text, not a back-translation. Get it with `python3 pipeline/lookup.py source "Deuteronomy 17:13"` (Sefaria); give the reference in Hebrew form if the author gives one.
 - Well-known works and people: check `python3 pipeline/lookup.py name "John Locke" "Democracy in America"` (Hebrew Wikipedia) and use the established Hebrew title or spelling (e.g. ״הרפובליקה״ לאפלטון, ג׳ון לוק, אדמונד ברק). Lesser-known English titles: translate, then give the original in parentheses the first time.
+- Bylines and names: never write an English initial as a Hebrew abbreviation (R. Albert Mohler is ״אלברט מוהלר״, never ״ר׳ אלברט מוהלר״, which reads as a rabbi). Facts in the byline (place, date, venue) come from the source only.
 - Titles and subtitles: translate idiomatically, with a headline's punch. Do not translate word for word.
 - Keep the author's argument, tone and irony intact. Do not soften, sharpen, summarise or add commentary.
 - American-specific terms: use the Hebrew form and the standard first-use explanation in `pipeline/US-POLITICS.md`, so the same term is explained the same way in every post. One short phrase in the text, the first time only, never a translator's essay.
