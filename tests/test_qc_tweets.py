@@ -191,6 +191,8 @@ def test_kohelet_index():
 
 def test_policy_corpus_banks(capsys):
     import policy_corpus
-    assert policy_corpus.use("misgav") and policy_corpus.use("jiss")
+    assert policy_corpus.use("misgav") and policy_corpus.use("jiss") and policy_corpus.use("inss")
+    import mida_corpus
+    assert len(list(mida_corpus.rows())) == 1201
     policy_corpus.main(["--bank", "jiss", "count", "deterrence"])
     assert capsys.readouterr().out.startswith("deterrence: ")
