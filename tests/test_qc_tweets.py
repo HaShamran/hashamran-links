@@ -50,7 +50,7 @@ def test_azure_corpus_cleaner_and_alignment():
     assert azure_corpus.clean(page) == "First *para* of the essay, long enough to keep.\n\nSecond para."
     src, dst = ["a" * 10] * 10, ["b" * 10] * 5
     assert azure_corpus.aligned(src, dst, 9)[-1] == dst[-1]
-    assert len(azure_corpus.rows()) == 100
+    assert len(azure_corpus.rows()) == 224
 
 
 def test_style_measures_against_tchelet():

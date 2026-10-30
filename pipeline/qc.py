@@ -23,7 +23,7 @@ SLUG_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-[a-z0-9-]+$")
 URL = re.compile(r"\]\([^)]*\)|https?://\S+")
 TITLE_MAX = 80  # characters; a Hebrew headline, not a sentence
 
-# The תכלת voice, measured (pipeline/azure/STYLE.md). Limits sit near the 5th/95th percentile of the 100 תכלת
+# The תכלת voice, measured (pipeline/azure/STYLE.md). Limits sit near the 5th/95th percentile of the 224 תכלת
 # essays, so real תכלת prose passes and flat, translated-sounding Hebrew does not.
 CONNECTIVES = ("אלא", "אך", "אף", "אולם", "ואולם", "אפוא", "ברם", "שהרי", "הרי", "כלומר", "שכן", "לפיכך", "על כן",
                "יתר על כן", "עם זאת", "ואמנם", "אמנם", "דהיינו", "לכן", "ממילא", "זאת ועוד", "לא זו בלבד",
@@ -57,7 +57,7 @@ def style_problems(m):
     if m["connectives_per_1000"] < CONNECTIVES_MIN:
         out.append(f"style: {m['connectives_per_1000']} argument connectives per 1,000 words, תכלת has at least "
                    f"{CONNECTIVES_MIN} (rebuild the joints of the argument: ואולם, ברם, אפוא, שהרי, יתר על כן...)")
-    need = min(10, m["words"] // 150)
+    need = min(8, m["words"] // 200)
     if m["distinct_connectives"] < need:
         out.append(f"style: only {m['distinct_connectives']} different connectives; use at least {need}")
     if m["shel_per_100"] > SHEL_MAX:

@@ -114,3 +114,12 @@ qc.py and by fresh reviewer and back-translator subagents (REVIEWER.md). 11 majo
   are linked as translations by the site; Misgav pairs were matched by date, author and numbers, and their
   openings read side by side (37 of 247 rejected). Example of what it settles: "campaign between the wars" =
   המערכה בין המלחמות (מב״ם).
+
+### 2026-10-30 · תכלת bank grown from 100 to 224 pairs
+- Crawled every article page on both sites (467 Azure, 514 תכלת with text) and matched them by issue, length,
+  shared numbers, shared names and known author pairs. The matcher found all 100 existing pairs with no
+  conflicts; 124 new pairs were kept after reading both openings side by side (wrong matches and letters
+  printed under one heading in one magazine only were dropped). About 200 more תכלת essays exist only as PDFs.
+- The new pairs include many shorter pieces (reviews, columns, 1,000–3,000 words). With them, the rule "at least
+  one different connective per 150 words, up to 10" failed real תכלת prose 17% of the time. It is now one per
+  200 words, up to 8 (the 5th percentile of the 224); 200 of 224 תכלת essays pass the whole style check.

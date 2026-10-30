@@ -1,6 +1,6 @@
 # השמרן: how תכלת titled its essays (pass 3)
 
-The 100 parallel essays (`index.csv`) show the same essay titled twice, once by Azure in English and once by
+The 224 parallel essays (`index.csv`) show the same essay titled twice, once by Azure in English and once by
 תכלת in Hebrew. About 40 of the Hebrew titles are close to the English. The other 60 were rethought for the
 Hebrew reader. These are the moves they used. In pass 3, write at least one candidate with a close title and
 at least one with one of these moves, then choose.

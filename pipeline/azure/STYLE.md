@@ -1,7 +1,7 @@
-# השמרן: the תכלת voice (from 100 Azure / תכלת parallel essays)
+# השמרן: the תכלת voice (from 224 Azure / תכלת parallel essays)
 
 Our model is תכלת (Shalem Press, 1996–2012). Azure, its English sister journal, published many of the same
-essays, so we have 100 essays in both languages (`index.csv`, about 940,000 English and 750,000 Hebrew words).
+essays, so we have 224 essays in both languages (`index.csv`, about 1.4 million English and 1.1 million Hebrew words).
 This page is what those pairs teach. Read it before every translation, together with `pipeline/TRANSLATION.md`.
 
 ## Using the corpus during a run

@@ -1,4 +1,4 @@
-"""Parallel reference corpus: 100 essays that appeared in both Azure (English) and תכלת (Hebrew), Shalem Press.
+"""Parallel reference corpus: 224 essays that appeared in both Azure (English) and תכלת (Hebrew), Shalem Press.
 
 The texts are not stored in this public repo (they are Shalem Press's copyright). Their permanent private copy is
 the project folder /mnt/project-files/hashamran/translation-guide/pairs/, which the daily run reads directly.
