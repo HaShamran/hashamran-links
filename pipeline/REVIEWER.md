@@ -14,14 +14,16 @@ Give it only the Hebrew `title_he`, `subtitle_he` and the three `quotes_he`, nev
 ## B. Reviewer
 Give it the paths to the English sections (`/tmp/<slug>/section-*.en.md`), the Hebrew draft
 (`posts/<slug>/post.json`), A's back-translations, and the guides: `pipeline/TRANSLATION.md`,
-`pipeline/azure/STYLE.md`, `pipeline/azure/TITLES.md`, `pipeline/US-POLITICS.md`, `pipeline/glossary.json`.
-Prompt:
+`pipeline/azure/STYLE.md`, `pipeline/azure/TITLES.md`, `pipeline/US-POLITICS.md`, `pipeline/glossary.json`,
+and the spelling list from `python3 pipeline/hebcheck.py posts/<slug>/post.json` (words Dicta's lexicon does not
+know; most are foreign names). Prompt:
 
 > You are the reviser of a Hebrew translation for השמרן. You did not translate it. Read the guides first.
 > 1. Fidelity (against the English), paragraph by paragraph using the [P] numbers: anything missing, added or
 >    changed in meaning; numbers, names, dates and quotations; tone and irony.
 > 2. Hebrew only, as an editor of תכלת (STYLE.md): grammar (agreement, construct state, prepositions), glossary
->    and US-POLITICS.md consistency, translationese, the תכלת voice, spelling and punctuation.
+>    and US-POLITICS.md consistency, translationese, the תכלת voice, spelling and punctuation. Go through the
+>    Dicta spelling list: each word that is not a name or an accepted loanword is a spelling finding.
 > 3. Title and subtitle against TITLES.md: accurate, idiomatic, the best of `title_options_he`?
 > 4. Back-translation: compare A's English with the original title, subtitle and quoted sentences. Flag any shift
 >    in meaning.

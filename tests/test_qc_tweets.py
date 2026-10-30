@@ -124,3 +124,13 @@ def test_essay_trim_and_hebrew_number_words():
                               "במאה העשרים, מאה ועשרים אלף")
     assert {"13", "25", "300", "1930", "1940", "20", "120000"} <= words
     assert "77" not in words
+
+
+def test_hebcheck_unknown_words():
+    import hebcheck
+    reply = [{"word": "התלמידיים", "sep": False, "options": [["הַ|תַּלְמִידִיִּים", [["1", "", False]]]]},
+             {"word": " ", "sep": True, "options": []},
+             {"word": "הלכו", "sep": False, "options": [["הָלְכוּ", [["2", "הלך", False]]]]}]
+    assert hebcheck.unknown(reply) == ["התלמידיים"]
+    assert "http" not in hebcheck.clean("ראו ![תמונה](https://x/y.png) וגם https://a.b Trump")
+    assert "Trump" not in hebcheck.clean("Trump אמר")
