@@ -4,8 +4,10 @@ The daily run follows this guide for every essay. Translator = Claude, inside th
 
 ## Register: תכלת (Azure)
 Write the way the Hebrew edition of תכלת (Shalem Center, 1996–2012) read: serious, literate Israeli Hebrew for an educated general reader.
-**`pipeline/azure/STYLE.md` is the detailed model**, drawn from 224 essays published in both Azure and תכלת: syntax,
-connectives, idiom, typography and a term bank. `pipeline/azure_corpus.py` searches those pairs to show how תכלת
+**`pipeline/azure/STYLE.md` is the detailed model**, an in-depth writing guide measured on 224 essays published in
+both Azure and תכלת: reading for the argument, sentences, verbs, nouns and construct state, pronouns, negation,
+connectives, word choice and calques, idiom, tone, quotations, names, numbers, punctuation, spelling, where our
+drafts drift from תכלת, a self-check, and a term bank. `pipeline/azure_corpus.py` searches those pairs to show how תכלת
 rendered a word or phrase.
 **Secondary guide, for terms תכלת never needed** (woke, populism, DEI, the deep state): 100 recent essays from
 השילוח, searched with `pipeline/hashiloach_corpus.py`. Where the two differ on voice or style, תכלת wins.
@@ -106,7 +108,9 @@ translator; a model checking its own fresh work misses most of its errors). Ever
    the independent review and the back-translation, and measures the תכלת voice (argument connectives, variety
    of connectives, density of ״של״, sentence length; calibrated so 200 of the 224 תכלת essays pass). If a style
    check fails, revise the prose itself as STYLE.md describes; never sprinkle connectives in to reach the
-   number. If it fails, fix and rerun once; if it still fails, the post is held (never published) and the run
+   number. A calque (STYLE.md section 9) fails the check. Warnings (drift from תכלת in STYLE.md section 18,
+   jargon loanwords, a long title) do not: reread the passages they point to and fix what is really wrong, and
+   record in `review.not_fixed` any warning you leave, with the reason. If it fails, fix and rerun once; if it still fails, the post is held (never published) and the run
    raises an alert.
 7. **Update the translation log**: the reviewer's major findings, the title choice, the style measures, and any
    term settled (move settled terms into the glossary).

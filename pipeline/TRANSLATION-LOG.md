@@ -155,3 +155,17 @@ Full report: reports/retranslation-evaluation-2026-10-30.md in the project folde
 - Hadar settled both open questions (2026-10-30): when Hebrew Wikipedia and the press spell a name differently,
   Hebrew Wikipedia wins; when the essay's page has no author bio, the post has none, and no one goes looking for
   one elsewhere. → TRANSLATION.md
+
+## 2026-10-30 · In-depth writing guide (STYLE.md rewritten)
+Hadar asked for an in-depth style guide covering every aspect of writing, drawn from the 224 תכלת pairs and from
+what translation guides for AI should contain. STYLE.md is now a 20-section guide measured on the 224 Hebrew
+essays (54,070 sentences). New findings that correct the old guide:
+- תכלת's sentences average 22 words (median 19), not 16, and vary widely: about 11% are 8 words or fewer and 7.5%
+  are 40 or more. Hebrew sentences are a quarter shorter than the English ones of the same essays (21 against 28).
+- Our eight retranslations drift from תכלת in six measurable ways: ״ואולם״ five times too often and no ״אבל״;
+  ״כי״ almost never; present-tense ״אינו/אין״ too rare; ״ביותר״ and ״עצמו״ twice as often; sentences too even.
+  qc now warns on each.
+- תכלת writes ״ספרו״, never ״הספר שלו״; ״בידי״ for a person agent more than ״על ידי״; ״אף ש״ over ״למרות ש״;
+  ״כדי ל״ over ״על מנת ל״; ״אמריקני״ (1,431) over ״אמריקאי״ (5) → glossary; ״תכנית״ and ״מרס״.
+- Calques that qc now fails: בסופו של יום, לשחק תפקיד, לעשות שכל / עושה שכל, לעשות הבדל, על בסיס יומי.
+  Jargon loanwords that it warns on: נרטיב, אג׳נדה, קונספט, דיסקורס, פרובלמטי, פרקטי.

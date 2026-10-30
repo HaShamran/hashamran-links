@@ -62,6 +62,19 @@ def test_style_measures_against_tchelet():
                      "לפיכך נמשיך, שכן אין דרך אחרת. על כן נדבר. אמנם זה קשה, אלא שאין ברירה."] * 12)
     assert qc.style_problems(qc.style(rich)) == []
     assert qc.style_problems(qc.style("קצר מאוד.")) == []  # too short to measure
+    drift = " ".join(["ואולם המדינה לא מסוגלת לעמוד בזה לבדה היום. ואולם הציבור יודע שהמצב קשה מאוד."] * 60)
+    warned = qc.style_warnings(qc.style(drift))
+    assert any("ואולם" in w for w in warned) and any("כי" in w for w in warned) and any("even" in w for w in warned)
+    assert qc.style_warnings(qc.style("קצר מאוד.")) == []
+
+
+def test_calques_fail_and_jargon_warns():
+    calqued = {**GOOD, "body_he": GOOD["body_he"] + "\n\nבסופו של יום, הוא שיחק תפקיד; הם לשחק תפקיד רצו."}
+    report = qc.check(calqued)
+    assert any("בסופו של יום" in p for p in report["problems"]) and any("לשחק תפקיד" in p for p in report["problems"])
+    assert not qc.calque_problems("בסופו של דבר הוא מילא תפקיד חשוב.")
+    assert qc.jargon_warnings("הנרטיב הזה") and not qc.jargon_warnings("הפרקטיקה הזאת")
+    assert any("אמריקאי" in p for p in qc.check({**GOOD, "body_he": GOOD["body_he"] + "\n\nהעם האמריקאי."})["problems"])
 
 
 def test_lookup_text_helpers():

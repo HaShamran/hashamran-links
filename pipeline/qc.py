@@ -34,6 +34,17 @@ SHEL_MAX = 4.2           # "של" per 100 words (תכלת median 3.1); more read
 SENTENCE_MAX = 30        # average words per sentence (תכלת 20)
 STYLE_MIN_WORDS = 600    # shorter pieces are too small to measure
 
+# English idioms translated word for word (STYLE.md section 9); none of them occurs in תכלת as our prose would use it.
+CALQUES = {"בסופו של יום": "בסופו של דבר", "לשחק תפקיד": "למלא תפקיד", "לשחק את התפקיד": "למלא את התפקיד",
+           "לעשות שכל": "הגיוני, מתקבל על הדעת", "עושה שכל": "הגיוני, מתקבל על הדעת", "לעשות הבדל": "לשנות, להשפיע",
+           "על בסיס יומי": "מדי יום"}
+JARGON = {"נרטיב": "סיפור, תפיסה", "אג'נדה": "סדר יום", "אג׳נדה": "סדר יום", "קונספט": "מושג, רעיון",
+          "דיסקורס": "שיח", "פרובלמטי": "בעייתי", "פרקטי": "מעשי"}
+# Where our drafts drift from תכלת (STYLE.md section 18): warnings, at the 5th/95th percentile of the 224 essays.
+DRIFT = {"veulam_max": 1.5, "neg_min": 2.5, "ki_min": 1.4, "beyoter_max": 3.0, "atzmo_max": 4.2, "spread_min": 8.9}
+NEGATION = re.compile(r"(?<![א-ת])[וש]?(אינו|אינה|אינם|אינן|איני|אינני|איננו|אין)(?![א-ת])")
+ATZMO = re.compile(r"(?<![א-ת])[מבול]?עצמ(ו|ה|ם|ן)(?![א-ת])")
+
 
 def word(w):
     return re.compile(r"(?<![א-ת])" + w + r"(?![א-ת])")
@@ -44,11 +55,20 @@ def style(text):
     words = len(re.findall(r"[א-ת]+", text)) or 1
     hits = {c: len(word(c).findall(text)) for c in CONNECTIVES}
     sentences = [x for x in re.split(r"[.?!]\s", text) if len(x.split()) > 2] or [text]
+    lengths = [len(x.split()) for x in sentences]
+    mean = sum(lengths) / len(lengths)
+    per1000 = lambda n: round(n * 1000 / words, 2)
     return {"words": words,
             "connectives_per_1000": round(sum(hits.values()) * 1000 / words, 1),
             "distinct_connectives": sum(1 for v in hits.values() if v),
             "shel_per_100": round(len(word("של").findall(text)) * 100 / words, 2),
-            "sentence_words": round(sum(len(x.split()) for x in sentences) / len(sentences), 1)}
+            "sentence_words": round(mean, 1),
+            "sentence_spread": round((sum((n - mean) ** 2 for n in lengths) / len(lengths)) ** 0.5, 1),
+            "veulam_per_1000": per1000(len(word("ואולם").findall(text))),
+            "negation_per_1000": per1000(len(NEGATION.findall(text))),
+            "ki_per_1000": per1000(len(word("[וש]?כי").findall(text))),
+            "beyoter_per_1000": per1000(len(word("ביותר").findall(text))),
+            "atzmo_per_1000": per1000(len(ATZMO.findall(text)))}
 
 
 def style_problems(m):
@@ -67,6 +87,42 @@ def style_problems(m):
     if m["sentence_words"] > SENTENCE_MAX:
         out.append(f"style: sentences average {m['sentence_words']} words; split them (תכלת averages 20)")
     return out
+
+
+def style_warnings(m):
+    """Drift from תכלת that is worth a second look but can be right for a given essay (STYLE.md section 18)."""
+    if m["words"] < STYLE_MIN_WORDS:
+        return []
+    d, out = DRIFT, []
+    if m["veulam_per_1000"] > d["veulam_max"]:
+        out.append(f"style: ״ואולם״ {m['veulam_per_1000']} per 1,000 words (תכלת median 0.37); vary the contrast: "
+                   "אבל, אך, אולם, ברם, עם זאת, ואילו")
+    if m["negation_per_1000"] < d["neg_min"]:
+        out.append(f"style: ״אין/אינו״ only {m['negation_per_1000']} per 1,000 words (תכלת median 5.9); "
+                   "present-tense negation is ״אינו״, not ״לא״ (STYLE.md section 7)")
+    if m["ki_per_1000"] < d["ki_min"]:
+        out.append(f"style: ״כי״ only {m['ki_per_1000']} per 1,000 words (תכלת median 3.8); alternate ״כי״ with ״ש״ "
+                   "after verbs of saying, above all where ״ש״ would stack")
+    if m["beyoter_per_1000"] > d["beyoter_max"]:
+        out.append(f"style: ״ביותר״ {m['beyoter_per_1000']} per 1,000 words (תכלת median 1.3); not every \"most\" is "
+                   "a superlative")
+    if m["atzmo_per_1000"] > d["atzmo_max"]:
+        out.append(f"style: ״עצמו״ forms {m['atzmo_per_1000']} per 1,000 words (תכלת median 1.9); drop emphatic "
+                   "\"himself\"")
+    if m["sentence_spread"] < d["spread_min"]:
+        out.append(f"style: sentence lengths too even (deviation {m['sentence_spread']} words, תכלת median 11.9); let "
+                   "some sentences run and some stop short")
+    return out
+
+
+def calque_problems(text):
+    return [f"calque: ״{c}״ reads as translated English; write ״{fix}״ (STYLE.md section 9)"
+            for c, fix in CALQUES.items() if word(c).search(text)]
+
+
+def jargon_warnings(text):
+    return [f"loanword: ״{j}״; תכלת writes ״{fix}״ unless the author uses it as a term (STYLE.md section 9)"
+            for j, fix in JARGON.items() if re.search(r"(?<![א-ת])[הבלמוש]?" + j + r"(ים|ות|ית|יים|יות)?(?![א-ת])", text)]
 
 
 def load_glossary():
@@ -215,6 +271,7 @@ def check(post, source_markdown=None):
     if '"' in plain:
         problems.append('English quotation marks (") in the Hebrew text; use ״ ״')
     problems += glossary_problems(plain, load_glossary())
+    problems += calque_problems(plain)
     # A paragraph that is mostly Latin script was probably left untranslated.
     for i, p in enumerate(paras, 1):
         heb = len(HEBREW.findall(p))
@@ -251,6 +308,7 @@ def check(post, source_markdown=None):
     warnings = []
     if len(title.split()) > TITLE_WORDS_WARN:
         warnings.append(f"title has {len(title.split())} words; תכלת titles are mostly 2-6 (TITLES.md)")
+    warnings += style_warnings(measures) + jargon_warnings(plain)
     return {"pass": not problems, "problems": problems, "warnings": warnings, "he_paragraphs": len(paras),
             "words": words, "style": measures}
 
