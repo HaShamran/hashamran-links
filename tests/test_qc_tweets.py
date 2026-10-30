@@ -51,3 +51,14 @@ def test_azure_corpus_cleaner_and_alignment():
     src, dst = ["a" * 10] * 10, ["b" * 10] * 5
     assert azure_corpus.aligned(src, dst, 9)[-1] == dst[-1]
     assert len(azure_corpus.rows()) == 100
+
+
+def test_style_measures_against_tchelet():
+    flat = " ".join(["המדינה של העם הזה היא המדינה של כולם והיא חשובה."] * 80)
+    probs = qc.style_problems(qc.style(flat))
+    assert any("connectives" in p for p in probs) and any("של" in p for p in probs)
+    rich = " ".join(["ואולם הדבר אינו פשוט. אך יש בו אמת. ברם עלינו לזכור זאת, שהרי הוא חשוב. "
+                     "זוהי אפוא שאלה קשה. יתר על כן היא דחופה. עם זאת אין לייאש. כלומר יש תקווה. "
+                     "לפיכך נמשיך, שכן אין דרך אחרת. על כן נדבר. אמנם זה קשה, אלא שאין ברירה."] * 12)
+    assert qc.style_problems(qc.style(rich)) == []
+    assert qc.style_problems(qc.style("קצר מאוד.")) == []  # too short to measure

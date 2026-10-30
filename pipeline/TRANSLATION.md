@@ -53,6 +53,10 @@ variants under `avoid`) and mark the log entry `→ glossary`. A recurring style
    - Then check the subtitle (`subtitle_he`) against the chosen title: it should complete it, not repeat it.
    - Log the candidates and why the winner won in the translation log.
 5. **Write the post file** (`posts/<slug>/post.json`, see below) with 3 tweet quotes, and run `python3 pipeline/finalize.py posts/<slug>/post.json`. If it fails, fix and rerun once; if it still fails, the post is held (never published) and the run raises an alert.
+   `qc.py` also measures the תכלת voice (argument connectives, variety of connectives, density of ״של״, sentence
+   length; limits in `qc.py`, calibrated so 92 of the 100 תכלת essays pass). If a style check fails, revise the
+   prose itself: rebuild the joints of the argument and the possessives as STYLE.md describes. Never sprinkle
+   connectives in to reach the number. The measures are saved in `post.json` as `style`; note them in the log.
 6. **Update the translation log** (and the glossary, when a term is settled).
 
 ## Post file

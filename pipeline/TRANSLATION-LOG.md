@@ -39,3 +39,10 @@ Settled terms move to `pipeline/glossary.json`; mark the entry `→ glossary` wh
 - Added `pipeline/azure/` (style guide STYLE.md, index of 100 Azure/תכלת parallel essays) and
   `pipeline/azure_corpus.py` (fetch and search the pairs at run time). 33 corpus terms → glossary.
 - Open question: תכלת's web text uses plain " quotes; we keep ״ ״ (same convention, proper glyph).
+
+### 2026-10-30 · style measured against תכלת
+- Our first translations vs תכלת, per 10,000 words: אך 1 vs 15, אולם 1 vs 8, אפוא 1 vs 6, ברם/הרי/ואמנם/על כן ~0 vs
+  2–3; ״של״ 17% more. Lesson: our Hebrew leaned on ואולם alone and on ״של״. qc.py now checks this.
+- Caught in murray-france: ״ואיזה אזהרות היו״ → ״ואילו אזהרות היו!״ (איזה is singular; plural takes אילו).
+- Hard call, same essay: "pour encourager les autres" can take a Hebrew echo, ״כדי שאחרים יראו וייראו״ (Deut. 17:13),
+  instead of staying in French.

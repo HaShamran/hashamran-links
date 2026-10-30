@@ -68,6 +68,7 @@ def finalize(path, render=True):
     path = pathlib.Path(path)
     post = load_json(path)
     report = qc.check(post)
+    post["style"] = report["style"]
     if not report["pass"]:
         post["status"] = "draft_failed_qc"
         post["qc_problems"] = report["problems"]
