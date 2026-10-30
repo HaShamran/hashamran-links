@@ -187,3 +187,10 @@ def test_kohelet_index():
     assert len(rows) == 72 and {"original", "he_url", "en_url"} <= set(rows[0])
     assert {r["original"] for r in rows} <= {"he", "en", ""}
     assert kohelet_corpus.mida_corpus.INDEX.name == "index.csv"
+
+
+def test_policy_corpus_banks(capsys):
+    import policy_corpus
+    assert policy_corpus.use("misgav") and policy_corpus.use("jiss")
+    policy_corpus.main(["--bank", "jiss", "count", "deterrence"])
+    assert capsys.readouterr().out.startswith("deterrence: ")
