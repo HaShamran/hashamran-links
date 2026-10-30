@@ -134,3 +134,19 @@ def test_hebcheck_unknown_words():
     assert hebcheck.unknown(reply) == ["התלמידיים"]
     assert "http" not in hebcheck.clean("ראו ![תמונה](https://x/y.png) וגם https://a.b Trump")
     assert "Trump" not in hebcheck.clean("Trump אמר")
+
+
+def test_mida_corpus_alignment(tmp_path, monkeypatch, capsys):
+    import mida_corpus
+    d = tmp_path / "001-1"; d.mkdir()
+    (d / "en.md").write_text("# T\n\nThe deep state is real.\n\nSecond paragraph is here now.\n", encoding="utf-8")
+    (d / "he.md").write_text("# ת\n\nהמדינה העמוקה קיימת באמת היום.\n\nפסקה שנייה נמצאת כאן עכשיו.\n", encoding="utf-8")
+    idx = tmp_path / "index.csv"
+    idx.write_text("n,dir,title_he,title_en,date,publication,mida_url,en_url,abridged,words_he,words_en\n"
+                   "1,001-1,ת,T,2025-01-01,Commentary,u,v,0,6,8\n", encoding="utf-8")
+    monkeypatch.setattr(mida_corpus, "STORE", tmp_path); monkeypatch.setattr(mida_corpus, "INDEX", idx)
+    mida_corpus.search("deep state")
+    out = capsys.readouterr().out
+    assert "המדינה העמוקה" in out and "פסקה שנייה" not in out
+    mida_corpus.count(["המדינה העמוקה"])
+    assert "המדינה העמוקה: 1" in capsys.readouterr().out

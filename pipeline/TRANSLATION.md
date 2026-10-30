@@ -9,6 +9,10 @@ connectives, idiom, typography and a term bank. `pipeline/azure_corpus.py` searc
 rendered a word or phrase.
 **Secondary guide, for terms תכלת never needed** (woke, populism, DEI, the deep state): 100 recent essays from
 השילוח, searched with `pipeline/hashiloach_corpus.py`. Where the two differ on voice or style, תכלת wins.
+**Third guide, for terminology only:** 43 English essays (Commentary, National Review) paired with Mida's Hebrew
+translations, searched with `pipeline/mida_corpus.py search "<English term>"`. It shows how a current American
+term was rendered in Hebrew, next to the English. It never sets voice or style, Mida abridges and errs, so verify
+what you take.
 - Elevated but clear. Rich vocabulary and well-built sentences, never archaic, never bureaucratic, never slangy.
 - Natural Hebrew syntax. Rebuild long English sentences into Hebrew ones rather than mirroring English word order. Prefer verbs over strings of nominal constructions (avoid "ביצוע של הבדיקה של").
 - Full spelling (כתיב מלא) per the Academy's rules. Minimal niqqud, only to prevent a misreading.
@@ -53,7 +57,8 @@ translator; a model checking its own fresh work misses most of its errors). Ever
    settled in it. A name or term in memory is never rendered differently later. For any term or idiom the
    glossary and US-POLITICS.md do not settle, run `python3 pipeline/azure_corpus.py search "<english>"` and follow
    תכלת where it is consistent; for a term newer than 2012, check `python3 pipeline/hashiloach_corpus.py count
-   <Hebrew candidates>` and use השילוח's form.
+   <Hebrew candidates>` and use השילוח's form. For a current American term, also check
+   `python3 pipeline/mida_corpus.py search "<english>"` to see it rendered in a real translation.
 3b. **Author bio and photo.** If the original ends with an author bio and/or photo (extract.py returns `author_bio` and `author_photo`, and check the page itself if those look wrong), reproduce them: translate the bio into Hebrew (`author_bio_he`) and keep the photo URL (`author_photo`). The publisher adds them as a "על המחבר" section after the essay, before the credit line. Skip anything that is a newsletter or subscription prompt rather than a bio.
 4. **Title, subtitle and tweet quotes (draft).** Read `pipeline/azure/TITLES.md`. Write at least 3 candidate titles
    (`title_options_he`): one close to the original and at least one using a תכלת move (a Hebrew pun in place of
