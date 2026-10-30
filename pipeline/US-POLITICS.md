@@ -6,13 +6,18 @@ time, as a short phrase in the sentence (never a footnote or a translator's note
 explains the term, don't add ours. Drop the explanation for terms every Israeli reader knows (marked —).
 
 Sources (column S): **W** Hebrew Wikipedia (`python3 pipeline/lookup.py name`), **ה** השילוח
-(`python3 pipeline/hashiloach_corpus.py count`), **M** usual Israeli press usage. Where Wikipedia and the press
+(`python3 pipeline/hashiloach_corpus.py count`), **M** usual Israeli press usage, **E** settled in the retranslation evaluation of 2026-10-30. Where Wikipedia and the press
 differ, the press form wins (the Pentagon is ״הפנטגון״, not Wikipedia's ״מחומש״). A term that is not here:
 check Wikipedia and השילוח, decide, use it the same way throughout, and add it here through the translation log.
 
 ## Branches and institutions
 | English | Hebrew | First-use explanation | S |
 |---|---|---|---|
+| fraternity (college) | אחוות סטודנטים (האחווה) | מועדון סטודנטים סגור שחבריו מתגוררים יחד | E |
+| district attorney (DA) | התובע המחוזי | התובע הנבחר של המחוז | E |
+| state attorney general | התובע הכללי של מדינת <שם המדינה> | העומד בראש התביעה של המדינה (לא התובע הכללי הפדרלי) | E |
+| Environmental Protection Agency (EPA) | הסוכנות להגנת הסביבה (EPA) | הסוכנות הפדרלית לאיכות הסביבה | E |
+| Treasury Secretary | מזכיר האוצר | שר האוצר האמריקני | E |
 | Congress | הקונגרס | — | W |
 | the Senate / a senator | הסנאט / סנטור (הסנטור) | — | W ה |
 | the House (of Representatives) | בית הנבחרים | — | W |
@@ -49,6 +54,7 @@ check Wikipedia and השילוח, decide, use it the same way throughout, and ad
 ## Elections and procedure
 | English | Hebrew | First-use explanation | S |
 |---|---|---|---|
+| advice and consent (treaties) | אישור הסנאט | אמנה בינלאומית טעונה אישור של שני שלישים מן הסנאט | E |
 | primaries | הפריימריז | הבחירות המקדימות בתוך המפלגה | ה |
 | midterms | בחירות האמצע | הבחירות לקונגרס באמצע כהונת הנשיא | W ה |
 | swing states | מדינות מתנדנדות | — | W ה |

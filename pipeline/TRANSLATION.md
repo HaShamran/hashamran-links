@@ -27,6 +27,13 @@ first, so they show which Hebrew term goes with which English one, not how to tr
 - Bylines and names: never write an English initial as a Hebrew abbreviation (R. Albert Mohler is ״אלברט מוהלר״, never ״ר׳ אלברט מוהלר״, which reads as a rabbi). Facts in the byline (place, date, venue) come from the source only.
 - Titles and subtitles: translate idiomatically, with a headline's punch. Do not translate word for word.
 - Keep the author's argument, tone and irony intact. Do not soften, sharpen, summarise or add commentary.
+- Argument-critical terms stay fixed and must fit the argument: if the essay turns on "treaty" vs "agreement", it is אמנה vs הסכם every time.
+- Match the strength of every hedge and concession ("might well" is not אולי; concessive "may" is ״אמנם... אך״), and add a connective (אפוא, ואמנם) only where the English has that logical relation.
+- Never give a foreign institution an Israeli civic name that merely resembles it (11 November is ״יום שביתת הנשק״, not ״יום הזיכרון״; a state attorney general is ״התובע הכללי של מדינת ניו יורק״). Check words that can be heard as a different charge or group (״גזעי״ reads as racist; bare ״אורתודוקסים מזרחיים״ reads as Mizrahi Jews).
+- Book titles: use a Hebrew title only when a Hebrew edition is confirmed (a Wikipedia article title is not enough); otherwise translate literally and give the English in parentheses the first time.
+- Speech transcripts: drop stammers and false starts, keep deliberate rhetorical repetition.
+- Prefer the construct state and the Hebrew word to a ״של״ phrase or a loanword (״קמפוסי העילית״, ״אסון״ rather than ״קטסטרופה״). Use the maqaf in Hebrew compound names (״ריס־מוג״).
+- Tweet quotes and their hooks: an allegation stays an allegation, and a paraphrase never goes in quotation marks.
 - American-specific terms: use the Hebrew form and the standard first-use explanation in `pipeline/US-POLITICS.md`, so the same term is explained the same way in every post. One short phrase in the text, the first time only, never a translator's essay.
 
 ## Glossary
@@ -42,7 +49,7 @@ each essay** (format at the top of the log). Record anything that will help the 
 - Hard calls: idioms, irony, puns, American references, titles of books and articles.
 - What passes 2 and 3 caught in pass 1 (recurring errors are the most useful entries).
 - Every correction from Hadar or a reader, verbatim, and what rule it implies.
-When a term has been used the same way twice, or Hadar settles it, add it to `glossary.json` (with any wrong
+Every entry records its evidence in `note` (a published Hebrew edition and publisher, a corpus count, or "Wikipedia only"); a Wikipedia article title alone never settles a book title. When a term has been used the same way twice, or Hadar settles it, add it to `glossary.json` (with any wrong
 variants under `avoid`) and mark the log entry `→ glossary`. A recurring style lesson goes into this guide.
 
 ## Procedure
@@ -90,7 +97,9 @@ translator; a model checking its own fresh work misses most of its errors). Ever
      above: if the install, the model download or the run fails, it prints a warning and an empty list, and the
      review goes on exactly as before.
    - **Spelling and punctuation:** full spelling (כתיב מלא), ״ ״ quotation marks (never "), maqaf before numbers and Latin script, no stray Latin words except where the guide keeps them.
-   Fix the findings and record `review` and `back_translation` in `post.json`.
+   Fix the findings, have the fixes checked and rerun the back-translation if the title, subtitle or quotes
+   changed (REVIEWER.md, "Check the fixes"), and record `review` and `back_translation` (with its `source`) in
+   `post.json`.
 6. **Quality check.** `python3 pipeline/finalize.py posts/<slug>/post.json /tmp/<slug>.src.json`. Besides the
    format checks, it compares the Hebrew with the English (paragraph count; every number of two or more digits
    kept, or listed in `fidelity_waivers` as `{"number": "1960", "reason": "שנות השישים"}`), requires the brief,
@@ -116,7 +125,8 @@ Write `posts/<slug>/post.json` (slug = `YYYY-MM-DD-<author surname>-<title words
   "quotes_he": ["tweet 1", "tweet 2", "tweet 3"],
   "brief": {"tone": "...", "audience_gap": "...", "allusions": "...", "hard_terms": "...", "names": "..."},
   "review": {"independent": true, "findings": 0, "major": 0, "fixed": 0, "not_fixed": []},
-  "back_translation": {"title": "...", "subtitle": "...", "quotes": ["...", "...", "..."], "meaning_kept": true},
+  "back_translation": {"title": "...", "subtitle": "...", "quotes": ["...", "...", "..."], "meaning_kept": true,
+                       "source": {"title": "<the Hebrew title it was made from>", "subtitle": "...", "quotes": ["...", "...", "..."]}},
   "fidelity_waivers": [],
   "source_paragraphs": 0, "he_paragraphs": 0
 }

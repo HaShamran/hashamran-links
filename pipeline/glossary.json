@@ -413,14 +413,6 @@
   "note": "Galston, 2026-10-13."
  },
  {
-  "en": "Hillbilly Elegy (J. D. Vance)",
-  "he": "״אמריקה השנייה״ (Hillbilly Elegy) של ג׳יי. די. ואנס",
-  "avoid": [
-   "אלגיה להילבילי"
-  ],
-  "note": "Published Hebrew title (lookup.py). Renn, 2026-10-14."
- },
- {
   "en": "sympathy (for)",
   "he": "אהדה (ל־), אהדתו",
   "avoid": [
@@ -440,5 +432,104 @@
   "he": "ממשל, ממשלה / ממשל (של נשיא מסוים)",
   "avoid": [],
   "note": "English 'government' is the general institution; 'the Trump administration' is one president's. השילוח's translator alternates ממשלה and ממשל for the general sense; keep 'administration' as ממשל + the president's name."
+ },
+ {
+  "en": "treaty (requiring Senate consent)",
+  "he": "אמנה",
+  "avoid": [],
+  "note": "Keep אמנה for treaty and הסכם for agreement, above all where the argument turns on Senate ratification (Darwall). (retranslation evaluation, 2026-10-30) Not enforced by qc (״הסכם״ is common in other senses); the reviewer checks it."
+ },
+ {
+  "en": "executive agreement; the Paris Agreement",
+  "he": "הסכם; הסכם פריז",
+  "avoid": [
+   "אמנת פריז"
+  ],
+  "note": "Pair with treaty = אמנה. (retranslation evaluation, 2026-10-30)"
+ },
+ {
+  "en": "(regulatory) rule, regulation",
+  "he": "תקנה",
+  "avoid": [],
+  "note": "An agency rule such as the MATS rule is תקנת MATS. (retranslation evaluation, 2026-10-30) Not enforced by qc (״כלל״ is common in other senses); the reviewer checks it."
+ },
+ {
+  "en": "Armistice Day / Remembrance Day (11 November)",
+  "he": "יום שביתת הנשק",
+  "avoid": [],
+  "note": "יום הזיכרון is Israel's Memorial Day to a Hebrew reader. (retranslation evaluation, 2026-10-30) Not enforced by qc (״יום הזיכרון״ is common in other senses); the reviewer checks it."
+ },
+ {
+  "en": "win the peace",
+  "he": "לנצח במערכה על השלום",
+  "avoid": [
+   "ינצח בשלום",
+   "לנצח בשלום"
+  ],
+  "note": "בשלום reads as 'peacefully'. Roberts' closing antithesis. (retranslation evaluation, 2026-10-30)"
+ },
+ {
+  "en": "racialized",
+  "he": "קיבל צביון גזעי, נצבע בצבעי גזע",
+  "avoid": [
+   "נעשה גזעי",
+   "נעשתה גזעית"
+  ],
+  "note": "גזעי alone is heard as 'racist'. (retranslation evaluation, 2026-10-30)"
+ },
+ {
+  "en": "Eastern Orthodox (Christians)",
+  "he": "נוצרים אורתודוקסים מזרחיים",
+  "avoid": [],
+  "note": "Never the bare אורתודוקסים מזרחיים, which reads as Mizrahi Orthodox Jews. qc cannot flag a missing word, so this is for the reviewer. (retranslation evaluation, 2026-10-30)"
+ },
+ {
+  "en": "The Greatest Story Ever Told (film about Jesus, used as a figure)",
+  "he": "״הסיפור הגדול ביותר שסופר אי פעם״",
+  "avoid": [],
+  "note": "Keep the fixed title and say once that it is a film about the life of Jesus. (retranslation evaluation, 2026-10-30) Not enforced by qc (״הגדול מכולם״ is common in other senses); the reviewer checks it."
+ },
+ {
+  "en": "Xerxes",
+  "he": "חשיארש",
+  "avoid": [
+   "כסרכסס",
+   "קסרקסס"
+  ],
+  "note": "Use the name readers know from the Book of Esther. (retranslation evaluation, 2026-10-30)"
+ },
+ {
+  "en": "catastrophism",
+  "he": "קטסטרופיזם",
+  "avoid": [
+   "קטסטרופיזציה"
+  ],
+  "note": "קטסטרופיזציה is a psychology term. (retranslation evaluation, 2026-10-30)"
+ },
+ {
+  "en": "cap and trade / emissions trading",
+  "he": "סחר בפליטות",
+  "avoid": [
+   "הגבל וסחור"
+  ],
+  "note": "Established Hebrew term (Darwall). (retranslation evaluation, 2026-10-30)"
+ },
+ {
+  "en": "for the record",
+  "he": "למען הסר ספק",
+  "avoid": [],
+  "note": "Roberts. (retranslation evaluation, 2026-10-30) Not enforced by qc (״לפרוטוקול״ is common in other senses); the reviewer checks it."
+ },
+ {
+  "en": "explain away",
+  "he": "לתרץ",
+  "avoid": [],
+  "note": "Roberts. (retranslation evaluation, 2026-10-30) Not enforced by qc (״להצדיק״ is common in other senses); the reviewer checks it."
+ },
+ {
+  "en": "Hillbilly Elegy (J. D. Vance)",
+  "he": "״אלגיה להילבילי״ (Hillbilly Elegy) של ג׳יי. די. ואנס",
+  "avoid": [],
+  "note": "Literal title with the English in parentheses. Replaces the current entry: ״אמריקה השנייה״ is only the Hebrew Wikipedia article title; no Hebrew edition was found. The 2020 film is ״יומני האפלצ׳ים״ in Hebrew. (retranslation evaluation, 2026-10-30)"
  }
 ]

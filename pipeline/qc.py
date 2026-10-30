@@ -22,6 +22,7 @@ LATIN_WORD = re.compile(r"[A-Za-z]{2,}")
 SLUG_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-[a-z0-9-]+$")
 URL = re.compile(r"\]\([^)]*\)|https?://\S+")
 TITLE_MAX = 80  # characters; a Hebrew headline, not a sentence
+TITLE_WORDS_WARN = 8  # TITLES.md: most תכלת titles are 2-6 words
 
 # The תכלת voice, measured (pipeline/azure/STYLE.md). Limits sit near the 5th/95th percentile of the 224 תכלת
 # essays, so real תכלת prose passes and flat, translated-sounding Hebrew does not.
@@ -108,6 +109,11 @@ def process_problems(post):
         out.append("missing blind back-translation of the title and the 3 quotes (back_translation)")
     elif bt.get("meaning_kept") is not True:
         out.append("back-translation shows a shift in meaning: fix it, then set back_translation.meaning_kept")
+    current = {"title": post.get("title_he", ""), "subtitle": post.get("subtitle_he", ""),
+               "quotes": list(post.get("quotes_he") or [])}
+    if bt and bt.get("source") != current:
+        out.append("back-translation is stale or unrecorded: back_translation.source must hold the exact Hebrew title, "
+                   "subtitle and quotes it was made from; rerun the blind back-translator after any change (REVIEWER.md)")
     return out
 
 
@@ -242,7 +248,11 @@ def check(post, source_markdown=None):
     problems += style_problems(measures)
     if source_markdown is not None:
         problems += process_problems(post) + fidelity_problems(post, source_markdown)
-    return {"pass": not problems, "problems": problems, "he_paragraphs": len(paras), "words": words, "style": measures}
+    warnings = []
+    if len(title.split()) > TITLE_WORDS_WARN:
+        warnings.append(f"title has {len(title.split())} words; תכלת titles are mostly 2-6 (TITLES.md)")
+    return {"pass": not problems, "problems": problems, "warnings": warnings, "he_paragraphs": len(paras),
+            "words": words, "style": measures}
 
 
 def main(argv=None):

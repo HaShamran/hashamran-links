@@ -97,7 +97,9 @@ def test_prepare_sections_and_numbers(tmp_path):
 def test_fidelity_and_process_checks():
     process = {"brief": {"tone": "polemical"},
                "review": {"independent": True, "findings": 2, "major": 1, "fixed": 2, "not_fixed": []},
-               "back_translation": {"title": "t", "subtitle": "s", "quotes": ["a", "b", "c"], "meaning_kept": True}}
+               "back_translation": {"title": "t", "subtitle": "s", "quotes": ["a", "b", "c"], "meaning_kept": True,
+                                    "source": {"title": GOOD["title_he"], "subtitle": GOOD.get("subtitle_he", ""),
+                                               "quotes": list(GOOD["quotes_he"])}}}
     source = "\n\n".join(["In 1977 the debt reached 115 percent of output and kept rising for years after that."] * 8)
     body = "\n\n".join(["בשנת 1977 הגיע החוב ל־115 אחוזים מן התוצר והמשיך לעלות שנים רבות לאחר מכן."] * 8)
     good = {**GOOD, **process, "body_he": body}
@@ -110,6 +112,7 @@ def test_fidelity_and_process_checks():
     assert any("meaning" in p for p in qc.check(
         {**good, "back_translation": {**process["back_translation"], "meaning_kept": False}}, source)["problems"])
     assert any("paragraphs" in p for p in qc.check({**good, "body_he": body.split("\n\n")[0]}, source)["problems"])
+    assert any("stale" in p for p in qc.check({**good, "title_he": GOOD["title_he"] + " חדש"}, source)["problems"])
 
 
 def test_essay_trim_and_hebrew_number_words():
