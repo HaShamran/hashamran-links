@@ -33,3 +33,9 @@ Settled terms move to `pipeline/glossary.json`; mark the entry `→ glossary` wh
   2b Hebrew-only read for glossary consistency and grammar), pass 3 title (at least 3 candidates, choose, log).
 - Glossary moved from TRANSLATION.md to `pipeline/glossary.json` with `avoid` variants that `qc.py` rejects.
 - Seeded "Terms under watch" from the three posts translated so far.
+
+### 2026-10-30 · תכלת corpus
+- Hadar: no human step anywhere; the system stays fully automated.
+- Added `pipeline/azure/` (style guide STYLE.md, index of 100 Azure/תכלת parallel essays) and
+  `pipeline/azure_corpus.py` (fetch and search the pairs at run time). 33 corpus terms → glossary.
+- Open question: תכלת's web text uses plain " quotes; we keep ״ ״ (same convention, proper glyph).

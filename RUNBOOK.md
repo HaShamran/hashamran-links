@@ -9,6 +9,7 @@ commit here. Your job: find new essays, translate, choose tweet quotes, commit, 
 pip install -q -r requirements.txt
 ```
 Chromium is preinstalled at /opt/pw-browsers/chromium; never run `playwright install`.
+Then `python3 pipeline/azure_corpus.py fetch` (the תכלת reference corpus, ~1 min; if it fails, translate anyway).
 Firecrawl needs no key here (the network proxy adds it for api.firecrawl.dev).
 
 ## 2. Detect
@@ -28,7 +29,7 @@ For each:
    - `paywalled`: set the queue item's status to `paywalled` with a note; no bypass. Next item.
    - `too_short` / `failed`: set `failed` with the error; next item. A PDF without a text layer: look for the
      same essay on the publication's own site and extract that URL instead.
-2. Read `pipeline/glossary.json` and `pipeline/TRANSLATION-LOG.md`. Translate following `pipeline/TRANSLATION.md`
+2. Read `pipeline/azure/STYLE.md`, `pipeline/glossary.json` and `pipeline/TRANSLATION-LOG.md`. Translate following `pipeline/TRANSLATION.md`
    (clean, pass 1 translate, pass 2 review: fidelity then Hebrew-only glossary and grammar, pass 3 title),
    including author bio and photo and the 3 tweet quotes, and write `posts/<slug>/post.json`.
 3. `python3 pipeline/finalize.py posts/<slug>/post.json`. On failure fix once and rerun; if it still fails, leave
