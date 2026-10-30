@@ -70,6 +70,8 @@ translator; a model checking its own fresh work misses most of its errors). Ever
    - **Grammar:** gender and number agreement (verbs, adjectives, numerals), construct state (סמיכות), the definite article in construct, prepositions governed by the verb, the ־ש/אשר clauses, tense consistency.
    - **The תכלת voice:** verb-first sentences where natural, formal negation (אינו, אין הוא), varied connectives (ואולם, ברם, אפוא, שהרי), sentences of moderate length.
    - **Translationese:** English word order, chains of nominal constructions, "עושה שימוש", "הוא זה ש", calques of English idioms, too many possessive "של".
+   - **Dicta spelling list:** `python3 pipeline/hebcheck.py posts/<slug>/post.json` lists the words Dicta's
+     Nakdan does not know; the reviewer marks each one as a name, a loanword or a spelling error.
    - **Spelling and punctuation:** full spelling (כתיב מלא), ״ ״ quotation marks (never "), maqaf before numbers and Latin script, no stray Latin words except where the guide keeps them.
    Fix the findings and record `review` and `back_translation` in `post.json`.
 6. **Quality check.** `python3 pipeline/finalize.py posts/<slug>/post.json /tmp/<slug>.src.json`. Besides the
