@@ -25,9 +25,26 @@ def paragraphs(markdown):
     return [p.strip() for p in re.split(r"\n\s*\n", markdown or "") if p.strip()]
 
 
+# Where the essay ends and the page goes on: reader comments, polls, print-edition notes, publisher boilerplate.
+# Found by testing the published posts (2026-10-30): WORLD and UnHerd pages came back with hundreds of comments.
+END_MARKERS = re.compile(
+    r"^(#+ *Comments\b|Please wait while we load the latest comments|#+ *Do you agree with this article|"
+    r"\*?Appeared in the .{0,80}print edition|The American Mind is a publication of the Claremont Institute|"
+    r"Please register, subscribe, or log in to comment)", re.I | re.M)
+BOILERPLATE = re.compile(r"^(This copy is for your personal, non-commercial use only\..*|"
+                         r"\**[A-Z][a-z]{2}\.? \d{1,2}, \d{4},? \d{1,2}:\d{2} [ap]m [A-Z]{2,3}\**)$", re.M)  # + datelines
+
+
+def essay(markdown):
+    """The essay alone: everything before the first end-of-essay marker, without reprint boilerplate."""
+    markdown = BOILERPLATE.sub("", markdown or "")
+    m = END_MARKERS.search(markdown)
+    return markdown[:m.start()] if m else markdown
+
+
 def text_paragraphs(markdown):
     """Paragraphs that carry text (not images, embeds or one-word leftovers)."""
-    return [p for p in paragraphs(markdown) if not is_media(p) and len(p) > 30]
+    return [p for p in paragraphs(essay(markdown)) if not is_media(p) and len(p) > 30]
 
 
 NUM = re.compile(r"(?<![\w.])\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?")

@@ -110,3 +110,17 @@ def test_fidelity_and_process_checks():
     assert any("meaning" in p for p in qc.check(
         {**good, "back_translation": {**process["back_translation"], "meaning_kept": False}}, source)["problems"])
     assert any("paragraphs" in p for p in qc.check({**good, "body_he": body.split("\n\n")[0]}, source)["problems"])
+
+
+def test_essay_trim_and_hebrew_number_words():
+    import prepare
+    body = "\n\n".join(["The essay itself, which runs on for a while about 1968 and other matters of note."] * 5)
+    page = ("This copy is for your personal, non-commercial use only. Distribution is governed by law.\n\n"
+            "**Oct. 13, 2026 12:36 pm ET**\n\n" + body +
+            "\n\n## Comments\n\n" + "\n\n".join(["A reader writes at length about 2024 and 77 other things."] * 30))
+    assert len(prepare.text_paragraphs(page)) == 5
+    assert prepare.numbers(prepare.essay(page)) == ["1968"]
+    words = qc.hebrew_numbers("פי שלושה עשר, עשרים וחמש מאות שנה, שלוש מאות הספרטנים, בשנות השלושים והארבעים, "
+                              "במאה העשרים, מאה ועשרים אלף")
+    assert {"13", "25", "300", "1930", "1940", "20", "120000"} <= words
+    assert "77" not in words

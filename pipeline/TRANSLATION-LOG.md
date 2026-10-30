@@ -70,3 +70,27 @@ Settled terms move to `pipeline/glossary.json`; mark the entry `→ glossary` wh
   paragraphs and numbers against the English in `qc.py` (`fidelity_waivers` for numbers rendered as words).
 - Why: self-review misses most of a model's own errors; whole-document translation silently skips sentences;
   error scoring catches accuracy better than style, so the תכלת style measures stay.
+
+### 2026-10-30 · audit: the new workflow run on the 7 published posts
+Mohler, Rubio, Roberts, Galston, Pinkoski, Renn, Darwall, checked against today's extraction of the English by
+qc.py and by fresh reviewer and back-translator subagents (REVIEWER.md). 11 major and 84 minor findings.
+- Style: all 7 fail the תכלת connectives check (2.6 to 3.5 per 1,000 words, or one connective used throughout);
+  Pinkoski and Renn also have too much ״של״.
+- Fidelity: nothing was dropped and every number was kept. Two posts have the wrong meaning in places:
+  - Pinkoski P23, ״העולם חב לאמריקה את תביעתה להגמוניה״ for "America owes the world her assertion of global
+    hegemony" (reversed).
+  - Rubio, the paragraph ״כבר יש סימנים לכך.״ has no source; and the byline puts the speech on the Pnyx (גבעת
+    הפניקס), which the source does not say.
+- Word errors caught: ״הצטדקות בשם היטלר״ for apologism (→ סנגוריה), ״אוהדתו״ for sympathy (→ אהדתו),
+  ״התבצרות לאומית״ for national self-assertion (→ תביעת העוצמה הלאומית), ״הליברל לדוגמה״ for token liberal
+  (→ הליברל התורן), ״אלגיה להילבילי״ for Hillbilly Elegy (the Hebrew edition is ״אמריקה השנייה״). → glossary
+- Byline: ״מאת ר׳ אלברט מוהלר״ made a Baptist leader a rabbi. Rule: never write an English initial R. as ר׳; drop
+  the initial or spell it out.
+- Names: several spellings differed from Hebrew Wikipedia (קת׳י הוקול, אית׳קה, קאי פאי for Chi Phi,
+  למברט וילסון, אריק פוגלין). Rule: every name goes through `lookup.py name`.
+- Title: ״אמריקה ואפס הפליטות: כמעט״ failed the blind back-translation ("almost" read as falling short, not
+  as a narrow escape). Better: ״אפס פליטות נטו: אמריקה ניצלה בעור שיניה״.
+- Allusion lost: Pinkoski's "the greatest story ever told" is a film title about Jesus, not a phrase; say so or
+  echo it.
+- Source cleaning: today's extraction of WORLD and UnHerd pages included hundreds of reader comments, and the WSJ
+  PDF included reprint boilerplate. `prepare.essay()` now cuts the page at the end of the essay.

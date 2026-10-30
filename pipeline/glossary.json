@@ -384,5 +384,49 @@
   "he": "המדינה המנהלית",
   "avoid": [],
   "note": "see pipeline/US-POLITICS.md"
+ },
+ {
+  "en": "apologism, apologist (for X)",
+  "he": "סנגוריה על X, סנגור של X",
+  "avoid": [
+   "הצטדקות בשם",
+   "הצטדקותו בשם"
+  ],
+  "note": "הצטדקות = justifying oneself. Roberts, 2026-10-11."
+ },
+ {
+  "en": "(national) self-assertion",
+  "he": "תביעת העוצמה הלאומית / האסרטיביות הלאומית",
+  "avoid": [
+   "התבצרות לאומית",
+   "ההתבצרות הלאומית"
+  ],
+  "note": "התבצרות = entrenchment, the opposite image. Galston, 2026-10-13."
+ },
+ {
+  "en": "token liberal / token conservative",
+  "he": "הליברל התורן / השמרן התורן",
+  "avoid": [
+   "הליברל לדוגמה",
+   "השמרן לדוגמה"
+  ],
+  "note": "Galston, 2026-10-13."
+ },
+ {
+  "en": "Hillbilly Elegy (J. D. Vance)",
+  "he": "״אמריקה השנייה״ (Hillbilly Elegy) של ג׳יי. די. ואנס",
+  "avoid": [
+   "אלגיה להילבילי"
+  ],
+  "note": "Published Hebrew title (lookup.py). Renn, 2026-10-14."
+ },
+ {
+  "en": "sympathy (for)",
+  "he": "אהדה (ל־), אהדתו",
+  "avoid": [
+   "אוהדתו של",
+   "אוהדתו ל"
+  ],
+  "note": "אוהדת = a female fan. Roberts, 2026-10-11."
  }
 ]
