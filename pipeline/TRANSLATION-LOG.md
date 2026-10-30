@@ -44,5 +44,12 @@ Settled terms move to `pipeline/glossary.json`; mark the entry `→ glossary` wh
 - Our first translations vs תכלת, per 10,000 words: אך 1 vs 15, אולם 1 vs 8, אפוא 1 vs 6, ברם/הרי/ואמנם/על כן ~0 vs
   2–3; ״של״ 17% more. Lesson: our Hebrew leaned on ואולם alone and on ״של״. qc.py now checks this.
 - Caught in murray-france: ״ואיזה אזהרות היו״ → ״ואילו אזהרות היו!״ (איזה is singular; plural takes אילו).
-- Hard call, same essay: "pour encourager les autres" can take a Hebrew echo, ״כדי שאחרים יראו וייראו״ (Deut. 17:13),
-  instead of staying in French.
+- Hard call, same essay: "pour encourager les autres" can take a Hebrew echo, ״כדי שאחרים יראו וייראו״, the
+  everyday idiom that echoes ״וכל העם ישמעו ויראו״ (Deut. 17:13, checked with lookup.py source), instead of
+  staying in French.
+
+### 2026-10-30 · new tools
+- `pipeline/azure/TITLES.md`: seven title moves from the 100 תכלת pairs, for pass 3.
+- `pipeline/lookup.py name`: Hebrew Wikipedia spellings (ג׳ון לוק, כתבי הפדרליסט, הריטג׳ פאונדיישן). A "-" means no
+  Hebrew article: transliterate, give the English in parentheses the first time, and log it.
+- `pipeline/lookup.py source`: original Hebrew of a verse or passage from Sefaria, without cantillation or niqqud.

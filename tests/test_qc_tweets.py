@@ -62,3 +62,11 @@ def test_style_measures_against_tchelet():
                      "לפיכך נמשיך, שכן אין דרך אחרת. על כן נדבר. אמנם זה קשה, אלא שאין ברירה."] * 12)
     assert qc.style_problems(qc.style(rich)) == []
     assert qc.style_problems(qc.style("קצר מאוד.")) == []  # too short to measure
+
+
+def test_lookup_text_helpers():
+    import lookup
+    assert lookup.hebrew_punct("ג'ון לוק, צה\"ל") == "ג׳ון לוק, צה״ל"
+    raw = 'וְכׇל־הָעָ֖ם יִשְׁמְע֣וּ&nbsp;<span class="x">{ס}</span>'
+    assert lookup.plain_hebrew(raw) == "וכל־העם ישמעו"
+    assert lookup.plain_hebrew(raw, niqqud=True).startswith("וְכׇל־הָעָם")
