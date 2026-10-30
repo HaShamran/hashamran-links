@@ -531,5 +531,13 @@
   "he": "״אלגיה להילבילי״ (Hillbilly Elegy) של ג׳יי. די. ואנס",
   "avoid": [],
   "note": "Literal title with the English in parentheses. Replaces the current entry: ״אמריקה השנייה״ is only the Hebrew Wikipedia article title; no Hebrew edition was found. The 2020 film is ״יומני האפלצ׳ים״ in Hebrew. (retranslation evaluation, 2026-10-30)"
+ },
+ {
+  "en": "American (adjective and noun)",
+  "he": "אמריקני, אמריקנית, אמריקנים",
+  "avoid": [
+   "אמריקאי"
+  ],
+  "note": "תכלת: אמריקני 1,431 times, אמריקאי 5 (STYLE.md section 9). Evidence: azure_corpus counts, 2026-10-30."
  }
 ]
