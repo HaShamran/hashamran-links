@@ -150,3 +150,32 @@ def test_mida_corpus_alignment(tmp_path, monkeypatch, capsys):
     assert "המדינה העמוקה" in out and "פסקה שנייה" not in out
     mida_corpus.count(["המדינה העמוקה"])
     assert "המדינה העמוקה: 1" in capsys.readouterr().out
+
+
+def test_grammar_agreement_rules():
+    import grammar
+
+    def tok(token, pos, func, head, **feats):
+        return {"token": token, "morph": {"pos": pos, "feats": feats}, "syntax": {"dep_func": func, "dep_head_idx": head}}
+
+    def parse(*toks):
+        return {"text": " ".join(t["token"] for t in toks), "tokens": list(toks)}
+
+    bad_adj = parse(tok("החלטה", "NOUN", "root", -1, Gender="Fem", Number="Sing"),
+                    tok("חשוב", "ADJ", "amod", 0, Gender="Masc", Number="Sing"))
+    assert [f["rule"] for f in grammar.agreement(bad_adj)] == ["adjective-noun"]
+    good_adj = parse(tok("החלטה", "NOUN", "root", -1, Gender="Fem", Number="Sing"),
+                     tok("חשובה", "ADJ", "amod", 0, Gender="Fem", Number="Sing"))
+    assert grammar.agreement(good_adj) == []
+    bad_subj = parse(tok("הממשלה", "NOUN", "nsubj", 1, Gender="Fem", Number="Sing"),
+                     tok("החליטו", "VERB", "root", -1, Number="Plur", Person="3"))
+    assert [f["rule"] for f in grammar.agreement(bad_subj)] == ["subject-verb"]
+    bad_num = parse(tok("שלוש", "NUM", "nummod", 1, Gender="Fem"), tok("ספרים", "NOUN", "root", -1, Gender="Masc"))
+    assert [f["rule"] for f in grammar.agreement(bad_num)] == ["numeral-noun"]
+    tens = parse(tok("עשרות", "NUM", "nummod", 1, Gender="Fem"), tok("ספרים", "NOUN", "root", -1, Gender="Masc"))
+    assert grammar.agreement(tens) == []
+    # a subject joined by ו is skipped: the parser gives only one of its parts
+    conj = parse(tok("הממשלה", "NOUN", "nsubj", 3, Gender="Fem", Number="Sing"), tok("ו", "CCONJ", "cc", 2),
+                 tok("הכנסת", "NOUN", "conj", 0, Gender="Fem", Number="Sing"),
+                 tok("החליטו", "VERB", "root", -1, Number="Plur", Person="3"))
+    assert grammar.agreement(conj) == []

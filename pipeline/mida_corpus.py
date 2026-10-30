@@ -1,10 +1,14 @@
-"""Third reference, for terminology only: English essays and Mida's Hebrew translations of them, side by side.
+"""Third reference, for terminology only: English essays and published Hebrew translations of them, side by side.
 
-43 pairs (2014–2025) from Commentary and National Review, translated and published by Mida (mida.org.il). Use it to
+48 pairs: 43 (2014–2025) from Commentary and National Review, translated and published by Mida (mida.org.il), and 5
+(2014–2017) from First Things, American Affairs and the Washington Free Beacon, translated and published by השילוח
+(index.csv column he_outlet). Use it to
 see how a Hebrew right-of-centre outlet renders a current American or political term (deep state, swing voters,
 woke, the squad). It never sets voice or style: תכלת (pipeline/azure/) stays primary, and השילוח
 (pipeline/hashiloach/) is the second guide for Hebrew register. Mida's Hebrew is journalism, often abridged, and it
 has mistakes (pair 9 moves Inauguration Day from January 20 to January 25), so check what you take from it.
+The השילוח pairs are full, careful translations, and their translator's notes are in the glossary (little platoons,
+government and administration).
 
 The texts are the publishers' copyright: the permanent private copy is the project folder
 /mnt/project-files/hashamran/translation-guide/mida/pairs/<dir>/{en,he}.md, never this public repo.

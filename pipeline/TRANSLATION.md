@@ -9,8 +9,9 @@ connectives, idiom, typography and a term bank. `pipeline/azure_corpus.py` searc
 rendered a word or phrase.
 **Secondary guide, for terms תכלת never needed** (woke, populism, DEI, the deep state): 100 recent essays from
 השילוח, searched with `pipeline/hashiloach_corpus.py`. Where the two differ on voice or style, תכלת wins.
-**Third guide, for terminology only:** 43 English essays (Commentary, National Review) paired with Mida's Hebrew
-translations, searched with `pipeline/mida_corpus.py search "<English term>"`. It shows how a current American
+**Third guide, for terminology only:** 48 English essays paired with published Hebrew translations: 43 from
+Commentary and National Review translated by Mida, and 5 from First Things, American Affairs and the Free Beacon
+translated by השילוח (Levin, Scruton, Haivry and Hazony, Continetti). Searched with `pipeline/mida_corpus.py search "<English term>"`. It shows how a current American
 term was rendered in Hebrew, next to the English. It never sets voice or style, Mida abridges and errs, so verify
 what you take.
 - Elevated but clear. Rich vocabulary and well-built sentences, never archaic, never bureaucratic, never slangy.
@@ -77,6 +78,12 @@ translator; a model checking its own fresh work misses most of its errors). Ever
    - **Translationese:** English word order, chains of nominal constructions, "עושה שימוש", "הוא זה ש", calques of English idioms, too many possessive "של".
    - **Dicta spelling list:** `python3 pipeline/hebcheck.py posts/<slug>/post.json` lists the words Dicta's
      Nakdan does not know; the reviewer marks each one as a name, a loanword or a spelling error.
+   - **Dicta grammar list (optional extra layer):** `python3 pipeline/grammar.py posts/<slug>/post.json` lists
+     agreement clashes found by Dicta's DictaBERT parser (adjective and noun, subject and verb, numeral and noun).
+     Install first with `pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q
+     transformers`. The reviewer judges each finding, since the parser can be wrong. It replaces none of the checks
+     above: if the install, the model download or the run fails, it prints a warning and an empty list, and the
+     review goes on exactly as before.
    - **Spelling and punctuation:** full spelling (כתיב מלא), ״ ״ quotation marks (never "), maqaf before numbers and Latin script, no stray Latin words except where the guide keeps them.
    Fix the findings and record `review` and `back_translation` in `post.json`.
 6. **Quality check.** `python3 pipeline/finalize.py posts/<slug>/post.json /tmp/<slug>.src.json`. Besides the
