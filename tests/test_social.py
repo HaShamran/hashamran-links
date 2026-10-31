@@ -13,10 +13,13 @@ def at(h, m=0, day=29):
 
 def test_slots_are_israel_time_windows():
     assert social.current_slot(at(11, 5)) == "2026-10-29#0"
-    assert social.current_slot(at(12, 29)) == "2026-10-29#0"
-    assert social.current_slot(at(12, 31)) is None
+    assert social.current_slot(at(15, 59)) == "2026-10-29#0"  # a late run still catches the 11:00 slot
+    assert social.current_slot(at(16, 0)) == "2026-10-29#1"
     assert social.current_slot(at(21, 0)) == "2026-10-29#2"
+    assert social.current_slot(at(23, 29)) == "2026-10-29#2"
+    assert social.current_slot(at(23, 31)) is None
     assert social.current_slot(at(9, 0)) is None
+    assert social.current_slot(at(10, 59)) is None
 
 
 def test_one_tweet_per_slot_and_45_minute_gap():

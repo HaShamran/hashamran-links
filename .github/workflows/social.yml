@@ -1,4 +1,5 @@
-# Relay pages, tweets and alerts. Runs every 15 minutes; see pipeline/social.py for the rules.
+# Relay pages, tweets and alerts. Scheduled every 15 minutes, but GitHub often delays scheduled runs by hours,
+# so dud's publisher also starts it (workflow_dispatch, dry_run=false) every 30 minutes. Rules: pipeline/social.py.
 name: social
 
 on:
@@ -51,7 +52,12 @@ jobs:
         run: |
           git config user.name "hashamran-bot"
           git config user.email "hashamran-bot@users.noreply.github.com"
-          git add -A state/live.json state/tweets.json state/social-status.json ./*.html 2>/dev/null || true
+          # One missing path makes git add refuse ALL paths, so add only files that exist (tweets.json is
+          # created by the first tweet). Before this fix nothing was ever saved, relay pages never went up,
+          # and every tweet waited for its relay page forever.
+          for f in state/live.json state/tweets.json state/social-status.json ./*.html; do
+            if [ -e "$f" ]; then git add -A -- "$f"; fi
+          done
           if ! git diff --cached --quiet; then
             git commit -q -m "social: $(date -u +%FT%RZ)"
             for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep $((i*3)); done

@@ -10,7 +10,8 @@ Why dud: Substack refuses publish calls from cloud servers (403, Oct 2026). From
 with the cookies of a Chrome profile Hadar signed into, the same call is an ordinary signed-in publish.
 If Substack still refuses the API call, the script presses Publish in that Chrome profile itself.
 
-Pace (Hadar): 1 post a day, 2 when more than 5 are waiting; the second not before 12:00 Israel time.
+Pace (Hadar): 1 post a day, 2 when there is a backlog (2 or more ready that day); hard cap 2; the second not
+before 12:00 Israel time.
 Hours: 06:00 to 22:00 Israel time. Every file it writes lives in %LOCALAPPDATA%\\HaShamran.
 """
 import base64
@@ -234,7 +235,8 @@ def due_post(now, arch, index, state):
     waiting.sort(key=lambda p: p.get("ready_at", ""))
     today = sum(1 for a in arch
                 if dt.datetime.fromisoformat(a["post_date"].replace("Z", "+00:00")).astimezone(ISRAEL).date() == local.date())
-    allowance = 2 if len(waiting) > 5 else 1
+    # Backlog = at least 2 posts ready today (waiting now + already published today) -> 2 a day, never more.
+    allowance = 2 if len(waiting) + today >= 2 else 1
     if today >= allowance:
         return None, f"daily cap reached ({today} today, {len(waiting)} waiting)"
     if today >= 1 and local.hour < SECOND_POST_HOUR:
@@ -281,6 +283,18 @@ def report_live(index, arch, state):
         entry.update(reported=True, published=True, url=record["url"])
         save(STATE_FILE, state)
         log(f"reported live: {p['slug']} -> {record['url']}")
+
+
+def start_social():
+    """Start the tweet workflow. GitHub runs its 15-minute schedule hours late (31 Oct: about every 6 hours),
+    so tweet slots were missed; dud runs every 30 minutes and starts it itself. Failure here never stops publishing."""
+    try:
+        res = subprocess.run([gh(), "workflow", "run", "social.yml", "-R", REPO, "-f", "dry_run=false"],
+                             capture_output=True, text=True, timeout=60)
+        if res.returncode != 0:
+            log(f"could not start the tweet workflow: {res.stderr.strip()[:200]}")
+    except Exception as e:
+        log(f"could not start the tweet workflow: {type(e).__name__}")
 
 
 # ---------- building and publishing ----------
@@ -387,6 +401,7 @@ def _run():
     gh_ok = github_ok()
     if gh_ok:
         report_live(index, arch, state)
+        start_social()
     post_meta, reason = due_post(now, arch, index, state)
     if not post_meta:
         log(f"nothing to publish: {reason}")
