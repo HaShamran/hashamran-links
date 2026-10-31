@@ -1,11 +1,13 @@
 {
   "newly_live": [],
-  "relays_written": [
-    "2023-03-30-greer-a-school-of-strength-and-character",
-    "2026-10-21-smith-how-a-maga-youth-movement-is-training-10000-stephen-millers"
-  ],
+  "relays_written": [],
   "tweet": {
-    "waiting_for_relay_page": "2023-03-30-greer-a-school-of-strength-and-character"
+    "slot": "2026-10-31#1",
+    "slug": "2023-03-30-greer-a-school-of-strength-and-character",
+    "quote": 0,
+    "text": "״באמריקה אין דבר שהרצון האנושי מתייאש מלהשיג באמצעות פעולתם החופשית של כוחות היחידים המאוחדים.״ טאנר גריר על החברה האמריקנית שידעה להתארגן בעצמה, ואיך איבדה את הכישרון הזה.\n\nhttps://hashamran.github.io/hashamran-links/2023-03-30-greer-a-school-of-strength-and-character.html",
+    "at": "2026-10-31T15:02:02+00:00",
+    "buffer_id": "6ae602eb37c1acd2a0b591aa"
   },
   "alerts": [
     "2026-10-20-murray-france-stares-down-the-abyss-of-history has waited 1d 17h to be published: check that dud is on and signed in to Substack (run login.cmd)"
