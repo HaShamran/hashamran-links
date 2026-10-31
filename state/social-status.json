@@ -1,9 +1,9 @@
 {
   "newly_live": [],
-  "relays_written": [],
-  "tweet": null,
-  "alerts": [
-    "2026-10-20-murray-france-stares-down-the-abyss-of-history has waited 1d 18h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+  "relays_written": [
+    "2026-10-20-murray-france-stares-down-the-abyss-of-history"
   ],
+  "tweet": null,
+  "alerts": [],
   "substack_unreachable": true
 }
