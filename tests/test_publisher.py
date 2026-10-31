@@ -28,6 +28,13 @@ def test_hours_and_pace():
     assert publisher.due_post(now(13), arch_today(2), idx(7), {})[0] is None
 
 
+def test_counts_own_publish_when_archive_lags():
+    state = {"s0": {"published": True, "published_at": now(13).isoformat()}}
+    # 1 in the archive + 1 we published that the archive doesn't show yet = 2: no third post
+    assert publisher.due_post(now(14), arch_today(1), idx(3), state)[0] is None
+    assert publisher.due_post(now(14), [], idx(3), state)[0]["slug"] == "s1"
+
+
 def test_skips_live_and_published():
     arch = [{"title": "כותרת 0", "slug": "x", "post_date": "2026-10-28T05:00:00Z"}]
     assert publisher.due_post(now(7), arch, idx(2), {})[0]["slug"] == "s1"
