@@ -21,7 +21,8 @@ def arch_today(k):
 def test_hours_and_pace():
     assert publisher.due_post(now(5), [], idx(1), {})[0] is None
     assert publisher.due_post(now(7), [], idx(1), {})[0]["slug"] == "s0"
-    assert publisher.due_post(now(13), arch_today(1), idx(3), {})[0] is None      # 1 a day
+    assert publisher.due_post(now(13), arch_today(1), idx(1), {})[0]["slug"] == "s0"  # 2 were ready today: backlog
+    assert publisher.due_post(now(13), arch_today(1), idx(3), {})[0]["slug"] == "s0"  # backlog: 2 a day
     assert publisher.due_post(now(10), arch_today(1), idx(7), {})[0] is None      # 2nd waits for noon
     assert publisher.due_post(now(13), arch_today(1), idx(7), {})[0]["slug"] == "s0"
     assert publisher.due_post(now(13), arch_today(2), idx(7), {})[0] is None

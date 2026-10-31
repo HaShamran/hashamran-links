@@ -23,7 +23,7 @@ from common import (BROWSER_UA, ISRAEL, PAGES_URL, POSTS, PUBLICATION_URL, ROOT,
                     parse_iso, save_json, utcnow)
 
 SLOTS = [(11, 0), (16, 0), (21, 0)]
-SLOT_WINDOW = dt.timedelta(minutes=90)
+DAY_END = (23, 30)  # a slot stays owed until the next slot starts (the last one until 23:30), so a late run catches up
 MIN_GAP = dt.timedelta(minutes=45)
 TWEET_WINDOW = dt.timedelta(hours=48)
 MAX_PER_POST = 3
@@ -157,10 +157,13 @@ def relay_is_up(slug):
 
 
 def current_slot(now):
+    """The slot owed now. GitHub runs scheduled workflows hours late, so a slot is not lost when no run lands in
+    its first minutes: it stays open until the next slot starts."""
     local = now.astimezone(ISRAEL)
-    for i, (h, m) in enumerate(SLOTS):
-        start = local.replace(hour=h, minute=m, second=0, microsecond=0)
-        if start <= local < start + SLOT_WINDOW:
+    at = lambda hm: local.replace(hour=hm[0], minute=hm[1], second=0, microsecond=0)
+    ends = SLOTS[1:] + [DAY_END]
+    for i, (slot, end) in enumerate(zip(SLOTS, ends)):
+        if at(slot) <= local < at(end):
             return f"{local.date().isoformat()}#{i}"
     return None
 
