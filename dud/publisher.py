@@ -233,8 +233,13 @@ def due_post(now, arch, index, state):
     if not waiting:
         return None, "nothing waiting"
     waiting.sort(key=lambda p: p.get("ready_at", ""))
-    today = sum(1 for a in arch
-                if dt.datetime.fromisoformat(a["post_date"].replace("Z", "+00:00")).astimezone(ISRAEL).date() == local.date())
+    on_day = lambda iso: dt.datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(ISRAEL).date() == local.date()
+    # Count today's posts from Substack's archive AND from our own record: the archive can lag an hour behind a
+    # publish (31 Oct), and counting from it alone could let a third post through.
+    titles = {p["slug"]: norm(p["title_he"]) for p in index}
+    published_today = {norm(a["title"]) for a in arch if on_day(a["post_date"])}
+    published_today |= {titles.get(s, s) for s, e in state.items() if e.get("published_at") and on_day(e["published_at"])}
+    today = len(published_today)
     # Backlog = at least 2 posts ready today (waiting now + already published today) -> 2 a day, never more.
     allowance = 2 if len(waiting) + today >= 2 else 1
     if today >= allowance:
@@ -264,6 +269,8 @@ def report_live(index, arch, state):
     by_slug = {a["slug"]: a for a in arch}
     for p in index:
         a = by_slug.get(p.get("substack_slug")) or by_title.get(norm(p["title_he"]))
+        if not a and state.get(p["slug"], {}).get("published") and not state[p["slug"]].get("reported"):
+            a = published_post(p.get("substack_slug"))  # we published it; the archive just hasn't caught up
         entry = state.setdefault(p["slug"], {}) if a else None
         if not a or entry.get("reported"):
             continue
@@ -371,8 +378,23 @@ def publish_ui(draft_id):
             ctx.close()
 
 
+def published_post(substack_slug):
+    """The post as Substack's own post page reports it, or None. Unlike the archive, it is current at once."""
+    if not substack_slug:
+        return None
+    try:
+        r = requests.get(f"{PUB}/api/v1/posts/{substack_slug}", params={"t": int(time.time())}, timeout=30)
+        d = r.json() if r.ok else {}
+    except (requests.RequestException, ValueError):
+        return None
+    return d if d.get("is_published") and d.get("post_date") else None
+
+
 def wait_live(post, tries=12):
     for _ in range(tries):
+        d = published_post(post.get("substack_slug"))
+        if d:
+            return d.get("canonical_url") or f"{PUB}/p/{d['slug']}"
         for a in archive():
             if norm(a["title"]) == norm(post["title_he"]) or a["slug"] == post.get("substack_slug"):
                 return a.get("canonical_url") or f"{PUB}/p/{a['slug']}"
@@ -422,6 +444,7 @@ def _run():
             d = api.get_draft(draft_id)
             if d.get("is_published"):
                 entry.update(published=True, url=d.get("canonical_url"))
+                entry.setdefault("published_at", d.get("post_date") or now.isoformat(timespec="seconds"))
                 save(STATE_FILE, state)
                 log(f"{slug} was already published")
                 return 0
