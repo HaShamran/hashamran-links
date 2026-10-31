@@ -25,6 +25,7 @@ Settled terms move to `pipeline/glossary.json`; mark the entry `→ glossary` wh
 | American Moment (organization) | אמריקן מומנט in the subtitle, American Moment in the body | Smith, 2026-10-21 | inconsistent: settle one form (proposed: Hebrew transliteration, Latin in parentheses the first time) |
 | remigration | remigration (Latin) | Murray, 2026-10-20 | used once; Hebrew form needed (proposed: ״רה־הגירה״) |
 | Robert's Rules of Order | Robert's Rules of Order (Latin) | Greer, 2023-03-30 | used once; proposed: ״כללי הנוהל של רוברט״ (Robert's Rules of Order) |
+| last hurrah | שירת הברבור | McCarthy, 2026-10-27 | used once |
 
 ## Entries
 
@@ -169,3 +170,19 @@ essays (54,070 sentences). New findings that correct the old guide:
   ״כדי ל״ over ״על מנת ל״; ״אמריקני״ (1,431) over ״אמריקאי״ (5) → glossary; ״תכנית״ and ״מרס״.
 - Calques that qc now fails: בסופו של יום, לשחק תפקיד, לעשות שכל / עושה שכל, לעשות הבדל, על בסיס יומי.
   Jargon loanwords that it warns on: נרטיב, אג׳נדה, קונספט, דיסקורס, פרובלמטי, פרקטי.
+
+### 2026-10-31 · 2026-10-27-mccarthy-brazil-and-venezuela-face-a-tough-road-back-to-sanity
+- Term: lawfare → ״לוחמה משפטית״ (in quotation marks on first use). Why: the established Hebrew press form. → glossary
+- Term: legitimate opposition → ״אופוזיציה לגיטימית״; the essay's argument turns on it, kept the same throughout. → glossary
+- Term: leftist (noun) → ״איש השמאל״ / ״אנשי השמאל״, and "leftist incumbent" → ״הנשיא המכהן מן השמאל״. Why:
+  ״שמאלן״ is slangy and pejorative in Hebrew, which the author's neutral usage is not. → glossary (avoid ״שמאלן״)
+- Term: token protest → ״מחאה סמלית״, not ״מחאה לשם מחאה״ (which adds a sneer that isn't there).
+- Title: chose ״ברזיל וונצואלה: מבחן האופוזיציה הלגיטימית״ over ״...הדרך הקשה חזרה לשפיות״ (a literal calque of the
+  English headline), ״שירת הברבור של לולה״, ״השמאל הלטיני ויריביו״. Why: it names the essay's actual test. The reviewer agreed.
+- Caught in pass 2 (major): P15 "Charging Machado would be a convenient way" was rendered as a past fact (״הייתה״),
+  which states an allegation as having happened → conditional ״אם תואשם... תהיה זו״. Watch the tense of English
+  "would" in hypotheticals.
+- Caught in pass 2 (major): "go down in history" became ״להיזכר בהיסטוריה״ (= to recall history) → ״להיכנס לדברי הימים״.
+- Caught in the fix check: ״אילו״ with future-tense verbs is ungrammatical (אילו takes past: אילו הואשמה... הייתה); a
+  reviewer-suggested gloss (״העומדת בראש התביעה שלה״) added words not in the English, so it was dropped.
+- Hard call: "last hurrah" → ״שירת הברבור״ (Hebrew has no exact equivalent; the swan song keeps the sense of a final act).

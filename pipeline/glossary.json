@@ -539,5 +539,26 @@
    "אמריקאי"
   ],
   "note": "תכלת: אמריקני 1,431 times, אמריקאי 5 (STYLE.md section 9). Evidence: azure_corpus counts, 2026-10-30."
+ },
+ {
+  "en": "lawfare",
+  "he": "לוחמה משפטית",
+  "avoid": [],
+  "note": "in quotation marks on first use"
+ },
+ {
+  "en": "legitimate opposition",
+  "he": "אופוזיציה לגיטימית",
+  "avoid": [],
+  "note": ""
+ },
+ {
+  "en": "leftist (noun)",
+  "he": "איש השמאל / אנשי השמאל",
+  "avoid": [
+   "שמאלן",
+   "שמאלנים"
+  ],
+  "note": "שמאלן is pejorative slang; use only where the English is pejorative"
  }
 ]
