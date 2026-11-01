@@ -222,3 +222,10 @@ essays (54,070 sentences). New findings that correct the old guide:
 - QC fail, fixed once: 4.0 argument connectives per 1,000 (min 5). Pass 1 rendered "nevertheless", "yet", "but here as
   elsewhere" as ״בכל זאת״ / ״ואף על פי כן״ / ״אבל״, which do not count and are flatter than תכלת's ״עם זאת״, ״אולם״, ״אך״.
   Reach for the listed connectives where the English has the joint.
+
+## 2026-11-01 · Israel Hayom bank (fourth guide)
+19 Israel Hayom columns written in Hebrew, each with the paper's own English translation (Eyal Zisser 15, Dror
+Eydar 3, Amnon Lord 1; Aug–Oct 2026), added as `policy_corpus.py --bank israelhayom`. They show how current
+Israeli political and security Hebrew is rendered in English (Iran, Hezbollah, the Gulf, the elections). 10
+candidates were left out: Amit Segal's English columns are condensed rewrites, not translations, and three long
+Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, never register.
