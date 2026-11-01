@@ -26,6 +26,9 @@ Settled terms move to `pipeline/glossary.json`; mark the entry `→ glossary` wh
 | remigration | remigration (Latin) | Murray, 2026-10-20 | used once; Hebrew form needed (proposed: ״רה־הגירה״) |
 | Robert's Rules of Order | Robert's Rules of Order (Latin) | Greer, 2023-03-30 | used once; proposed: ״כללי הנוהל של רוברט״ (Robert's Rules of Order) |
 | last hurrah | שירת הברבור | McCarthy, 2026-10-27 | used once |
+| cohabitation (president vs government of rival camps) | ״קוהביטציה״, glossed once as הדו־קיום הכפוי | Parish, 2026-10-25 | used once |
+| confessional state | המדינה בעלת הדת הממוסדת (confessional state) | Hankins, 2026-10-20 | used once; first try ״מדינה דתית־ממוסדת״ was awkward in the plural |
+| grooming gangs (UK) | כנופיות ה״גרומינג״ | Hankins, 2026-10-20 | used once; ״טיפוח״ is a calque (cultivation, beauty care) |
 
 ## Entries
 
@@ -186,3 +189,36 @@ essays (54,070 sentences). New findings that correct the old guide:
 - Caught in the fix check: ״אילו״ with future-tense verbs is ungrammatical (אילו takes past: אילו הואשמה... הייתה); a
   reviewer-suggested gloss (״העומדת בראש התביעה שלה״) added words not in the English, so it was dropped.
 - Hard call: "last hurrah" → ״שירת הברבור״ (Hebrew has no exact equivalent; the swan song keeps the sense of a final act).
+
+### 2026-11-01 · 2026-10-25-parish-poland-divided-how-politics-became-a-struggle-between-two-nations
+- Term: polarisation → ״קיטוב״; affective → ״רגשי״. opponent vs enemy → ״יריב״ / ״אויב״, and "distinction" → ״ההבחנה״
+  every time (the closing argument turns on it; pass 1 mixed ״ההבדל״ and ״ההבחנה״).
+- Term: capture (institutions) → ״להשתלט על״ on both sides of the mirror claim; pass 1 split it into ״להשתלט״ / ״נשבו״,
+  which broke the symmetry the argument rests on.
+- Names (Hebrew Wikipedia): המצע האזרחי (Civic Platform, masculine: ״המצע... נעשה״), רפאל צ׳אסקובסקי, טבח קאטין, בית המשפט
+  החוקתי (Constitutional Tribunal), שיחות ״השולחן העגול״.
+- Title: chose ״פולין מול פולין: הפוליטיקה כמאבק בין שתי אומות״ over the literal ״פולין המפולגת...״, ״בין יריב לאויב: הפילוג
+  הפולני״, ״שתי היסטוריות של פולין״. Why: the antithesis is the essay's thesis in two words.
+- Caught in pass 2 (major): "This suggests that" → ״מכאן ש״ made a hedged inference a firm conclusion (→ ״הדבר מרמז ש״);
+  "hardened into" → ״התקשו״ reads as "had difficulty" (→ ״התקבעו״). Pass 1 also dropped "appeared to", "helps explain",
+  "precisely", "comfortably": hedges and intensifiers keep being lost.
+- Hard call: "constitutional DEFCON 1" → ״כוננות חוקתית עליונה״.
+- Style: ״אפוא״ ran 9 times in 2,800 words; varied with לפיכך / על כן / מכאן ש. Sentence spread warning left (measured voice).
+
+### 2026-11-01 · 2026-10-20-hankins-a-muslim-answer-to-muslim-immigration
+- Term: free exercise / public exercise (of religion) → ״חופש קיום הדת״ (in running text) and ׳קיום חופשי׳ / ׳קיום פומבי׳ (the paired distinction). Pass 1 used
+  ״חופש הפולחן״ for the First Amendment right, so the essay's final distinction lost its anchor (major). Keep
+  ״חופש הפולחן״ only for "freedom of worship". → glossary
+- Term: confessional state → ״המדינה בעלת הדת הממוסדת (confessional state)״; establishment (of religion) → ״כינון דת״.
+- Term: "at the state level" (US) → ״ברמת מדינות הברית״; ״ברמת המדינה״ reads as nationwide and blurs state vs federal (major).
+- Caught in pass 2 (major): "the British Commonwealth" as a source for the Founders is Cromwell's republic → ״חבר העמים של
+  אנגליה״, not ״הקהילייה הבריטית״ (an anachronism). Check "Commonwealth" by period every time.
+- Caught in pass 2 (major): in a hard-hitting essay pass 1 sharpened claims: "intimidation" → ״הטלת אימה״ (→ ״הפחדת״),
+  "disruptive" → ״הרסני״ (→ ״מטלטל״), "construe as" → ״כאילו״ (implies pretense; → ״כך ש״). Keep the author's exact strength.
+- Title: chose ״הלקח המלזי: תשובה מוסלמית להגירה מוסלמית״ (topic: angle, keeping the original's parallel) over the bare
+  literal title, ״מה שכשר לאסלאם״ (opaque alone) and a 10-word option.
+- Hard call: "sauce for the Islamic goose ... Christian gander" → ״מה שכשר לאסלאם יוכשר, בהתאמות, גם לנצרות״; Arnold's
+  "ignorant armies clash by night" woven in without quotation marks (unattributed in the English too).
+- QC fail, fixed once: 4.0 argument connectives per 1,000 (min 5). Pass 1 rendered "nevertheless", "yet", "but here as
+  elsewhere" as ״בכל זאת״ / ״ואף על פי כן״ / ״אבל״, which do not count and are flatter than תכלת's ״עם זאת״, ״אולם״, ״אך״.
+  Reach for the listed connectives where the English has the joint.

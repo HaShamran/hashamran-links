@@ -164,7 +164,8 @@
     "date": "October 25, 2026",
     "context": "Matthew Parish, “Poland Divided: How Politics Became a Struggle Between Two Nations” Lviv Harald , October 25, 2026",
     "first_seen": "2026-10-30T03:44:19+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-10-25-parish-poland-divided-how-politics-became-a-struggle-between-two-nations/post.json"
   },
   {
     "url": "https://firstthings.com/a-muslim-answer-to-muslim-immigration",
@@ -174,7 +175,8 @@
     "date": "October 20, 2026",
     "context": "James Hankins , “A Muslim Answer to Muslim Immigration” First Things , October 20, 2026",
     "first_seen": "2026-10-30T03:44:19+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-10-20-hankins-a-muslim-answer-to-muslim-immigration/post.json"
   },
   {
     "url": "https://thecatholicherald.com/article/jd-vance-says-us-church-leaders-have-missed-opportunity-on-immigration",
