@@ -1,9 +1,16 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": null,
+  "tweet": {
+    "slot": "2026-11-01#0",
+    "slug": "2026-10-20-murray-france-stares-down-the-abyss-of-history",
+    "quote": 1,
+    "text": "״כמו ילדים שהציתו אש, אין להם מושג איך לכבות אותה.״ דאגלס מארי על הפוליטיקאים שהביאו את צרפת אל שפת התהום.\n\nhttps://hashamran.github.io/hashamran-links/2026-10-20-murray-france-stares-down-the-abyss-of-history.html",
+    "at": "2026-11-01T13:45:52+00:00",
+    "buffer_id": "6ae74291cf3a3112f3fd336e"
+  },
   "alerts": [
-    "2026-10-27-mccarthy-brazil-and-venezuela-face-a-tough-road-back-to-sanity has waited 1d 2h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-10-27-mccarthy-brazil-and-venezuela-face-a-tough-road-back-to-sanity has waited 1d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
