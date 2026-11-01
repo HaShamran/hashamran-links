@@ -1,11 +1,14 @@
 """Fourth reference, for legal, policy and security terms only: Israeli think tanks that publish in both English
-and Hebrew, side by side. One tool for all of them (pipeline/kohelet_corpus.py is the Kohelet-only form).
+and Hebrew, side by side, and Israel Hayom columns with the paper's English translations. One tool for all of them
+(pipeline/kohelet_corpus.py is the Kohelet-only form).
 
 Banks (index files in this folder; private texts under /mnt/project-files/hashamran/translation-guide/<bank>/pairs):
 - kohelet  Kohelet Policy Forum: Israeli law, the courts, international law, economy, education
 - misgav   Misgav Institute for National Security and Zionist Strategy: Iran, Hezbollah, Gaza, US-Israel relations
 - jiss     Jerusalem Institute for Strategy and Security: strategy, security, the region
 - inss     Institute for National Security Studies: security research, the region, society and security
+- israelhayom  Israel Hayom columns (Hebrew originals) and the paper's English translations: politics, Iran,
+               the region; current newspaper Hebrew, not a guide for register
 
 Every pair was checked before it was added (see each bank's README in the project folder). Many were written in
 Hebrew first, so read a pair as "this Hebrew term goes with this English one", not as a model translation. None of
@@ -25,7 +28,7 @@ import mida_corpus
 
 HERE = pathlib.Path(__file__).parent
 STORE = pathlib.Path(os.environ.get("POLICY_STORE", "/mnt/project-files/hashamran/translation-guide"))
-BANKS = ("kohelet", "misgav", "jiss", "inss")
+BANKS = ("kohelet", "misgav", "jiss", "inss", "israelhayom")
 
 
 def use(bank):

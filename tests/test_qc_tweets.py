@@ -210,5 +210,7 @@ def test_policy_corpus_banks(capsys):
     assert policy_corpus.use("misgav") and policy_corpus.use("jiss") and policy_corpus.use("inss")
     import mida_corpus
     assert len(list(mida_corpus.rows())) == 1201
+    assert policy_corpus.use("israelhayom") and len(mida_corpus.rows()) == 19
+    assert {r["original"] for r in mida_corpus.rows()} == {"he"}
     policy_corpus.main(["--bank", "jiss", "count", "deterrence"])
     assert capsys.readouterr().out.startswith("deterrence: ")

@@ -63,7 +63,8 @@ def scrape(url, formats=("markdown",), main_only=True, timeout=120):
         _refused = True
         raise FirecrawlError(f"Firecrawl refused the request (HTTP {r.status_code})")
     data = payload.get("data") or {}
-    _record(int((data.get("metadata") or {}).get("creditsUsed") or 1))
+    if r.status_code != 429:  # a rate-limited request is turned away before any work and costs nothing
+        _record(int((data.get("metadata") or {}).get("creditsUsed") or 1))
     if not r.ok or not payload.get("success"):
         raise FirecrawlError(f"Firecrawl HTTP {r.status_code}: {str(payload.get('error') or r.text)[:200]}")
     return data
