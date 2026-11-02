@@ -229,3 +229,18 @@ Eydar 3, Amnon Lord 1; Aug–Oct 2026), added as `policy_corpus.py --bank israel
 Israeli political and security Hebrew is rendered in English (Iran, Hezbollah, the Gulf, the elections). 10
 candidates were left out: Amit Segal's English columns are condensed rewrites, not translations, and three long
 Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, never register.
+
+### 2026-11-02 · 2026-10-20-paul-lgbtq-is-far-from-dead
+- Term: LGB vs LGBTQ → ״הומואים, לסביות או ביסקסואלים״ / ״הזהות ההומוסקסואלית והביסקסואלית״ for LGB survey figures;
+  ״להט״ב״ only where the English has LGBTQ. Pass 1 used ״להט״ב״ for both, which put trans and queer people into data
+  that measures only sexual orientation.
+- Term: non-heterosexual(ity) → ״לא־הטרוסקסואלי״ / ״אי־הטרוסקסואליות״; social contagion → ״הדבקה חברתית״; plateau →
+  ״התייצבות״; genderfluid → ״זרימה מגדרית״ (ג׳נדר־פלואיד; ״גמישות מגדרית״ is gender nonconformity); prep school → ״פנימייה פרטית המכינה לקולג׳״.
+- Title: chose ״מוקדם להספיד את הזהות הלהט״בית״ over the calque ״הלהט״ב רחוק ממוות״, ״נולדו כך? הזהות המינית כגל חברתי״,
+  ״הגל הלהט״בי עוד לא נסוג״. Why: a Hebrew idiom that says what "far from dead" says.
+- Caught in pass 2 (major): "political as well as social" → ״פוליטיות לא פחות משהן חברתיות״ ranked the two and sharpened
+  the claim (→ ״חברתיות וגם פוליטיות״); it was also tweet quote 1.
+- Caught in pass 2 (major): the subtitle stated the decline as a fact for all young Americans; the essay limits it to high
+  schoolers and young men and says young women are at a record. A Hebrew subtitle needs the same fidelity check as the body.
+- Style: age ranges and statistics in digits (בני 18–24), not words; ״לשיא של כל הזמנים״ and ״עושה קאמבק״ are calques/slang.
+- Skipped this run: Catholic Herald (Vance on immigration), registration wall after three paragraphs → paywalled.

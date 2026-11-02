@@ -186,7 +186,8 @@
     "date": "October 22, 2026",
     "context": "Christine Rousselle, “JD Vance says US Church leaders have missed opportunity on immigration” The Catholic Herald , October 22, 2026",
     "first_seen": "2026-10-30T03:44:19+00:00",
-    "status": "queued"
+    "status": "paywalled",
+    "note": "2026-11-02: registration wall after 3 paragraphs (\"Continue reading with a free account\"); no bypass"
   },
   {
     "url": "https://firstthings.com/lgbtq-is-far-from-dead",
@@ -196,7 +197,8 @@
     "date": "October 20, 2026",
     "context": "Darel E. Paul, “LGBTQ Is Far from Dead” First Things , October 20, 2026",
     "first_seen": "2026-10-30T03:44:19+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-10-20-paul-lgbtq-is-far-from-dead/post.json"
   },
   {
     "url": "https://nationalconservatism.org/wp-content/uploads/2026/10/Islam-Verses-the-west.pdf",
