@@ -1,11 +1,18 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": null,
+  "tweet": {
+    "slot": "2026-11-03#1",
+    "slug": "2026-10-27-mccarthy-brazil-and-venezuela-face-a-tough-road-back-to-sanity",
+    "quote": 1,
+    "text": "״הפסד עלול להיות כואב; לסיים את דרכה כמו מדורו יהיה גרוע יותר.״ דניאל מקארתי על הבחירה העומדת בפני דלסי רודריגס בוונצואלה.\n\nhttps://hashamran.github.io/hashamran-links/2026-10-27-mccarthy-brazil-and-venezuela-face-a-tough-road-back-to-sanity.html",
+    "at": "2026-11-03T15:39:11+00:00",
+    "buffer_id": "6aea002001362e3aaea19364"
+  },
   "alerts": [
-    "2026-10-20-hankins-a-muslim-answer-to-muslim-immigration has waited 2d 3h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-10-20-paul-lgbtq-is-far-from-dead has waited 1d 4h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-10-25-parish-poland-divided-how-politics-became-a-struggle-between-two-nations has waited 2d 3h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-10-20-hankins-a-muslim-answer-to-muslim-immigration has waited 2d 11h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-10-20-paul-lgbtq-is-far-from-dead has waited 1d 11h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-10-25-parish-poland-divided-how-politics-became-a-struggle-between-two-nations has waited 2d 11h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
