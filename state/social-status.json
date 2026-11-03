@@ -1,17 +1,10 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": {
-    "slot": "2026-11-02#1",
-    "slug": "2026-10-27-mccarthy-brazil-and-venezuela-face-a-tough-road-back-to-sanity",
-    "quote": 0,
-    "text": "״הדבר הטוב ביותר שלולה יכול לעשות למען ברזיל הוא לכרות שלום עם יריביו.״ דניאל מקארתי על ברזיל וונצואלה אחרי הבחירות.\n\nhttps://hashamran.github.io/hashamran-links/2026-10-27-mccarthy-brazil-and-venezuela-face-a-tough-road-back-to-sanity.html",
-    "at": "2026-11-02T18:36:52+00:00",
-    "buffer_id": "6ae8d84587c5ea7cde559fce"
-  },
+  "tweet": null,
   "alerts": [
-    "2026-10-20-hankins-a-muslim-answer-to-muslim-immigration has waited 1d 14h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-10-25-parish-poland-divided-how-politics-became-a-struggle-between-two-nations has waited 1d 14h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-10-20-hankins-a-muslim-answer-to-muslim-immigration has waited 1d 21h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-10-25-parish-poland-divided-how-politics-became-a-struggle-between-two-nations has waited 1d 21h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
