@@ -208,7 +208,8 @@
     "date": "October 21, 2026",
     "context": "R. Albert Mohler, Jr, “Islam vs. America: The Constitutional Question Nobody Wants To Answer” Daily Wire , October 21, 2026",
     "first_seen": "2026-10-30T03:44:19+00:00",
-    "status": "queued"
+    "status": "failed",
+    "note": "2026-11-03: the NatCon PDF (a browser print of Daily Wire) has no text layer, and the site header covers one line on page 4 (\"Those ... repudiated throughout the Muslim world as apostate\"), so a sentence is lost. The Daily Wire original (dailywire.com/news/islam-versus-the-west-we-cannot-say-that-we-were-not-warned) is behind a login wall; no bypass."
   },
   {
     "url": "https://nationalconservatism.org/wp-content/uploads/2026/09/Iceland-puts-the-freeze-on-Brussels-%E2%80%98ever-closer-union.pdf",
@@ -218,7 +219,8 @@
     "date": "September 1, 2026",
     "context": "Paul McCarthy, “Iceland Puts the Freeze on Brussels’ ‘Ever Closer Union’” The Washington Times , September 1, 2026",
     "first_seen": "2026-10-30T03:44:19+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union/post.json"
   },
   {
     "url": "https://nationalconservatism.org/wp-content/uploads/2026/04/Why-Tucker-Carlson-Is-Turning-on-Donald-Trump_-%E2%80%98I-Feel-Betrayed-WSJ.pdf",

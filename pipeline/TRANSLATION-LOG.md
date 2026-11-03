@@ -244,3 +244,18 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   schoolers and young men and says young women are at a record. A Hebrew subtitle needs the same fidelity check as the body.
 - Style: age ranges and statistics in digits (בני 18–24), not words; ״לשיא של כל הזמנים״ and ״עושה קאמבק״ are calques/slang.
 - Skipped this run: Catholic Herald (Vance on immigration), registration wall after three paragraphs → paywalled.
+
+### 2026-11-03 · 2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union
+- Term: ever closer union → ״איחוד הדוק מתמיד״; single market → ״השוק האחיד״; EEA → ״האזור הכלכלי האירופי״ (Hebrew
+  Wikipedia); accession / enlargement → ״הצטרפות״ / ״התרחבות״; absorption → ״היבלעות״; accountable → ״נותן דין וחשבון״
+  (kept the same in P7, P19, P21); Project Fear → ״פרויקט הפחד״, glossed once ״המוכר מימי הברקזיט״.
+- Title: chose ״איסלנד מקפיאה את ״האיחוד ההדוק מתמיד״ של בריסל״ (keeps the freeze pun) over ״הכתף הקרה של איסלנד״,
+  ״איסלנד אומרת לא לבריסל״, ״אירופה של אומות: הלקח מרייקיאוויק״.
+- Caught in pass 2 (major): "the sovereignty and regulatory costs" → ״מחירי הריבונות״ reads as the cost of having
+  sovereignty, the opposite of the point (the cost to sovereignty) → ״המחיר בריבונות ובנטל הרגולטורי״. It was also a
+  tweet quote; the blind back-translation exposed it. Watch noun + ״מחיר״ constructions.
+- Hard call: Washington Times print had a sidebar table spliced into P8; rebuilt the sentence from the two halves.
+- Skipped this run: Mohler, "Islam vs. America" (Daily Wire via NatCon PDF): the PDF is a browser print whose sticky
+  header hides one line on page 4, so a sentence is lost; the Daily Wire page is behind a login. Marked failed.
+- Open question: US-POLITICS.md lists ״קרן הריטג׳״ but Hebrew Wikipedia has ״הריטג׳ פאונדיישן״; used Wikipedia per
+  Hadar's rule. The table entry should be aligned.
