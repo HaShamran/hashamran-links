@@ -214,9 +214,12 @@ def connect():
 # ---------- what is due ----------
 
 def archive():
-    r = requests.get(f"{PUB}/api/v1/archive", params={"sort": "new", "limit": 50}, timeout=60)
+    # Substack's archive API (since early Nov 2026) refuses limit above 25 with a 400 and wraps the list as
+    # {"posts": [...]}. A 400 here stopped every run before it could publish, so keep to 25 and accept both shapes.
+    r = requests.get(f"{PUB}/api/v1/archive", params={"sort": "new", "limit": 25}, timeout=60)
     r.raise_for_status()
-    return r.json()
+    data = r.json()
+    return data.get("posts", []) if isinstance(data, dict) else data
 
 
 def due_post(now, arch, index, state):

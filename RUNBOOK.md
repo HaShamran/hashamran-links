@@ -22,7 +22,7 @@ commit nothing from this step, and go on to step 3 with the existing queue.
 
 ## 3. Translate
 How many: count posts in `posts/index.json` with status `ready` that are not yet live on Substack
-(`curl -s "https://hashamran.substack.com/api/v1/archive?sort=new&limit=50"`, match by `title_he`).
+(`curl -s "https://hashamran.substack.com/api/v1/archive?sort=new&limit=25"`, a `{"posts": [...]}` object; limit above 25 gets a 400; match by `title_he`).
 Translate until 4 are waiting, at most 2 per run (dud publishes 2 a day while 2 or more are ready, so 2 a
 day keeps the pace). Take the oldest `queued` items in `state/queue.json`.
 
