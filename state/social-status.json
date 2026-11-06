@@ -1,17 +1,10 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": {
-    "slot": "2026-11-06#0",
-    "slug": "2026-10-20-hankins-a-muslim-answer-to-muslim-immigration",
-    "quote": 0,
-    "text": "״כל צעד במאה העשרים ואחת לחיזוק אופייה הנוצרי של אמריקה יהיה בהכרח רך ומתירני כמו הנצרות האמריקנית עצמה.״ ג׳יימס הנקינס על מה שאמריקה יכולה ללמוד ממלזיה.\n\nhttps://hashamran.github.io/hashamran-links/2026-10-20-hankins-a-muslim-answer-to-muslim-immigration.html",
-    "at": "2026-11-06T13:35:20+00:00",
-    "buffer_id": "6aedd799e45c1855cb3ff639"
-  },
+  "tweet": null,
   "alerts": [
-    "2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union has waited 3d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-10-20-paul-lgbtq-is-far-from-dead has waited 4d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union has waited 3d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-10-20-paul-lgbtq-is-far-from-dead has waited 4d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
