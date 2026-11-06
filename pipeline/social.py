@@ -43,15 +43,16 @@ def load_posts():
     return posts
 
 
-def substack_archive(limit=50):
+def substack_archive(limit=25):
     """Recent posts as [{title, slug, post_date, canonical_url, cover_image}]. Substack's JSON archive refuses
     some cloud IPs (GitHub Actions gets 403), so the RSS feed is the fallback. None when both fail."""
     headers = {"User-Agent": BROWSER_UA, "Accept-Language": "he,en;q=0.8"}
     try:
         r = requests.get(f"{PUBLICATION_URL}/api/v1/archive", params={"sort": "new", "limit": limit},
                          headers=headers, timeout=60)
-        if r.ok:
-            return r.json()
+        if r.ok:  # Substack caps limit at 25 and may wrap the list as {"posts": [...]}
+            data = r.json()
+            return data.get("posts", []) if isinstance(data, dict) else data
     except requests.RequestException:
         pass
     try:
