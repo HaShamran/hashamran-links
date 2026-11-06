@@ -1,17 +1,10 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": {
-    "slot": "2026-11-06#1",
-    "slug": "2026-10-25-parish-poland-divided-how-politics-became-a-struggle-between-two-nations",
-    "quote": 0,
-    "text": "״האתגר הוא לגלות מחדש את ההבחנה בין יריב לאויב.״ מתיו פאריש על הקיטוב בפולין, ועל המשקל הכבד שיש למילה ״אויב״ בארץ שאויביה ביקשו למחוק אותה מן המפה.\n\nhttps://hashamran.github.io/hashamran-links/2026-10-25-parish-poland-divided-how-politics-became-a-struggle-between-two-nations.html",
-    "at": "2026-11-06T14:35:21+00:00",
-    "buffer_id": "6aede5a9263cb82eef09f2ca"
-  },
+  "tweet": null,
   "alerts": [
-    "2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union has waited 3d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-10-20-paul-lgbtq-is-far-from-dead has waited 4d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union has waited 3d 11h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-10-20-paul-lgbtq-is-far-from-dead has waited 4d 11h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
