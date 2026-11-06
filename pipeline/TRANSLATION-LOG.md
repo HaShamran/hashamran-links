@@ -257,5 +257,5 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - Hard call: Washington Times print had a sidebar table spliced into P8; rebuilt the sentence from the two halves.
 - Skipped this run: Mohler, "Islam vs. America" (Daily Wire via NatCon PDF): the PDF is a browser print whose sticky
   header hides one line on page 4, so a sentence is lost; the Daily Wire page is behind a login. Marked failed.
-- Open question: US-POLITICS.md lists ״קרן הריטג׳״ but Hebrew Wikipedia has ״הריטג׳ פאונדיישן״; used Wikipedia per
-  Hadar's rule. The table entry should be aligned.
+- Resolved 6 Nov (Hadar): Heritage Foundation = ״קרן הריטג׳״, as in US-POLITICS.md, not Wikipedia's ״הריטג׳ פאונדיישן״.
+  The Wikipedia-spelling rule is for people's names, not established Hebrew names of institutions. Iceland bio fixed.

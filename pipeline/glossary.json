@@ -566,5 +566,13 @@
   "he": "חופש קיום הדת (קיום חופשי) / קיום פומבי של הדת",
   "avoid": [],
   "note": "Hankins 2026-11-01; ״הקיום החופשי של הדת״ reads as \"free existence\"; ״חופש הפולחן״ only for freedom of worship"
+ },
+ {
+  "en": "Heritage Foundation",
+  "he": "קרן הריטג׳",
+  "avoid": [
+   "הריטג׳ פאונדיישן"
+  ],
+  "note": "Hadar 6 Nov 2026: institution name follows US-POLITICS.md, not Hebrew Wikipedia."
  }
 ]
