@@ -20,11 +20,18 @@ python3 pipeline/detect.py
 Exit 0: new essays (if any) were added to `state/queue.json`. Exit 2: put the output in the report as an alert,
 commit nothing from this step, and go on to step 3 with the existing queue.
 
+Then top up the queue: `python3 pipeline/backfill.py`. Hadar's rule (6 Nov 2026) is at least two articles live
+every day, and the page adds essays more slowly than that. When fewer than 3 essays are queued, this moves the newest
+older essays from the page (listed before detection began) into the queue. New essays stay ahead of them. List
+any backfilled titles in the report.
+
 ## 3. Translate
 How many: count posts in `posts/index.json` with status `ready` that are not yet live on Substack
 (`curl -s "https://hashamran.substack.com/api/v1/archive?sort=new&limit=25"`, a `{"posts": [...]}` object; limit above 25 gets a 400; match by `title_he`).
-Translate until 4 are waiting, at most 2 per run (dud publishes 2 a day while 2 or more are ready, so 2 a
-day keeps the pace). Take the oldest `queued` items in `state/queue.json`.
+Translate until 6 are waiting, at most 3 per run. dud publishes 2 a day whenever 2 or more are ready, and Hadar's
+rule is at least 2 a day, so the buffer has to cover a day when an item fails, is paywalled, or is held.
+A backfilled item that is not an essay or article (a video, podcast, or social post), or that is clearly not right for
+השמרן, gets the status `skipped` with a one-line reason. Then take the next one. Take the oldest `queued` items in `state/queue.json`.
 
 For each:
 1. `python3 pipeline/extract.py "<url>" --out /tmp/<slug>.src.json` (slug rules in pipeline/TRANSLATION.md).
