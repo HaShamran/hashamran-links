@@ -1,17 +1,10 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": {
-    "slot": "2026-11-07#1",
-    "slug": "2026-10-20-hankins-a-muslim-answer-to-muslim-immigration",
-    "quote": 2,
-    "text": "״ייתכן שבפרשנויות עתידיות של התיקון הראשון אפשר יהיה להבחין בין ׳קיום חופשי׳ לבין ׳קיום פומבי׳, וזו ההבחנה המעשית הפועלת במלזיה.״ ג׳יימס הנקינס על הגירה מוסלמית ועל החוקה האמריקנית.\n\nhttps://hashamran.github.io/hashamran-links/2026-10-20-hankins-a-muslim-answer-to-muslim-immigration.html",
-    "at": "2026-11-07T14:29:13+00:00",
-    "buffer_id": "6aef35ba9214322f68f934aa"
-  },
+  "tweet": null,
   "alerts": [
-    "2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union has waited 4d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-10-20-paul-lgbtq-is-far-from-dead has waited 5d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union has waited 4d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-10-20-paul-lgbtq-is-far-from-dead has waited 5d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
