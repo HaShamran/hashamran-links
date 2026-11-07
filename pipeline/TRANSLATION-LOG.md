@@ -29,6 +29,9 @@ Settled terms move to `pipeline/glossary.json`; mark the entry `→ glossary` wh
 | cohabitation (president vs government of rival camps) | ״קוהביטציה״, glossed once as הדו־קיום הכפוי | Parish, 2026-10-25 | used once |
 | confessional state | המדינה בעלת הדת הממוסדת (confessional state) | Hankins, 2026-10-20 | used once; first try ״מדינה דתית־ממוסדת״ was awkward in the plural |
 | grooming gangs (UK) | כנופיות ה״גרומינג״ | Hankins, 2026-10-20 | used once; ״טיפוח״ is a calque (cultivation, beauty care) |
+| statute / statutory law | חיקוק / המשפט החקוק | Johnson, 2022-04-21 | used once; ״חוק חקוק״ is a pleonasm; avoid the biblical ״חוקים״ when the contrast is with Torah |
+| stated (law) vs unstated | מפורש / לא נאמר במפורש | Johnson, 2022-04-21 | used once; ״כתוב״ echoes תורה שבכתב |
+| deny / block citizenship vs revoke | למנוע / לחסום אזרחות vs לשלול אזרחות | Roberts, 2026-11-01 | used once; ״לשלול״ means taking away citizenship already held |
 
 ## Entries
 
@@ -259,3 +262,44 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   header hides one line on page 4, so a sentence is lost; the Daily Wire page is behind a login. Marked failed.
 - Resolved 6 Nov (Hadar): Heritage Foundation = ״קרן הריטג׳״, as in US-POLITICS.md, not Wikipedia's ״הריטג׳ פאונדיישן״.
   The Wikipedia-spelling rule is for people's names, not established Hebrew names of institutions. Iceland bio fixed.
+
+### 2026-11-07 · 2026-04-25-wegmann-why-tucker-carlson-is-turning-on-donald-trump
+- Source: a WSJ news feature that NatCon hosts as a PDF of a web capture; comments, newsletter box and "Further Reading" dropped. A news
+  report, so the register is plainer than an essay; the connectives came from the English joints (אמנם... אך, כלומר, אלא).
+- Term: neoconservatives → ״הניאו־שמרנים״; regime change → ״החלפת משטרים״; anti-interventionism → ״התנגדות להתערבות צבאית בחו״ל״;
+  "no new wars" → ״לא עוד מלחמות חדשות״; America First → ״אמריקה תחילה״, feminine throughout (״פירושה״, ״לדחות אותה״).
+- Term: Resolute Desk → ״שולחן הרזולוט, שולחן העבודה של הנשיא״ (Wikipedia name means nothing alone); WASP explained by the text's own
+  next sentence (״לבן, אנגלו־סקסי ופרוטסטנטי״).
+- Title: chose ״מדוע טאקר קרלסון יצא נגד טראמפ״ (close) over ״טאקר קרלסון: ״אני מרגיש נבגד״״ (nested quote marks in a title),
+  ״מאיש סוד לגולה״, ״קרלסון נגד טראמפ: הקרע על איראן״. The subtitle carries ״אני מרגיש נבגד״.
+- Caught in pass 2 (major): tweet quote 1 put the reporter's paraphrase ("If America First is the gut instinct... Carlson said") inside
+  Carlson's quotation marks, joined by [...]. Rule: a tweet quote may only join words inside the same speaker's quotation; the frame goes
+  in the hook. The fix-check then caught that ״לדחות אותה״ had no referent inside the quote → ״לדחות את [׳אמריקה תחילה׳]״.
+- Caught in pass 2 (minor, recurring kind): ״השיב לשיחות״ for "fielding calls" (received, not returned); ״מעצמות זרות״ for "foreign powers"
+  in a vague smear (→ ״גורמים זרים״); ״עצוב ומשלים״ needs ״עם המצב״; ״הנחתי שהוא כן״ reads as "yes" (→ ״מתכוון לדבריו״).
+- Pass 1 error caught by me before review: ״האיש שעזר לו להפוך לנשיא״ reversed who helped whom. Check the subject of every ״ש־״ clause
+  after a name.
+
+### 2026-11-07 · 2022-04-21-johnson-will-we-ever-actually-bother-with-biblical-law
+- A Christian scholar writing to Christians (a Theopolis "conversation" reply). Kept his ״אנו״ as Christians; Bible references in
+  Hebrew-Bible numbering (English Exod 22:1–3 = שמות כא, לז – כב, ב) with fidelity waivers; Lev 19:17 quoted from the original.
+- Term: "keep the torah like you keep a garden or keep sheep" works natively in Hebrew (שמר); "break" a law → ״לשבור״, in quotation
+  marks, so the garden/sheep joke survives ("Can you break a garden?"). teachings of Jesus → ״משנתו של ישו״, so it does not clash with ״תורה״.
+- Title: chose ״שומרים תורה כמו ששומרים גן״ (the essay's central image) over the close ״האם נטרח אי־פעם לעסוק באמת במשפט המקראי?״,
+  ״התורה אינה ספר חוקים״, ״הנוצרים והתורה: החזון שהוחמץ״.
+- Caught in pass 2 (major): tweet 2 called Henri Frankfort ״ההיסטוריון״; he was an archaeologist and Assyriologist, and the source cites
+  "Frankfort et al." Rule: a tweet hook describes a person only as the essay or an undisputed fact does.
+- Caught in pass 2 (minor): the subtitle said "his fellow believers" where the essay says "many (possibly most?)"; ״הוערכו... על פי חוק״
+  read as statute, the category the essay rejects (→ ״הועמדו חיי אדם, מבחינה משפטית, מעל הרכוש״); concessive "We may all roll our
+  eyes, but" rendered as a hedge ״אולי״ (→ ״אמנם... אבל״); "let us be real" is "realistic", not ״כנים״.
+- QC: English bibliographic notes fail the untranslated-paragraph check. Render notes in Hebrew form (author, translated title in italics,
+  English short title, place and publisher in Hebrew, ״עמ׳״).
+
+### 2026-11-07 · 2026-11-01-roberts-giorgia-meloni-threatens-to-remove-right-to-citizenship-from-rioting-teens
+- A news report with critical framing (hard-right, post-fascist roots); kept exactly: ״הימין הקשה״ for hard-right, ״הימין הקיצוני״ for
+  far-right, never merged.
+- Caught in pass 2 (major): title ״לשלול אזרחות״ reads as revoking citizenship already held; the teens are not citizens yet and the bill
+  blocks their path, while revocation is a separate measure in the same bill → ״למנוע אזרחות״.
+- Caught in pass 2 (major): closing line "security had always been a priority" → ״בראש סדר העדיפויות״ sharpened it (→ ״בין העדיפויות״).
+- Hard call: the source says the 17 October riots were "earlier this month" in a piece dated 1 November; wrote ״באוקטובר״.
+- Names: Beccaria → ״בקאריה״ (Hebrew Wikipedia, Cesare Beccaria); the League → ״מפלגת הליגה״; ANSA, ASGI, YouTrend/AGI in Latin.

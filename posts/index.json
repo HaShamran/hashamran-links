@@ -1,11 +1,27 @@
 [
   {
+    "slug": "2022-04-21-johnson-will-we-ever-actually-bother-with-biblical-law",
+    "title_he": "שומרים תורה כמו ששומרים גן",
+    "status": "ready",
+    "ready_at": "2026-11-07T04:10:12+00:00",
+    "substack_slug": "johnson-will-we-ever-actually-bother-with-biblical-law",
+    "substack_draft_id": null
+  },
+  {
     "slug": "2023-03-30-greer-a-school-of-strength-and-character",
     "title_he": "בית ספר לכוח ולאופי",
     "status": "ready",
     "ready_at": "2026-10-29T21:11:00+00:00",
     "substack_slug": "greer-a-school-of-strength-and-character",
     "substack_draft_id": 222376629
+  },
+  {
+    "slug": "2026-04-25-wegmann-why-tucker-carlson-is-turning-on-donald-trump",
+    "title_he": "מדוע טאקר קרלסון יצא נגד טראמפ",
+    "status": "ready",
+    "ready_at": "2026-11-07T04:00:25+00:00",
+    "substack_slug": "wegmann-why-tucker-carlson-is-turning-on-donald-trump",
+    "substack_draft_id": null
   },
   {
     "slug": "2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union",
@@ -61,6 +77,14 @@
     "status": "ready",
     "ready_at": "2026-10-31T03:55:48+00:00",
     "substack_slug": "mccarthy-brazil-and-venezuela-face-a-tough-road-back-to-sanity",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-11-01-roberts-giorgia-meloni-threatens-to-remove-right-to-citizenship-from-rioting-teens",
+    "title_he": "ממשלת מלוני מאיימת למנוע אזרחות מבני נוער מתפרעים",
+    "status": "ready",
+    "ready_at": "2026-11-07T04:09:34+00:00",
+    "substack_slug": "roberts-giorgia-meloni-threatens-to-remove-right-to-citizenship-from-rioting-tee",
     "substack_draft_id": null
   }
 ]
