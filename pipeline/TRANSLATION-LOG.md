@@ -321,3 +321,6 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - Hard call: "retarded" in the closing polemic → ״מטומטמים״ (keeps the insult, without a slur about disability).
 - Title: chose ״אחרי טראמפ: הזומבים, טאקר והמאבק על הירושה״ (topic: angle) over ״בחירות האמצע, המפלגה הזומבית ובעיית טאקר״ (close, dated
   by the election) and ״הטראמפיזם גווע, הזומבים מתעוררים״; the subtitle decodes ״הזומבים״.
+- Correction (Hadar, 2026-11-08): "״המחנה הלאומי״: best" (asked for alternatives to ״אנשי הלאומיות״). Rule: the nationalists as a camp or people
+  = ״המחנה הלאומי״; the adjective stays לאומי; never לאומן. Applied to this post. → glossary
+- Correction (Hadar, 2026-11-08): "second best: הימין הלאומי". Rule: ״הימין הלאומי״ is the alternative to ״המחנה הלאומי״.

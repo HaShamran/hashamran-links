@@ -577,8 +577,12 @@
  },
  {
   "en": "nationalism / nationalist (as the national-conservative camp's self-description)",
-  "he": "לאומיות / לאומי, אנשי הלאומיות",
-  "avoid": [],
-  "note": "Never לאומן/לאומנים/לאומני for the camp itself: in Hebrew it reads as chauvinist, a slur the English lacks. Keep לאומי for 'nationalist' and write ״הפוליטיקה האמריקנית״ for 'national politics' so לאומי is not ambiguous. Keeperman, 2026-11-08 (reviewer major)."
+  "he": "לאומיות / לאומי; the camp or its people: המחנה הלאומי (second choice: הימין הלאומי)",
+  "avoid": [
+   "לאומנים",
+   "לאומן",
+   "אנשי הלאומיות"
+  ],
+  "note": "Hadar, 2026-11-08: ״המחנה הלאומי״ is the house form, with ״הימין הלאומי״ as second choice (for variety or where 'right' fits), for the nationalists as a camp or group of people. Never לאומן/לאומנים (reads as chauvinist). Adjective stays לאומי (מרד של המחנה הלאומי, סדר יום לאומי); write ״הפוליטיקה האמריקנית״ for 'national politics' so לאומי is not ambiguous."
  }
 ]
