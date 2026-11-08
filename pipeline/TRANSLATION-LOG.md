@@ -324,3 +324,4 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - Correction (Hadar, 2026-11-08): "״המחנה הלאומי״: best" (asked for alternatives to ״אנשי הלאומיות״). Rule: the nationalists as a camp or people
   = ״המחנה הלאומי״; the adjective stays לאומי; never לאומן. Applied to this post. → glossary
 - Correction (Hadar, 2026-11-08): "second best: הימין הלאומי". Rule: ״הימין הלאומי״ is the alternative to ״המחנה הלאומי״.
+- Correction (Hadar, 2026-11-08): "third best: ״השמרנים הלאומיים״". Rule: third choice, fits where NatCon people are meant.
