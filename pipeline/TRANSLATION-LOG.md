@@ -303,3 +303,21 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - Caught in pass 2 (major): closing line "security had always been a priority" → ״בראש סדר העדיפויות״ sharpened it (→ ״בין העדיפויות״).
 - Hard call: the source says the 17 October riots were "earlier this month" in a piece dated 1 November; wrote ״באוקטובר״.
 - Names: Beccaria → ״בקאריה״ (Hebrew Wikipedia, Cesare Beccaria); the League → ״מפלגת הליגה״; ANSA, ASGI, YouTrend/AGI in Latin.
+
+### 2026-11-08 · 2026-11-01-keeperman-midterms-zombie-gop-tucker-problem
+- Source: a long X article (Jonathan Keeperman, two days before the 3 Nov 2026 midterms), listed on the NatCon essays page; it extracted
+  cleanly, with one lead image. The X profile line (publisher and podcast links) is not an essay bio, so no bio.
+- Term: Zombie GOP → ״המפלגה הרפובליקנית הזומבית״ throughout (״הרפובליקניות הזומבית״ for "Zombie Republicanism"); Vanceguard →
+  ״הוואנסגארד״ glossed once as Vance + ״אוונגרד״, and "vanguard movements" later → ״תנועות ׳אוונגרד׳״ to keep the echo (not ״תנועות חלוץ״,
+  which evokes Zionist youth movements); Tech Right → ״ימין הטק״; degrowth → ״הנסיגה מן הצמיחה״ (degrowth), not ״צמיחה שלילית״ (recession);
+  NGO complex → ״תעשיית הארגונים הלא־ממשלתיים״, not ״ארגוני החברה האזרחית״ (positive in Israel); Never Trumpers → ״מתנגדי טראמפ המושבעים״.
+- Term: nationalism/nationalist → לאומיות/לאומי, never לאומן (chauvinist). → glossary
+- Caught in pass 2 (major): ״לאומנים / לאומן / מרד לאומני״ for the same camp the author calls לאומי elsewhere; ״מדוע מחק טראמפ את הפרויקט
+  שלו״ read as Trump's own project (it was the old guard's; the first fix ״שלו עצמו״ made it worse, the fix-check caught it → ״שלהם״);
+  "institutional reckoning" → ״חשבון הנפש״ (introspection) instead of ״התחשבנות עם המוסדות״.
+- Caught in pass 2 (minor, recurring kinds): ״התגיירו ללאומיות״ (conversion to Judaism only) → ״חזרו בתשובה אל הלאומיות״; ״בידי היהודים״
+  generalised "by Jews" → ״בידי יהודים״; ״מאבק בעלייה״ calque; ״הספסל שלה אינו עמוק״ sports calque → ״אין לה עתודה של ממש״; dropped
+  hedges ("some of", "might portend", "really"); ואולם 11 times → varied with אבל, אך, ברם, עם זאת, אלא ש.
+- Hard call: "retarded" in the closing polemic → ״מטומטמים״ (keeps the insult, without a slur about disability).
+- Title: chose ״אחרי טראמפ: הזומבים, טאקר והמאבק על הירושה״ (topic: angle) over ״בחירות האמצע, המפלגה הזומבית ובעיית טאקר״ (close, dated
+  by the election) and ״הטראמפיזם גווע, הזומבים מתעוררים״; the subtitle decodes ״הזומבים״.
