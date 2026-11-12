@@ -87,3 +87,12 @@ def test_parse_feed():
     [a] = social.parse_feed(FEED)
     assert a == {"title": "כותרת", "slug": "abc", "post_date": "2026-10-29T05:00:00+00:00",
                  "canonical_url": "https://hashamran.substack.com/p/abc", "cover_image": "https://cdn/x.jpg"}
+
+
+def test_choose_skips_a_post_whose_relay_page_is_not_up():
+    now = at(14, 40, day=29)
+    posts = {"old": dict(POST, slug="old"), "new": dict(POST, slug="new")}
+    live = {"old": {"live_at": iso(at(13, 35, day=29))}, "new": {"live_at": iso(at(14, 5, day=29))}}
+    assert social.choose(posts, live, [], now) == ("new", 0)
+    assert social.choose(posts, live, [], now, ready=lambda s: s != "new") == ("old", 0)
+    assert social.choose(posts, live, [], now, ready=lambda s: False) is None
