@@ -1,19 +1,12 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": {
-    "slot": "2026-11-12#1",
-    "slug": "2026-10-20-paul-lgbtq-is-far-from-dead",
-    "quote": 0,
-    "text": "״זהויות הן חברתיות וגם פוליטיות, ודבר זה נכון במיוחד לזהויות מיניות.״ דארל פול על הירידה בהזדהות הלהט״בית בקרב צעירים אמריקנים, ועל מה שעשוי להחזיר אותה.\n\nhttps://hashamran.github.io/hashamran-links/2026-10-20-paul-lgbtq-is-far-from-dead.html",
-    "at": "2026-11-12T14:05:22+00:00",
-    "buffer_id": "6af5c7a4d2a6e57bf9b9a0e3"
-  },
+  "tweet": null,
   "alerts": [
-    "2022-04-21-johnson-will-we-ever-actually-bother-with-biblical-law has waited 5d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2022-04-21-johnson-will-we-ever-actually-bother-with-biblical-law has waited 5d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)",
     "2026-04-25-wegmann-why-tucker-carlson-is-turning-on-donald-trump has waited 5d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)",
     "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem has waited 4d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-11-01-roberts-giorgia-meloni-threatens-to-remove-right-to-citizenship-from-rioting-teens has waited 5d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-11-01-roberts-giorgia-meloni-threatens-to-remove-right-to-citizenship-from-rioting-teens has waited 5d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
