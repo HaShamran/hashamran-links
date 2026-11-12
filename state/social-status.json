@@ -1,15 +1,18 @@
 {
   "newly_live": [],
-  "relays_written": [
-    "2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union"
-  ],
+  "relays_written": [],
   "tweet": {
-    "waiting_for_relay_page": "2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union"
+    "slot": "2026-11-12#0",
+    "slug": "2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union",
+    "quote": 0,
+    "text": "״הם לא הפנו עורף לאירופה. הם הזכירו לאירופה שממשל דמוקרטי עדיין מתחיל בבית.״ פול מקארתי על משאל העם באיסלנד.\n\nhttps://hashamran.github.io/hashamran-links/2026-09-01-mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union.html",
+    "at": "2026-11-12T13:05:22+00:00",
+    "buffer_id": "6af5b9936f4d84d775f83f30"
   },
   "alerts": [
     "2022-04-21-johnson-will-we-ever-actually-bother-with-biblical-law has waited 5d 8h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-04-25-wegmann-why-tucker-carlson-is-turning-on-donald-trump has waited 5d 8h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem has waited 4d 8h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-04-25-wegmann-why-tucker-carlson-is-turning-on-donald-trump has waited 5d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem has waited 4d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)",
     "2026-11-01-roberts-giorgia-meloni-threatens-to-remove-right-to-citizenship-from-rioting-teens has waited 5d 8h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
