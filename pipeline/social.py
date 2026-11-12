@@ -7,6 +7,8 @@ Usage:
 
 Tweet rules (Hadar, 2026-10-27/28): 3 a day around 11:00, 16:00 and 21:00 Israel time; only posts live less
 than 48 hours, today's first; at most 3 tweets per post, never the same quote twice; 45 minutes apart.
+Catch-up (Hadar, 2026-11-12): a slot that passed with no tweet is not dropped. Every slot that has started today
+and has no tweet stays owed until 23:30, oldest first, one per run, still 45 minutes apart.
 """
 import argparse
 import datetime as dt
@@ -23,7 +25,7 @@ from common import (BROWSER_UA, ISRAEL, PAGES_URL, POSTS, PUBLICATION_URL, ROOT,
                     parse_iso, save_json, utcnow)
 
 SLOTS = [(11, 0), (16, 0), (21, 0)]
-DAY_END = (23, 30)  # a slot stays owed until the next slot starts (the last one until 23:30), so a late run catches up
+DAY_END = (23, 30)  # every slot that has started today stays owed until 23:30, so missed slots are caught up later
 MIN_GAP = dt.timedelta(minutes=45)
 TWEET_WINDOW = dt.timedelta(hours=48)
 MAX_PER_POST = 3
@@ -196,10 +198,25 @@ def choose(posts, live, log, now):
     return candidates[0][3], candidates[0][4]
 
 
+def owed_slot(log, now):
+    """The oldest slot that has started today and has no tweet yet, or None (Hadar, 2026-11-12: a missed morning
+    or afternoon slot is sent later in the day, not dropped). Nothing is owed after 23:30."""
+    local = now.astimezone(ISRAEL)
+    at = lambda hm: local.replace(hour=hm[0], minute=hm[1], second=0, microsecond=0)
+    if local >= at(DAY_END):
+        return None
+    done = {t.get("slot") for t in log}
+    for i, slot in enumerate(SLOTS):
+        key = f"{local.date().isoformat()}#{i}"
+        if at(slot) <= local and key not in done:
+            return key
+    return None
+
+
 def tweet_due(log, now):
     """The slot key if a tweet is owed now, else None."""
-    slot = current_slot(now)
-    if not slot or any(t.get("slot") == slot for t in log):
+    slot = owed_slot(log, now)
+    if not slot:
         return None
     today = israel_date(now)
     if sum(1 for t in log if israel_date(parse_iso(t["at"])) == today) >= MAX_PER_DAY:

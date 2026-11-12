@@ -30,6 +30,20 @@ def test_one_tweet_per_slot_and_45_minute_gap():
     assert social.tweet_due(log2, at(16, 0)) is None
 
 
+def test_missed_slots_are_caught_up_later_45_minutes_apart():
+    # nothing sent all day: at 16:30 the morning slot is still owed, then the afternoon one
+    assert social.tweet_due([], at(16, 30)) == "2026-10-29#0"
+    log = [{"slot": "2026-10-29#0", "slug": "x", "quote": 0, "at": iso(at(16, 30))}]
+    assert social.tweet_due(log, at(17, 0)) is None  # 45-minute gap
+    assert social.tweet_due(log, at(17, 15)) == "2026-10-29#1"
+    log.append({"slot": "2026-10-29#1", "slug": "x", "quote": 1, "at": iso(at(17, 15))})
+    assert social.tweet_due(log, at(20, 0)) is None  # the evening slot has not started
+    assert social.tweet_due(log, at(21, 0)) == "2026-10-29#2"
+    # a late start at 22:00 still sends all three by 23:30
+    assert social.tweet_due([], at(22, 0)) == "2026-10-29#0"
+    assert social.tweet_due([], at(23, 31)) is None
+
+
 def test_max_three_a_day():
     log = [{"slot": f"other#{i}", "slug": "x", "quote": i, "at": iso(at(8 + i))} for i in range(3)]
     assert social.tweet_due(log, at(16, 0)) is None
