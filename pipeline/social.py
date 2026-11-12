@@ -171,8 +171,10 @@ def current_slot(now):
     return None
 
 
-def choose(posts, live, log, now):
-    """The (slug, quote index) to tweet now, or None. Today's posts first, then the newest."""
+def choose(posts, live, log, now, ready=None):
+    """The (slug, quote index) to tweet now, or None. Today's posts first, then the newest. With `ready`, a post
+    whose relay page is not up yet is passed over for the next one, so a post that just went live does not hold
+    up a tweet for a post whose page is already up."""
     today = israel_date(now)
     used = {}
     for t in log:
@@ -195,7 +197,10 @@ def choose(posts, live, log, now):
     if not candidates:
         return None
     candidates.sort(reverse=True)
-    return candidates[0][3], candidates[0][4]
+    for c in candidates:
+        if ready is None or ready(c[3]):
+            return c[3], c[4]
+    return None
 
 
 def owed_slot(log, now):
@@ -258,15 +263,17 @@ def run(dry_run=False, now=None, archive=None):
     save_json(STATE / "live.json", live)
 
     slot = tweet_due(log, now)
-    pick = choose(posts, live, log, now) if slot else None
+    ready = lambda s: s not in report["relays_written"] and relay_is_up(s)
+    first = choose(posts, live, log, now) if slot else None
+    pick = choose(posts, live, log, now, ready=ready) if first else None
+    if first and not pick:
+        report["tweet"] = {"waiting_for_relay_page": first[0]}
     if pick:
         slug, qi = pick
         post = posts[slug]
         text = tweets.compose(post["quotes_he"][qi], relay_url(slug))
         entry = {"slot": slot, "slug": slug, "quote": qi, "text": text, "at": iso(now)}
-        if slug in report["relays_written"] or not relay_is_up(slug):
-            report["tweet"] = {"waiting_for_relay_page": slug}
-        elif dry_run or not os.environ.get("BUFFER_API_KEY"):
+        if dry_run or not os.environ.get("BUFFER_API_KEY"):
             report["tweet"] = {**entry, "dry_run": True}
         else:
             buf = tweets.Buffer()
