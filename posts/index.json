@@ -80,6 +80,14 @@
     "substack_draft_id": null
   },
   {
+    "slug": "2026-10-30-duggan-inside-the-roman-mind",
+    "title_he": "עולם בלי רחמים: בתוך התודעה הרומית",
+    "status": "ready",
+    "ready_at": "2026-11-13T03:55:13+00:00",
+    "substack_slug": "duggan-inside-the-roman-mind",
+    "substack_draft_id": null
+  },
+  {
     "slug": "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem",
     "title_he": "אחרי טראמפ: הזומבים, טאקר והמאבק על הירושה",
     "status": "ready",
@@ -93,6 +101,14 @@
     "status": "ready",
     "ready_at": "2026-11-07T04:09:34+00:00",
     "substack_slug": "roberts-giorgia-meloni-threatens-to-remove-right-to-citizenship-from-rioting-tee",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-11-04-purnell-the-best-and-worst-explanations-for-republicans-midterm-losses",
+    "title_he": "מדוע הפסידו הרפובליקנים? ההסברים הטובים והגרועים",
+    "status": "ready",
+    "ready_at": "2026-11-13T03:54:54+00:00",
+    "substack_slug": "purnell-the-best-and-worst-explanations-for-republicans-midterm-losses",
     "substack_draft_id": null
   }
 ]

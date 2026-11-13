@@ -325,3 +325,17 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   = ״המחנה הלאומי״; the adjective stays לאומי; never לאומן. Applied to this post. → glossary
 - Correction (Hadar, 2026-11-08): "second best: הימין הלאומי". Rule: ״הימין הלאומי״ is the alternative to ״המחנה הלאומי״.
 - Correction (Hadar, 2026-11-08): "third best: ״השמרנים הלאומיים״". Rule: third choice, fits where NatCon people are meant.
+
+### 2026-11-13 · 2026-10-30-duggan-inside-the-roman-mind
+- Source: First Things book review of Robert Harris, *Agrippa*, read alongside Tom Holland's *Dominion*. The image credit line was dropped.
+- Term: Dominion → ״שררה״ (Dominion), a literal title since no Hebrew edition is confirmed, and "the new dominion" → ״השררה החדשה״ keeps the echo. Conclave film → ״עד שיצא עשן לבן״ (Wikipedia), the novel → ״קונקלבה״ (Conclave). Truce of God → ״שביתת הנשק של אלוהים״ (Wikipedia). Agrippa → ״אגריפה״ (Wikipedia), not ״אגריפס״.
+- Caught in pass 2 (major): "great-nephew of Julius Caesar" → ״נכדו של אחי יוליוס קיסר״, a factual error. Fixed to ״נכד אחותו״. Kinship terms (great-nephew, grand-uncle) need checking word by word.
+- Caught in pass 2 (minor): ״ההתגלות״ for "epiphany" reads as divine revelation in an essay on Christianity, so it became ״תובנתו״. ״הקיסר החדש״ for "the new Caesar" reads as "emperor". ״התנ״ך״ for a Christian's Bible became ״כתבי הקודש״. ״בשוויון נפש״ for "evenly" means indifference, so it became ״באורח מאוזן״. The fix-check then caught ״שהתנצרו״ (the knights were born Christian, so it reverted to ״הנוצרים״) and ״שעבד״ (subjugated, so ״הפך לעבדים״).
+- Title: chose ״עולם בלי רחמים: בתוך התודעה הרומית״ over ״בתוך התודעה הרומית״ (too close), ״אגריפה פוגש את האבירים״ (closing reverie only) and ״לפני שהנצרות שינתה הכול״ (it states Holland's thesis as the headline).
+
+### 2026-11-13 · 2026-11-04-purnell-the-best-and-worst-explanations-for-republicans-midterm-losses
+- Source: The Federalist. The first graph ("This graph is worth 1,000 words") is not in the extracted page; the GasBuddy chart is kept. Elle → ״אל״ (as with Elle Fanning), with feminine verbs.
+- Caught in pass 2 (major): the subtitle said she ranks the explanations "from worst to best". Her actual order is good, bad, better, worst, best. Rule: never describe a structure in a subtitle without checking it. Also major: ״הגירושים״ for deportations (reads as divorces). → glossary
+- Caught in pass 2 (minor): ״חנינה״ for immigration amnesty → ״הסדרת מעמד גורפת״ (→ glossary). The SAVE America Act is a bill (״הצעת חוק״), not a law. Secretary of War → ״מזכיר המלחמה״ per US-POLITICS.md. ״נרטיב״ → ״מסגרת הדיון״ / ״הטענה״ / ״הגרסה״. bigots → ״בעלי הדעות הקדומות״, not ״הקנאים״. ״לא עוד מלחמות חדשות״ is redundant → ״בלי מלחמות חדשות״. Spelling: ״העניישו״ → ״הענישו״. Small numbers in prose are written in words (״שלושה מכל ארבעה״).
+- Title: chose ״מדוע הפסידו הרפובליקנים? ההסברים הטובים והגרועים״ over a close rendering (too long), ״לא הגירוש, אלא איראן״ (gives away the ending) and ״מי אשם במפלת הרפובליקנים״.
+- Skipped this run: The Free Press (Dougherty, "Trump Lost Because He Betrayed America First"): about 350 words, then a sign-in wall, so → paywalled.

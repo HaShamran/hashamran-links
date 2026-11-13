@@ -274,7 +274,8 @@
     "date": "October 30, 2026",
     "context": "John Duggan, “Inside the Roman Mind” First Things , October 30, 2026",
     "first_seen": "2026-11-07T03:44:21+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-10-30-duggan-inside-the-roman-mind/post.json"
   },
   {
     "url": "https://thefp.com/p/trump-lost-because-he-betrayed-america-first",
@@ -284,7 +285,8 @@
     "date": "November 11, 2026",
     "context": "Michael Brendan Dougherty, “Trump Lost Because He Betrayed America First” The Free Press , November 11,2026",
     "first_seen": "2026-11-07T03:44:21+00:00",
-    "status": "queued"
+    "status": "paywalled",
+    "note": "The Free Press: only ~350 words before the sign-in wall"
   },
   {
     "url": "https://thefederalist.com/2026/11/04/the-best-and-worst-explanations-for-republicans-midterm-losses",
@@ -294,7 +296,8 @@
     "date": "November 4, 2026",
     "context": "Elle Purnell, “The Best And Worst Explanations For Republicans’ Midterm Losses” The Federalist , November 4, 2026",
     "first_seen": "2026-11-07T03:44:21+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-11-04-purnell-the-best-and-worst-explanations-for-republicans-midterm-losses/post.json"
   },
   {
     "url": "https://nationalconservatism.org/wp-content/uploads/2026/11/The-twilight-of-boomer-Republicanism-_-The-Spectator.pdf",
