@@ -91,6 +91,7 @@
   "cover_image": "https://firstthings.com/wp-content/uploads/2026/10/Relief_Agrippa_fontana_di_Trevi_Roma.jpg",
   "brand_cover": false,
   "substack_slug": "duggan-inside-the-roman-mind",
-  "status": "ready",
-  "ready_at": "2026-11-13T03:55:13+00:00"
+  "status": "skipped",
+  "ready_at": "2026-11-13T03:55:13+00:00",
+  "skip_reason": "Hadar, 2026-11-13: skip (not to be published or tweeted)"
 }
