@@ -1,18 +1,11 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": {
-    "slot": "2026-11-13#0",
-    "slug": "2026-04-25-wegmann-why-tucker-carlson-is-turning-on-donald-trump",
-    "quote": 0,
-    "text": "״כל אדם הגון חייב כמובן לדחות את [׳אמריקה תחילה׳], כי איננו סוגדים לבני אדם. איננו יכולים. זוהי עבודת אלילים.״ כך טאקר קרלסון, אם ׳אמריקה תחילה׳ היא תחושת הבטן של טראמפ ולא מערכת של עקרונות.\n\nhttps://hashamran.github.io/hashamran-links/2026-04-25-wegmann-why-tucker-carlson-is-turning-on-donald-trump.html",
-    "at": "2026-11-13T09:05:27+00:00",
-    "buffer_id": "6af6d2d86d858908964ede48"
-  },
+  "tweet": null,
   "alerts": [
-    "2022-04-21-johnson-will-we-ever-actually-bother-with-biblical-law has waited 6d 4h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2022-04-21-johnson-will-we-ever-actually-bother-with-biblical-law has waited 6d 5h to be published: check that dud is on and signed in to Substack (run login.cmd)",
     "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem has waited 5d 5h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-11-01-roberts-giorgia-meloni-threatens-to-remove-right-to-citizenship-from-rioting-teens has waited 6d 4h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-11-01-roberts-giorgia-meloni-threatens-to-remove-right-to-citizenship-from-rioting-teens has waited 6d 5h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
