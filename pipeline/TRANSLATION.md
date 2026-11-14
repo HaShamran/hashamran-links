@@ -55,6 +55,9 @@ each essay** (format at the top of the log). Record anything that will help the 
 Every entry records its evidence in `note` (a published Hebrew edition and publisher, a corpus count, or "Wikipedia only"); a Wikipedia article title alone never settles a book title. When a term has been used the same way twice, or Hadar settles it, add it to `glossary.json` (with any wrong
 variants under `avoid`) and mark the log entry `→ glossary`. A recurring style lesson goes into this guide.
 
+## Mistakes
+Every mistake found in a translation goes through `pipeline/MISTAKE-PROTOCOL.md` (Hadar, 14 Nov 2026).
+
 ## Procedure
 The translator translates. A separate reviewer revises (ISO 17100: revision by someone other than the
 translator; a model checking its own fresh work misses most of its errors). Everything is automatic.

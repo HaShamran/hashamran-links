@@ -405,6 +405,68 @@ def wait_live(post, tries=12):
     return None
 
 
+# ---------- correcting live posts ----------
+# Hadar (14 Nov 2026) caught ״התנגדויותיי שלי״ in a post that was already live. A correction to a live post goes in
+# state/live-fixes.json in the repo ({"id", "slug", "find", "replace"}); dud applies each one once: it edits the text in
+# the post's Substack body and presses Update (republish with send=False, so no email and no new share).
+
+def _replace_text(body, find, replace):
+    import substack_doc
+    count = 0
+    for node in substack_doc.walk(body):
+        text = node.get("text")
+        if isinstance(text, str) and find in text:
+            count += text.count(find)
+            node["text"] = text.replace(find, replace)
+    return count
+
+
+def apply_live_fixes(api, state):
+    try:
+        r = requests.get(f"{RAW}/state/live-fixes.json", params={"t": int(time.time())}, timeout=30)
+        fixes = r.json() if r.ok else []
+    except (requests.RequestException, ValueError):
+        return
+    done = state.setdefault("_live_fixes", {})
+    pending = [f for f in fixes if f.get("id") and f["id"] not in done]
+    by_slug = {}
+    for f in pending:
+        by_slug.setdefault(f["slug"], []).append(f)
+    for slug, group in by_slug.items():
+        try:
+            post = requests.get(f"{RAW}/posts/{slug}/post.json", params={"t": int(time.time())}, timeout=60).json()
+            live = published_post(post.get("substack_slug"))
+            if not live:
+                log(f"live fix waits: {slug} is not live")
+                continue
+            draft = api.get_draft(live["id"])
+            body = draft.get("draft_body") or "{}"
+            body = json.loads(body) if isinstance(body, str) else body
+            changed = 0
+            for f in group:
+                n = _replace_text(body, f["find"], f["replace"])
+                changed += n
+                done[f["id"]] = {"at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+                                 "replaced": n}
+                if not n:
+                    log(f"live fix {f['id']}: text not found in {slug} (already fixed, or split by formatting)")
+            if changed:
+                api.put_draft(live["id"], draft_body=json.dumps(body, ensure_ascii=False))
+                api.publish_draft(live["id"], send=False, share_automatically=False)
+                after = published_post(post.get("substack_slug")) or {}
+                html = after.get("body_html") or ""
+                left = [f["id"] for f in group if f["find"] in html]
+                if after.get("post_date") and after["post_date"] != live.get("post_date"):
+                    log(f"live fix note: {slug} post date moved {live.get('post_date')} -> {after['post_date']}")
+                log(f"LIVE FIX {slug}: {changed} replacement(s) republished without email"
+                    + (f"; still showing old text for {left}" if left else ""))
+            save(STATE_FILE, state)
+        except LoginNeeded:
+            raise
+        except Exception as e:
+            log(f"live fix failed for {slug}: {type(e).__name__}: {str(e)[:200]}")
+
+
 def run():
     if LOCK.exists() and time.time() - LOCK.stat().st_mtime < 25 * 60:
         log("another run is still going; skipping")
@@ -427,6 +489,7 @@ def _run():
     if gh_ok:
         report_live(index, arch, state)
         start_social()
+    apply_live_fixes(api, state)
     post_meta, reason = due_post(now, arch, index, state)
     if not post_meta:
         log(f"nothing to publish: {reason}")

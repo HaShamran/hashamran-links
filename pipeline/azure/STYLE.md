@@ -424,7 +424,8 @@ The categories follow MQM, the standard error typology for translation review; `
 2. **Terminology**: argument-critical terms identical throughout; glossary and `US-POLITICS.md` followed; no
    Israeli civic names for foreign institutions.
 3. **Fluency (grammar)**: agreement of gender and number, numbers with nouns, the article in constructs, verb
-   government (section 4), no calques (section 9).
+   government (section 4), no calques (section 9), no double possessive (״התנגדויותיי שלי״: suffix or ״של״,
+   never both; "his own" is ״משלו״, ״בעצמו״ or the suffix alone; house rule, Hadar 14 Nov 2026, qc fails it).
 4. **Style**: sentence length and variety, connectives varied and true to the logic, ״אין״ negation, ״של״
    density, register even, no stacked idioms, the author's temperature.
 5. **Locale conventions**: names by Hebrew Wikipedia, dates and numbers (section 14), punctuation and

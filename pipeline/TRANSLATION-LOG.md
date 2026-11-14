@@ -380,3 +380,20 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - The fix-check caught: ״גילויי הדחייה... של נשיא״ read as the president rejecting (→ ״שספג נשיא״); the US-POLITICS.md first-use
   glosses for filibuster (״נאום סחבת״) and super PAC (״מגייס כסף לקמפיין״) are inaccurate for 2026 (the 60-vote rule; super PACs may
   not coordinate with campaigns), so this post uses corrected glosses. US-POLITICS.md itself should be corrected in a system change.
+
+### 2026-11-14 · Mistake: double possessive (2026-11-01-keeperman-midterms-zombie-gop-tucker-problem)
+- Correction (Hadar, 14 Nov 2026): "Keeperman article translated ״התנגדויותיי שלי״ is a redundancy". Rule: a possessive
+  suffix and a ״של״ pronoun never together. Write ״התנגדויותיי״ or ״ההתנגדויות שלי״; where the English stresses "own"
+  (his own version, their own losses), write ״משלו״ (״גרסה משלו״), ״בעצמו״, ״הם עצמם״, or the suffix alone. qc fails it.
+- How many times we made it: 7 in 3 of our 17 posts (Keeperman 5, Wegmann 1, Purnell 1), about 1 per 3,900 Hebrew words;
+  4 more in the October posts that were deleted (Rubio ״דיוקננו שלנו״, Pinkoski ״כישלונותיהם שלהם״, ״בשלמותו שלו״).
+  Keeperman and Wegmann were live: fixed through state/live-fixes.json. Purnell fixed before publishing.
+- The archive: professional translators do use the form, but sparingly and only for real contrast with someone else
+  (״אנשיו שלו ביקשו לסקלו״ = even his own men; ״ביקרה את ממשלתה שלה״ = her own government, not another's;
+  ״לזמננו שלנו״). Rates per 10,000 words: תכלת 0.8 (87 in 224 essays), השילוח 0.5, INSS 0.07, JISS 0.1, ours 2.6, three
+  times תכלת. For plain "my/his own" תכלת mostly writes the suffix alone, or ״משלו״ (182 times) and ״עצמו״ forms (500+).
+- Note for myself: "own" in English is usually not contrastive and needs no Hebrew word. Translate it only when the
+  sentence sets the owner against someone else, and then with ״משלו״ or ״עצמו״, not a second ״של״.
+- System: qc.py `double_possessive_problems`; pipeline/MISTAKE-PROTOCOL.md (new standing process for every mistake);
+  pipeline/mistake_sweep.py; dud/publisher.py applies state/live-fixes.json to live posts.
+
