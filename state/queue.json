@@ -307,7 +307,8 @@
     "date": "November 4, 2026",
     "context": "Daniel McCarthy, “The twilight of boomer Republicanism” The Spectator , November 4, 2026",
     "first_seen": "2026-11-09T03:44:25+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-11-04-mccarthy-the-twilight-of-boomer-republicanism/post.json"
   },
   {
     "url": "https://nationalconservatism.org/wp-content/uploads/2026/11/How-Trump-Lost-the-Midterms-WSJ.pdf",
@@ -317,6 +318,18 @@
     "date": "November 5, 2026",
     "context": "Josh Dawsey, Alex Leary, and Lindsay Wise, “How Trump Lost the Midterms” Wall Street Journal , November 5, 2026",
     "first_seen": "2026-11-09T03:44:25+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-11-05-dawsey-how-trump-lost-the-midterms/post.json"
+  },
+  {
+    "url": "https://city-journal.org/article/baby-boomers-young-generations-society",
+    "title": "The Return of Generational Warfare",
+    "author": "Joel Kotkin",
+    "publication": "City Journal",
+    "date": "November 10, 2026",
+    "context": "Joel Kotkin, “The Return of Generational Warfare” City Journal , November 10, 2026",
+    "first_seen": "2026-11-14T03:44:29+00:00",
+    "status": "translated",
+    "post": "posts/2026-11-10-kotkin-the-return-of-generational-warfare/post.json"
   }
 ]

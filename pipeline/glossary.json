@@ -598,5 +598,31 @@
   "he": "הסדרת מעמד גורפת",
   "avoid": [],
   "note": "Not ״חנינה״ (a criminal pardon). Purnell, 2026-11-13."
+ },
+ {
+  "en": "Border Patrol (US)",
+  "he": "משמר הגבול האמריקני",
+  "avoid": [],
+  "note": "Bare ״משמר הגבול״ reads as Israel's Border Police; its officers are ״סוכנים״. Dawsey/WSJ, 2026-11-14 (reviewer major)."
+ },
+ {
+  "en": "affordability (as a political goal)",
+  "he": "הורדת יוקר המחיה / הקלה על יוקר המחיה",
+  "avoid": [],
+  "note": "Bare ״יוקר המחיה״ as an object (״לקשור X ליוקר המחיה״) can read as causing high prices. McCarthy, 2026-11-14 (reviewer major)."
+ },
+ {
+  "en": "domestic terrorist",
+  "he": "טרוריסט מבית",
+  "avoid": [
+   "מחבל מקומי"
+  ],
+  "note": "״מחבל״ is Israeli usage for Palestinian attackers. Dawsey/WSJ, 2026-11-14."
+ },
+ {
+  "en": "gas prices / fuel prices",
+  "he": "מחירי הבנזין / מחירי הדלק",
+  "avoid": [],
+  "note": "gas = בנזין, fuel = דלק, diesel = סולר. Dawsey/WSJ, 2026-11-14."
  }
 ]

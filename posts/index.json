@@ -104,11 +104,35 @@
     "substack_draft_id": null
   },
   {
+    "slug": "2026-11-04-mccarthy-the-twilight-of-boomer-republicanism",
+    "title_he": "דמדומי הרפובליקנים של דור הבייבי בום",
+    "status": "ready",
+    "ready_at": "2026-11-14T03:58:08+00:00",
+    "substack_slug": "mccarthy-the-twilight-of-boomer-republicanism",
+    "substack_draft_id": null
+  },
+  {
     "slug": "2026-11-04-purnell-the-best-and-worst-explanations-for-republicans-midterm-losses",
     "title_he": "מדוע הפסידו הרפובליקנים? ההסברים הטובים והגרועים",
     "status": "ready",
     "ready_at": "2026-11-13T03:54:54+00:00",
     "substack_slug": "purnell-the-best-and-worst-explanations-for-republicans-midterm-losses",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-11-05-dawsey-how-trump-lost-the-midterms",
+    "title_he": "לפני שבר גאון: כך הפסיד טראמפ את בחירות האמצע",
+    "status": "ready",
+    "ready_at": "2026-11-14T04:03:35+00:00",
+    "substack_slug": "dawsey-how-trump-lost-the-midterms",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-11-10-kotkin-the-return-of-generational-warfare",
+    "title_he": "מלחמת הדורות חוזרת",
+    "status": "ready",
+    "ready_at": "2026-11-14T03:59:35+00:00",
+    "substack_slug": "kotkin-the-return-of-generational-warfare",
     "substack_draft_id": null
   }
 ]

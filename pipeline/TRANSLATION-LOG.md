@@ -339,3 +339,44 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - Caught in pass 2 (minor): ״חנינה״ for immigration amnesty → ״הסדרת מעמד גורפת״ (→ glossary). The SAVE America Act is a bill (״הצעת חוק״), not a law. Secretary of War → ״מזכיר המלחמה״ per US-POLITICS.md. ״נרטיב״ → ״מסגרת הדיון״ / ״הטענה״ / ״הגרסה״. bigots → ״בעלי הדעות הקדומות״, not ״הקנאים״. ״לא עוד מלחמות חדשות״ is redundant → ״בלי מלחמות חדשות״. Spelling: ״העניישו״ → ״הענישו״. Small numbers in prose are written in words (״שלושה מכל ארבעה״).
 - Title: chose ״מדוע הפסידו הרפובליקנים? ההסברים הטובים והגרועים״ over a close rendering (too long), ״לא הגירוש, אלא איראן״ (gives away the ending) and ״מי אשם במפלת הרפובליקנים״.
 - Skipped this run: The Free Press (Dougherty, "Trump Lost Because He Betrayed America First"): about 350 words, then a sign-in wall, so → paywalled.
+
+### 2026-11-14 · 2026-11-04-mccarthy-the-twilight-of-boomer-republicanism
+- Source: The Spectator (US), via the NatCon PDF of an archive.today capture. Dropped the archive header, site navigation and the
+  "related articles" fragments that the PDF had spliced into the middle of P12. The author bio is on the page, so it is kept.
+- Term: baby boomers → ״דור הבייבי בום״, then ״הבומרים״ (accepted loanword); "came out bust" → ״יצאו מהן פושטי רגל״ to keep boom/bust.
+- Caught in pass 2 (major): "tying AI to affordability" → ״לקשור את הבינה המלאכותית ליוקר המחיה״ read as blaming AI for the high cost
+  of living, the opposite of the author's advice (→ ״להציג את הבינה המלאכותית כדרך להקל על יוקר המחיה״). Rule: affordability is
+  the goal of lowering the cost of living; render it so the direction is clear (״הורדת יוקר המחיה״), never bare ״יוקר המחיה״ as an object.
+- Caught in pass 2 (minor): ״ברחבי הארץ״ for "across the country" means Israel (→ ״ברחבי ארצות הברית״); "war with Iran" is ״עם איראן״,
+  not ״באיראן״; "marked a nation as a great power" ≠ ״הופך אומה למעצמה״; an added hedge ״כמעט״; "to be sure" ≠ ״מן הסתם״.
+  The fix-check caught ״מי שדעתו צלולה״ (it broke the rhetorical question → ״מי שפוי בדעתו״) and an inline midterms gloss judged clumsy.
+- Title: chose ״דמדומי הרפובליקנים של דור הבייבי בום״ (close to "twilight", the reviewer's pick) over the first draft
+  ״ילדי המלחמה הקרה הפסידו את בחירות האמצע״ (moved into the subtitle), ״לא הימין החדש הובס, אלא הישן״ and ״שני טראמפים, מלחמה אחת״.
+
+### 2026-11-14 · 2026-11-10-kotkin-the-return-of-generational-warfare
+- Source: City Journal. Dropped the audio-player line, the newsletter prompt and the comment policy. No bio on the page.
+- Terms: generational war ״מלחמת דורות״; forever renters ״שוכרי נצח״; Gen Z ״דור Z״ (״הזומרים״); millennials ״דור המילניום״;
+  gerontocracy ״גרונטוקרטיה (שלטון זקנים)״; "Lulu Lenins" → ״הלנינים של לולולמון״ with a short gloss; Chinamaxxing ״צ׳יינה־מקסינג״.
+- Caught in pass 2 (minor): the subtitle made "the young" want to confiscate boomer wealth, which the essay credits to a progressive
+  movement (→ ״נמשכים לרעיון״); ״מחוששים״ is not a word; "truce" was ״שביתת נשק״ in the body but ״הפסקת האש״ in a tweet hook;
+  ״חשוכת ילדים״ implies misfortune (→ ״נטולת ילדים״); book titles: Hebrew in italics, English in parentheses.
+- The fix-check rejected ״בחירות האמצע לקונגרס״: these midterms included ballot measures, so the gloss narrowed the meaning.
+- Names: Mamdani → ״זוהרן ממדאני״ (Hebrew Wikipedia; the draft had ״זוהראן״).
+- Title: chose ״מלחמת הדורות חוזרת״ over ״שובה של מלחמת הדורות״, ״הבומרים נגד הזומרים״ and ״לא מלחמת דורות, אלא ברית דורות״.
+
+### 2026-11-14 · 2026-11-05-dawsey-how-trump-lost-the-midterms
+- Source: The Wall Street Journal news feature (Dawsey, Leary, Wise), via the NatCon PDF. Dropped 20 photo captions and credits,
+  stray caption fragments, the print-edition line and the PDF footer; rejoined lines broken mid-sentence. The three bios are on
+  the page; kept their first sentence each (the rest was cut off in the PDF).
+- The PDF says "Sen. Darline Graham"; it is Lindsey Graham (South Carolina), rendered ״לינדזי גרהאם״.
+- Caught in pass 2 (major): ״משמר הגבול״ alone is Israel's Border Police (→ ״משמר הגבול האמריקני״, agent ״סוכן״, not ״שוטר״); "decisive
+  repudiation" → ״הסתייגות״ softened the lead verdict (→ ״גילויי הדחייה הנחרצים ביותר״). → glossary
+- Caught in pass 2 (minor): "domestic terrorist" → ״טרוריסט מבית״, not ״מחבל מקומי״ (Israeli usage for Palestinian attackers); US
+  secretaries are ״מזכיר/ת״ (Homeland Security, Defense); "gas prices" ״מחירי הבנזין״, "fuel" ״דלק״; "By May" is ״במאי״, not ״עד מאי״;
+  "It was about the economy" ≠ ״בגלל הכלכלה״ (→ ״העניין היה הכלכלה״); resodding is planting turf, not ״ריצוף״; "vacillated" ≠ ״היסס״.
+  Kept: italics for paraphrased thoughts, never quotation marks; every corruption claim stays ״טענות״.
+- Title: chose ״לפני שבר גאון: כך הפסיד טראמפ את בחירות האמצע״ (Proverbs 16:18, from Ralph Norman's own quote) over the close
+  ״כיצד הפסיד טראמפ בבחירות האמצע״, ״מאיראן ועד אולם הנשפים: שנת המפלה של טראמפ״ and ״המלחמה שהפילה את הרפובליקנים״.
+- The fix-check caught: ״גילויי הדחייה... של נשיא״ read as the president rejecting (→ ״שספג נשיא״); the US-POLITICS.md first-use
+  glosses for filibuster (״נאום סחבת״) and super PAC (״מגייס כסף לקמפיין״) are inaccurate for 2026 (the 60-vote rule; super PACs may
+  not coordinate with campaigns), so this post uses corrected glosses. US-POLITICS.md itself should be corrected in a system change.
