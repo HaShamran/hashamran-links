@@ -1,0 +1,14 @@
+[
+  {"id": "2026-11-14-keeperman-1", "slug": "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem",
+   "find": "את התנגדויותיי שלי", "replace": "את התנגדויותיי"},
+  {"id": "2026-11-14-keeperman-2", "slug": "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem",
+   "find": "ויכריז על גרסתו שלו לרפובליקניות", "replace": "ויכריז על גרסה משלו לרפובליקניות"},
+  {"id": "2026-11-14-keeperman-3", "slug": "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem",
+   "find": "בוגד בעניינו שלו", "replace": "בוגד בעניינו"},
+  {"id": "2026-11-14-keeperman-4", "slug": "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem",
+   "find": "שמוסדותיה שלה טיפחו", "replace": "שמוסדותיה טיפחו"},
+  {"id": "2026-11-14-keeperman-5", "slug": "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem",
+   "find": "כישלונותיו שלו", "replace": "כישלונותיו"},
+  {"id": "2026-11-14-wegmann-1", "slug": "2026-04-25-wegmann-why-tucker-carlson-is-turning-on-donald-trump",
+   "find": "טראמפ הוכיח את טענתו שלו:", "replace": "טראמפ הוכיח את טענתו בעצמו:"}
+]

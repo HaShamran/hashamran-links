@@ -115,6 +115,32 @@ def style_warnings(m):
     return out
 
 
+# Possessive suffix plus a ״של״ pronoun says "my" twice (Hadar, 14 Nov 2026: ״התנגדויותיי שלי״). Write the suffix alone
+# (״התנגדויותיי״) or ״של״ alone (״ההתנגדויות שלי״); for "his own" emphasis write ״משלו״ or ״הוא עצמו״.
+# Each ״של״ form is matched with suffixes that cannot be an unrelated word ending (״החברה שלה״, ״האמיתי שלי״ are fine):
+# plural suffixes always (not bare ״־יה״: ״באימפריה שלה״ is fine); singular ״־תי/־תו/־תה״ only on a word without the article ה.
+DOUBLE_POSSESSIVE = {"שלי": ("יי",), "שלך": ("יך", "תך"), "שלו": ("יו", "ינו"), "שלה": ("ותיה",),
+                     "שלנו": ("נו",), "שלכם": ("כם",), "שלכן": ("כן",), "שלהם": ("הם",), "שלהן": ("הן",)}
+SINGULAR_T = {"שלי": "תי", "שלו": "תו", "שלה": "תה"}
+NOT_POSSESSIVE = {"היו", "שהיו", "והיו", "יהיו", "ויהיו", "שיהיו", "עכשיו", "ועכשיו", "בעיה", "הבעיה"}
+_POSSESSIVE_PAIR = re.compile(r"(?<![א-ת])([א-ת]{3,})\s+(של(?:י|ך|ו|ה|נו|כם|כן|הם|הן))(?![א-ת])")
+
+
+def double_possessive_problems(text):
+    out = []
+    for m in _POSSESSIVE_PAIR.finditer(text):
+        w, shel = m.groups()
+        if w in NOT_POSSESSIVE:
+            continue
+        hit = w.endswith(DOUBLE_POSSESSIVE[shel])
+        if not hit and shel in SINGULAR_T and w.endswith(SINGULAR_T[shel]):
+            hit = not re.match(r"[וש]?ה", w)
+        if hit:
+            out.append(f"double possessive: ״{w} {shel}״ says the owner twice; keep the suffix alone or ״של״ alone "
+                       "(for \"own\" write ״משלו״ or ״הוא עצמו״)")
+    return out
+
+
 def calque_problems(text):
     return [f"calque: ״{c}״ reads as translated English; write ״{fix}״ (STYLE.md section 9)"
             for c, fix in CALQUES.items() if word(c).search(text)]
@@ -272,6 +298,7 @@ def check(post, source_markdown=None):
         problems.append('English quotation marks (") in the Hebrew text; use ״ ״')
     problems += glossary_problems(plain, load_glossary())
     problems += calque_problems(plain)
+    problems += double_possessive_problems(plain)
     # A paragraph that is mostly Latin script was probably left untranslated.
     for i, p in enumerate(paras, 1):
         heb = len(HEBREW.findall(p))

@@ -214,3 +214,14 @@ def test_policy_corpus_banks(capsys):
     assert {r["original"] for r in mida_corpus.rows()} == {"he"}
     policy_corpus.main(["--bank", "jiss", "count", "deterrence"])
     assert capsys.readouterr().out.startswith("deterrence: ")
+
+
+def test_double_possessive():
+    # Hadar, 14 Nov 2026: ״התנגדויותיי שלי״ says "my" twice.
+    for bad in ("השמעתי את התנגדויותיי שלי", "גרסתו שלו", "בעניינו שלו", "מוסדותיה שלה", "הפסדיהם שלהם", "דעתי שלי"):
+        assert qc.double_possessive_problems(bad), bad
+    for fine in ("ההתנגדויות שלי", "ההיסטוריה שלה", "החברה שלה", "האמיתי שלי", "כאילו היו שלו", "הכלכלה שלנו",
+                 "גרסה משלו", "המדיניות שלה"):
+        assert not qc.double_possessive_problems(fine), fine
+    bad = {**GOOD, "body_he": GOOD["body_he"] + "\n\nהשמעתי את התנגדויותיי שלי."}
+    assert any("double possessive" in p for p in qc.check(bad)["problems"])

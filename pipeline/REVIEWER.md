@@ -28,7 +28,7 @@ and the review is the same without it). Prompt:
 > 1. Fidelity (against the English), paragraph by paragraph using the [P] numbers: anything missing, added or
 >    changed in meaning; numbers, names, dates and quotations; tone and irony.
 > 2. Hebrew only, as an editor of תכלת (STYLE.md, using its section 19 checklist): grammar (agreement, numbers
->    with nouns, construct state, verb government and prepositions), glossary and US-POLITICS.md consistency,
+>    with nouns, construct state, verb government and prepositions, no double possessive like ״התנגדויותיי שלי״), glossary and US-POLITICS.md consistency,
 >    translationese and calques, negation (״אינו״), the joints of the argument, the תכלת voice and the author's
 >    tone, spelling and punctuation. Go through the
 >    Dicta spelling list: each word that is not a name or an accepted loanword is a spelling finding.
@@ -61,3 +61,9 @@ change, does the new Hebrew say what the English says, and is it at least as goo
 [{"where", "ok": true|false, "problem"}]." Fix any "ok": false, then rerun the back-translator if the title,
 subtitle or quotes changed.
 Copy the major findings and the lessons into the translation log.
+
+## When a mistake is found
+Any mistake found after a post is written (by Hadar, a reviewer or a check) goes through `pipeline/MISTAKE-PROTOCOL.md`:
+fix it, sweep all our posts and the reference banks with `pipeline/mistake_sweep.py`, compare with how the archive
+translators handled it, fix the other instances (live ones through `state/live-fixes.json`), add a check or a
+reviewer rule, and log it.

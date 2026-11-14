@@ -54,3 +54,11 @@ def test_fix_images_shrinks_author_photo_and_never_uses_it_as_cover():
                                        {"type": "image2", "attrs": {"src": "me"}}]}
     out, cover = substack_doc.fix_images(body, True)
     assert cover == "art" and out["content"][1]["attrs"]["resizeWidth"] == 120
+
+
+def test_live_fix_replaces_text_in_nodes():
+    body = {"type": "doc", "content": [{"type": "paragraph", "content": [
+        {"type": "text", "text": "השמעתי את התנגדויותיי שלי למלחמה"}]}]}
+    assert publisher._replace_text(body, "את התנגדויותיי שלי", "את התנגדויותיי") == 1
+    assert body["content"][0]["content"][0]["text"] == "השמעתי את התנגדויותיי למלחמה"
+    assert publisher._replace_text(body, "את התנגדויותיי שלי", "את התנגדויותיי") == 0
