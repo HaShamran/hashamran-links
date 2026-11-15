@@ -1,10 +1,17 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": null,
+  "tweet": {
+    "slot": "2026-11-15#2",
+    "slug": "2026-11-04-mccarthy-the-twilight-of-boomer-republicanism",
+    "quote": 1,
+    "text": "״יש שני טראמפים. האחד הוא כוח חדש מן היסוד בפוליטיקה האמריקנית, המערער על כל נורמה ועל כל מוסכמה. השני הוא פוליטיקאי רפובליקני בן 80.״ דניאל מקארתי על כהונתו השנייה של טראמפ.\n\nhttps://hashamran.github.io/hashamran-links/2026-11-04-mccarthy-the-twilight-of-boomer-republicanism.html",
+    "at": "2026-11-15T19:52:31+00:00",
+    "buffer_id": "6afa0d80e5a113497a0d2221"
+  },
   "alerts": [
-    "2026-11-05-dawsey-how-trump-lost-the-midterms has waited 1d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-11-10-kotkin-the-return-of-generational-warfare has waited 1d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-11-05-dawsey-how-trump-lost-the-midterms has waited 1d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-11-10-kotkin-the-return-of-generational-warfare has waited 1d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
