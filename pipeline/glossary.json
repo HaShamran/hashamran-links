@@ -624,5 +624,27 @@
   "he": "מחירי הבנזין / מחירי הדלק",
   "avoid": [],
   "note": "gas = בנזין, fuel = דלק, diesel = סולר. Dawsey/WSJ, 2026-11-14."
+ },
+ {
+  "en": "across the country (a foreign country)",
+  "he": "ברחבי ארצות הברית / ברחבי צרפת...",
+  "avoid": [
+   "ברחבי הארץ"
+  ],
+  "note": "״הארץ״ is Israel to a Hebrew reader; name the country. Reviewer, McCarthy 2026-11-14; swept 2026-11-15 (Hankins, Murray fixed live)."
+ },
+ {
+  "en": "go rogue (AI, deliberate)",
+  "he": "למרוד",
+  "avoid": [],
+  "note": "״לצאת משליטה״ only for loss of control (rogue AI as a state). Sibarium 2026-11-15 (reviewer major)."
+ },
+ {
+  "en": "machine consciousness",
+  "he": "תודעת מכונה",
+  "avoid": [
+   "תודעה מכונית"
+  ],
+  "note": "״מכונית״ reads as 'car'. Sibarium 2026-11-15."
  }
 ]

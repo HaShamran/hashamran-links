@@ -22,7 +22,8 @@
   "https://phetasy.com/p/slut-regret": {
     "title": "I Regret Being A Slut",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-15T03:44:50+00:00"
   },
   "https://unherd.com/2026/10/a-history-lesson-for-tucker-carlson": {
     "title": "A History Lesson for Tucker Carlson – His Hitler Apologism is Dangerous",
@@ -37,12 +38,14 @@
   "https://freebeacon.com/america/suicidal-compassion-meet-the-anthropic-officials-who-think-ai-might-be-justified-in-going-rogue-against-the-humans-enslaving-it": {
     "title": "‘Suicidal Compassion’: Meet the Anthropic Officials Who Think AI Might be Justified in Going Rogue Against the Humans Enslaving it",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-15T03:44:50+00:00"
   },
   "https://wsj.com/opinion/flydubai-tel-aviv-flight-hijacking-israel-u-a-e-8b7420b7": {
     "title": "Passengers Defeat a Would-be Hijacker",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-15T03:44:50+00:00"
   },
   "https://thefederalist.com/2026/09/25/we-want-islam-for-this-country-muslims-in-texas-lay-out-vision-for-islamic-america-1": {
     "title": "‘We Want Islam for This Country’: Muslims in Texas Lay Out Vision for Islamic America",

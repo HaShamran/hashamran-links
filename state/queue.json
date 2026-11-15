@@ -331,5 +331,29 @@
     "first_seen": "2026-11-14T03:44:29+00:00",
     "status": "translated",
     "post": "posts/2026-11-10-kotkin-the-return-of-generational-warfare/post.json"
+  },
+  {
+    "url": "https://phetasy.com/p/slut-regret",
+    "title": "I Regret Being A Slut",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "failed",
+    "source": "backfill",
+    "note": "2026-11-15: no article text; the post URL redirects to the phetasy.com homepage (removed or subscriber-only)"
+  },
+  {
+    "url": "https://freebeacon.com/america/suicidal-compassion-meet-the-anthropic-officials-who-think-ai-might-be-justified-in-going-rogue-against-the-humans-enslaving-it",
+    "title": "‘Suicidal Compassion’: Meet the Anthropic Officials Who Think AI Might be Justified in Going Rogue Against the Humans Enslaving it",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-25-sibarium-suicidal-compassion-meet-the-anthropic-officials/post.json"
+  },
+  {
+    "url": "https://wsj.com/opinion/flydubai-tel-aviv-flight-hijacking-israel-u-a-e-8b7420b7",
+    "title": "Passengers Defeat a Would-be Hijacker",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "paywalled",
+    "source": "backfill",
+    "note": "2026-11-15: WSJ paywall after the first two paragraphs; no bypass"
   }
 ]

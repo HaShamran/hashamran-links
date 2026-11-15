@@ -397,3 +397,26 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - System: qc.py `double_possessive_problems`; pipeline/MISTAKE-PROTOCOL.md (new standing process for every mistake);
   pipeline/mistake_sweep.py; dud/publisher.py applies state/live-fixes.json to live posts.
 
+
+### 2026-11-15 · 2026-09-25-sibarium-suicidal-compassion-meet-the-anthropic-officials
+- Source: Washington Free Beacon investigative feature (Aaron Sibarium). Clean extraction; no bio on the page. Anthropic → ״אנת׳רופיק״
+  (Hebrew Wikipedia); product names (Claude, ChatGPT, Fable, Opus, GPT-6) in Latin.
+- Terms: AI/model welfare ״רווחת הבינה המלאכותית / רווחת המודל״; alignment ״יישור (alignment)״; regulatory capture ״שבי רגולטורי״;
+  machine consciousness ״תודעת מכונה״ (not ״תודעה מכונית״, which reads as "car"); whistleblower ״מתריע״ (not ״חושף שחיתויות״);
+  "digital holocaust" (lowercase) → ״השמדה דיגיטלית המונית״, since ״שואה״ means the Holocaust to an Israeli reader.
+- Caught in pass 2 (major): "justified in going rogue" → ״מוצדקות אם ייצאו משליטה״ turned a deliberate act into a malfunction
+  (→ ״אם ימרדו״); "rogue AI" as a state stays ״שיצאה משליטה״. The title dropped the quotation marks around "Suicidal Compassion",
+  making a critic's charge our own statement. "hydrocarbon bigotry" → ״קנאות נגד פחמימנים״ reversed the phrase (→ ״קנאות פחמימנית״).
+- Caught in pass 2 (minor): hedges dropped (as many as, a bit, could be); ״להעמיד לדין״ is criminal, the passage is civil liability.
+  Names: Lina Khan ״לינה קאן״, Chalmers ״אוניברסיטת צ׳למרס לטכנולוגיה״ (Hebrew Wikipedia). The fix-check caught a hedge added to
+  "would be" and ״עורכת״ for "author".
+- Title: chose ״״חמלה אובדנית״: אנת׳רופיק ורווחת הבינה המלאכותית״ (the reviewer's pick) over the longer hook version, ״מי ישעבד את מי?״
+  and ״זכויות אדם למכונה״.
+- Skipped this run: Phetasy, "I Regret Being A Slut" (the URL redirects to the site's homepage, no text) → failed; WSJ editorial,
+  "Passengers Defeat a Would-be Hijacker" (paywall after two paragraphs) → paywalled.
+
+### Mistake: ״ברחבי הארץ״ for "across the country" (found 14 Nov by the reviewer in McCarthy)
+- To a Hebrew reader ״הארץ״ is Israel. Swept our posts (grep of every post.json; the full mistake_sweep.py over the banks timed out
+  in the daily run): 2 more, both live, Hankins (USA) and Murray (France). Fixed in post.json and through state/live-fixes.json
+  (2026-11-15-hankins-1, -murray-1) → ״ברחבי ארצות הברית״, ״ברחבי צרפת״.
+- Rule: name the country (״ברחבי ארצות הברית / צרפת״) whenever the country is not Israel. The bank comparison (תכלת rate) is still owed.

@@ -10,5 +10,9 @@
   {"id": "2026-11-14-keeperman-5", "slug": "2026-11-01-keeperman-midterms-zombie-gop-tucker-problem",
    "find": "כישלונותיו שלו", "replace": "כישלונותיו"},
   {"id": "2026-11-14-wegmann-1", "slug": "2026-04-25-wegmann-why-tucker-carlson-is-turning-on-donald-trump",
-   "find": "טראמפ הוכיח את טענתו שלו:", "replace": "טראמפ הוכיח את טענתו בעצמו:"}
+   "find": "טראמפ הוכיח את טענתו שלו:", "replace": "טראמפ הוכיח את טענתו בעצמו:"},
+  {"id": "2026-11-15-hankins-1", "slug": "2026-10-20-hankins-a-muslim-answer-to-muslim-immigration",
+   "find": "נראה את המנהגים האלה מתפשטים ברחבי הארץ", "replace": "נראה את המנהגים האלה מתפשטים ברחבי ארצות הברית"},
+  {"id": "2026-11-15-murray-1", "slug": "2026-10-20-murray-france-stares-down-the-abyss-of-history",
+   "find": "היא עברה לילות של אימה ברחבי הארץ", "replace": "היא עברה לילות של אימה ברחבי צרפת"}
 ]
