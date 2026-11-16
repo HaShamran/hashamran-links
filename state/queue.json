@@ -355,5 +355,29 @@
     "status": "paywalled",
     "source": "backfill",
     "note": "2026-11-15: WSJ paywall after the first two paragraphs; no bypass"
+  },
+  {
+    "url": "https://thefederalist.com/2026/09/25/we-want-islam-for-this-country-muslims-in-texas-lay-out-vision-for-islamic-america-1",
+    "title": "‘We Want Islam for This Country’: Muslims in Texas Lay Out Vision for Islamic America",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-25-monnington-we-want-islam-for-this-country/post.json"
+  },
+  {
+    "url": "https://americanmind.org/features/congress-and-the-collapse-of-constitutional-republicanism-in-america",
+    "title": "Congress and the Collapse of Constitutional Republicanism in America",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-10-20-portteus-congress-and-the-collapse-of-constitutional-republicanism/post.json"
+  },
+  {
+    "url": "https://americanmind.org/features/two-cheers-for-milton-friedman",
+    "title": "Two Cheers for Milton Friedman",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2023-02-06-stepman-two-cheers-for-milton-friedman/post.json"
   }
 ]

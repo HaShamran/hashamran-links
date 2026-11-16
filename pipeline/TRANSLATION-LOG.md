@@ -420,3 +420,36 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   in the daily run): 2 more, both live, Hankins (USA) and Murray (France). Fixed in post.json and through state/live-fixes.json
   (2026-11-15-hankins-1, -murray-1) → ״ברחבי ארצות הברית״, ״ברחבי צרפת״.
 - Rule: name the country (״ברחבי ארצות הברית / צרפת״) whenever the country is not Israel. The bank comparison (תכלת rate) is still owed.
+
+### 2026-11-16 · 2026-09-25-monnington-we-want-islam-for-this-country
+- Reported news piece (The Federalist), mostly a speaker's quotations. Attribution kept: Farooq's words in quotes, the author's
+  paraphrase unquoted, the author's claims (Muhammad, the Quran) at their own strength, "reportedly" → ״כך נמסר״.
+- Caught in pass 2 (no major, 28 minor): ״צריח״ for steeple (also a minaret, in a church-to-mosque story) → ״מגדל פעמונים״;
+  ״מליצי היושר הנוצרים״ for Christian apologists → ״האפולוגטים הנוצרים״; ״כנסייה של השטן״ → ״כנסיית השטן״; ״רגל רבוע״ → ״רגל
+  רבועה״; ״באתר שבו עמדה כנסייה״ next to ״אתר הארגון״ read as the website → ״במקום שבו״; "the future is ours" had become ״העתיד
+  שלנו״ (our future); "nationwide attention" → ״תשומת לב ארצית״ (the ״ברחבי הארץ״ trap again) → ״בכל רחבי ארצות הברית״;
+  ״חזון אמריקה האסלאמית״ (a definite construct implies it exists) → ״חזון של אמריקה אסלאמית״.
+- Fix-check: flagged that the new title drops Texas; kept short on purpose, the subtitle names North Texas.
+
+### 2026-11-16 · 2026-10-20-portteus-congress-and-the-collapse-of-constitutional-republicanism
+- Constitutional theory (The American Mind). Argument terms: delegation ״האצלה״, abdication ״התפטרות״, deliberation ״שקילה״,
+  regime ״משטר״, constitutional republicanism ״רפובליקניות חוקתית״. The source's subheads are missing from the split English files;
+  the Hebrew keeps them as ## lines.
+- Caught in pass 2 (no major, 25 minor): deliberation ״השיקול״ collided with ״שיקול הדעת המעשי״ (practical judgment) and made P8 a
+  near-tautology → ״השקילה״ / ״כושר השיפוט המעשי״, and a Greek gloss (פרונסיס) the English does not have was dropped; Madison's
+  "a rule of action" ״כלל למעשה״ read as "in effect, a rule"; "protestations to the contrary" ״מחאותיהם״ (protests) → ״הכחשותיהם״;
+  "hardened into a class" ״התקשה״ (had difficulty) → ״התקבע״; a hedge dropped ("might be ready"); a tweet quote cut words from inside
+  the quotation marks without [...] (restored); book titles go in Hebrew with the English in parentheses.
+- Fix-check (1 not ok): the fix for Hamilton's "prescribed rules" put ״מחייבים״ inside the quotation marks → ״כללים להסדרת החברה״
+  שנקבעו.
+
+### 2026-11-16 · 2023-02-06-stepman-two-cheers-for-milton-friedman
+- A speech turned essay (The American Mind): appreciative of Friedman, then Kristol's 1972 critique as a blockquote. Argument terms:
+  free market ״השוק החופשי״, school choice ״חופש הבחירה בחינוך״, government ״הממשלה״ (one ״השלטון״ fixed), the "self" ״עצמי״,
+  vice ״מידות רעות״. Before review, qc made the joints explicit (5 → 10 distinct connectives) and caught ״לרעיונותיו שלו״.
+- Caught in pass 2 (no major, 31 minor): Kristol's "vice" as ״חטא״ (sin) → ״מידות רעות״; ״שמאלנות / השמאלנית״ (glossary avoid
+  form, pejorative) → ״השקפות שמאל / השמאלית״; ״כספך שלך״, a 2nd-person double possessive that qc does not catch (it skips a bare
+  ״ך״ suffix because of words like ״דרך שלך״); ״המדינה הראשונה בארץ״ → ״בארצות הברית״ (the ״ברחבי הארץ״ trap, third run in a row);
+  ״בני מיעוטים״ (an Israeli civic category) → ״מקבוצות מיעוט״; school boards are district bodies, not ״מועצות בתי הספר״; Burnham's
+  managerial class ״מנהלתיים״ → ״מעמד מנהלים״; "incendiary" ״הסתה״ → ״התלהמות״; the program name keeps ״ויליאם פ׳ באקלי״ as the English has it (fix-check).
+- Not fixed: ״תוכנית״ (the Academy's full spelling) and ״אי אפשר״ without maqaf, both accepted.

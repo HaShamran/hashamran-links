@@ -50,17 +50,20 @@
   "https://thefederalist.com/2026/09/25/we-want-islam-for-this-country-muslims-in-texas-lay-out-vision-for-islamic-america-1": {
     "title": "‘We Want Islam for This Country’: Muslims in Texas Lay Out Vision for Islamic America",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-16T03:43:48+00:00"
   },
   "https://americanmind.org/features/congress-and-the-collapse-of-constitutional-republicanism-in-america": {
     "title": "Congress and the Collapse of Constitutional Republicanism in America",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-16T03:43:48+00:00"
   },
   "https://americanmind.org/features/two-cheers-for-milton-friedman": {
     "title": "Two Cheers for Milton Friedman",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-16T03:43:48+00:00"
   },
   "https://jonmalesic.substack.com/p/how-i-uncovered-a-prolific-ai-author": {
     "title": "How I Uncovered a Prolific AI Author in Religious Magazines",
