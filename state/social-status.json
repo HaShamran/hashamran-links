@@ -1,12 +1,19 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": null,
+  "tweet": {
+    "slot": "2026-11-17#2",
+    "slug": "2026-11-05-dawsey-how-trump-lost-the-midterms",
+    "quote": 1,
+    "text": "״הבעיה הגדולה ביותר היא שאני לא הייתי על פתק ההצבעה.״ טראמפ ל״וול סטריט ג׳ורנל״, אף שקודם לכן אמר שוב ושוב לבוחרים לדמיין שהוא על הפתק.\n\nhttps://hashamran.github.io/hashamran-links/2026-11-05-dawsey-how-trump-lost-the-midterms.html",
+    "at": "2026-11-17T19:05:22+00:00",
+    "buffer_id": "6afca573789e760cd3ce0e05"
+  },
   "alerts": [
-    "2023-02-06-stepman-two-cheers-for-milton-friedman has waited 1d 14h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-09-25-monnington-we-want-islam-for-this-country has waited 1d 14h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-09-25-sibarium-suicidal-compassion-meet-the-anthropic-officials has waited 2d 14h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-10-20-portteus-congress-and-the-collapse-of-constitutional-republicanism has waited 1d 14h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2023-02-06-stepman-two-cheers-for-milton-friedman has waited 1d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-09-25-monnington-we-want-islam-for-this-country has waited 1d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-09-25-sibarium-suicidal-compassion-meet-the-anthropic-officials has waited 2d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-10-20-portteus-congress-and-the-collapse-of-constitutional-republicanism has waited 1d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
