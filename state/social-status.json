@@ -1,18 +1,11 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": {
-    "slot": "2026-11-16#1",
-    "slug": "2026-11-04-purnell-the-best-and-worst-explanations-for-republicans-midterm-losses",
-    "quote": 1,
-    "text": "״המאבק בטראמפ הוא כמעט כל מה שעשתה הנהגת הסנאט בשנתיים האחרונות.״ אל פרנל על כישלונות ההנהגה הרפובליקנית בסנאט.\n\nhttps://hashamran.github.io/hashamran-links/2026-11-04-purnell-the-best-and-worst-explanations-for-republicans-midterm-losses.html",
-    "at": "2026-11-16T20:58:21+00:00",
-    "buffer_id": "6afb6e6e2b3e825373d52f01"
-  },
+  "tweet": null,
   "alerts": [
-    "2026-09-25-sibarium-suicidal-compassion-meet-the-anthropic-officials has waited 1d 17h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-11-05-dawsey-how-trump-lost-the-midterms has waited 2d 16h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-11-10-kotkin-the-return-of-generational-warfare has waited 2d 16h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-09-25-sibarium-suicidal-compassion-meet-the-anthropic-officials has waited 1d 23h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-11-05-dawsey-how-trump-lost-the-midterms has waited 2d 23h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-11-10-kotkin-the-return-of-generational-warfare has waited 2d 23h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
