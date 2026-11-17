@@ -68,12 +68,14 @@
   "https://jonmalesic.substack.com/p/how-i-uncovered-a-prolific-ai-author": {
     "title": "How I Uncovered a Prolific AI Author in Religious Magazines",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-17T03:44:03+00:00"
   },
   "https://maartenboudry.substack.com/p/race-realist-rattles-rector": {
     "title": "Race Realist Rattles Rector",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-17T03:44:03+00:00"
   },
   "https://worksinprogress.co/issue/weapons-of-mass-decentralization": {
     "title": "Weapons of Mass Decentralization",
@@ -13418,6 +13420,11 @@
   "https://city-journal.org/article/baby-boomers-young-generations-society": {
     "title": "The Return of Generational Warfare",
     "first_seen": "2026-11-14T03:44:29+00:00",
+    "status": "queued"
+  },
+  "https://realclearpolitics.com/video/2026/11/15/rubio_warns_icc_on_weaponization_of_international_law_stop_quoting_law_to_men_with_swords.html": {
+    "title": "Rubio Warns ICC on “Weaponization Of International Law”: “Stop Quoting Law To Men With Swords”",
+    "first_seen": "2026-11-17T03:44:02+00:00",
     "status": "queued"
   }
 }

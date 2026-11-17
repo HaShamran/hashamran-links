@@ -379,5 +379,29 @@
     "status": "translated",
     "source": "backfill",
     "post": "posts/2023-02-06-stepman-two-cheers-for-milton-friedman/post.json"
+  },
+  {
+    "url": "https://realclearpolitics.com/video/2026/11/15/rubio_warns_icc_on_weaponization_of_international_law_stop_quoting_law_to_men_with_swords.html",
+    "title": "Rubio Warns ICC on “Weaponization Of International Law”: “Stop Quoting Law To Men With Swords”",
+    "author": "Tim Hains",
+    "publication": "RealClear Politics",
+    "date": "November 15, 2026",
+    "context": "Tim Hains, “Rubio Warns ICC on “Weaponization Of International Law”: “Stop Quoting Law To Men With Swords”” RealClear Politics , November 15, 2026",
+    "first_seen": "2026-11-17T03:44:02+00:00",
+    "status": "queued"
+  },
+  {
+    "url": "https://jonmalesic.substack.com/p/how-i-uncovered-a-prolific-ai-author",
+    "title": "How I Uncovered a Prolific AI Author in Religious Magazines",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "queued",
+    "source": "backfill"
+  },
+  {
+    "url": "https://maartenboudry.substack.com/p/race-realist-rattles-rector",
+    "title": "Race Realist Rattles Rector",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "queued",
+    "source": "backfill"
   }
 ]
