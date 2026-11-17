@@ -626,12 +626,13 @@
   "note": "gas = בנזין, fuel = דלק, diesel = סולר. Dawsey/WSJ, 2026-11-14."
  },
  {
-  "en": "across the country (a foreign country)",
-  "he": "ברחבי ארצות הברית / ברחבי צרפת...",
+  "en": "the country / this country / across the country (a country other than Israel)",
+  "he": "ארצות הברית / אמריקה / צרפת... (name it); ארצנו in a speaker's mouth; ברחבי ארצות הברית",
   "avoid": [
-   "ברחבי הארץ"
+   "ברחבי הארץ",
+   "הארץ הזאת"
   ],
-  "note": "״הארץ״ is Israel to a Hebrew reader; name the country. Reviewer, McCarthy 2026-11-14; swept 2026-11-15 (Hankins, Murray fixed live)."
+  "note": "״הארץ / בארץ / לארץ״ is Israel to a Hebrew reader; name the country. ״המדינה״ only for a non-US country (for the US it can mean a state). qc.haaretz_problems fails it. Reviewer, McCarthy 14 Nov, Monnington and Stepman 16 Nov; swept 17 Nov: 15 more in 5 posts, all fixed."
  },
  {
   "en": "go rogue (AI, deliberate)",

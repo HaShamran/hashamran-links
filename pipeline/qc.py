@@ -141,6 +141,44 @@ def double_possessive_problems(text):
     return out
 
 
+# ״הארץ״ for a country other than Israel (reviewer, 14 and 16 Nov 2026; three daily runs in a row): to a Hebrew reader
+# ״הארץ / בארץ / לארץ / מהארץ״ is Israel (or the newspaper). Name the country: ״ארצות הברית״, ״אמריקה״, ״צרפת״; in a
+# speaker's mouth ״ארצנו״; for a country other than the US ״המדינה״ also works (for the US it can read as "the state").
+# Flagged: ״הארץ״ with the article, and ״בארץ / לארץ / מארץ״ where nothing after it makes it indefinite (end of clause, or
+# a function word: ״לארץ או״, ״בארץ שנתיים״). Not flagged: ״חוץ לארץ״, ״כדור הארץ״, ״על פני הארץ״, the newspaper in
+# quotation marks, ״הארץ ההיא״ (that far land), ״ארץ מוסלמית״, ״בארץ זרה״, ״בארץ שבה״. A post that really means Israel
+# lists the phrase in post["haaretz_ok"] as {"phrase", "reason"}.
+_HAARETZ_DEF = re.compile(r"(?<![א-ת״])((?:ו|ש|כש|וכש)?(?:מה|ה)ארץ)(?![א-ת])")
+_HAARETZ_PREP = re.compile(r"(?<![א-ת])((?:ו|ש|כש)?(?:ב|ל|מ)ארץ)(?![א-ת])")
+_HAARETZ_BEFORE_OK = re.compile(r"(?:כדור|מוסף|עיתון|פני|רעידת|עם|ראשי|חוץ|מחוץ|בחוץ|לחוץ|ומחוץ|שבחוץ|ובחוץ|עלייה|העלייה|"
+                                r"עלו|עלה|עלתה|לעלות|עולים|העולים|ארץ|ארצות)\s+$")
+_HAARETZ_AFTER_OK = re.compile(r"\s+(?:ההיא|ישראל|הקודש|הקדושה|המובטחת)(?![א-ת])")
+_FUNCTION_AFTER = re.compile(r"\s+(?:או|את|על|עם|גם|רק|כבר|אז|עוד|לפני|אחרי|מאז|במשך|עד|היום|כיום|כעת|עכשיו|בלבד|כולה|"
+                             r"שנתיים|שנים|שנה|ומחוצה|ובחוצה|הייתה|היה|היו|נעשתה|סבלה|ראתה|כש|וה|ו[א-ת]+)(?![א-ת])")
+
+
+def haaretz_hits(text, allowed=()):
+    """[(form, context)] for each ״הארץ״ that may mean a country other than Israel."""
+    out = []
+    for pat, definite in ((_HAARETZ_DEF, True), (_HAARETZ_PREP, False)):
+        for m in pat.finditer(text):
+            before, after = text[max(0, m.start() - 12):m.start()], text[m.end():m.end() + 14]
+            if _HAARETZ_BEFORE_OK.search(before) or _HAARETZ_AFTER_OK.match(after):
+                continue
+            if not definite and after.strip() and after[0] == " " and not _FUNCTION_AFTER.match(after):
+                continue  # ״בארץ זרה״, ״לארץ אחרת״, ״בארץ שבה״: indefinite
+            ctx = text[max(0, m.start() - 30):m.end() + 20].replace("\n", " ").strip()
+            if not any(a and a in ctx for a in allowed):
+                out.append((m.group(1), ctx))
+    return out
+
+
+def haaretz_problems(text, allowed=()):
+    return [f"״{form}״ reads as Israel to a Hebrew reader: name the country (״ארצות הברית״, ״אמריקה״, ״צרפת״...) or "
+            f"write ״המדינה״ / ״ארצנו״; if Israel is meant, add the phrase to haaretz_ok: …{ctx}…"
+            for form, ctx in haaretz_hits(text, allowed)]
+
+
 def calque_problems(text):
     return [f"calque: ״{c}״ reads as translated English; write ״{fix}״ (STYLE.md section 9)"
             for c, fix in CALQUES.items() if word(c).search(text)]
@@ -299,6 +337,7 @@ def check(post, source_markdown=None):
     problems += glossary_problems(plain, load_glossary())
     problems += calque_problems(plain)
     problems += double_possessive_problems(plain)
+    problems += haaretz_problems(plain, [w.get("phrase", "") for w in post.get("haaretz_ok") or [] if w.get("reason")])
     # A paragraph that is mostly Latin script was probably left untranslated.
     for i, p in enumerate(paras, 1):
         heb = len(HEBREW.findall(p))

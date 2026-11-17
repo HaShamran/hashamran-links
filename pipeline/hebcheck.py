@@ -7,12 +7,18 @@ Nakdan (https://nakdan.dicta.org.il, free) vowelizes Hebrew and analyses each wo
 readings has a known lemma is not in its lexicon. Most hits are foreign names (טאקר, סולהיים), which are fine; the
 rest are misspellings or made-up words, e.g. התלמידיים. The list goes to the reviewer (REVIEWER.md), who decides
 which are errors. It never fails a post on its own, and a network error returns an empty list with a warning.
+
+It also lists, without the network, every ״הארץ / בארץ / לארץ״ that may stand for a country other than Israel
+(qc.haaretz_hits; three daily runs in a row used it for America). Those entries carry a "note"; the reviewer
+checks each against the English.
 """
 import json
 import re
 import sys
 
 import requests
+
+import qc
 
 NAKDAN = "https://nakdan-2-0.loadbalancer.dicta.org.il/api"
 CHUNK = 4000  # characters per request
@@ -61,6 +67,13 @@ def check(text):
     return out
 
 
+def haaretz(text, allowed=()):
+    """״הארץ״ that may mean America (or France...) to the author but reads as Israel to a Hebrew reader."""
+    return [{"word": form, "count": 1, "context": ctx,
+             "note": "״הארץ״ is Israel to a Hebrew reader: if the English means another country, name it "
+                     "(״ארצות הברית״, ״אמריקה״) or write ״המדינה״ / ״ארצנו״"} for form, ctx in qc.haaretz_hits(text, allowed)]
+
+
 def post_text(post):
     return "\n".join([post.get("title_he", ""), post.get("subtitle_he", ""), post.get("body_he", ""),
                       post.get("author_bio_he", "")] + list(post.get("quotes_he") or []))
@@ -74,6 +87,8 @@ def main(argv=None):
     except (requests.RequestException, ValueError) as e:
         print(f"warning: Dicta Nakdan unavailable ({e}); spelling not checked", file=sys.stderr)
         result = []
+    allowed = [w.get("phrase", "") for w in post.get("haaretz_ok") or [] if w.get("reason")]
+    result += haaretz(post_text(post), allowed)
     print(json.dumps(result, ensure_ascii=False, indent=1))
     return 0
 
