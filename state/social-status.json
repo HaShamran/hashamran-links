@@ -1,13 +1,20 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": null,
+  "tweet": {
+    "slot": "2026-11-17#0",
+    "slug": "2026-11-10-kotkin-the-return-of-generational-warfare",
+    "quote": 0,
+    "text": "״להעלות באש את עולמם של סבא וסבתא אולי מסב סיפוק לרגע, אבל הטענה שלאמריקנים המבוגרים היה קל יותר אינה משכנעת.״ ג׳ואל קוטקין על מלחמת הדורות החדשה.\n\nhttps://hashamran.github.io/hashamran-links/2026-11-10-kotkin-the-return-of-generational-warfare.html",
+    "at": "2026-11-17T09:05:22+00:00",
+    "buffer_id": "6afc18d3101362236255a0ac"
+  },
   "alerts": [
-    "2023-02-06-stepman-two-cheers-for-milton-friedman has waited 1d 4h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-09-25-monnington-we-want-islam-for-this-country has waited 1d 4h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-09-25-sibarium-suicidal-compassion-meet-the-anthropic-officials has waited 2d 4h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-10-20-portteus-congress-and-the-collapse-of-constitutional-republicanism has waited 1d 4h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-11-05-dawsey-how-trump-lost-the-midterms has waited 3d 4h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2023-02-06-stepman-two-cheers-for-milton-friedman has waited 1d 5h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-09-25-monnington-we-want-islam-for-this-country has waited 1d 5h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-09-25-sibarium-suicidal-compassion-meet-the-anthropic-officials has waited 2d 5h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-10-20-portteus-congress-and-the-collapse-of-constitutional-republicanism has waited 1d 5h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-11-05-dawsey-how-trump-lost-the-midterms has waited 3d 5h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
