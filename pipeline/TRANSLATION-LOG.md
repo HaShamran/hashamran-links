@@ -453,3 +453,28 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   ״בני מיעוטים״ (an Israeli civic category) → ״מקבוצות מיעוט״; school boards are district bodies, not ״מועצות בתי הספר״; Burnham's
   managerial class ״מנהלתיים״ → ״מעמד מנהלים״; "incendiary" ״הסתה״ → ״התלהמות״; the program name keeps ״ויליאם פ׳ באקלי״ as the English has it (fix-check).
 - Not fixed: ״תוכנית״ (the Academy's full spelling) and ״אי אפשר״ without maqaf, both accepted.
+
+### 2026-11-18 · Held: Malesic, "How I Uncovered a Prolific AI Author in Religious Magazines"
+- An investigative post that names a little-known writer and says his degree claim is false and his work AI-written. Held
+  (queue status `held`) for Hadar under the editorial-holds rule; not translated.
+
+### 2026-11-18 · 2026-09-25-boudry-race-realist-rattles-rector
+- First-person, sardonic Substack essay by a Belgian philosopher on the Cofnas affair at Ghent. Reader comments removed; the
+  footnotes kept as a ״הערות״ section (footnotes 1 and 5 had no text in the page and their markers were dropped).
+- Terms: race realist ״ריאליסט גזעי״ (always in quotation marks in a title: bare ״גזעי״ reads as pedigreed or racist, the one
+  major finding); heckler's veto ״וטו של המפריעים״; pseudoscience ״מדע כזב״; plagiarism ״גניבה ספרותית״ (not ״העתקה״);
+  pronatalism ״עידוד הילודה״; double standard ״איפה ואיפה״ (not ״כפל במידות״); rector glossed at first use (in Belgium the
+  rector heads the university; in Israel the רקטור is under the president).
+- Caught in pass 2 (minor): a dropped hedge ("seems clearly qualified"); the letters' own words lost their quotation marks;
+  ״אמונות תיאוריות״ (descriptive) misread as theories; ״בדרך כלל״ for "on the whole"; ״אחת העבריינים״ (gender clash).
+  Fix-check caught a doubled gloss and a ״שבהן״ with no antecedent.
+- System note: three avoid forms added on 16 Nov (שיקול, מחאות, חטא, plus מנהלתי, צריח) are right in other senses and made qc
+  fail correct text; moved from `avoid` to the note. An avoid form must be wrong in every context.
+
+### 2026-11-18 · 2026-11-15-hains-rubio-warns-icc-on-weaponization-of-international-law
+- RealClearPolitics report plus the speech transcript and Q&A at the Federalist Society. Rubio's repetitions and false starts
+  kept; (Laughter)/(Applause) → (צחוק)/(מחיאות כפיים). Title: ״חוקים מול חרבות: רוביו נגד בית הדין בהאג״ (antithesis).
+- Caught in pass 2 (major): the subtitle said the US ״לא תניח״ (will not allow) the ICC to prosecute Americans; the source says
+  it would resist attempts → ״תתנגד לכל ניסיון״. Minor: global governance ״הממשל העולמי״ reads as world government →
+  ״המשילות העולמית״; "simply" and "real" dropped; ״אנו מפרים״ changed the subject; ״מן המדיניות החוץ״ (article in a construct);
+  Roe v. Wade and APEC need first-use glosses.

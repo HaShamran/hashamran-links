@@ -40,6 +40,14 @@
     "substack_draft_id": null
   },
   {
+    "slug": "2026-09-25-boudry-race-realist-rattles-rector",
+    "title_he": "ה״ריאליסט הגזעי״ והרקטורית",
+    "status": "ready",
+    "ready_at": "2026-11-18T03:58:48+00:00",
+    "substack_slug": "boudry-race-realist-rattles-rector",
+    "substack_draft_id": null
+  },
+  {
     "slug": "2026-09-25-monnington-we-want-islam-for-this-country",
     "title_he": "״אנחנו רוצים את האסלאם למדינה הזאת״: חזון של אמריקה אסלאמית",
     "status": "ready",
@@ -165,6 +173,14 @@
     "status": "ready",
     "ready_at": "2026-11-14T03:59:35+00:00",
     "substack_slug": "kotkin-the-return-of-generational-warfare",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-11-15-hains-rubio-warns-icc-on-weaponization-of-international-law",
+    "title_he": "חוקים מול חרבות: רוביו נגד בית הדין בהאג",
+    "status": "ready",
+    "ready_at": "2026-11-18T04:00:01+00:00",
+    "substack_slug": "hains-rubio-warns-icc-on-weaponization-of-international-law",
     "substack_draft_id": null
   }
 ]

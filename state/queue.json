@@ -388,20 +388,23 @@
     "date": "November 15, 2026",
     "context": "Tim Hains, “Rubio Warns ICC on “Weaponization Of International Law”: “Stop Quoting Law To Men With Swords”” RealClear Politics , November 15, 2026",
     "first_seen": "2026-11-17T03:44:02+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-11-15-hains-rubio-warns-icc-on-weaponization-of-international-law/post.json"
   },
   {
     "url": "https://jonmalesic.substack.com/p/how-i-uncovered-a-prolific-ai-author",
     "title": "How I Uncovered a Prolific AI Author in Religious Magazines",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "queued",
-    "source": "backfill"
+    "status": "held",
+    "source": "backfill",
+    "note": "2026-11-18: investigative piece naming a little-known writer and alleging a fake degree and AI-written work; held for Hadar per the editorial-holds rule."
   },
   {
     "url": "https://maartenboudry.substack.com/p/race-realist-rattles-rector",
     "title": "Race Realist Rattles Rector",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "queued",
-    "source": "backfill"
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-25-boudry-race-realist-rattles-rector/post.json"
   }
 ]
