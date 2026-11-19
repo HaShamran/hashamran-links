@@ -61,6 +61,23 @@ Only when the essay's argument fully supports the verdict.
 - A Tragedy Shrouded in Silence → ״חורבן קהילות ארצות ערב: האסון שנגנז״
 Short noun phrase first, the hook after the colon.
 
+## 8. An English idiom is translated by what it means, never word for word
+Mistake (Hadar, 19 Nov 2026): "Two Cheers for Milton Friedman" went out as ״שתי תשואות למילטון פרידמן״, which
+means nothing in Hebrew (the idiom is Forster's and Kristol's: praise with reservations). The blind
+back-translation returned the English word for word and was counted as a pass. A calque always back-translates
+perfectly, so a back-translation identical to an idiomatic English title proves nothing.
+תכלת never copies the idiom; it states what it means, or uses one of moves 2-4:
+- Fukuyama's Second Thoughts → ״חשבון הנפש של פוקויאמה״
+- Preaching to the Choir → ״נאום ההגנה של הניאו-שמרנות״
+- Breach of Faith → ״המהפכה של מל גיבסון״
+- The CIA Gets an F → ״באשמת פקידי הסוכנות״
+- Who's Afraid of The Nation-State? → ״קץ הלאומיות?״
+- It's Human Nature, Stupid → ״זו המסורת, טמבל״ (an English idiom Hebrew readers do know, kept)
+Test: would an Israeli reader who knows no English understand the phrase? If not, say what it means. When the
+title names a person and states the essay's thesis, make clear whose view it is: ״מילטון פרידמן: השוק לבדו אינו
+מספיק״ reads as Friedman's own claim; ״מילטון פרידמן צדק, אבל השוק לבדו אינו מספיק״ is the author's verdict
+on him. The same holds for the subtitle and the three tweet quotes. qc fails the common ones (`HEADLINE_IDIOMS`).
+
 ## Shape
 - Most are 2 to 6 words. Use a noun phrase over a sentence. No clickbait and no exclamation marks.
 - Bring it home when the essay allows: Zionism's Compatriots → ״ישראל ומדינות הלאום החדשות״.

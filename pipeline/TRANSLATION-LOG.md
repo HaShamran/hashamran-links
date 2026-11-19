@@ -499,3 +499,24 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - Fix-check (5 not ok, all fixed): ״מהפכות האנטיכריסט״ made the Antichrist a person; ״המקולנים״ is not a word; ״ובראשן״
   overstates "not least"; the new subtitle overstated "will not save" → "will not be enough to hold together". A C. S. Lewis
   attribution the reviewer proposed was reverted: the source does not name him. Lesson: never add attributions the author left out.
+
+### 2026-11-19 · Mistake: English title idiom copied word for word (2023-02-06-stepman-two-cheers-for-milton-friedman)
+- Correction (Hadar, 19 Nov 2026): "the hebrew title is unclear". ״שתי תשואות למילטון פרידמן״ copies "Two Cheers for",
+  an English idiom (Forster, then Kristol's "Two Cheers for Capitalism") for praise with reservations; in Hebrew it says
+  nothing. Hadar also rejected ״מילטון פרידמן: השוק לבדו אינו מספיק״ because it reads as Friedman's own claim: a title
+  that names a person and states a thesis must make clear it is the author's verdict on him.
+- How many times we made it: 1 title of 25, plus 1 tweet quote in the same post (״שתי תשואות – אבל לא שלוש״). No other
+  title, subtitle or quote in our posts copies an English idiom (checked all 25 by eye and with the new qc check). The
+  body's last line keeps the phrase, because the paragraph before it names Kristol's essay and explains it.
+- Why it slipped: pass 3 listed the calque first among the candidates, and the blind back-translator returned "Two
+  Cheers for Milton Friedman" exactly, which was read as a pass. A calque always back-translates perfectly.
+- The archive: in the 224 תכלת title pairs no idiomatic English title is copied word for word; idioms are rendered by
+  meaning: Fukuyama's Second Thoughts ״חשבון הנפש של פוקויאמה״, Preaching to the Choir ״נאום ההגנה של הניאו-שמרנות״,
+  The CIA Gets an F ״באשמת פקידי הסוכנות״, Who's Afraid of The Nation-State? ״קץ הלאומיות?״. In תכלת ״תשואות״ occurs
+  only as literal applause (7 essays). (The full mistake_sweep over the network folder timed out twice; the title list
+  in pipeline/azure/index.csv was checked instead.)
+- Rule: an English idiom in a title, subtitle or tweet is translated by what it means, never word for word (TITLES.md
+  section 8). qc.py `headline_idiom_problems` fails two/three cheers, elephant in the room, low-hanging fruit, moving the
+  goalposts, kicking the can, Kool-Aid, deck chairs in the title, subtitle and quotes. REVIEWER.md: copied idiom = major
+  title finding; a word-for-word back-translation of an idiom is a warning, not a pass.
+- System: dud/publisher.py live fixes take `"field": "title"` to retitle a live post (same URL, no email).

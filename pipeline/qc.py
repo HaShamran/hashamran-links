@@ -38,6 +38,17 @@ STYLE_MIN_WORDS = 600    # shorter pieces are too small to measure
 CALQUES = {"בסופו של יום": "בסופו של דבר", "לשחק תפקיד": "למלא תפקיד", "לשחק את התפקיד": "למלא את התפקיד",
            "לעשות שכל": "הגיוני, מתקבל על הדעת", "עושה שכל": "הגיוני, מתקבל על הדעת", "לעשות הבדל": "לשנות, להשפיע",
            "על בסיס יומי": "מדי יום"}
+# English headline idioms translated word for word (MISTAKE: ״שתי תשואות למילטון פרידמן״, 19 Nov 2026). They mean
+# nothing to a Hebrew reader, so they may not stand in a title, subtitle or tweet quote. The body may still name a
+# work whose title holds one (Kristol's ״שתי תשואות לקפיטליזם״), where the text around it explains it.
+# Each entry: Hebrew calque -> what the English means, to say instead (TITLES.md section 8).
+HEADLINE_IDIOMS = {r"(שתי|שלוש|שלש)\s+תשואות": "two/three cheers = qualified (or full) praise: say ״שבח מסויג״ or name the reservation",
+                   r"(?<![א-ת])ה?פיל\s+ש?ב?חדר": "the elephant in the room = the obvious problem nobody names",
+                   r"פרי\s+(ה)?תלוי\s+נמוך": "low-hanging fruit = the easy gains",
+                   r"(להזיז|הזזת)\s+(את\s+)?(עמודי|קורות)\s+ה?שער": "moving the goalposts = changing the rules midway",
+                   r"(לבעוט|בעיטת)\s+(ב)?פחית": "kicking the can down the road = putting the problem off",
+                   r"(לשתות|שתיית|שתו)\s+(את\s+)?ה?קול[-־ ]?אייד": "drinking the Kool-Aid = blind faith in a movement",
+                   r"(לסדר|סידור)\s+(מחדש\s+)?(את\s+)?כיסאות\s+ה?סיפון": "rearranging the deck chairs = busywork before disaster"}
 JARGON = {"נרטיב": "סיפור, תפיסה", "אג'נדה": "סדר יום", "אג׳נדה": "סדר יום", "קונספט": "מושג, רעיון",
           "דיסקורס": "שיח", "פרובלמטי": "בעייתי", "פרקטי": "מעשי"}
 # Where our drafts drift from תכלת (STYLE.md section 18): warnings, at the 5th/95th percentile of the 224 essays.
@@ -144,6 +155,14 @@ def double_possessive_problems(text):
 def calque_problems(text):
     return [f"calque: ״{c}״ reads as translated English; write ״{fix}״ (STYLE.md section 9)"
             for c, fix in CALQUES.items() if word(c).search(text)]
+
+
+def headline_idiom_problems(post):
+    """A title, subtitle or tweet quote that copies an English idiom word for word (TITLES.md section 8)."""
+    lines = [("title", post.get("title_he", "")), ("subtitle", post.get("subtitle_he", ""))]
+    lines += [(f"quote {i}", q) for i, q in enumerate(post.get("quotes_he") or [], 1)]
+    return [f"{where}: ״{m.group(0)}״ copies an English idiom word for word; {meaning} (TITLES.md section 8)"
+            for where, text in lines for pat, meaning in HEADLINE_IDIOMS.items() for m in [re.search(pat, text or "")] if m]
 
 
 def jargon_warnings(text):
@@ -298,6 +317,7 @@ def check(post, source_markdown=None):
         problems.append('English quotation marks (") in the Hebrew text; use ״ ״')
     problems += glossary_problems(plain, load_glossary())
     problems += calque_problems(plain)
+    problems += headline_idiom_problems(post)
     problems += double_possessive_problems(plain)
     # A paragraph that is mostly Latin script was probably left untranslated.
     for i, p in enumerate(paras, 1):

@@ -225,3 +225,14 @@ def test_double_possessive():
         assert not qc.double_possessive_problems(fine), fine
     bad = {**GOOD, "body_he": GOOD["body_he"] + "\n\nהשמעתי את התנגדויותיי שלי."}
     assert any("double possessive" in p for p in qc.check(bad)["problems"])
+
+
+def test_headline_idioms_fail_in_title_and_quotes_but_not_body():
+    post = dict(GOOD, title_he="שתי תשואות למילטון פרידמן",
+                title_options_he=["שתי תשואות למילטון פרידמן", "צרפת", "התהום"])
+    probs = qc.check(post)["problems"]
+    assert any("title: ״שתי תשואות״" in p for p in probs), probs
+    post = dict(GOOD, quotes_he=["ציטוט ראשון", "ציטוט שני", "הרשו לי להעניק שלוש תשואות לפרידמן"])
+    assert any(p.startswith("quote 3:") for p in qc.check(post)["problems"])
+    body = GOOD["body_he"] + "\n\nקריסטול כתב מאמר שכותרתו ״שתי תשואות לקפיטליזם״."
+    assert qc.check(dict(GOOD, body_he=body))["pass"]

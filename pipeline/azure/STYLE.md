@@ -396,7 +396,8 @@ the same essays): comma 80 / 74, semicolon 4.1 / 2.7, colon 6.3 / 4.8, parenthes
 
 ## 17. Titles, subtitles, tweets
 `TITLES.md` covers the headline (2 to 6 words, a noun phrase or a short sentence, never a calque of an English
-pun) and the subtitle. Tweets follow `TRANSLATION.md`: an allegation stays an allegation, and no quotation marks
+pun or idiom: "two cheers for" is never ״שתי תשואות ל״, see TITLES.md section 8) and the subtitle. A title
+that names a person and states a thesis must say whose thesis it is. Tweets follow `TRANSLATION.md`: an allegation stays an allegation, and no quotation marks
 around a paraphrase.
 
 ## 18. Where our drafts drift (measured 2026-10-30)

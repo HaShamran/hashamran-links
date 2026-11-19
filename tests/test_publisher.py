@@ -62,3 +62,37 @@ def test_live_fix_replaces_text_in_nodes():
     assert publisher._replace_text(body, "את התנגדויותיי שלי", "את התנגדויותיי") == 1
     assert body["content"][0]["content"][0]["text"] == "השמעתי את התנגדויותיי למלחמה"
     assert publisher._replace_text(body, "את התנגדויותיי שלי", "את התנגדויותיי") == 0
+
+
+def test_live_fix_can_retitle(monkeypatch):
+    calls = {}
+
+    class Api:
+        def get_draft(self, _id):
+            return {"draft_title": "שתי תשואות למילטון פרידמן", "draft_body": "{\"type\": \"doc\", \"content\": []}"}
+
+        def put_draft(self, _id, **kw):
+            calls["put"] = kw
+
+        def publish_draft(self, _id, **kw):
+            calls["publish"] = kw
+
+    class Resp:
+        ok = True
+
+        def __init__(self, data):
+            self.data = data
+
+        def json(self):
+            return self.data
+
+    fixes = [{"id": "t1", "slug": "s", "field": "title", "find": "שתי תשואות למילטון פרידמן", "replace": "כותרת חדשה"}]
+    monkeypatch.setattr(publisher.requests, "get", lambda url, **kw: Resp(fixes if "live-fixes" in url else {"substack_slug": "x"}))
+    monkeypatch.setattr(publisher, "published_post", lambda slug: {"id": 1, "title": "כותרת חדשה", "post_date": "d"})
+    monkeypatch.setattr(publisher, "save", lambda *a: None)
+    monkeypatch.setattr(publisher, "log", lambda *a: None)
+    state = {}
+    publisher.apply_live_fixes(Api(), state)
+    assert calls["put"]["draft_title"] == "כותרת חדשה"
+    assert calls["publish"] == {"send": False, "share_automatically": False}
+    assert state["_live_fixes"]["t1"]["replaced"] == 1
