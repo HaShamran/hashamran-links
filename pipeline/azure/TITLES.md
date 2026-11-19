@@ -75,8 +75,8 @@ perfectly, so a back-translation identical to an idiomatic English title proves 
 - It's Human Nature, Stupid → ״זו המסורת, טמבל״ (an English idiom Hebrew readers do know, kept)
 Test: would an Israeli reader who knows no English understand the phrase? If not, say what it means. When the
 title names a person and states the essay's thesis, make clear whose view it is: ״מילטון פרידמן: השוק לבדו אינו
-מספיק״ reads as Friedman's own claim; ״מילטון פרידמן צדק, אבל השוק לבדו אינו מספיק״ is the author's verdict
-on him. The same holds for the subtitle and the three tweet quotes. qc fails the common ones (`HEADLINE_IDIOMS`).
+מספיק״ reads as Friedman's own claim. Hadar's pick was the thesis alone, ״השוק לבדו אינו מספיק״: the subtitle
+names the author and Friedman's book, so the title needs neither. The same holds for the subtitle and the three tweet quotes. qc fails the common ones (`HEADLINE_IDIOMS`).
 
 ## Shape
 - Most are 2 to 6 words. Use a noun phrase over a sentence. No clickbait and no exclamation marks.

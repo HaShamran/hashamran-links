@@ -21,12 +21,12 @@
   "source_paragraphs": 0,
   "he_paragraphs": 0,
   "author_he": "אינס פלטשר סטפמן",
-  "title_he": "שתי תשואות למילטון פרידמן",
+  "title_he": "השוק לבדו אינו מספיק",
   "title_options_he": [
-    "שתי תשואות למילטון פרידמן",
-    "שתי תשואות, לא שלוש",
-    "פרידמן במלחמת התרבות",
-    "מה פרידמן לא ראה"
+    "השוק לבדו אינו מספיק",
+    "מילטון פרידמן צדק, אבל השוק לבדו אינו מספיק",
+    "ויכוח עם מילטון פרידמן: השוק לבדו אינו מספיק",
+    "מה שמילטון פרידמן החמיץ: השוק לבדו אינו מספיק"
   ],
   "subtitle_he": "אינס פלטשר סטפמן: בתנאים חדשים לגמרי, כמה מן התובנות הישנות של ״קפיטליזם וחירות״ צריכות התאמה. חופש הבחירה בחינוך עדיין חיוני, אבל השוק לבדו אינו יכול לשמר חברה חופשית.",
   "byline_he": "מאת אינס פלטשר סטפמן | פורסם לראשונה ב־The American Mind ב־6 בפברואר 2023",
@@ -34,7 +34,7 @@
   "quotes_he": [
     "״נראה שהשוק הפרטי אכן יכול להשיג כל מה שהממשלה יכולה, ביעילות לפחות שווה – ובכלל זה צנזורה.״ אינס פלטשר סטפמן ב־The American Mind.",
     "״כוח הצרכן שפרידמן דגל בו יכול לשמש גם כלי רב עוצמה במלחמת התרבות.״ אינס פלטשר סטפמן על חופש הבחירה בחינוך.",
-    "״הרשו לי, אפוא, להעניק שתי תשואות – אבל לא שלוש – לספרו הקלסי של מילטון פרידמן, קפיטליזם וחירות.״ אינס פלטשר סטפמן."
+    "״כמו כל שיטה כלכלית, אין הוא יכול לומר לנו אם מה שאנו חפצים בו טוב, או אם הוא מתיישב עם המשך קיומה של אותה חברה חופשית שמקיימת אותו.״ אינס פלטשר סטפמן על השוק החופשי."
   ],
   "brief": {
     "tone": "A speech turned essay: appreciative but critical of Friedman, combative toward the left; first person.",
@@ -66,21 +66,21 @@
     "fixed": 1
   },
   "back_translation": {
-    "title": "Two Cheers for Milton Friedman",
-    "subtitle": "Inez Feltscher Stepman: Under entirely new conditions, some of the old insights of \"Capitalism and Freedom\" need adjustment. Freedom of choice in education is still essential, but the market alone cannot preserve a free society.",
+    "title": "The market alone is not enough",
+    "subtitle": "Inez Feltscher Stepman: Under entirely new conditions, some of the old insights of \"Capitalism and Freedom\" need adjustment. School choice is still essential, but the market alone cannot preserve a free society.",
     "quotes": [
-      "\"It seems that the private market can indeed accomplish everything the government can, with at least equal efficiency – including censorship.\" Inez Feltscher Stepman in The American Mind.",
-      "\"The consumer power that Friedman advocated can also serve as a powerful tool in the culture war.\" Inez Feltscher Stepman on freedom of choice in education.",
-      "\"Allow me, then, to give two cheers – but not three – to Milton Friedman's classic book, Capitalism and Freedom.\" Inez Feltscher Stepman."
+      "\"It seems the private market can indeed accomplish everything the government can, with at least equal efficiency, including censorship.\" Inez Feltscher Stepman in The American Mind.",
+      "\"The consumer power that Friedman championed can also serve as a powerful weapon in the culture war.\" Inez Feltscher Stepman on school choice.",
+      "\"Like any economic system, it cannot tell us whether what we desire is good, or whether it is compatible with the continued existence of the very free society that sustains it.\" Inez Feltscher Stepman on the free market."
     ],
     "meaning_kept": true,
     "source": {
-      "title": "שתי תשואות למילטון פרידמן",
+      "title": "השוק לבדו אינו מספיק",
       "subtitle": "אינס פלטשר סטפמן: בתנאים חדשים לגמרי, כמה מן התובנות הישנות של ״קפיטליזם וחירות״ צריכות התאמה. חופש הבחירה בחינוך עדיין חיוני, אבל השוק לבדו אינו יכול לשמר חברה חופשית.",
       "quotes": [
         "״נראה שהשוק הפרטי אכן יכול להשיג כל מה שהממשלה יכולה, ביעילות לפחות שווה – ובכלל זה צנזורה.״ אינס פלטשר סטפמן ב־The American Mind.",
         "״כוח הצרכן שפרידמן דגל בו יכול לשמש גם כלי רב עוצמה במלחמת התרבות.״ אינס פלטשר סטפמן על חופש הבחירה בחינוך.",
-        "״הרשו לי, אפוא, להעניק שתי תשואות – אבל לא שלוש – לספרו הקלסי של מילטון פרידמן, קפיטליזם וחירות.״ אינס פלטשר סטפמן."
+        "״כמו כל שיטה כלכלית, אין הוא יכול לומר לנו אם מה שאנו חפצים בו טוב, או אם הוא מתיישב עם המשך קיומה של אותה חברה חופשית שמקיימת אותו.״ אינס פלטשר סטפמן על השוק החופשי."
       ]
     }
   },

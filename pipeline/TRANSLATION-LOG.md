@@ -505,6 +505,9 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   an English idiom (Forster, then Kristol's "Two Cheers for Capitalism") for praise with reservations; in Hebrew it says
   nothing. Hadar also rejected ״מילטון פרידמן: השוק לבדו אינו מספיק״ because it reads as Friedman's own claim: a title
   that names a person and states a thesis must make clear it is the author's verdict on him.
+  Hadar's title: ״השוק לבדו אינו מספיק״ (the thesis alone; the subtitle carries author and book). Quote 3 is now the
+  essay's own ״כמו כל שיטה כלכלית, אין הוא יכול לומר לנו אם מה שאנו חפצים בו טוב...״; live title fixed through
+  state/live-fixes.json (`"field": "title"`).
 - How many times we made it: 1 title of 25, plus 1 tweet quote in the same post (״שתי תשואות – אבל לא שלוש״). No other
   title, subtitle or quote in our posts copies an English idiom (checked all 25 by eye and with the new qc check). The
   body's last line keeps the phrase, because the paragraph before it names Kristol's essay and explains it.
