@@ -80,7 +80,8 @@
   "https://worksinprogress.co/issue/weapons-of-mass-decentralization": {
     "title": "Weapons of Mass Decentralization",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-19T03:44:37+00:00"
   },
   "https://americanmind.org/salvo/what-claremont-is-for": {
     "title": "What Claremont is for",
@@ -13425,6 +13426,16 @@
   "https://realclearpolitics.com/video/2026/11/15/rubio_warns_icc_on_weaponization_of_international_law_stop_quoting_law_to_men_with_swords.html": {
     "title": "Rubio Warns ICC on “Weaponization Of International Law”: “Stop Quoting Law To Men With Swords”",
     "first_seen": "2026-11-17T03:44:02+00:00",
+    "status": "queued"
+  },
+  "https://firstthings.com/natures-god-is-not-enough": {
+    "title": "Nature’s God Is Not Enough",
+    "first_seen": "2026-11-19T03:44:36+00:00",
+    "status": "queued"
+  },
+  "https://spectator.com/article/i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller": {
+    "title": "I know why Tommy Robinson’s grooming gang book is a bestseller",
+    "first_seen": "2026-11-19T03:44:36+00:00",
     "status": "queued"
   }
 }

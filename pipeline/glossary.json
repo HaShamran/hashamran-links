@@ -795,5 +795,75 @@
   "he": "(צחוק) / (מחיאות כפיים)",
   "avoid": [],
   "note": "Rubio 2026-11-18."
+ },
+ {
+  "en": "anti-Christ / anti-Christian (revolution)",
+  "he": "אנטיכריסט / אנטיכריסטי",
+  "avoid": [
+   "אנטי־כריסט"
+  ],
+  "note": "Hebrew Wikipedia: אנטיכריסט. Not ״אנטי־משיחי״ in a Christian context (that reads as anti-Messianic). Mitchell 2026-11-19."
+ },
+ {
+  "en": "incomplete religion (Mitchell)",
+  "he": "דת שלא הושלמה",
+  "avoid": [],
+  "note": "Keep one form through the essay. Mitchell 2026-11-19."
+ },
+ {
+  "en": "colonizers and colonized",
+  "he": "הכובשים הקולוניאליים והנכבשים",
+  "avoid": [
+   "המקולנים"
+  ],
+  "note": "Not ״המתיישבים והמושבים״. Mitchell 2026-11-19."
+ },
+ {
+  "en": "established church",
+  "he": "כנסייה רשמית",
+  "avoid": [],
+  "note": "Not ״כנסייה ממוסדת״. Mitchell 2026-11-19."
+ },
+ {
+  "en": "mansplaining",
+  "he": "הסגברה",
+  "avoid": [
+   "מאנספליינינג"
+  ],
+  "note": "Mitchell 2026-11-19."
+ },
+ {
+  "en": "Plato's Republic",
+  "he": "המדינה",
+  "avoid": [
+   "פוליטיאה"
+  ],
+  "note": "Hebrew title of the book. Mitchell 2026-11-19."
+ },
+ {
+  "en": "Islamophobe",
+  "he": "אסלאמופוב",
+  "avoid": [
+   "איסלאמופוב"
+  ],
+  "note": "Mitchell 2026-11-19."
+ },
+ {
+  "en": "Iron Age metallurgists",
+  "he": "המטלורגים של תקופת הברזל",
+  "avoid": [],
+  "note": "Not ״המתכות״. Fitzsimmons 2026-11-19."
+ },
+ {
+  "en": "smiths (blacksmiths)",
+  "he": "נפחים",
+  "avoid": [],
+  "note": "״חרשים״ without niqqud reads as deaf people. Fitzsimmons 2026-11-19."
+ },
+ {
+  "en": "offense-defense balance",
+  "he": "מאזן ההתקפה וההגנה",
+  "avoid": [],
+  "note": "Fitzsimmons 2026-11-19."
  }
 ]

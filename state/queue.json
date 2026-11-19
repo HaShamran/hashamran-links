@@ -406,5 +406,34 @@
     "status": "translated",
     "source": "backfill",
     "post": "posts/2026-09-25-boudry-race-realist-rattles-rector/post.json"
+  },
+  {
+    "url": "https://firstthings.com/natures-god-is-not-enough",
+    "title": "Nature’s God Is Not Enough",
+    "author": "Joshua Mitchell",
+    "publication": "First Things",
+    "date": "November 17, 2026",
+    "context": "Joshua Mitchell , “Nature’s God Is Not Enough” First Things , November 17, 2026",
+    "first_seen": "2026-11-19T03:44:36+00:00",
+    "status": "translated",
+    "post": "posts/2026-11-17-mitchell-natures-god-is-not-enough/post.json"
+  },
+  {
+    "url": "https://spectator.com/article/i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller",
+    "title": "I know why Tommy Robinson’s grooming gang book is a bestseller",
+    "author": "Rosie Lewis",
+    "publication": "The Spectator",
+    "date": "November 16, 2026",
+    "context": "Rosie Lewis, “I know why Tommy Robinson’s grooming gang book is a bestseller” The Spectator , November 16, 2026",
+    "first_seen": "2026-11-19T03:44:36+00:00",
+    "status": "queued"
+  },
+  {
+    "url": "https://worksinprogress.co/issue/weapons-of-mass-decentralization",
+    "title": "Weapons of Mass Decentralization",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-23-fitzsimmons-weapons-of-mass-decentralization/post.json"
   }
 ]

@@ -478,3 +478,24 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   it would resist attempts → ״תתנגד לכל ניסיון״. Minor: global governance ״הממשל העולמי״ reads as world government →
   ״המשילות העולמית״; "simply" and "real" dropped; ״אנו מפרים״ changed the subject; ״מן המדיניות החוץ״ (article in a construct);
   Roe v. Wade and APEC need first-use glosses.
+
+### 2026-11-19 · 2026-09-23-fitzsimmons-weapons-of-mass-decentralization
+- Backfilled Works in Progress essay on how iron (and maybe drones today) decentralized military power. Three infographics
+  with English-only labels removed; year waivers 1600 and 1950. Title ״נשק לביזור המוני״.
+- Caught in pass 2 (major): the subtitle asked whether drones ״יעשו כך״ (will do so), but the source asks whether they can →
+  ״האם יכולות טכנולוגיות כמו רחפנים לעשות זאת גם היום?״. Minor: smiths ״חרשים״ (reads as deaf without niqqud) → ״נפחים״;
+  ״המתכות של תקופת הברזל״ → ״המטלורגים״; "offense-defense balance" → ״מאזן ההתקפה וההגנה״; ״טלאים של מדינות״ → ״פסיפס״;
+  tribute ״מס עובד״ → ״מנחות״; battles named without ״קרבות״. Fix-check: 19 checked, all ok.
+
+### 2026-11-19 · 2026-11-17-mitchell-natures-god-is-not-enough
+- First Things essay (Joshua Mitchell): identity politics as an "incomplete religion"; dense with Christian theology and
+  Gospel verses (chapters in Hebrew letters, verse numbers waived). Title ״אלוהי הטבע אינו מספיק״.
+- Caught in pass 2 (4 major): anti-Christ ״אנטי־משיחי״ (reads as anti-Messianic, a Jewish frame) → ״אנטיכריסטי / אנטיכריסט״
+  (Hebrew Wikipedia); colonizers/colonized ״המתיישבים והמושבים״ (settlers, an Israeli loaded term, and a non-word) →
+  ״הכובשים הקולוניאליים והנכבשים״; the Declaration of Independence unqualified reads as Israel's → ״הכרזת העצמאות האמריקנית״.
+  Minor: "purge" needs its object (״לטהר מהם את העולם״); established church ״ממוסדת״ → ״רשמית״; Plato's *Republic* is
+  ״המדינה״; mansplaining → ״הסגברה״; ״אסלאמופוב״ spelling; one form for "incomplete religion" (״דת שלא הושלמה״);
+  John 3:30 in its standard Hebrew wording; ״ארצנו״ → ״אמריקה״ (the ״הארץ״ trap again, in first-person plural).
+- Fix-check (5 not ok, all fixed): ״מהפכות האנטיכריסט״ made the Antichrist a person; ״המקולנים״ is not a word; ״ובראשן״
+  overstates "not least"; the new subtitle overstated "will not save" → "will not be enough to hold together". A C. S. Lewis
+  attribution the reviewer proposed was reverted: the source does not name him. Lesson: never add attributions the author left out.
