@@ -523,3 +523,23 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   goalposts, kicking the can, Kool-Aid, deck chairs in the title, subtitle and quotes. REVIEWER.md: copied idiom = major
   title finding; a word-for-word back-translation of an idiom is a warning, not a pass.
 - System: dud/publisher.py live fixes take `"field": "title"` to retitle a live post (same URL, no email).
+
+### 2026-11-20 · 2026-11-16-lewis-i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller
+- First-person Spectator column by a foster carer (feminine forms kept). Not held: the crimes named (Banaz Mahmod, Sara Sharif)
+  are court convictions, reported as such. Pull quotes and an unrelated image removed. Title ״השליח הפגום״.
+- Glosses for the Israeli reader at first use: Robinson ״הפעיל הבריטי נגד האסלאם״, Bindel ״העיתונאית הפמיניסטית״ (fix-check: accurate, neutral).
+- Caught in pass 2 (3 major): the subtitle dropped the author's hedge ("I suspect... less to do with") → ״לדעתה, לא כל כך... אלא״;
+  "actively discouraged" became ״מונעות״ (stronger, and ambiguous) → ״מניאים במכוון״; "too squeamish" became ״מתחלחלים״
+  (sympathetic) → ״אסטניסים״. Minor: "in care" one form (״בהשגחת המדינה״); one word for the "uncomfortable" motif; ״להתעמת ב״ → ״להתמודד עם״;
+  ״משקות אותן בסמים״; "damning" is ״מרשיע״, not ״מחריד״; quotes must be verbatim and mark cuts with [...].
+- Fix-check: ״בית המשפט העליון״ is the Supreme Court; the English High Court is ״בית המשפט הגבוה״. A noun swap
+  (רשימה → תיעוד) left a feminine ״ממנה״ behind: after changing a noun, check the pronouns that follow.
+
+### 2026-11-20 · 2026-09-24-williams-what-claremont-is-for
+- Backfilled American Mind rebuttal by Claremont's president to Erick Erickson. Title ״לשם מה קיים מכון קלרמונט״ (the institute
+  named: ״קלרמונט״ alone reads as a town or college). Slack's two passages kept as block quotes.
+- Caught in pass 2 (major): Haywood's "Foundationalism" as ״יסודנות״ called him a fundamentalist → ״פאונדיישנליזם״ with the
+  English at first use. Minor: natural law is ״המשפט הטבעי״, never ״חוק הטבע״ (a law of physics); "for good measure... into the mix"
+  calqued as ״לשם הסדר הטוב... אל התערובת״; "Fittingly" ≠ ״ולא בכדי״; "have come to believe" ≠ ״באו להאמין״; lodges ״לשכות״;
+  Erickson's [sic] must sit on a kept slip; "city in speech" glossed ״כלשון אפלטון״; Roosevelt's hyphen glossed.
+- Fix-check: ״לשכות״ left ״ובמרכזם״ (gender, again after a noun swap); quote 2 not synced with a body fix.

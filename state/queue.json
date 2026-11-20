@@ -426,7 +426,8 @@
     "date": "November 16, 2026",
     "context": "Rosie Lewis, “I know why Tommy Robinson’s grooming gang book is a bestseller” The Spectator , November 16, 2026",
     "first_seen": "2026-11-19T03:44:36+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-11-16-lewis-i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller/post.json"
   },
   {
     "url": "https://worksinprogress.co/issue/weapons-of-mass-decentralization",
@@ -435,5 +436,20 @@
     "status": "translated",
     "source": "backfill",
     "post": "posts/2026-09-23-fitzsimmons-weapons-of-mass-decentralization/post.json"
+  },
+  {
+    "url": "https://americanmind.org/salvo/what-claremont-is-for",
+    "title": "What Claremont is for",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-24-williams-what-claremont-is-for/post.json"
+  },
+  {
+    "url": "https://thefederalist.com/2026/09/08/the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land",
+    "title": "The Smithsonian Has no Business Saying America is Built on ‘Stolen Land’",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "queued",
+    "source": "backfill"
   }
 ]

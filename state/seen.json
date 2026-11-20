@@ -86,12 +86,14 @@
   "https://americanmind.org/salvo/what-claremont-is-for": {
     "title": "What Claremont is for",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-20T03:44:09+00:00"
   },
   "https://thefederalist.com/2026/09/08/the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land": {
     "title": "The Smithsonian Has no Business Saying America is Built on ‘Stolen Land’",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-20T03:44:09+00:00"
   },
   "https://nypost.com/2026/09/18/opinion/theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics": {
     "title": "There’s a Prudent Path Forward for AI — and Pols Need to Push it Over Politics",
