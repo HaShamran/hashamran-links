@@ -1,9 +1,17 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": null,
+  "tweet": {
+    "slot": "2026-11-20#1",
+    "slug": "2026-11-15-hains-rubio-warns-icc-on-weaponization-of-international-law",
+    "quote": 0,
+    "text": "״בעבור האליטה העולמית הזאת, המשפט הבין־לאומי אינו מערכת כללים ניטרלית; המשפט הבין־לאומי הוא כלי לקידום האינטרסים שלה במסווה של עקרונות אוניברסליים.״ מזכיר המדינה מרקו רוביו, בנאום באגודה הפדרליסטית.\n\nhttps://hashamran.github.io/hashamran-links/2026-11-15-hains-rubio-warns-icc-on-weaponization-of-international-law.html",
+    "at": "2026-11-20T14:05:22+00:00",
+    "buffer_id": "6b0053a25d9549971caefbcb"
+  },
   "alerts": [
-    "2026-09-23-fitzsimmons-weapons-of-mass-decentralization has waited 1d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-09-23-fitzsimmons-weapons-of-mass-decentralization has waited 1d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)",
     "2026-11-17-mitchell-natures-god-is-not-enough has waited 1d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)"
-  ]
+  ],
+  "substack_unreachable": true
 }
