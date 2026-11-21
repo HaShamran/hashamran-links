@@ -913,5 +913,73 @@
   "he": "אמריקנים בלי מקף",
   "avoid": [],
   "note": "Gloss at first use (״אירי־אמריקני״). Williams 2026-11-20."
+ },
+ {
+  "en": "land acknowledgement",
+  "he": "הצהרת ״הכרה בקרקע״",
+  "avoid": [],
+  "note": "Gloss at first use (statement recognizing the native tribes' tie to the land). Fonte 2026-11-21."
+ },
+ {
+  "en": "stolen land",
+  "he": "אדמה גזולה",
+  "avoid": [],
+  "note": "Fonte 2026-11-21."
+ },
+ {
+  "en": "Revolutionary War (American)",
+  "he": "מלחמת העצמאות האמריקנית",
+  "avoid": [],
+  "note": "Never bare ״מלחמת העצמאות״ (Israel 1948). Fonte 2026-11-21."
+ },
+ {
+  "en": "Manifest Destiny",
+  "he": "הייעוד הגלוי",
+  "avoid": [
+   "הגורל הגלוי"
+  ],
+  "note": "Hebrew Wikipedia. Fonte 2026-11-21."
+ },
+ {
+  "en": "National Education Association (NEA)",
+  "he": "אגודת החינוך הלאומית",
+  "avoid": [],
+  "note": "Hebrew Wikipedia; feminine verb. Fonte 2026-11-21."
+ },
+ {
+  "en": "congressional hearing",
+  "he": "שימוע בקונגרס",
+  "avoid": [],
+  "note": "Not ״דיון״. Fonte 2026-11-21."
+ },
+ {
+  "en": "moral panic",
+  "he": "בהלה מוסרית",
+  "avoid": [],
+  "note": "Hammer 2026-11-21."
+ },
+ {
+  "en": "data centers",
+  "he": "מרכזי נתונים",
+  "avoid": [],
+  "note": "Hammer 2026-11-21."
+ },
+ {
+  "en": "regulatory capture",
+  "he": "שבי רגולטורי",
+  "avoid": [],
+  "note": "Hammer 2026-11-21."
+ },
+ {
+  "en": "popular sovereignty (Douglas)",
+  "he": "ריבונות עממית",
+  "avoid": [],
+  "note": "Gloss: each territory decides whether to allow slavery. Hammer 2026-11-21."
+ },
+ {
+  "en": "pander to",
+  "he": "להתחנף ל־",
+  "avoid": [],
+  "note": "״להתרפס״ is grovel. Hammer 2026-11-21."
  }
 ]

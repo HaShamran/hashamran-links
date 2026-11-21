@@ -449,6 +449,22 @@
     "url": "https://thefederalist.com/2026/09/08/the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land",
     "title": "The Smithsonian Has no Business Saying America is Built on ‘Stolen Land’",
     "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-08-fonte-the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land/post.json"
+  },
+  {
+    "url": "https://nypost.com/2026/09/18/opinion/theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics",
+    "title": "There’s a Prudent Path Forward for AI — and Pols Need to Push it Over Politics",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-18-hammer-theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics/post.json"
+  },
+  {
+    "url": "https://spectator.com/article/dario-amodei-and-the-ai-apocalypse-alchemists",
+    "title": "Dario Amodei and the AI Apocalypse Alchemists",
+    "first_seen": "2026-10-21T23:06:44+00:00",
     "status": "queued",
     "source": "backfill"
   }

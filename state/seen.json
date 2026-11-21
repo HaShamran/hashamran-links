@@ -98,12 +98,14 @@
   "https://nypost.com/2026/09/18/opinion/theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics": {
     "title": "There’s a Prudent Path Forward for AI — and Pols Need to Push it Over Politics",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-21T03:44:34+00:00"
   },
   "https://spectator.com/article/dario-amodei-and-the-ai-apocalypse-alchemists": {
     "title": "Dario Amodei and the AI Apocalypse Alchemists",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-21T03:44:34+00:00"
   },
   "https://nationalconservatism.org/wp-content/uploads/2026/09/The-strange-death-of-libertarianism-_-The-Spectator.pdf": {
     "title": "The Strange Death of Libertarianism",

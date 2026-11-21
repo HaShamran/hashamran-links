@@ -543,3 +543,23 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   calqued as ״לשם הסדר הטוב... אל התערובת״; "Fittingly" ≠ ״ולא בכדי״; "have come to believe" ≠ ״באו להאמין״; lodges ״לשכות״;
   Erickson's [sic] must sit on a kept slip; "city in speech" glossed ״כלשון אפלטון״; Roosevelt's hyphen glossed.
 - Fix-check: ״לשכות״ left ״ובמרכזם״ (gender, again after a noun swap); quote 2 not synced with a body fix.
+
+### 2026-11-21 · 2026-09-08-fonte-the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land
+- Backfilled Federalist op-ed. Title ״מי גזל ממי?״ (the essay's own question). Land acknowledgement glossed at first use;
+  ״נרטיב״ kept, since the author uses "narrative" as a term.
+- Caught in pass 2 (major): the Revolutionary War as bare ״מלחמת העצמאות״, which is Israel's 1948 → ״מלחמת העצמאות האמריקנית״.
+  Minor: Hebrew Wikipedia names (״הייעוד הגלוי״, אוניידה, קיווה, צ׳וקטאו, אגודת החינוך הלאומית); ״בארצם שלהם״ (double
+  possessive, missed by qc); "hearing" is ״שימוע״; "weaponized" ≠ ״שהפך לנשק״ (who did it) → ״שהוסב לכלי נשק״; a curator of
+  unknown gender must not become ״אוצרת״; "the Supreme Court" needs ״האמריקני״; cowboys doubled and homesteaders lost in a list.
+- Fix-check: a new subject (״מוסד סמית׳סוניאן״) made ״הוא מציע״ point at the Smithsonian; a name moved before a verb left a
+  gender clash (״אגודה... חיבר״). After any subject change, reread the verbs and pronouns that follow.
+
+### 2026-11-21 · 2026-09-18-hammer-theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics
+- Backfilled NY Post op-ed in one-line paragraphs (kept). Title ״הבהלה הגדולה מן הבינה המלאכותית״. Bio from the source's footer.
+- Caught in pass 2 (5 major): the subtitle blamed "both parties" for the panic (the essay blames the AI industry; the parties
+  scapegoat) → ״פוליטיקאים מכל קצות הקשת רוכבים על הבהלה״; ״לפחות״ added inside Amodei's quotation; "isn't above" ≠
+  ״אינו מתעלם מ״ → ״אינו בוחל ב״; Burke's "sacrifices it to your opinion" → ״על מזבח דעתכם״ (״לדעתכם״ reads "in your view");
+  "at our own peril" ≠ ״על אחריותנו״. Minor: midterms ״בחירות האמצע״ (glossary); mob ≠ commoners; "kill your job" is
+  ״מקומות העבודה שלכם״; apocalypse ״קץ העולם״, not the messianic ״אחרית הימים״.
+- Note: prepare.py drops lines of 30 characters or less, so short one-line paragraphs are missing from the [P] files; the
+  reviewer must check them against the source markdown.
