@@ -5,5 +5,6 @@
   "alerts": [
     "2026-09-24-williams-what-claremont-is-for has waited 1d 16h to be published: check that dud is on and signed in to Substack (run login.cmd)",
     "2026-11-16-lewis-i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller has waited 1d 16h to be published: check that dud is on and signed in to Substack (run login.cmd)"
-  ]
+  ],
+  "substack_unreachable": true
 }
