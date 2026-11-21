@@ -1,10 +1,16 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": null,
+  "tweet": {
+    "slot": "2026-11-21#1",
+    "slug": "2026-11-17-mitchell-natures-god-is-not-enough",
+    "quote": 0,
+    "text": "״כן, הפוליטיקה נמצאת במורד הזרם של התרבות – אבל התרבות נמצאת במורד הזרם של הדת.״ ג׳ושוע מיטשל ב־First Things.\n\nhttps://hashamran.github.io/hashamran-links/2026-11-17-mitchell-natures-god-is-not-enough.html",
+    "at": "2026-11-21T14:05:29+00:00",
+    "buffer_id": "6b01a52a142c9575191b358b"
+  },
   "alerts": [
-    "2026-09-24-williams-what-claremont-is-for has waited 1d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)",
-    "2026-11-16-lewis-i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller has waited 1d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)"
-  ],
-  "substack_unreachable": true
+    "2026-09-24-williams-what-claremont-is-for has waited 1d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)",
+    "2026-11-16-lewis-i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller has waited 1d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+  ]
 }
