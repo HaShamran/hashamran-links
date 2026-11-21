@@ -235,7 +235,7 @@ def test_haaretz_for_a_foreign_country():
         assert qc.haaretz_problems(bad), bad
     for fine in ("להרפתקאות בחוץ לארץ.", "על פני כדור הארץ", "מלזיה היא ארץ מוסלמית", "בארץ זרה ונכרייה",
                  "בארץ שבה גדל", "תושבי הארץ ההיא", "ארץ המוצא של הוריהם", "ראו ״הארץ״, 9 ביולי", "בארצות הברית",
-                 "עם הארץ", "הארץ המובטחת", "לחיות בארץ מערבית"):
+                 "עם הארץ", "הארץ המובטחת", "לחיות בארץ מערבית", "אשור נסוגה אל בירתה שבפנים הארץ"):
         assert not qc.haaretz_problems(fine), fine
     post = {**GOOD, "body_he": GOOD["body_he"] + "\n\nהעלייה ההמונית הגיעה ממש אל הארץ."}
     assert not qc.check(post)["pass"]
@@ -247,3 +247,13 @@ def test_hebcheck_lists_haaretz():
     import hebcheck
     hits = hebcheck.haaretz("ההסדר הדתי של הארץ? מלזיה היא ארץ מוסלמית.")
     assert [h["word"] for h in hits] == ["הארץ"] and "note" in hits[0]
+
+def test_headline_idioms_fail_in_title_and_quotes_but_not_body():
+    post = dict(GOOD, title_he="שתי תשואות למילטון פרידמן",
+                title_options_he=["שתי תשואות למילטון פרידמן", "צרפת", "התהום"])
+    probs = qc.check(post)["problems"]
+    assert any("title: ״שתי תשואות״" in p for p in probs), probs
+    post = dict(GOOD, quotes_he=["ציטוט ראשון", "ציטוט שני", "הרשו לי להעניק שלוש תשואות לפרידמן"])
+    assert any(p.startswith("quote 3:") for p in qc.check(post)["problems"])
+    body = GOOD["body_he"] + "\n\nקריסטול כתב מאמר שכותרתו ״שתי תשואות לקפיטליזם״."
+    assert qc.check(dict(GOOD, body_he=body))["pass"]

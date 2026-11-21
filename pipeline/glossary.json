@@ -651,10 +651,8 @@
  {
   "en": "steeple (of a church)",
   "he": "מגדל פעמונים",
-  "avoid": [
-   "צריח"
-  ],
-  "note": "״צריח״ also means a minaret; confusing in a church-to-mosque story. Monnington 2026-11-16."
+  "avoid": [],
+  "note": "״צריח״ also means a minaret; confusing in a church-to-mosque story. Monnington 2026-11-16. Not in avoid: ״צריח״ is right in other senses."
  },
  {
   "en": "Christian apologists (apologetics)",
@@ -683,10 +681,8 @@
  {
   "en": "deliberation (Aristotle, legislative)",
   "he": "שקילה",
-  "avoid": [
-   "שיקול"
-  ],
-  "note": "Keeps ״אנו שוקלים / השוקל״ in line; practical judgment = ״כושר השיפוט המעשי״, prudence = ״התבונה המעשית״. Portteus 2026-11-16."
+  "avoid": [],
+  "note": "Keeps ״אנו שוקלים / השוקל״ in line; practical judgment = ״כושר השיפוט המעשי״, prudence = ״התבונה המעשית״. Portteus 2026-11-16. Not in avoid: ״שיקול״ is right in other senses."
  },
  {
   "en": "delegation (of legislative power)",
@@ -697,10 +693,8 @@
  {
   "en": "protestations to the contrary",
   "he": "הכחשות",
-  "avoid": [
-   "מחאות"
-  ],
-  "note": "Not protests. Portteus 2026-11-16."
+  "avoid": [],
+  "note": "Not protests. Portteus 2026-11-16. Not in avoid: ״מחאות״ is right in other senses."
  },
  {
   "en": "square feet",
@@ -727,10 +721,8 @@
  {
   "en": "vice (moral)",
   "he": "מידות רעות",
-  "avoid": [
-   "חטא"
-  ],
-  "note": "חטא is sin, religious; keep vice/virtue pairing. Stepman 2026-11-16."
+  "avoid": [],
+  "note": "חטא is sin, religious; keep vice/virtue pairing. Stepman 2026-11-16. Not in avoid: ״חטא״ is right in other senses."
  },
  {
   "en": "minority students / minorities (US)",
@@ -743,15 +735,252 @@
  {
   "en": "managerial class (Burnham)",
   "he": "מעמד המנהלים",
-  "avoid": [
-   "מנהלתי"
-  ],
-  "note": "מנהלתי = administrative. Stepman 2026-11-16."
+  "avoid": [],
+  "note": "מנהלתי = administrative. Stepman 2026-11-16. Not in avoid: ״מנהלתי״ is right in other senses."
  },
  {
   "en": "charter school",
   "he": "בית ספר צ׳רטר (בית ספר ציבורי בניהול עצמאי)",
   "avoid": [],
   "note": "Gloss at first use. Stepman 2026-11-16."
+ },
+ {
+  "en": "race realist / race realism",
+  "he": "״ריאליסט גזעי״ / ״ריאליזם גזעי״",
+  "avoid": [],
+  "note": "Keep in quotation marks in titles: bare ״גזעי״ reads as pedigreed or racist. Boudry 2026-11-18."
+ },
+ {
+  "en": "plagiarism, plagiarist",
+  "he": "גניבה ספרותית, מי שביצע גניבה ספרותית",
+  "avoid": [],
+  "note": "״העתקה״ is too weak. Boudry 2026-11-18."
+ },
+ {
+  "en": "heckler's veto",
+  "he": "וטו של המפריעים",
+  "avoid": [],
+  "note": "Boudry 2026-11-18."
+ },
+ {
+  "en": "pseudoscience",
+  "he": "מדע כזב",
+  "avoid": [],
+  "note": "Boudry 2026-11-18."
+ },
+ {
+  "en": "double standard(s)",
+  "he": "איפה ואיפה",
+  "avoid": [
+   "כפל במידות",
+   "הכפל במידות"
+  ],
+  "note": "Boudry 2026-11-18."
+ },
+ {
+  "en": "pronatalism",
+  "he": "עידוד הילודה",
+  "avoid": [
+   "פרו־נטליזם"
+  ],
+  "note": "Boudry 2026-11-18."
+ },
+ {
+  "en": "global governance",
+  "he": "המשילות העולמית",
+  "avoid": [],
+  "note": "״הממשל העולמי״ reads as world government. Rubio 2026-11-18."
+ },
+ {
+  "en": "(Laughter) / (Applause) in transcripts",
+  "he": "(צחוק) / (מחיאות כפיים)",
+  "avoid": [],
+  "note": "Rubio 2026-11-18."
+ },
+ {
+  "en": "anti-Christ / anti-Christian (revolution)",
+  "he": "אנטיכריסט / אנטיכריסטי",
+  "avoid": [
+   "אנטי־כריסט"
+  ],
+  "note": "Hebrew Wikipedia: אנטיכריסט. Not ״אנטי־משיחי״ in a Christian context (that reads as anti-Messianic). Mitchell 2026-11-19."
+ },
+ {
+  "en": "incomplete religion (Mitchell)",
+  "he": "דת שלא הושלמה",
+  "avoid": [],
+  "note": "Keep one form through the essay. Mitchell 2026-11-19."
+ },
+ {
+  "en": "colonizers and colonized",
+  "he": "הכובשים הקולוניאליים והנכבשים",
+  "avoid": [
+   "המקולנים"
+  ],
+  "note": "Not ״המתיישבים והמושבים״. Mitchell 2026-11-19."
+ },
+ {
+  "en": "established church",
+  "he": "כנסייה רשמית",
+  "avoid": [],
+  "note": "Not ״כנסייה ממוסדת״. Mitchell 2026-11-19."
+ },
+ {
+  "en": "mansplaining",
+  "he": "הסגברה",
+  "avoid": [
+   "מאנספליינינג"
+  ],
+  "note": "Mitchell 2026-11-19."
+ },
+ {
+  "en": "Plato's Republic",
+  "he": "המדינה",
+  "avoid": [
+   "פוליטיאה"
+  ],
+  "note": "Hebrew title of the book. Mitchell 2026-11-19."
+ },
+ {
+  "en": "Islamophobe",
+  "he": "אסלאמופוב",
+  "avoid": [
+   "איסלאמופוב"
+  ],
+  "note": "Mitchell 2026-11-19."
+ },
+ {
+  "en": "Iron Age metallurgists",
+  "he": "המטלורגים של תקופת הברזל",
+  "avoid": [],
+  "note": "Not ״המתכות״. Fitzsimmons 2026-11-19."
+ },
+ {
+  "en": "smiths (blacksmiths)",
+  "he": "נפחים",
+  "avoid": [],
+  "note": "״חרשים״ without niqqud reads as deaf people. Fitzsimmons 2026-11-19."
+ },
+ {
+  "en": "offense-defense balance",
+  "he": "מאזן ההתקפה וההגנה",
+  "avoid": [],
+  "note": "Fitzsimmons 2026-11-19."
+ },
+ {
+  "en": "grooming gangs",
+  "he": "כנופיות הגרומינג",
+  "avoid": [],
+  "note": "As in the earlier post; loanword accepted. Lewis 2026-11-20."
+ },
+ {
+  "en": "foster carer",
+  "he": "הורה אומן / אם אומנת",
+  "avoid": [],
+  "note": "Lewis 2026-11-20."
+ },
+ {
+  "en": "children in care (UK)",
+  "he": "ילדים בהשגחת המדינה",
+  "avoid": [],
+  "note": "Not ״שירותי הרווחה״ (sounds Israeli); the argument blames the state. Lewis 2026-11-20."
+ },
+ {
+  "en": "High Court (England)",
+  "he": "בית המשפט הגבוה",
+  "avoid": [],
+  "note": "״בית המשפט העליון״ is the Supreme Court. Lewis 2026-11-20."
+ },
+ {
+  "en": "guilt by association",
+  "he": "אשמה מכוח קשר",
+  "avoid": [],
+  "note": "Williams 2026-11-20."
+ },
+ {
+  "en": "fraternal organization / lodge",
+  "he": "ארגון אחווה / לשכה",
+  "avoid": [],
+  "note": "Lodges are ״לשכות״, not ״סניפים״. Williams 2026-11-20."
+ },
+ {
+  "en": "Foundationalism (Haywood)",
+  "he": "פאונדיישנליזם",
+  "avoid": [],
+  "note": "Never ״יסודנות״ here: it is the Academy word for fundamentalism (right only for fundamentalism). Williams 2026-11-20."
+ },
+ {
+  "en": "unhyphenated Americans",
+  "he": "אמריקנים בלי מקף",
+  "avoid": [],
+  "note": "Gloss at first use (״אירי־אמריקני״). Williams 2026-11-20."
+ },
+ {
+  "en": "land acknowledgement",
+  "he": "הצהרת ״הכרה בקרקע״",
+  "avoid": [],
+  "note": "Gloss at first use (statement recognizing the native tribes' tie to the land). Fonte 2026-11-21."
+ },
+ {
+  "en": "stolen land",
+  "he": "אדמה גזולה",
+  "avoid": [],
+  "note": "Fonte 2026-11-21."
+ },
+ {
+  "en": "Revolutionary War (American)",
+  "he": "מלחמת העצמאות האמריקנית",
+  "avoid": [],
+  "note": "Never bare ״מלחמת העצמאות״ (Israel 1948). Fonte 2026-11-21."
+ },
+ {
+  "en": "Manifest Destiny",
+  "he": "הייעוד הגלוי",
+  "avoid": [
+   "הגורל הגלוי"
+  ],
+  "note": "Hebrew Wikipedia. Fonte 2026-11-21."
+ },
+ {
+  "en": "National Education Association (NEA)",
+  "he": "אגודת החינוך הלאומית",
+  "avoid": [],
+  "note": "Hebrew Wikipedia; feminine verb. Fonte 2026-11-21."
+ },
+ {
+  "en": "congressional hearing",
+  "he": "שימוע בקונגרס",
+  "avoid": [],
+  "note": "Not ״דיון״. Fonte 2026-11-21."
+ },
+ {
+  "en": "moral panic",
+  "he": "בהלה מוסרית",
+  "avoid": [],
+  "note": "Hammer 2026-11-21."
+ },
+ {
+  "en": "data centers",
+  "he": "מרכזי נתונים",
+  "avoid": [],
+  "note": "Hammer 2026-11-21."
+ },
+ {
+  "en": "regulatory capture",
+  "he": "שבי רגולטורי",
+  "avoid": [],
+  "note": "Hammer 2026-11-21."
+ },
+ {
+  "en": "popular sovereignty (Douglas)",
+  "he": "ריבונות עממית",
+  "avoid": [],
+  "note": "Gloss: each territory decides whether to allow slavery. Hammer 2026-11-21."
+ },
+ {
+  "en": "pander to",
+  "he": "להתחנף ל־",
+  "avoid": [],
+  "note": "״להתרפס״ is grovel. Hammer 2026-11-21."
  }
 ]

@@ -409,6 +409,7 @@ def wait_live(post, tries=12):
 # Hadar (14 Nov 2026) caught ״התנגדויותיי שלי״ in a post that was already live. A correction to a live post goes in
 # state/live-fixes.json in the repo ({"id", "slug", "find", "replace"}); dud applies each one once: it edits the text in
 # the post's Substack body and presses Update (republish with send=False, so no email and no new share).
+# With "field": "title" the fix edits the post's title instead (the URL slug stays the same).
 
 def _replace_text(body, find, replace):
     import substack_doc
@@ -443,19 +444,30 @@ def apply_live_fixes(api, state):
             body = draft.get("draft_body") or "{}"
             body = json.loads(body) if isinstance(body, str) else body
             changed = 0
+            title_update = None
             for f in group:
-                n = _replace_text(body, f["find"], f["replace"])
+                if f.get("field") == "title":  # a retitle (19 Nov 2026): the Substack title, not the body
+                    old = draft.get("draft_title") or ""
+                    n = old.count(f["find"])
+                    if n:
+                        draft["draft_title"] = old.replace(f["find"], f["replace"])
+                        title_update = draft["draft_title"]
+                else:
+                    n = _replace_text(body, f["find"], f["replace"])
                 changed += n
                 done[f["id"]] = {"at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
                                  "replaced": n}
                 if not n:
                     log(f"live fix {f['id']}: text not found in {slug} (already fixed, or split by formatting)")
             if changed:
-                api.put_draft(live["id"], draft_body=json.dumps(body, ensure_ascii=False))
+                update = {"draft_body": json.dumps(body, ensure_ascii=False)}
+                if title_update:
+                    update["draft_title"] = title_update
+                api.put_draft(live["id"], **update)
                 api.publish_draft(live["id"], send=False, share_automatically=False)
                 after = published_post(post.get("substack_slug")) or {}
                 html = after.get("body_html") or ""
-                left = [f["id"] for f in group if f["find"] in html]
+                left = [f["id"] for f in group if f["find"] in (after.get("title") or "" if f.get("field") == "title" else html)]
                 if after.get("post_date") and after["post_date"] != live.get("post_date"):
                     log(f"live fix note: {slug} post date moved {live.get('post_date')} -> {after['post_date']}")
                 log(f"LIVE FIX {slug}: {changed} replacement(s) republished without email"

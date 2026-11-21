@@ -80,27 +80,32 @@
   "https://worksinprogress.co/issue/weapons-of-mass-decentralization": {
     "title": "Weapons of Mass Decentralization",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-19T03:44:37+00:00"
   },
   "https://americanmind.org/salvo/what-claremont-is-for": {
     "title": "What Claremont is for",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-20T03:44:09+00:00"
   },
   "https://thefederalist.com/2026/09/08/the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land": {
     "title": "The Smithsonian Has no Business Saying America is Built on ‘Stolen Land’",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-20T03:44:09+00:00"
   },
   "https://nypost.com/2026/09/18/opinion/theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics": {
     "title": "There’s a Prudent Path Forward for AI — and Pols Need to Push it Over Politics",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-21T03:44:34+00:00"
   },
   "https://spectator.com/article/dario-amodei-and-the-ai-apocalypse-alchemists": {
     "title": "Dario Amodei and the AI Apocalypse Alchemists",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-21T03:44:34+00:00"
   },
   "https://nationalconservatism.org/wp-content/uploads/2026/09/The-strange-death-of-libertarianism-_-The-Spectator.pdf": {
     "title": "The Strange Death of Libertarianism",
@@ -13425,6 +13430,16 @@
   "https://realclearpolitics.com/video/2026/11/15/rubio_warns_icc_on_weaponization_of_international_law_stop_quoting_law_to_men_with_swords.html": {
     "title": "Rubio Warns ICC on “Weaponization Of International Law”: “Stop Quoting Law To Men With Swords”",
     "first_seen": "2026-11-17T03:44:02+00:00",
+    "status": "queued"
+  },
+  "https://firstthings.com/natures-god-is-not-enough": {
+    "title": "Nature’s God Is Not Enough",
+    "first_seen": "2026-11-19T03:44:36+00:00",
+    "status": "queued"
+  },
+  "https://spectator.com/article/i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller": {
+    "title": "I know why Tommy Robinson’s grooming gang book is a bestseller",
+    "first_seen": "2026-11-19T03:44:36+00:00",
     "status": "queued"
   }
 }

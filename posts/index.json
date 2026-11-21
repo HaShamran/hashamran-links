@@ -9,7 +9,7 @@
   },
   {
     "slug": "2023-02-06-stepman-two-cheers-for-milton-friedman",
-    "title_he": "שתי תשואות למילטון פרידמן",
+    "title_he": "השוק לבדו אינו מספיק",
     "status": "ready",
     "ready_at": "2026-11-16T03:59:41+00:00",
     "substack_slug": "stepman-two-cheers-for-milton-friedman",
@@ -37,6 +37,46 @@
     "status": "ready",
     "ready_at": "2026-11-03T03:52:35+00:00",
     "substack_slug": "mccarthy-iceland-puts-the-freeze-on-brussels-ever-closer-union",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-09-08-fonte-the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land",
+    "title_he": "מי גזל ממי?",
+    "status": "ready",
+    "ready_at": "2026-11-21T03:58:27+00:00",
+    "substack_slug": "fonte-the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-09-18-hammer-theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics",
+    "title_he": "הבהלה הגדולה מן הבינה המלאכותית",
+    "status": "ready",
+    "ready_at": "2026-11-21T03:55:11+00:00",
+    "substack_slug": "hammer-theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politi",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-09-23-fitzsimmons-weapons-of-mass-decentralization",
+    "title_he": "נשק לביזור המוני",
+    "status": "ready",
+    "ready_at": "2026-11-19T03:57:07+00:00",
+    "substack_slug": "fitzsimmons-weapons-of-mass-decentralization",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-09-24-williams-what-claremont-is-for",
+    "title_he": "לשם מה קיים מכון קלרמונט",
+    "status": "ready",
+    "ready_at": "2026-11-20T03:56:56+00:00",
+    "substack_slug": "williams-what-claremont-is-for",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-09-25-boudry-race-realist-rattles-rector",
+    "title_he": "ה״ריאליסט הגזעי״ והרקטורית",
+    "status": "ready",
+    "ready_at": "2026-11-18T03:58:48+00:00",
+    "substack_slug": "boudry-race-realist-rattles-rector",
     "substack_draft_id": null
   },
   {
@@ -165,6 +205,30 @@
     "status": "ready",
     "ready_at": "2026-11-14T03:59:35+00:00",
     "substack_slug": "kotkin-the-return-of-generational-warfare",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-11-15-hains-rubio-warns-icc-on-weaponization-of-international-law",
+    "title_he": "חוקים מול חרבות: רוביו נגד בית הדין בהאג",
+    "status": "ready",
+    "ready_at": "2026-11-18T04:00:01+00:00",
+    "substack_slug": "hains-rubio-warns-icc-on-weaponization-of-international-law",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-11-16-lewis-i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller",
+    "title_he": "השליח הפגום",
+    "status": "ready",
+    "ready_at": "2026-11-20T03:54:12+00:00",
+    "substack_slug": "lewis-i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller",
+    "substack_draft_id": null
+  },
+  {
+    "slug": "2026-11-17-mitchell-natures-god-is-not-enough",
+    "title_he": "אלוהי הטבע אינו מספיק",
+    "status": "ready",
+    "ready_at": "2026-11-19T04:07:58+00:00",
+    "substack_slug": "mitchell-natures-god-is-not-enough",
     "substack_draft_id": null
   }
 ]

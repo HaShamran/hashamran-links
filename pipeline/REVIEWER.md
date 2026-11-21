@@ -32,9 +32,13 @@ and the review is the same without it). Prompt:
 >    translationese and calques, negation (״אינו״), the joints of the argument, the תכלת voice and the author's
 >    tone, spelling and punctuation. Go through the
 >    Dicta spelling list: each word that is not a name or an accepted loanword is a spelling finding.
-> 3. Title and subtitle against TITLES.md: accurate, idiomatic, the best of `title_options_he`?
+> 3. Title and subtitle against TITLES.md: accurate, idiomatic, the best of `title_options_he`? Would a reader who
+>    knows no English understand every phrase? An English idiom copied word for word (״שתי תשואות ל...״ for
+>    "Two Cheers for") is a **major** title finding (TITLES.md section 8). If the title names a person and states
+>    a thesis, is it clear whose thesis it is (the author's, not the person's)?
 > 4. Back-translation: compare A's English with the original title, subtitle and quoted sentences. Flag any shift
->    in meaning.
+>    in meaning. A back-translation that reproduces an English idiom word for word is a warning, not a pass: a
+>    calque always back-translates perfectly.
 > 5. Argument-critical terms: list the 3-6 terms the essay's argument turns on (e.g. treaty vs agreement) and
 >    check each is rendered the same way throughout and in a way the argument still works.
 > Severity: **major** is any change of meaning in a claim, the title, the subtitle, a tweet quote or the closing

@@ -477,3 +477,113 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - Now prevented by: qc.haaretz_problems (fails the post; a post that really means Israel lists the phrase in
   `haaretz_ok` with a reason), the same hits in hebcheck.py's list for the reviewer with a note, a line in REVIEWER.md's
   severity list, STYLE.md section 19, and the glossary entry. Tests in tests/test_qc_tweets.py.
+
+### 2026-11-18 · Held: Malesic, "How I Uncovered a Prolific AI Author in Religious Magazines"
+- An investigative post that names a little-known writer and says his degree claim is false and his work AI-written. Held
+  (queue status `held`) for Hadar under the editorial-holds rule; not translated.
+
+### 2026-11-18 · 2026-09-25-boudry-race-realist-rattles-rector
+- First-person, sardonic Substack essay by a Belgian philosopher on the Cofnas affair at Ghent. Reader comments removed; the
+  footnotes kept as a ״הערות״ section (footnotes 1 and 5 had no text in the page and their markers were dropped).
+- Terms: race realist ״ריאליסט גזעי״ (always in quotation marks in a title: bare ״גזעי״ reads as pedigreed or racist, the one
+  major finding); heckler's veto ״וטו של המפריעים״; pseudoscience ״מדע כזב״; plagiarism ״גניבה ספרותית״ (not ״העתקה״);
+  pronatalism ״עידוד הילודה״; double standard ״איפה ואיפה״ (not ״כפל במידות״); rector glossed at first use (in Belgium the
+  rector heads the university; in Israel the רקטור is under the president).
+- Caught in pass 2 (minor): a dropped hedge ("seems clearly qualified"); the letters' own words lost their quotation marks;
+  ״אמונות תיאוריות״ (descriptive) misread as theories; ״בדרך כלל״ for "on the whole"; ״אחת העבריינים״ (gender clash).
+  Fix-check caught a doubled gloss and a ״שבהן״ with no antecedent.
+- System note: three avoid forms added on 16 Nov (שיקול, מחאות, חטא, plus מנהלתי, צריח) are right in other senses and made qc
+  fail correct text; moved from `avoid` to the note. An avoid form must be wrong in every context.
+
+### 2026-11-18 · 2026-11-15-hains-rubio-warns-icc-on-weaponization-of-international-law
+- RealClearPolitics report plus the speech transcript and Q&A at the Federalist Society. Rubio's repetitions and false starts
+  kept; (Laughter)/(Applause) → (צחוק)/(מחיאות כפיים). Title: ״חוקים מול חרבות: רוביו נגד בית הדין בהאג״ (antithesis).
+- Caught in pass 2 (major): the subtitle said the US ״לא תניח״ (will not allow) the ICC to prosecute Americans; the source says
+  it would resist attempts → ״תתנגד לכל ניסיון״. Minor: global governance ״הממשל העולמי״ reads as world government →
+  ״המשילות העולמית״; "simply" and "real" dropped; ״אנו מפרים״ changed the subject; ״מן המדיניות החוץ״ (article in a construct);
+  Roe v. Wade and APEC need first-use glosses.
+
+### 2026-11-19 · 2026-09-23-fitzsimmons-weapons-of-mass-decentralization
+- Backfilled Works in Progress essay on how iron (and maybe drones today) decentralized military power. Three infographics
+  with English-only labels removed; year waivers 1600 and 1950. Title ״נשק לביזור המוני״.
+- Caught in pass 2 (major): the subtitle asked whether drones ״יעשו כך״ (will do so), but the source asks whether they can →
+  ״האם יכולות טכנולוגיות כמו רחפנים לעשות זאת גם היום?״. Minor: smiths ״חרשים״ (reads as deaf without niqqud) → ״נפחים״;
+  ״המתכות של תקופת הברזל״ → ״המטלורגים״; "offense-defense balance" → ״מאזן ההתקפה וההגנה״; ״טלאים של מדינות״ → ״פסיפס״;
+  tribute ״מס עובד״ → ״מנחות״; battles named without ״קרבות״. Fix-check: 19 checked, all ok.
+
+### 2026-11-19 · 2026-11-17-mitchell-natures-god-is-not-enough
+- First Things essay (Joshua Mitchell): identity politics as an "incomplete religion"; dense with Christian theology and
+  Gospel verses (chapters in Hebrew letters, verse numbers waived). Title ״אלוהי הטבע אינו מספיק״.
+- Caught in pass 2 (4 major): anti-Christ ״אנטי־משיחי״ (reads as anti-Messianic, a Jewish frame) → ״אנטיכריסטי / אנטיכריסט״
+  (Hebrew Wikipedia); colonizers/colonized ״המתיישבים והמושבים״ (settlers, an Israeli loaded term, and a non-word) →
+  ״הכובשים הקולוניאליים והנכבשים״; the Declaration of Independence unqualified reads as Israel's → ״הכרזת העצמאות האמריקנית״.
+  Minor: "purge" needs its object (״לטהר מהם את העולם״); established church ״ממוסדת״ → ״רשמית״; Plato's *Republic* is
+  ״המדינה״; mansplaining → ״הסגברה״; ״אסלאמופוב״ spelling; one form for "incomplete religion" (״דת שלא הושלמה״);
+  John 3:30 in its standard Hebrew wording; ״ארצנו״ → ״אמריקה״ (the ״הארץ״ trap again, in first-person plural).
+- Fix-check (5 not ok, all fixed): ״מהפכות האנטיכריסט״ made the Antichrist a person; ״המקולנים״ is not a word; ״ובראשן״
+  overstates "not least"; the new subtitle overstated "will not save" → "will not be enough to hold together". A C. S. Lewis
+  attribution the reviewer proposed was reverted: the source does not name him. Lesson: never add attributions the author left out.
+
+### 2026-11-19 · Mistake: English title idiom copied word for word (2023-02-06-stepman-two-cheers-for-milton-friedman)
+- Correction (Hadar, 19 Nov 2026): "the hebrew title is unclear". ״שתי תשואות למילטון פרידמן״ copies "Two Cheers for",
+  an English idiom (Forster, then Kristol's "Two Cheers for Capitalism") for praise with reservations; in Hebrew it says
+  nothing. Hadar also rejected ״מילטון פרידמן: השוק לבדו אינו מספיק״ because it reads as Friedman's own claim: a title
+  that names a person and states a thesis must make clear it is the author's verdict on him.
+  Hadar's title: ״השוק לבדו אינו מספיק״ (the thesis alone; the subtitle carries author and book). Quote 3 is now the
+  essay's own ״כמו כל שיטה כלכלית, אין הוא יכול לומר לנו אם מה שאנו חפצים בו טוב...״; live title fixed through
+  state/live-fixes.json (`"field": "title"`).
+- How many times we made it: 1 title of 25, plus 1 tweet quote in the same post (״שתי תשואות – אבל לא שלוש״). No other
+  title, subtitle or quote in our posts copies an English idiom (checked all 25 by eye and with the new qc check). The
+  body's last line keeps the phrase, because the paragraph before it names Kristol's essay and explains it.
+- Why it slipped: pass 3 listed the calque first among the candidates, and the blind back-translator returned "Two
+  Cheers for Milton Friedman" exactly, which was read as a pass. A calque always back-translates perfectly.
+- The archive: in the 224 תכלת title pairs no idiomatic English title is copied word for word; idioms are rendered by
+  meaning: Fukuyama's Second Thoughts ״חשבון הנפש של פוקויאמה״, Preaching to the Choir ״נאום ההגנה של הניאו-שמרנות״,
+  The CIA Gets an F ״באשמת פקידי הסוכנות״, Who's Afraid of The Nation-State? ״קץ הלאומיות?״. In תכלת ״תשואות״ occurs
+  only as literal applause (7 essays). (The full mistake_sweep over the network folder timed out twice; the title list
+  in pipeline/azure/index.csv was checked instead.)
+- Rule: an English idiom in a title, subtitle or tweet is translated by what it means, never word for word (TITLES.md
+  section 8). qc.py `headline_idiom_problems` fails two/three cheers, elephant in the room, low-hanging fruit, moving the
+  goalposts, kicking the can, Kool-Aid, deck chairs in the title, subtitle and quotes. REVIEWER.md: copied idiom = major
+  title finding; a word-for-word back-translation of an idiom is a warning, not a pass.
+- System: dud/publisher.py live fixes take `"field": "title"` to retitle a live post (same URL, no email).
+
+### 2026-11-20 · 2026-11-16-lewis-i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller
+- First-person Spectator column by a foster carer (feminine forms kept). Not held: the crimes named (Banaz Mahmod, Sara Sharif)
+  are court convictions, reported as such. Pull quotes and an unrelated image removed. Title ״השליח הפגום״.
+- Glosses for the Israeli reader at first use: Robinson ״הפעיל הבריטי נגד האסלאם״, Bindel ״העיתונאית הפמיניסטית״ (fix-check: accurate, neutral).
+- Caught in pass 2 (3 major): the subtitle dropped the author's hedge ("I suspect... less to do with") → ״לדעתה, לא כל כך... אלא״;
+  "actively discouraged" became ״מונעות״ (stronger, and ambiguous) → ״מניאים במכוון״; "too squeamish" became ״מתחלחלים״
+  (sympathetic) → ״אסטניסים״. Minor: "in care" one form (״בהשגחת המדינה״); one word for the "uncomfortable" motif; ״להתעמת ב״ → ״להתמודד עם״;
+  ״משקות אותן בסמים״; "damning" is ״מרשיע״, not ״מחריד״; quotes must be verbatim and mark cuts with [...].
+- Fix-check: ״בית המשפט העליון״ is the Supreme Court; the English High Court is ״בית המשפט הגבוה״. A noun swap
+  (רשימה → תיעוד) left a feminine ״ממנה״ behind: after changing a noun, check the pronouns that follow.
+
+### 2026-11-20 · 2026-09-24-williams-what-claremont-is-for
+- Backfilled American Mind rebuttal by Claremont's president to Erick Erickson. Title ״לשם מה קיים מכון קלרמונט״ (the institute
+  named: ״קלרמונט״ alone reads as a town or college). Slack's two passages kept as block quotes.
+- Caught in pass 2 (major): Haywood's "Foundationalism" as ״יסודנות״ called him a fundamentalist → ״פאונדיישנליזם״ with the
+  English at first use. Minor: natural law is ״המשפט הטבעי״, never ״חוק הטבע״ (a law of physics); "for good measure... into the mix"
+  calqued as ״לשם הסדר הטוב... אל התערובת״; "Fittingly" ≠ ״ולא בכדי״; "have come to believe" ≠ ״באו להאמין״; lodges ״לשכות״;
+  Erickson's [sic] must sit on a kept slip; "city in speech" glossed ״כלשון אפלטון״; Roosevelt's hyphen glossed.
+- Fix-check: ״לשכות״ left ״ובמרכזם״ (gender, again after a noun swap); quote 2 not synced with a body fix.
+
+### 2026-11-21 · 2026-09-08-fonte-the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land
+- Backfilled Federalist op-ed. Title ״מי גזל ממי?״ (the essay's own question). Land acknowledgement glossed at first use;
+  ״נרטיב״ kept, since the author uses "narrative" as a term.
+- Caught in pass 2 (major): the Revolutionary War as bare ״מלחמת העצמאות״, which is Israel's 1948 → ״מלחמת העצמאות האמריקנית״.
+  Minor: Hebrew Wikipedia names (״הייעוד הגלוי״, אוניידה, קיווה, צ׳וקטאו, אגודת החינוך הלאומית); ״בארצם שלהם״ (double
+  possessive, missed by qc); "hearing" is ״שימוע״; "weaponized" ≠ ״שהפך לנשק״ (who did it) → ״שהוסב לכלי נשק״; a curator of
+  unknown gender must not become ״אוצרת״; "the Supreme Court" needs ״האמריקני״; cowboys doubled and homesteaders lost in a list.
+- Fix-check: a new subject (״מוסד סמית׳סוניאן״) made ״הוא מציע״ point at the Smithsonian; a name moved before a verb left a
+  gender clash (״אגודה... חיבר״). After any subject change, reread the verbs and pronouns that follow.
+
+### 2026-11-21 · 2026-09-18-hammer-theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics
+- Backfilled NY Post op-ed in one-line paragraphs (kept). Title ״הבהלה הגדולה מן הבינה המלאכותית״. Bio from the source's footer.
+- Caught in pass 2 (5 major): the subtitle blamed "both parties" for the panic (the essay blames the AI industry; the parties
+  scapegoat) → ״פוליטיקאים מכל קצות הקשת רוכבים על הבהלה״; ״לפחות״ added inside Amodei's quotation; "isn't above" ≠
+  ״אינו מתעלם מ״ → ״אינו בוחל ב״; Burke's "sacrifices it to your opinion" → ״על מזבח דעתכם״ (״לדעתכם״ reads "in your view");
+  "at our own peril" ≠ ״על אחריותנו״. Minor: midterms ״בחירות האמצע״ (glossary); mob ≠ commoners; "kill your job" is
+  ״מקומות העבודה שלכם״; apocalypse ״קץ העולם״, not the messianic ״אחרית הימים״.
+- Note: prepare.py drops lines of 30 characters or less, so short one-line paragraphs are missing from the [P] files; the
+  reviewer must check them against the source markdown.

@@ -388,18 +388,82 @@
     "date": "November 15, 2026",
     "context": "Tim Hains, “Rubio Warns ICC on “Weaponization Of International Law”: “Stop Quoting Law To Men With Swords”” RealClear Politics , November 15, 2026",
     "first_seen": "2026-11-17T03:44:02+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-11-15-hains-rubio-warns-icc-on-weaponization-of-international-law/post.json"
   },
   {
     "url": "https://jonmalesic.substack.com/p/how-i-uncovered-a-prolific-ai-author",
     "title": "How I Uncovered a Prolific AI Author in Religious Magazines",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "queued",
-    "source": "backfill"
+    "status": "held",
+    "source": "backfill",
+    "note": "2026-11-18: investigative piece naming a little-known writer and alleging a fake degree and AI-written work; held for Hadar per the editorial-holds rule."
   },
   {
     "url": "https://maartenboudry.substack.com/p/race-realist-rattles-rector",
     "title": "Race Realist Rattles Rector",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-25-boudry-race-realist-rattles-rector/post.json"
+  },
+  {
+    "url": "https://firstthings.com/natures-god-is-not-enough",
+    "title": "Nature’s God Is Not Enough",
+    "author": "Joshua Mitchell",
+    "publication": "First Things",
+    "date": "November 17, 2026",
+    "context": "Joshua Mitchell , “Nature’s God Is Not Enough” First Things , November 17, 2026",
+    "first_seen": "2026-11-19T03:44:36+00:00",
+    "status": "translated",
+    "post": "posts/2026-11-17-mitchell-natures-god-is-not-enough/post.json"
+  },
+  {
+    "url": "https://spectator.com/article/i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller",
+    "title": "I know why Tommy Robinson’s grooming gang book is a bestseller",
+    "author": "Rosie Lewis",
+    "publication": "The Spectator",
+    "date": "November 16, 2026",
+    "context": "Rosie Lewis, “I know why Tommy Robinson’s grooming gang book is a bestseller” The Spectator , November 16, 2026",
+    "first_seen": "2026-11-19T03:44:36+00:00",
+    "status": "translated",
+    "post": "posts/2026-11-16-lewis-i-know-why-tommy-robinsons-grooming-gang-book-is-a-bestseller/post.json"
+  },
+  {
+    "url": "https://worksinprogress.co/issue/weapons-of-mass-decentralization",
+    "title": "Weapons of Mass Decentralization",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-23-fitzsimmons-weapons-of-mass-decentralization/post.json"
+  },
+  {
+    "url": "https://americanmind.org/salvo/what-claremont-is-for",
+    "title": "What Claremont is for",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-24-williams-what-claremont-is-for/post.json"
+  },
+  {
+    "url": "https://thefederalist.com/2026/09/08/the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land",
+    "title": "The Smithsonian Has no Business Saying America is Built on ‘Stolen Land’",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-08-fonte-the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land/post.json"
+  },
+  {
+    "url": "https://nypost.com/2026/09/18/opinion/theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics",
+    "title": "There’s a Prudent Path Forward for AI — and Pols Need to Push it Over Politics",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-18-hammer-theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics/post.json"
+  },
+  {
+    "url": "https://spectator.com/article/dario-amodei-and-the-ai-apocalypse-alchemists",
+    "title": "Dario Amodei and the AI Apocalypse Alchemists",
     "first_seen": "2026-10-21T23:06:44+00:00",
     "status": "queued",
     "source": "backfill"
