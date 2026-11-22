@@ -1,17 +1,9 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": {
-    "slot": "2026-11-22#2",
-    "slug": "2026-09-24-williams-what-claremont-is-for",
-    "quote": 1,
-    "text": "״אני חושד שפואנטס היה מתנגד לכל תיאום עם קלרמונט, שהרי אמר בפומבי שאין לסמוך עלינו משום שיושב ראש המכון יהודי.״ ריאן ויליאמס משיב למבקריו.\n\nhttps://hashamran.github.io/hashamran-links/2026-09-24-williams-what-claremont-is-for.html",
-    "at": "2026-11-22T19:05:22+00:00",
-    "buffer_id": "6b033cf3cc364169c17a3c4a"
-  },
+  "tweet": null,
   "alerts": [
     "2026-09-08-fonte-the-smithsonian-has-no-business-saying-america-is-built-on-stolen-land has waited 1d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)",
     "2026-09-18-hammer-theres-a-prudent-path-forward-for-ai-and-pols-need-to-push-it-over-politics has waited 1d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)"
-  ],
-  "substack_unreachable": true
+  ]
 }
