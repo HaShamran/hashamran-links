@@ -156,12 +156,12 @@ def double_possessive_problems(text):
 # ״הארץ / בארץ / לארץ / מהארץ״ is Israel (or the newspaper). Name the country: ״ארצות הברית״, ״אמריקה״, ״צרפת״; in a
 # speaker's mouth ״ארצנו״; for a country other than the US ״המדינה״ also works (for the US it can read as "the state").
 # Flagged: ״הארץ״ with the article, and ״בארץ / לארץ / מארץ״ where nothing after it makes it indefinite (end of clause, or
-# a function word: ״לארץ או״, ״בארץ שנתיים״). Not flagged: ״חוץ לארץ״, ״כדור הארץ״, ״על פני הארץ״, ״בפנים הארץ״ (inland), the newspaper in
+# a function word: ״לארץ או״, ״בארץ שנתיים״). Not flagged: ״חוץ לארץ״, ״כדור הארץ״, ״על פני הארץ״, the newspaper in
 # quotation marks, ״הארץ ההיא״ (that far land), ״ארץ מוסלמית״, ״בארץ זרה״, ״בארץ שבה״. A post that really means Israel
 # lists the phrase in post["haaretz_ok"] as {"phrase", "reason"}.
 _HAARETZ_DEF = re.compile(r"(?<![א-ת״])((?:ו|ש|כש|וכש)?(?:מה|ה)ארץ)(?![א-ת])")
 _HAARETZ_PREP = re.compile(r"(?<![א-ת])((?:ו|ש|כש)?(?:ב|ל|מ)ארץ)(?![א-ת])")
-_HAARETZ_BEFORE_OK = re.compile(r"(?:כדור|מוסף|עיתון|פני|(?:ש?ב|ל|מ)?פנים|רעידת|עם|ראשי|חוץ|מחוץ|בחוץ|לחוץ|ומחוץ|שבחוץ|ובחוץ|עלייה|העלייה|"
+_HAARETZ_BEFORE_OK = re.compile(r"(?:כדור|מוסף|עיתון|פני|רעידת|עם|ראשי|חוץ|מחוץ|בחוץ|לחוץ|ומחוץ|שבחוץ|ובחוץ|עלייה|העלייה|"
                                 r"עלו|עלה|עלתה|לעלות|עולים|העולים|ארץ|ארצות)\s+$")
 _HAARETZ_AFTER_OK = re.compile(r"\s+(?:ההיא|ישראל|הקודש|הקדושה|המובטחת)(?![א-ת])")
 _FUNCTION_AFTER = re.compile(r"\s+(?:או|את|על|עם|גם|רק|כבר|אז|עוד|לפני|אחרי|מאז|במשך|עד|היום|כיום|כעת|עכשיו|בלבד|כולה|"

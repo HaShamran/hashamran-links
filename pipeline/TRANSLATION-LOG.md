@@ -477,6 +477,11 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - Now prevented by: qc.haaretz_problems (fails the post; a post that really means Israel lists the phrase in
   `haaretz_ok` with a reason), the same hits in hebcheck.py's list for the reviewer with a note, a line in REVIEWER.md's
   severity list, STYLE.md section 19, and the glossary entry. Tests in tests/test_qc_tweets.py.
+- Correction (Hadar, 22 Nov 2026): ״בפנים הארץ״ "is not Hebrew". Fitzsimmons (live) had "Assyria contracted back to its
+  inland imperial capital" as ״אל בירתה האימפריאלית שבפנים הארץ״, and on 21 Nov the check was wrongly loosened to allow it.
+  The phrase appears 0 times in all the banks (תכלת, השילוח, Mida, Kohelet, Misgav, Israel Hayom); no other post has it.
+  Fixed → ״שבלב היבשה״ (post.json and live-fixes 2026-11-22-fitzsimmons-haaretz-1); the exception is removed, so qc fails it
+  again. Lesson: never widen a check to pass our own wording without the archive showing that wording.
 
 ### 2026-11-18 · Held: Malesic, "How I Uncovered a Prolific AI Author in Religious Magazines"
 - An investigative post that names a little-known writer and says his degree claim is false and his work AI-written. Held
