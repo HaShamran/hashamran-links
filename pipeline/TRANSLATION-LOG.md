@@ -563,3 +563,18 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   ״מקומות העבודה שלכם״; apocalypse ״קץ העולם״, not the messianic ״אחרית הימים״.
 - Note: prepare.py drops lines of 30 characters or less, so short one-line paragraphs are missing from the [P] files; the
   reviewer must check them against the source markdown.
+
+### 2026-11-22 · 2026-09-14-thomas-dario-amodei-and-the-ai-apocalypse-alchemists
+- Backfilled Spectator column. Title ״האלכימאים של אחרית הימים״. A duplicate pull quote removed.
+- Caught in pass 2 (2 major): ״החלו לעבוד את Claude״ reads as "began working on Claude" in an AI essay → ״לסגוד ל־Claude״
+  (and ״נסגוד לה״); a subtitle with bare ״חפיר״ (moat) means nothing to a Hebrew reader → spell out the point. Minor: "pause"
+  as ״לבלום״ to match the brakes; ״מודל״ alone reads as an AI model → ״מודל עסקי״; "neither here nor there" → ״אינן מעלות ואינן מורידות״.
+- Mistake: the company name. Our Sibarium post and Hebrew Wikipedia write ״אנת׳רופיק״; this draft and the Hammer post (not yet
+  live) wrote ״אנתרופיק״. Both fixed; glossary entry with avoid ״אנתרופיק״ so qc fails it from now on.
+
+### 2026-11-22 · 2024-02-02-cline-stop-hating-the-puritans
+- American Mind polemic (two sections, three block quotes, subheads as ## headings). Title ״די לשנוא את הפוריטנים״.
+- Pass 2 found no major issues (24 minor). The two argument terms must stay apart: filial piety ״כיבוד אבות״ vs ancestral
+  veneration ״הערצת האבות״ (P5 mixed them). "stock" as ״גזע״ reads as race → ״שושלת״ / ״מקרבם קמו״; the author's own word
+  (*puritanical*) had slipped inside Rothman's quotation marks; "wokeness" needs its first-use gloss; "trophies" ≠ ״גביעים״.
+- Fix-check: ״מצאצאיהם צמחו״ was circular; ״ייחוד פוריטני״ misused ייחוד (uniqueness).

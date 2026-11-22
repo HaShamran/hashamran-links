@@ -981,5 +981,49 @@
   "he": "להתחנף ל־",
   "avoid": [],
   "note": "״להתרפס״ is grovel. Hammer 2026-11-21."
+ },
+ {
+  "en": "Anthropic (company)",
+  "he": "אנת׳רופיק",
+  "avoid": [
+   "אנתרופיק"
+  ],
+  "note": "Hebrew Wikipedia and the Sibarium post. Thomas/Hammer 2026-11-22."
+ },
+ {
+  "en": "moat (business sense)",
+  "he": "חפיר",
+  "avoid": [],
+  "note": "In a title or subtitle spell out the meaning (protection from competitors). Thomas 2026-11-22."
+ },
+ {
+  "en": "superintelligence",
+  "he": "בינת־על",
+  "avoid": [],
+  "note": "Thomas 2026-11-22."
+ },
+ {
+  "en": "worship (a god, an AI)",
+  "he": "לסגוד ל־",
+  "avoid": [],
+  "note": "״לעבוד את״ reads as 'work on' in an AI context. Thomas 2026-11-22."
+ },
+ {
+  "en": "filial piety",
+  "he": "כיבוד אבות",
+  "avoid": [],
+  "note": "Keep apart from ancestral veneration ״הערצת האבות״. Cline 2026-11-22."
+ },
+ {
+  "en": "ancestral veneration",
+  "he": "הערצת האבות",
+  "avoid": [],
+  "note": "Cline 2026-11-22."
+ },
+ {
+  "en": "stock (lineage)",
+  "he": "שושלת / צאצאים",
+  "avoid": [],
+  "note": "Not ״גזע״, which reads as race. Cline 2026-11-22."
  }
 ]

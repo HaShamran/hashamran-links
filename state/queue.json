@@ -465,7 +465,59 @@
     "url": "https://spectator.com/article/dario-amodei-and-the-ai-apocalypse-alchemists",
     "title": "Dario Amodei and the AI Apocalypse Alchemists",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "queued",
-    "source": "backfill"
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-14-thomas-dario-amodei-and-the-ai-apocalypse-alchemists/post.json"
+  },
+  {
+    "url": "https://americanmind.org/salvo/stop-hating-the-puritans",
+    "title": "Stop Hating the Puritans",
+    "author": "Timon Cline",
+    "publication": "The American Mind",
+    "date": "February 2, 2024",
+    "context": "Timon Cline, “Stop Hating the Puritans” The American Mind , February 2, 2024",
+    "first_seen": "2026-11-22T03:43:49+00:00",
+    "status": "translated",
+    "post": "posts/2024-02-02-cline-stop-hating-the-puritans/post.json"
+  },
+  {
+    "url": "https://mattgoodwin.org/p/what-europe-will-look-like-in-2070",
+    "title": "What Europe will look like in 2070",
+    "author": "Matt Goodwin",
+    "publication": "Matt Goodwin",
+    "date": "“What Europe will look like in 2070” Matt Goodwin , November 19, 2026",
+    "context": "Matt Goodwin, “What Europe will look like in 2070” Matt Goodwin , November 19, 2026",
+    "first_seen": "2026-11-22T03:43:49+00:00",
+    "status": "queued"
+  },
+  {
+    "url": "https://washingtonsun.com/technology/bank-ceos-nsa-tell-congress-ai-driven-patches-behind-outages",
+    "title": "Bank CEOs, NSA Tell Congress That AI-Driven Patches Are Behind Outages",
+    "author": "Jeff Stein",
+    "publication": "The Washington Sun",
+    "date": "November 17, 2026",
+    "context": "Jeff Stein, “Bank CEOs, NSA Tell Congress That AI-Driven Patches Are Behind Outages” The Washington Sun , November 17, 2026",
+    "first_seen": "2026-11-22T03:43:49+00:00",
+    "status": "queued"
+  },
+  {
+    "url": "https://dailysignal.com/2026/11/18/hanson-problem-new-american-right-part-1",
+    "title": "The Problem With the New American Right, Part 1",
+    "author": "Victor Davis Hanson",
+    "publication": "Daily Signal",
+    "date": "November 18, 2026",
+    "context": "Victor Davis Hanson, “The Problem With the New American Right, Part 1” Daily Signal , November 18, 2026",
+    "first_seen": "2026-11-22T03:43:49+00:00",
+    "status": "queued"
+  },
+  {
+    "url": "https://americancompass.org/post-midterm-survey",
+    "title": "The Post-Midterm Post-Mortem",
+    "author": "Oren Cass",
+    "publication": "American Compass",
+    "date": "November 18, 2026",
+    "context": "Oren Cass, “The Post-Midterm Post-Mortem” American Compass , November 18, 2026",
+    "first_seen": "2026-11-22T03:43:49+00:00",
+    "status": "queued"
   }
 ]
