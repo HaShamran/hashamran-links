@@ -454,6 +454,35 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   managerial class ״מנהלתיים״ → ״מעמד מנהלים״; "incendiary" ״הסתה״ → ״התלהמות״; the program name keeps ״ויליאם פ׳ באקלי״ as the English has it (fix-check).
 - Not fixed: ״תוכנית״ (the Academy's full spelling) and ״אי אפשר״ without maqaf, both accepted.
 
+### Mistake: ״הארץ / בארץ / לארץ״ for America or another foreign country (17 Nov, after three daily runs in a row)
+- The reviewer caught it on 14 Nov (McCarthy, ״ברחבי הארץ״) and twice on 16 Nov (Monnington ״תשומת לב ארצית״, Stepman
+  ״המדינה הראשונה בארץ״). The 14 Nov fix only banned ״ברחבי הארץ״, so the other forms kept coming.
+- How often we made it: a full read of all 21 posts found 15 more uses, in 5 posts: Hankins 6 (Malaysia and the US),
+  Murray 4 (France), Greer 2 (the US), Parish 2 (Poland), Monnington 1 (״החוקה של הארץ הזאת״, the US). With the 2 fixed
+  on 15 Nov that is 17 in 34,500 words, 4.9 per 10,000. Four of the five posts were live.
+- The archive: in the 26 US-centred תכלת essays (115,000 Hebrew words) ״הארץ״ means the US once (124, ״שיכבד את הארץ
+  ואת אזרחיה״), against 219 uses of ״ארצות הברית / אמריקה״: 0.09 per 10,000. Mida: once in 14,000 words (045, ״כלפי
+  הארץ ותולדותיה״), against 40 names. Every other ״הארץ / בארץ״ in those essays is Israel or ״כדור הארץ״. For a country
+  other than the US, תכלת writes ״הארץ״ only right after naming it, mostly with a demonstrative (171 ״בארץ זו״, Russia).
+- How they render it: Mida 045 "describe this country as the 'land of the free'" → ״כשאנו מתארים את ארה״ב כ׳ארצם של
+  החופשיים׳״; Mida 029 "Trump and the country survive" → ״גם הנשיא וגם המדינה שרדו אותה״; תכלת 124 "We perceive our
+  country as inviolable" → ״אנו תופסים את ארצנו״; תכלת 175 "the country's housing bubble" → ״בארצות־הברית, ששורשיו
+  נעוצים בבועת הנדל״ן״; תכלת 026 "nationwide protests" → ״מחאה ארצית״.
+- Rule: never ״הארץ / בארץ / לארץ / מהארץ / ברחבי הארץ״ for a country other than Israel. Name the country (״ארצות
+  הברית״, ״אמריקה״, ״צרפת״); in an American speaker's mouth ״ארצנו״; ״המדינה״ for a non-US country only (for the US it
+  can read as "the state"). Fine: ״חוץ לארץ״, ״כדור הארץ״, ״ארץ מוסלמית״, ״בארץ זרה״, ״בארץ שבה״, ״ארץ המוצא״.
+- Fixed: Monnington (queued) in post.json → ״החוקה האמריקנית״; the 14 live uses in post.json and through
+  state/live-fixes.json (2026-11-17-*-haaretz-*). ״להעניק לארץ ציון״ (Hankins) is the one the new check does not catch
+  (a following noun looks like a construct): the reviewer rule covers it.
+- Now prevented by: qc.haaretz_problems (fails the post; a post that really means Israel lists the phrase in
+  `haaretz_ok` with a reason), the same hits in hebcheck.py's list for the reviewer with a note, a line in REVIEWER.md's
+  severity list, STYLE.md section 19, and the glossary entry. Tests in tests/test_qc_tweets.py.
+- Correction (Hadar, 22 Nov 2026): ״בפנים הארץ״ "is not Hebrew". Fitzsimmons (live) had "Assyria contracted back to its
+  inland imperial capital" as ״אל בירתה האימפריאלית שבפנים הארץ״, and on 21 Nov the check was wrongly loosened to allow it.
+  The phrase appears 0 times in all the banks (תכלת, השילוח, Mida, Kohelet, Misgav, Israel Hayom); no other post has it.
+  Fixed → ״שבלב היבשה״ (post.json and live-fixes 2026-11-22-fitzsimmons-haaretz-1); the exception is removed, so qc fails it
+  again. Lesson: never widen a check to pass our own wording without the archive showing that wording.
+
 ### 2026-11-18 · Held: Malesic, "How I Uncovered a Prolific AI Author in Religious Magazines"
 - An investigative post that names a little-known writer and says his degree claim is false and his work AI-written. Held
   (queue status `held`) for Hadar under the editorial-holds rule; not translated.

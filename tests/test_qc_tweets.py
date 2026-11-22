@@ -227,6 +227,27 @@ def test_double_possessive():
     assert any("double possessive" in p for p in qc.check(bad)["problems"])
 
 
+def test_haaretz_for_a_foreign_country():
+    """״הארץ״ for America or France reads as Israel (reviewer, 14 and 16 Nov 2026)."""
+    for bad in ("אופייה של הארץ כארץ ספר", "בתוך שנתיים ראתה הארץ פעילים", "שישבו בארץ שנתיים לפחות",
+                "מי שנכנסים לארץ.", "נאמנות לארץ או אהבה אליה", "החוקה של הארץ הזאת", "מתפשטים ברחבי הארץ",
+                "כשהארץ סבלה ממרד", "והשקעות זרות זרמו לארץ.", "אשור נסוגה אל בירתה שבפנים הארץ"):
+        assert qc.haaretz_problems(bad), bad
+    for fine in ("להרפתקאות בחוץ לארץ.", "על פני כדור הארץ", "מלזיה היא ארץ מוסלמית", "בארץ זרה ונכרייה",
+                 "בארץ שבה גדל", "תושבי הארץ ההיא", "ארץ המוצא של הוריהם", "ראו ״הארץ״, 9 ביולי", "בארצות הברית",
+                 "עם הארץ", "הארץ המובטחת", "לחיות בארץ מערבית"):
+        assert not qc.haaretz_problems(fine), fine
+    post = {**GOOD, "body_he": GOOD["body_he"] + "\n\nהעלייה ההמונית הגיעה ממש אל הארץ."}
+    assert not qc.check(post)["pass"]
+    waived = {**post, "haaretz_ok": [{"phrase": "אל הארץ", "reason": "Israel: aliyah"}]}
+    assert qc.check(waived)["pass"], qc.check(waived)["problems"]
+
+
+def test_hebcheck_lists_haaretz():
+    import hebcheck
+    hits = hebcheck.haaretz("ההסדר הדתי של הארץ? מלזיה היא ארץ מוסלמית.")
+    assert [h["word"] for h in hits] == ["הארץ"] and "note" in hits[0]
+
 def test_headline_idioms_fail_in_title_and_quotes_but_not_body():
     post = dict(GOOD, title_he="שתי תשואות למילטון פרידמן",
                 title_options_he=["שתי תשואות למילטון פרידמן", "צרפת", "התהום"])

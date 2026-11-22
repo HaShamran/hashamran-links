@@ -423,7 +423,11 @@ The categories follow MQM, the standard error typology for translation review; `
 1. **Accuracy**: nothing added, nothing omitted, every number, name, date and quotation right; hedges and
    intensifiers at the English strength; allegations still allegations; irony intact.
 2. **Terminology**: argument-critical terms identical throughout; glossary and `US-POLITICS.md` followed; no
-   Israeli civic names for foreign institutions.
+   Israeli civic names for foreign institutions. "The country", "this country", "across the country" are never
+   ״הארץ / בארץ / לארץ / ברחבי הארץ״ when the country is not Israel: to a Hebrew reader that is Israel. Name it
+   (״ארצות הברית״, ״אמריקה״, ״צרפת״), or ״ארצנו״ in an American speaker's mouth, ״המדינה״ for a non-US country
+   (for the US it can read as "the state"); "nationwide" ״בכל רחבי ארצות הברית״ or ״ארצי״. תכלת and Mida name the
+   country (Mida: "this country as the land of the free" → ״את ארה״ב כ׳ארצם של החופשיים׳״). qc fails it.
 3. **Fluency (grammar)**: agreement of gender and number, numbers with nouns, the article in constructs, verb
    government (section 4), no calques (section 9), no double possessive (״התנגדויותיי שלי״: suffix or ״של״,
    never both; "his own" is ״משלו״, ״בעצמו״ or the suffix alone; house rule, Hadar 14 Nov 2026, qc fails it).

@@ -44,7 +44,9 @@ and the review is the same without it). Prompt:
 > Severity: **major** is any change of meaning in a claim, the title, the subtitle, a tweet quote or the closing
 > line; a wrong attribution (a paraphrase in quotation marks, the wrong speaker); an allegation stated as fact; a
 > mistranslated argument-critical term; a foreign institution given an Israeli civic name (יום הזיכרון for
-> 11 November). Everything else is minor.
+> 11 November); ״הארץ / בארץ / לארץ / ברחבי הארץ״ for a country other than Israel (to a Hebrew reader it is
+> Israel: name the country, or ״ארצנו״ / ״המדינה״). Check every entry in the Dicta list that has a "note" about
+> ״הארץ״ against the English. Everything else is minor.
 > Do not rewrite the translation. Return JSON:
 > {"findings": [{"where": "P12" or "title" or "quote 2", "category": "accuracy|omission|grammar|terminology|style|title|back-translation",
 >   "severity": "major|minor", "problem": "...", "suggestion": "..."}],
