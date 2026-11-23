@@ -488,7 +488,8 @@
     "date": "“What Europe will look like in 2070” Matt Goodwin , November 19, 2026",
     "context": "Matt Goodwin, “What Europe will look like in 2070” Matt Goodwin , November 19, 2026",
     "first_seen": "2026-11-22T03:43:49+00:00",
-    "status": "queued"
+    "status": "paywalled",
+    "note": "2026-11-23: subscribers only on Substack (audience only_subscribers); mattgoodwin.org also has a broken TLS certificate. No bypass."
   },
   {
     "url": "https://washingtonsun.com/technology/bank-ceos-nsa-tell-congress-ai-driven-patches-behind-outages",
@@ -498,7 +499,8 @@
     "date": "November 17, 2026",
     "context": "Jeff Stein, “Bank CEOs, NSA Tell Congress That AI-Driven Patches Are Behind Outages” The Washington Sun , November 17, 2026",
     "first_seen": "2026-11-22T03:43:49+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-11-17-stein-bank-ceos-nsa-tell-congress-that-ai-driven-patches-are-behind-outages/post.json"
   },
   {
     "url": "https://dailysignal.com/2026/11/18/hanson-problem-new-american-right-part-1",
@@ -508,7 +510,8 @@
     "date": "November 18, 2026",
     "context": "Victor Davis Hanson, “The Problem With the New American Right, Part 1” Daily Signal , November 18, 2026",
     "first_seen": "2026-11-22T03:43:49+00:00",
-    "status": "queued"
+    "status": "translated",
+    "post": "posts/2026-11-18-hanson-the-problem-with-the-new-american-right-part-1/post.json"
   },
   {
     "url": "https://americancompass.org/post-midterm-survey",

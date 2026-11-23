@@ -1026,5 +1026,77 @@
   "he": "שושלת / צאצאים",
   "avoid": [],
   "note": "Not ״גזע״, which reads as race. Cline 2026-11-22."
+ },
+ {
+  "en": "outage (IT systems)",
+  "he": "השבתה",
+  "avoid": [],
+  "note": "Keep one term throughout; not ״שיבוש״ in one paragraph and ״השבתה״ in the next. Stein 2026-11-23."
+ },
+ {
+  "en": "patch (software)",
+  "he": "תיקון / עדכון אבטחה",
+  "avoid": [],
+  "note": "Stein 2026-11-23."
+ },
+ {
+  "en": "vulnerability (software)",
+  "he": "פרצה / פרצת אבטחה",
+  "avoid": [],
+  "note": "Stein 2026-11-23."
+ },
+ {
+  "en": "legacy systems",
+  "he": "מערכות מיושנות",
+  "avoid": [],
+  "note": "Stein 2026-11-23."
+ },
+ {
+  "en": "Never Trumpers",
+  "he": "מתנגדי טראמפ המושבעים",
+  "avoid": [],
+  "note": "Keep ״מושבעים״ for this term only. Hanson 2026-11-23."
+ },
+ {
+  "en": "neo-isolationists",
+  "he": "ניאו־בדלנים",
+  "avoid": [],
+  "note": "isolationists = בדלנים. Hanson 2026-11-23."
+ },
+ {
+  "en": "Jacksonians (foreign policy)",
+  "he": "ג׳קסוניאנים",
+  "avoid": [],
+  "note": "First use: (על שם הנשיא אנדרו ג׳קסון). Hanson 2026-11-23."
+ },
+ {
+  "en": "Carlsonites",
+  "he": "קרלסוניסטים",
+  "avoid": [],
+  "note": "Followers of Tucker Carlson. Hanson 2026-11-23."
+ },
+ {
+  "en": "Groypers",
+  "he": "גרויפרים",
+  "avoid": [],
+  "note": "Nick Fuentes's followers; in quotation marks on first use. Hanson 2026-11-23."
+ },
+ {
+  "en": "Trump derangement syndrome",
+  "he": "תסמונת השיגעון מטראמפ",
+  "avoid": [],
+  "note": "Hanson 2026-11-23."
+ },
+ {
+  "en": "apostates (political)",
+  "he": "מומרים",
+  "avoid": [],
+  "note": "Hanson 2026-11-23."
+ },
+ {
+  "en": "agenda (political)",
+  "he": "סדר יום",
+  "avoid": [],
+  "note": "Not ״מצע״, which is a party platform. Hanson 2026-11-23."
  }
 ]

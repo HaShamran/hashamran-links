@@ -1,0 +1,87 @@
+{
+  "slug": "2026-11-17-stein-bank-ceos-nsa-tell-congress-that-ai-driven-patches-are-behind-outages",
+  "source_url": "https://washingtonsun.com/technology/bank-ceos-nsa-tell-congress-ai-driven-patches-behind-outages",
+  "queue_url": "https://washingtonsun.com/technology/bank-ceos-nsa-tell-congress-ai-driven-patches-behind-outages",
+  "source_title": "Bank CEOs, NSA Tell Congress That AI-Driven Patches Are Behind Outages",
+  "author": "Jeff Stein",
+  "publication": "The Washington Sun",
+  "date": "November 17, 2026",
+  "body_he": "![לוח טיסות בשדה תעופה](https://static.washingtonsun.com/dims4/default/ee03c91/2147483647/strip/true/crop/6000x3375+0+312/resize/1440x810!/quality/90/?url=https%3A%2F%2Fk2-prod-aji.s3.us-east-1.amazonaws.com%2Fbrightspot%2F72%2F1c%2Fe92cb7384504a4cb82d3dea569ac%2Fap25064000941559.jpg)\n\nבכירים בוול סטריט והסוכנות לביטחון לאומי (NSA) אמרו לחברי קונגרס כי ההשבתות הטכנולוגיות הנרחבות של השבוע נגרמו מניסיונות לתקן פרצות אבטחה שזיהתה בינה מלאכותית, כך לפי שלושה מקורות המכירים את השיחות הפרטיות.\n\nבימים האחרונים ידעה ארצות הברית שורה של כשלים טכנולוגיים מבהילים: כל הטיסות ברחבי המדינה הושבתו, לקוחות לא יכלו לגשת לחשבונות הבנק שלהם, ורשת תקשורת מסווגת ביותר של הסוכנות לביטחון לאומי קרסה.\n\nאף שלא נראה שהשיבושים נגרמו ממתקפת סייבר, בכירים בממשל ובבנקים אמרו למחוקקים שמקורם בניסיונות לסתום פרצות בהגנת הסייבר שזיהו מודלים של בינה מלאכותית, כך לפי המקורות. ואולם התיקונים הציפו את המערכות לזמן מה.\n\n״המודלים האלה מזהים פרצות עצומות, וזה מגביר את הדחיפות להתקין עדכונים מיד,״ אמר גורם בקונגרס שתודרך בעניין. ״הם מנסים להעביר המון עדכונים בבת אחת – יותר ממה שהמערכת תוכננה לשאת.״\n\nביום שני תלו בנקים כמו ג׳יי פי מורגן צ׳ייס את תקלות השירות בבאגים בתוכנה. ביום שלישי אמרה הסוכנות לביטחון לאומי כי ״תחזוקה שגרתית מתוכננת״ אחראית ל״פגיעה הזמנית״ בתפקודן של כמה מרשתותיה. מזכיר ביטחון המולדת, מארקוויין מולין, אמר ל־CNBC ביום שלישי: ״הם דוחפים טכנולוגיה חדשה על גבי מערכות מחשב ישנות מאוד, ונראה שזה פשוט מציף את המערכת... נראה עוד מקרים כאלה ככל שטכנולוגיה חדשה תיכנס לשימוש.״\n\nחברות רבות עוצמה וסוכנויות ממשלתיות מפנות יותר ויותר את מודלי הבינה המלאכותית החזקים ביותר אל מערכותיהן, כדי לזהות את הפרצות שאחרים עלולים לנצל נגדן. ברגע שהפרצות מתגלות, הן נתונות בלחץ עצום לסתום אותן מהר ככל האפשר, שכן הן יודעות שלגורמים זדוניים יש גישה לכלי בינה מלאכותית דומים – או שתהיה להם בקרוב.\n\nהדחיפות הזאת היא שהניעה מגוון רחב של גופים, במגזר הציבורי ובמגזר הפרטי, להחיל תיקונים על מערכותיהם מהר יותר מן הרגיל, אמרו המקורות. אבל גם גופים בעלי משאבים גדולים, כמו הבנקים הגדולים במדינה וקהילת המודיעין, מתקשים לעשות זאת בלי לגרום בטעות להשבתות. המקורות דיברו בעילום שם כדי לתאר שיחות פרטיות.\n\nההשבתות התפשטו השבוע ברחבי ארצות הברית. רשות התעופה הפדרלית ביטלה יותר מ־20,000 טיסות בעקבות ההשבתה הארצית של ההמראות, כך לפי ״וול סטריט ג׳ורנל״. מיקרוסופט חוותה השבתה רחבה של Outlook.\n\nמיקרוסופט תלתה את השיבוש בתקלה טכנית. גם לא ברור מה גרם לקריסת מערכות רשות התעופה הפדרלית.\n\n״במובן מסוים זה מרגיע, משום שפירוש הדבר שאין כאן מתקפה. אבל זה מראה עד כמה התשתיות הקריטיות לבטיחות, שאנו נשענים עליהן, מבוססות על תוכנה בעלת פרצות גדולות במערכות מיושנות,״ אמר נייתן קלווין, מנהל האסטרטגיה הראשי של Encode. ״העדכון שלהן יהיה תהליך רצוף מהמורות, וככל שיהיו לנו מודלים מתקדמים יותר זה לא יהיה עניין חד־פעמי – נמשיך למצוא עוד פרצות.״\n\nהסוכנות לביטחון לאומי לא הגיבה מיד לבקשה לתגובה.",
+  "author_photo": "",
+  "fidelity_waivers": [],
+  "source_paragraphs": 0,
+  "he_paragraphs": 0,
+  "author_he": "ג׳ף סטיין",
+  "title_he": "תיקונים שהפילו את המערכות",
+  "title_options_he": [
+    "תיקונים שהפילו את המערכות",
+    "מנכ״לי בנקים וה־NSA אומרים לקונגרס: עדכונים בעקבות בינה מלאכותית גרמו להשבתות",
+    "הבינה המלאכותית מצאה את הפרצות – והתיקונים השביתו את אמריקה",
+    "כשהתרופה מפילה את החולה"
+  ],
+  "subtitle_he": "לפי שלושה מקורות, בכירי בנקים והסוכנות לביטחון לאומי אמרו לקונגרס כי השבתות השבוע נגרמו ממרוץ לסתום פרצות שזיהתה בינה מלאכותית – וככל הנראה לא ממתקפת סייבר.",
+  "byline_he": "מאת ג׳ף סטיין | פורסם לראשונה ב־The Washington Sun ב־17 בנובמבר 2026",
+  "author_bio_he": "ג׳ף סטיין הוא כתב ב־The Washington Sun.",
+  "quotes_he": [
+    "״המודלים האלה מזהים פרצות עצומות, וזה מגביר את הדחיפות להתקין עדכונים מיד.״ גורם בקונגרס, כפי שמביא ג׳ף סטיין ב־The Washington Sun.",
+    "״הם דוחפים טכנולוגיה חדשה על גבי מערכות מחשב ישנות מאוד, ונראה שזה פשוט מציף את המערכת.״ מזכיר ביטחון המולדת מארקוויין מולין על השבתות השבוע.",
+    "״במובן מסוים זה מרגיע, משום שפירוש הדבר שאין כאן מתקפה. אבל זה מראה עד כמה התשתיות הקריטיות לבטיחות [...] מבוססות על תוכנה בעלת פרצות גדולות במערכות מיושנות.״ נייתן קלווין מ־Encode."
+  ],
+  "brief": {
+    "tone": "straight news report, anonymous sources, neutral",
+    "audience_gap": "The week's US outages (flights grounded, banks, NSA network); AI models used to find software vulnerabilities",
+    "allusions": "none",
+    "hard_terms": "patch → תיקון / עדכון אבטחה; vulnerability → פרצה; outage → השבתה; ground stop → השבתת ההמראות; legacy systems → מערכות מיושנות; safety-critical infrastructure → תשתיות קריטיות לבטיחות",
+    "names": "הסוכנות לביטחון לאומי (NSA); רשות התעופה הפדרלית; ג׳יי פי מורגן צ׳ייס; מארקוויין מולין (מזכיר ביטחון המולדת); נייתן קלווין; Encode"
+  },
+  "review": {
+    "independent": true,
+    "findings": 6,
+    "major": 1,
+    "fixed": 6,
+    "not_fixed": []
+  },
+  "fix_check": {
+    "independent": true,
+    "checked": 6,
+    "not_ok": 0,
+    "fixed": 0
+  },
+  "back_translation": {
+    "title": "Patches that brought down the systems",
+    "subtitle": "According to three sources, bank executives and the National Security Agency told Congress that this week's outages were caused by a race to plug vulnerabilities that artificial intelligence identified – and most likely not by a cyberattack.",
+    "quotes": [
+      "\"These models are identifying enormous vulnerabilities, and that increases the urgency to install updates immediately.\" A congressional source, as quoted by Jeff Stein in The Washington Sun.",
+      "\"They are pushing new technology on top of very old computer systems, and it seems that this is simply flooding the system.\" Homeland Security Secretary Markwayne Mullin on this week's outages.",
+      "\"In a certain sense this is reassuring, because it means there is no attack here. But it shows how much the infrastructure critical to safety [...] is based on software with large vulnerabilities in outdated systems.\" Nathan Calvin of Encode."
+    ],
+    "meaning_kept": true,
+    "source": {
+      "title": "תיקונים שהפילו את המערכות",
+      "subtitle": "לפי שלושה מקורות, בכירי בנקים והסוכנות לביטחון לאומי אמרו לקונגרס כי השבתות השבוע נגרמו ממרוץ לסתום פרצות שזיהתה בינה מלאכותית – וככל הנראה לא ממתקפת סייבר.",
+      "quotes": [
+        "״המודלים האלה מזהים פרצות עצומות, וזה מגביר את הדחיפות להתקין עדכונים מיד.״ גורם בקונגרס, כפי שמביא ג׳ף סטיין ב־The Washington Sun.",
+        "״הם דוחפים טכנולוגיה חדשה על גבי מערכות מחשב ישנות מאוד, ונראה שזה פשוט מציף את המערכת.״ מזכיר ביטחון המולדת מארקוויין מולין על השבתות השבוע.",
+        "״במובן מסוים זה מרגיע, משום שפירוש הדבר שאין כאן מתקפה. אבל זה מראה עד כמה התשתיות הקריטיות לבטיחות [...] מבוססות על תוכנה בעלת פרצות גדולות במערכות מיושנות.״ נייתן קלווין מ־Encode."
+      ]
+    }
+  },
+  "style": {
+    "words": 403,
+    "connectives_per_1000": 7.4,
+    "distinct_connectives": 3,
+    "shel_per_100": 2.23,
+    "sentence_words": 19.2,
+    "sentence_spread": 9.5,
+    "veulam_per_1000": 2.48,
+    "negation_per_1000": 2.48,
+    "ki_per_1000": 4.96,
+    "beyoter_per_1000": 4.96,
+    "atzmo_per_1000": 0.0
+  },
+  "cover_image": "https://static.washingtonsun.com/dims4/default/ee03c91/2147483647/strip/true/crop/6000x3375+0+312/resize/1440x810!/quality/90/?url=https%3A%2F%2Fk2-prod-aji.s3.us-east-1.amazonaws.com%2Fbrightspot%2F72%2F1c%2Fe92cb7384504a4cb82d3dea569ac%2Fap25064000941559.jpg",
+  "brand_cover": false,
+  "substack_slug": "stein-bank-ceos-nsa-tell-congress-that-ai-driven-patches-are-behind-outages",
+  "status": "ready",
+  "ready_at": "2026-11-23T03:51:43+00:00"
+}

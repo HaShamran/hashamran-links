@@ -607,3 +607,24 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   veneration ״הערצת האבות״ (P5 mixed them). "stock" as ״גזע״ reads as race → ״שושלת״ / ״מקרבם קמו״; the author's own word
   (*puritanical*) had slipped inside Rothman's quotation marks; "wokeness" needs its first-use gloss; "trophies" ≠ ״גביעים״.
 - Fix-check: ״מצאצאיהם צמחו״ was circular; ״ייחוד פוריטני״ misused ייחוד (uniqueness).
+
+### 2026-11-23 · 2026-11-17-stein-bank-ceos-nsa-tell-congress-that-ai-driven-patches-are-behind-outages
+- Washington Sun news report (11 paragraphs, anonymous sources). Title ״תיקונים שהפילו את המערכות״.
+- Pass 2 (1 major): the subtitle turned the reporter's hedge ("it does not appear… a cyberattack") into a firm claim by the
+  sources, and said ״הבנקים״ for bank executives → ״בכירי בנקים… וככל הנראה לא ממתקפת סייבר״. Lesson: a subtitle may not
+  harden a hedge or move it to another speaker. Minor: "outages" must be ״השבתות״ throughout (P1 had ״שיבושים״);
+  newspaper names in Hebrew letters without italics (״וול סטריט ג׳ורנל״); "rocky process" → ״רצוף מהמורות״; a pull
+  quote silently dropped "on legacy systems". Title ״המערכת״ (singular) can read as "the establishment" → plural.
+- qc caught a double possessive ״מערכותיהן שלהן״ in the draft.
+- Goodwin "What Europe will look like in 2070" marked paywalled (subscribers-only Substack).
+
+### 2026-11-23 · 2026-11-18-hanson-the-problem-with-the-new-american-right-part-1
+- Daily Signal video transcript (33 paragraphs, spoken register kept). Title ״הבעיה של הימין האמריקני החדש (חלק א׳)״.
+- Transcript garbles rendered cautiously: "left Never Trumpers" → ״שנותרו״ (context rules out leftists); "Fortress America,
+  attack" → ״׳אמריקה כמבצר׳, ותו לא״; cut-off "nuclear …" kept with the ellipsis. YouTube subscribe line dropped as promo.
+- First draft failed qc on connectives (1.0/1,000): spoken English has few joints, so add them where the logic is already
+  there (״לא זו בלבד… אלא״, ״שכן״, ״ואולם״, ״על כן״) rather than leaving the Hebrew loose.
+- Pass 2 found no major issues (14 minor). Watch for: reusing a term-of-art word elsewhere (״מושבעים״ is the Never Trumper
+  word, so "vehement enemies" → ״החריפים ביותר״); "the issue that separates MAGA" splits it from within (״המפלגת את״),
+  not ״המפרידה אותם מ־״; "especially X" ≠ ״ובראשם״ (who leads); a dropped hedge ("kind of ironic"); first-use glosses for
+  midterms and NPR/PBS; agenda = ״סדר יום״, not ״מצע״; ״בוחרים בכוח״ reads as "by force".
