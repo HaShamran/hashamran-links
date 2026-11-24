@@ -628,3 +628,15 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   word, so "vehement enemies" → ״החריפים ביותר״); "the issue that separates MAGA" splits it from within (״המפלגת את״),
   not ״המפרידה אותם מ־״; "especially X" ≠ ״ובראשם״ (who leads); a dropped hedge ("kind of ironic"); first-use glosses for
   midterms and NPR/PBS; agenda = ״סדר יום״, not ״מצע״; ״בוחרים בכוח״ reads as "by force".
+
+### 2026-11-24 · 2026-09-21-mcgrew-greta-gerwigs-war-on-masculinity-narnia-and-c-s-lewiss-intent
+- Daily Wire cultural polemic (9 paragraphs, female first person). Title ״האסלן של גרוויג אינו האסלן של לואיס״.
+  A reader comment under the article ("One Major correction…") and the Substack plug were dropped.
+- qc caught ״ג׳ו מארץ׳״ (Jo March) under the ״הארץ״ rule → ״ג׳ו מרץ׳״; ״של״ at 4.5/100 → construct forms.
+- Pass 2 (3 major): "transspecies" as ״טרנס־מיני״ reads as trans-*sexual* (מין = sex), so "not only transgender but
+  transspecies" collapsed into a repetition → ״טרנס־זני״ + gloss ״כלאיים של כמה בעלי חיים״. Lesson: a coined English
+  compound must be back-checked for the Hebrew root's other sense. Minor: "a masculine figure" carried feminine agreement
+  through ״דמות״ in an essay about masculinity → make the subject ״גבר״; "warp and woof" as ״שתי וערב״ is a calque here
+  → ״ארוגה בכל חוטי אמנותו״; "evokes" ≠ ״מעורר דמות״; Unitarian Universalist = ״אוניטריאנית־אוניברסליסטית״ (order).
+- Skipped today: Cass "Post-Midterm Post-Mortem" (chart-built survey report, charts don't extract). Paywalled: McCarthy
+  "The Strange Death of Libertarianism" (NatCon's PDF is an archive.today capture of The Spectator).

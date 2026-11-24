@@ -521,6 +521,22 @@
     "date": "November 18, 2026",
     "context": "Oren Cass, “The Post-Midterm Post-Mortem” American Compass , November 18, 2026",
     "first_seen": "2026-11-22T03:43:49+00:00",
-    "status": "queued"
+    "status": "skipped",
+    "note": "2026-11-24: a survey/data report built around some 20 charts and regression tables that don't come through extraction (no images); the text keeps pointing at charts that wouldn't be there, so it isn't a translatable essay for השמרן."
+  },
+  {
+    "url": "https://nationalconservatism.org/wp-content/uploads/2026/09/The-strange-death-of-libertarianism-_-The-Spectator.pdf",
+    "title": "The Strange Death of Libertarianism",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "paywalled",
+    "source": "backfill",
+    "note": "2026-11-24: the NatCon PDF is an archive.today capture of a Spectator article; using it would be a paywall bypass. No bypass."
+  },
+  {
+    "url": "https://dailywire.com/news/greta-gerwigs-war-on-masculinity-narnia-and-c-s-lewiss-intent?author=Bethel+McGrew&category=DW+Opinion&elementPosition=1&row=3&rowHeadline=Opinion+Board&rowType=Article+Carousel&title=Greta+Gerwig%E2%80%99s+War+On+Masculinity%2C+Narnia%2C+And+C.S.+Lewis%E2%80%99s+Intent",
+    "title": "Greta Gerwig’s War on Masculinity, Narnia, and C.S. Lewis’s Intent",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "queued",
+    "source": "backfill"
   }
 ]

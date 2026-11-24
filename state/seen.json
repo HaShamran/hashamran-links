@@ -110,12 +110,14 @@
   "https://nationalconservatism.org/wp-content/uploads/2026/09/The-strange-death-of-libertarianism-_-The-Spectator.pdf": {
     "title": "The Strange Death of Libertarianism",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-24T03:44:42+00:00"
   },
   "https://dailywire.com/news/greta-gerwigs-war-on-masculinity-narnia-and-c-s-lewiss-intent?author=Bethel+McGrew&category=DW+Opinion&elementPosition=1&row=3&rowHeadline=Opinion+Board&rowType=Article+Carousel&title=Greta+Gerwig%E2%80%99s+War+On+Masculinity%2C+Narnia%2C+And+C.S.+Lewis%E2%80%99s+Intent": {
     "title": "Greta Gerwig’s War on Masculinity, Narnia, and C.S. Lewis’s Intent",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-24T03:44:42+00:00"
   },
   "https://americanreformer.org/p/irresponsible-principles-on-the-duty": {
     "title": "Irresponsible Principles: On the Duty to Win in Politics and Culture",

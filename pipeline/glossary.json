@@ -1098,5 +1098,41 @@
   "he": "סדר יום",
   "avoid": [],
   "note": "Not ״מצע״, which is a party platform. Hanson 2026-11-23."
+ },
+ {
+  "en": "transspecies",
+  "he": "טרנס־זני",
+  "avoid": [
+   "טרנס־מיני"
+  ],
+  "note": "מין reads as sex. McGrew 2026-11-24."
+ },
+ {
+  "en": "authorial intent",
+  "he": "כוונת המחבר",
+  "avoid": [],
+  "note": "McGrew 2026-11-24."
+ },
+ {
+  "en": "Unitarian Universalism",
+  "he": "אוניטריאניזם־אוניברסליזם (אוניטריאנית־אוניברסליסטית)",
+  "avoid": [
+   "האוניברסליסטית־האוניטריאנית"
+  ],
+  "note": "McGrew 2026-11-24."
+ },
+ {
+  "en": "Jo March",
+  "he": "ג׳ו מרץ׳",
+  "avoid": [
+   "ג׳ו מארץ׳"
+  ],
+  "note": "״מארץ״ trips the הארץ rule. McGrew 2026-11-24."
+ },
+ {
+  "en": "Aslan (Narnia)",
+  "he": "אסלן",
+  "avoid": [],
+  "note": "Mr. Beaver = מר בונה; The Magician's Nephew = האחיין של הקוסם; The Last Battle = הקרב האחרון."
  }
 ]
