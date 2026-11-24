@@ -5,5 +5,6 @@
   "alerts": [
     "2024-02-02-cline-stop-hating-the-puritans has waited 1d 20h to be published: check that dud is on and signed in to Substack (run login.cmd)",
     "2026-09-14-thomas-dario-amodei-and-the-ai-apocalypse-alchemists has waited 1d 20h to be published: check that dud is on and signed in to Substack (run login.cmd)"
-  ]
+  ],
+  "substack_unreachable": true
 }
