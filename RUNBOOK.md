@@ -44,6 +44,10 @@ For each:
    including author bio and photo and the 3 tweet quotes, and write `posts/<slug>/post.json`.
 3. `python3 pipeline/finalize.py posts/<slug>/post.json /tmp/<slug>.src.json`. On failure fix once and rerun; if it still fails, leave
    it (it is held as `draft_failed_qc`) and alert.
+   Graphs (Hadar, 25 Nov 2026): never publish an article with graphs or charts if the graph images can't be fetched.
+   Keep every chart image from the source in `body_he` at its place, with its caption translated. If finalize sets
+   `held_missing_graphs` (an interactive chart embed, a chart image missing or not downloadable), do not delete the
+   chart reference to get it through: leave it held, put its `hold_reason` in the report as an alert, and take the next item.
 4. Add an entry to `pipeline/TRANSLATION-LOG.md` (terms, title choice, what passes 2 and 3 caught), and move
    settled terms into `pipeline/glossary.json`.
 

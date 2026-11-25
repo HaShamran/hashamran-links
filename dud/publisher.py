@@ -52,6 +52,14 @@ class LoginNeeded(RuntimeError):
     pass
 
 
+class ImageUnavailable(RuntimeError):
+    """An image in the post's body would not download. It may be a chart, and Hadar's rule (25 Nov 2026) is never
+    to publish an article with graphs when the graph images can't be fetched, so the post is held instead."""
+
+
+HOLD_RETRY = dt.timedelta(hours=12)  # a held post is tried again after this; it publishes only if every image loads
+
+
 def log(msg):
     LOGS.mkdir(parents=True, exist_ok=True)
     line = f"{dt.datetime.now(ISRAEL):%Y-%m-%d %H:%M:%S} {msg}"
@@ -222,6 +230,11 @@ def archive():
     return data.get("posts", []) if isinstance(data, dict) else data
 
 
+def _held(entry, now):
+    at = entry.get("held_at")
+    return bool(at) and now - dt.datetime.fromisoformat(at) < HOLD_RETRY
+
+
 def due_post(now, arch, index, state):
     """The next post to publish now, or (None, reason)."""
     local = now.astimezone(ISRAEL)
@@ -232,7 +245,8 @@ def due_post(now, arch, index, state):
     waiting = [p for p in index if p.get("status") == "ready"
                and norm(p["title_he"]) not in live_titles
                and p.get("substack_slug") not in live_slugs
-               and not state.get(p["slug"], {}).get("published")]
+               and not state.get(p["slug"], {}).get("published")
+               and not _held(state.get(p["slug"], {}), now)]
     if not waiting:
         return None, "nothing waiting"
     waiting.sort(key=lambda p: p.get("ready_at", ""))
@@ -313,10 +327,14 @@ def _downloader(tmpdir):
     def fetch(url):
         if not url.startswith("http"):
             return url
-        r = requests.get(url, headers={"User-Agent": UA}, timeout=60)
-        if r.status_code in (403, 429):
-            r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=60)
-        r.raise_for_status()
+        try:
+            r = requests.get(url, headers={"User-Agent": UA}, timeout=60)
+            if r.status_code in (403, 429):
+                r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=60)
+        except requests.RequestException as e:
+            raise ImageUnavailable(f"{url[:150]} ({type(e).__name__})")
+        if not r.ok or not r.content or r.headers.get("content-type", "").startswith("text/"):
+            raise ImageUnavailable(f"{url[:150]} (HTTP {r.status_code}, {r.headers.get('content-type', '')[:40]})")
         ext = {"image/png": ".png", "image/gif": ".gif", "image/webp": ".webp"}.get(
             r.headers.get("content-type", "").split(";")[0], ".jpg")
         path = pathlib.Path(tmpdir) / f"img{len(list(pathlib.Path(tmpdir).iterdir()))}{ext}"
@@ -328,7 +346,15 @@ def _downloader(tmpdir):
 def build_draft(api, post):
     import substack_doc
     with tempfile.TemporaryDirectory() as tmp:
-        md = substack_doc.substack_markdown(post, _downloader(tmp))
+        fetch = _downloader(tmp)
+        if post.get("author_photo"):
+            try:
+                fetch(post["author_photo"])
+            except ImageUnavailable as e:
+                log(f"author photo would not download, publishing without it: {e}")
+                post = {**post, "author_photo": ""}
+        # Any body image that will not download raises ImageUnavailable: the caller holds the post.
+        md = substack_doc.substack_markdown(post, fetch)
         res = api.create_draft_from_markdown(title=post["title_he"], subtitle=post.get("subtitle_he", ""),
                                              markdown=md, slug=post.get("substack_slug"))
     draft = res["draft"]
@@ -339,6 +365,25 @@ def build_draft(api, post):
         update["cover_image"] = cover
     api.put_draft(draft["id"], **update)
     return draft["id"]
+
+
+def hold(slug, entry, state, reason, now):
+    """Keep a post off Substack (tried again after HOLD_RETRY) and tell the repo, so the morning report shows it."""
+    entry.update(held=reason, held_at=now.isoformat(timespec="seconds"))
+    save(STATE_FILE, state)
+    log(f"HELD {slug}: {reason}")
+    status(f"OK, signed in; held {slug} (image missing, not published); the next post goes on the next run")
+    try:
+        record = {"slug": slug, "reason": reason, "held_at": entry["held_at"]}
+        content = base64.b64encode((json.dumps(record, ensure_ascii=False, indent=2) + "\n").encode()).decode()
+        path = f"repos/{REPO}/contents/state/held/{slug}.json"
+        exists = subprocess.run([gh(), "api", path, "--jq", ".sha"], capture_output=True, text=True)
+        args = [gh(), "api", "-X", "PUT", path, "-f", f"message=held: {slug}", "-f", f"content={content}"]
+        if exists.returncode == 0 and exists.stdout.strip():
+            args += ["-f", f"sha={exists.stdout.strip()}"]
+        subprocess.run(args, capture_output=True, text=True, timeout=60)
+    except Exception as e:
+        log(f"could not report the hold of {slug}: {type(e).__name__}")
 
 
 def publish_api(api, draft_id):
@@ -530,7 +575,11 @@ def _run():
             log(f"draft {draft_id} for {slug} is gone; building a new one")
             draft_id = None
     if not draft_id:
-        draft_id = build_draft(api, post)
+        try:
+            draft_id = build_draft(api, post)
+        except ImageUnavailable as e:
+            hold(slug, entry, state, f"an image would not download, it may be a chart: {e}", now)
+            return 0
         entry["draft_id"] = draft_id
         save(STATE_FILE, state)  # remember it at once, so a failure never makes a second copy
         log(f"draft {draft_id} built for {slug}")

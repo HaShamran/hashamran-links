@@ -241,6 +241,8 @@ def alerts(posts, live, now):
                            "check that dud is on and signed in to Substack (run login.cmd)")
         if p.get("status") == "draft_failed_qc":
             out.append(f"{slug} failed the quality check and was not published")
+        if p.get("status") == "held_missing_graphs":
+            out.append(f"{slug} is held, not published: it has graphs we could not get ({(p.get('hold_reason') or '')[:200]})")
     return out
 
 
@@ -283,6 +285,11 @@ def run(dry_run=False, now=None, archive=None):
             report["tweet"] = entry
     # Substack usually refuses GitHub Actions; that is expected, since dud reports live posts (state/live/).
     report["alerts"] = alerts(posts, live, now)
+    # dud holds a post when one of its images will not download (Hadar, 25 Nov 2026: a chart we cannot get
+    # means no publish) and reports it as state/held/<slug>.json.
+    for f in sorted((STATE / "held").glob("*.json")):
+        if f.stem not in live:
+            report["alerts"].append(f"{f.stem} is held on dud, not published: {load_json(f).get('reason', '')[:200]}")
     # No timestamp in the saved copy, so the file (and the repo) only changes when something happens.
     save_json(STATE / "social-status.json", {k: v for k, v in report.items() if k != "at"})
     return report
