@@ -1,14 +1,7 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": {
-    "slot": "2026-11-25#1",
-    "slug": "2026-11-18-hanson-the-problem-with-the-new-american-right-part-1",
-    "quote": 0,
-    "text": "״אלה אנשים ששנאו את תנועת MAGA [...] ובמיוחד את דונלד טראמפ עצמו, במידה כזאת שבתגובה עברו בכל הכוח לשמאל.״ ויקטור דייוויס הנסון על ״המומרים״ שבין מתנגדי טראמפ המושבעים.\n\nhttps://hashamran.github.io/hashamran-links/2026-11-18-hanson-the-problem-with-the-new-american-right-part-1.html",
-    "at": "2026-11-25T14:05:26+00:00",
-    "buffer_id": "6b06eb2706de2127fc1a9584"
-  },
+  "tweet": null,
   "alerts": [
     "2026-09-21-mcgrew-greta-gerwigs-war-on-masculinity-narnia-and-c-s-lewiss-intent has waited 1d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
