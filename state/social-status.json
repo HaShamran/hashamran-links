@@ -1,9 +1,16 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": null,
+  "tweet": {
+    "slot": "2026-11-25#2",
+    "slug": "2026-11-18-hanson-the-problem-with-the-new-american-right-part-1",
+    "quote": 1,
+    "text": "״הם מגדירים את ׳אמריקה תחילה׳ לא כדאגה לביטחונה של אמריקה, גם אם פירוש הדבר הוא להדוף אויבים פוטנציאליים או קיימים.״ ויקטור דייוויס הנסון על הניאו־בדלנים בימין האמריקני.\n\nhttps://hashamran.github.io/hashamran-links/2026-11-18-hanson-the-problem-with-the-new-american-right-part-1.html",
+    "at": "2026-11-25T19:05:23+00:00",
+    "buffer_id": "6b07317403e79bc5c6f8f19f"
+  },
   "alerts": [
-    "2026-09-21-mcgrew-greta-gerwigs-war-on-masculinity-narnia-and-c-s-lewiss-intent has waited 1d 14h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-09-21-mcgrew-greta-gerwigs-war-on-masculinity-narnia-and-c-s-lewiss-intent has waited 1d 15h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
