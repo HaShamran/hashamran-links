@@ -1134,5 +1134,103 @@
   "he": "אסלן",
   "avoid": [],
   "note": "Mr. Beaver = מר בונה; The Magician's Nephew = האחיין של הקוסם; The Last Battle = הקרב האחרון."
+ },
+ {
+  "en": "principle (as the author's key term)",
+  "he": "עיקרון",
+  "avoid": [],
+  "note": "adherence to principle = ״דבקות בעיקרון״, not ״ציות״. Fischer 2026-11-25."
+ },
+ {
+  "en": "body politic",
+  "he": "קהילה מדינית",
+  "avoid": [],
+  "note": "Fischer 2026-11-25."
+ },
+ {
+  "en": "ends in themselves",
+  "he": "מטרות בפני עצמן",
+  "avoid": [],
+  "note": "Fischer 2026-11-25."
+ },
+ {
+  "en": "legacy conservatives",
+  "he": "השמרנים הוותיקים",
+  "avoid": [],
+  "note": "Fischer 2026-11-25."
+ },
+ {
+  "en": "in-group (preference, loyalty)",
+  "he": "העדפת בני הקבוצה / נאמנות קבוצתית",
+  "avoid": [],
+  "note": "Fischer 2026-11-25."
+ },
+ {
+  "en": "mainstream (Democrats etc.)",
+  "he": "מן הזרם המרכזי",
+  "avoid": [],
+  "note": "״המרכזיים״ reads as 'leading'. Fischer 2026-11-25."
+ },
+ {
+  "en": "red pill (online right)",
+  "he": "״הגלולה האדומה״",
+  "avoid": [],
+  "note": "First use needs a gloss. Fischer 2026-11-25."
+ },
+ {
+  "en": "leftists (noun)",
+  "he": "אנשי השמאל",
+  "avoid": [],
+  "note": "see existing glossary rule; ״שמאלנים״ fails qc."
+ },
+ {
+  "en": "American Bar Association (ABA)",
+  "he": "לשכת עורכי הדין האמריקנית (ABA)",
+  "avoid": [],
+  "note": "Never bare ״לשכת עורכי הדין״ in a title: reads as the Israeli Bar. Biggs 2026-11-25."
+ },
+ {
+  "en": "accreditation",
+  "he": "הסמכה",
+  "avoid": [],
+  "note": "Biggs 2026-11-25."
+ },
+ {
+  "en": "tenure (academic)",
+  "he": "קביעות",
+  "avoid": [],
+  "note": "Biggs 2026-11-25."
+ },
+ {
+  "en": "law clinic",
+  "he": "קליניקה משפטית",
+  "avoid": [],
+  "note": "Biggs 2026-11-25."
+ },
+ {
+  "en": "trade association",
+  "he": "התאחדות מקצועית",
+  "avoid": [
+   "איגוד מקצועי פרטי"
+  ],
+  "note": "״איגוד מקצועי״ = trade union. Biggs 2026-11-25."
+ },
+ {
+  "en": "Federalist Society",
+  "he": "האגודה הפדרליסטית",
+  "avoid": [],
+  "note": "Biggs 2026-11-25."
+ },
+ {
+  "en": "Federalist Papers",
+  "he": "״הפדרליסט״",
+  "avoid": [],
+  "note": "Biggs 2026-11-25."
+ },
+ {
+  "en": "general counsel",
+  "he": "היועץ המשפטי",
+  "avoid": [],
+  "note": "Biggs 2026-11-25."
  }
 ]

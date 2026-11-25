@@ -640,3 +640,24 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   → ״ארוגה בכל חוטי אמנותו״; "evokes" ≠ ״מעורר דמות״; Unitarian Universalist = ״אוניטריאנית־אוניברסליסטית״ (order).
 - Skipped today: Cass "Post-Midterm Post-Mortem" (chart-built survey report, charts don't extract). Paywalled: McCarthy
   "The Strange Death of Libertarianism" (NatCon's PDF is an archive.today capture of The Spectator).
+
+### 2026-11-25 · 2026-09-16-fischer-irresponsible-principles-on-the-duty-to-win-in-politics-and-culture
+- American Reformer manifesto (6 subheads, 2 image captions). Title ״עקרונות חסרי אחריות: על החובה לנצח״. The page's
+  reader comments were dropped; the lead image duplicated the first inline image, so only the inline one (with caption) kept.
+- qc: ״שמאלנים״ → ״אנשי השמאל״ (glossary); 6 distinct connectives → added ״אפוא״, ״אמנם… אך״, ״ממילא״, ״הרי״.
+- Pass 2 found no major issues (19 minor). Keep the parody visible: "River Grande" → ״הנהר גרנדה״ to echo ״הגשר על הנהר
+  קוואי״ (don't add ״שבגבול אמריקה״). "adherence" stays ״דבקות״ everywhere (not ״ציות״); "racial frenzy" as ״הטירוף
+  הגזעי״ reads as racist → ״הטירוף סביב גזע ומין״; "mainstream Democrats" ≠ ״הדמוקרטים המרכזיים״ (leading) → ״מן הזרם
+  המרכזי״; "largest faction" ≠ ״סיעה״ (parliamentary) → ״גוש״; "in-group loyalty" must stay ״קבוצתית״ to link to
+  ״העדפת בני הקבוצה״; first-use gloss for "red pill". Fix-check caught ״תוצאותיו״ left masculine after ״ציות״ → ״דבקות״.
+
+### 2026-11-25 · 2026-09-17-biggs-save-the-constitution-ditch-the-aba
+- University of Austin op-ed with an editors' note and 13 footnotes. Title ״להציל את החוקה, להיפטר מלשכת עורכי הדין
+  האמריקנית״. Reader comments and the follow/sign-up block dropped; footnote markers 5 and 14 have no note and were dropped.
+- Footnotes: qc flags a note as untranslated when Latin letters outweigh Hebrew (URLs inside markdown links don't count).
+  So translate citation titles and framing into Hebrew and wrap bare URLs as ״[קישור](url)״.
+- Pass 2 (1 major): a title with bare ״לשכת עורכי הדין״ reads as the Israeli Bar → always ״האמריקנית״ in a title (same
+  for ״משרד החינוך״ on first use). Minor: "trade association" ≠ ״איגוד מקצועי״ (a trade union) → ״התאחדות מקצועית״;
+  "arguably" ≠ ״לכל היותר״; "state-assisted" (US states) → ״המדינות״; "grading" schools ≠ ״לדרג״ (rank);
+  ״מפלגתיות עירומה״, ״באופן מופשט״ are calques; ״יותר מהוכפל״ is ungrammatical → ״גדל יותר מפי שניים״.
+- Fix-check caught gender agreement broken by the noun swap (״התאחדות… שהקדיש… חזונו״ → ״שהקדישה… חזונה״).

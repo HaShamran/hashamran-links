@@ -536,7 +536,24 @@
     "url": "https://dailywire.com/news/greta-gerwigs-war-on-masculinity-narnia-and-c-s-lewiss-intent?author=Bethel+McGrew&category=DW+Opinion&elementPosition=1&row=3&rowHeadline=Opinion+Board&rowType=Article+Carousel&title=Greta+Gerwig%E2%80%99s+War+On+Masculinity%2C+Narnia%2C+And+C.S.+Lewis%E2%80%99s+Intent",
     "title": "Greta Gerwig’s War on Masculinity, Narnia, and C.S. Lewis’s Intent",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "queued",
-    "source": "backfill"
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-21-mcgrew-greta-gerwigs-war-on-masculinity-narnia-and-c-s-lewiss-intent/post.json"
+  },
+  {
+    "url": "https://americanreformer.org/p/irresponsible-principles-on-the-duty",
+    "title": "Irresponsible Principles: On the Duty to Win in Politics and Culture",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-16-fischer-irresponsible-principles-on-the-duty-to-win-in-politics-and-culture/post.json"
+  },
+  {
+    "url": "https://uatx.substack.com/p/save-the-constitution-ditch-the-aba",
+    "title": "Save the Constitution. Ditch the ABA.",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-17-biggs-save-the-constitution-ditch-the-aba/post.json"
   }
 ]
