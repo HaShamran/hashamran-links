@@ -1,12 +1,9 @@
 {
-  "newly_live": [
-    "2026-09-16-fischer-irresponsible-principles-on-the-duty-to-win-in-politics-and-culture"
-  ],
-  "relays_written": [
-    "2026-09-16-fischer-irresponsible-principles-on-the-duty-to-win-in-politics-and-culture"
-  ],
+  "newly_live": [],
+  "relays_written": [],
   "tweet": null,
   "alerts": [
     "2026-09-17-biggs-save-the-constitution-ditch-the-aba has waited 1d 6h to be published: check that dud is on and signed in to Substack (run login.cmd)"
-  ]
+  ],
+  "substack_unreachable": true
 }
