@@ -1232,5 +1232,49 @@
   "he": "היועץ המשפטי",
   "avoid": [],
   "note": "Biggs 2026-11-25."
+ },
+ {
+  "en": "Wahhabism",
+  "he": "והאביה (האסלאם הוהאבי)",
+  "avoid": [],
+  "note": "Hebrew Wikipedia spelling. Kennedy 2026-11-26. No avoid form: ״ו״ + ״והאביה״ is spelled the same."
+ },
+ {
+  "en": "Treasury Secretary (US)",
+  "he": "מזכיר האוצר",
+  "avoid": [],
+  "note": "see US-POLITICS.md. Kennedy 2026-11-26."
+ },
+ {
+  "en": "Muslim Brotherhood",
+  "he": "האחים המוסלמים",
+  "avoid": [],
+  "note": "Kennedy 2026-11-26."
+ },
+ {
+  "en": "apostasy (Islam)",
+  "he": "נטישת האסלאם",
+  "avoid": [],
+  "note": "Not ״כפירה״ (blurs with ״כופר״ = unbeliever). Kennedy 2026-11-26."
+ },
+ {
+  "en": "solemn (day)",
+  "he": "ביום הקודר / ביום הכבד",
+  "avoid": [
+   "ביום החגיגי"
+  ],
+  "note": "״חגיגי״ = festive. Fleitz 2026-11-26."
+ },
+ {
+  "en": "Islamist",
+  "he": "אסלאמיסטי",
+  "avoid": [],
+  "note": "Fleitz 2026-11-26."
+ },
+ {
+  "en": "Foreign Agents Registration Act (FARA)",
+  "he": "חוק רישום סוכנים זרים (FARA)",
+  "avoid": [],
+  "note": "Kennedy 2026-11-26."
  }
 ]

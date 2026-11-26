@@ -661,3 +661,26 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   "arguably" ≠ ״לכל היותר״; "state-assisted" (US states) → ״המדינות״; "grading" schools ≠ ״לדרג״ (rank);
   ״מפלגתיות עירומה״, ״באופן מופשט״ are calques; ״יותר מהוכפל״ is ungrammatical → ״גדל יותר מפי שניים״.
 - Fix-check caught gender agreement broken by the noun swap (״התאחדות… שהקדיש… חזונו״ → ״שהקדישה… חזונה״).
+
+### 2026-11-26 · 2026-09-11-fleitz-name-the-enemy-the-25th-anniversary-of-9-11-still-demands-it
+- American Greatness anniversary op-ed (15 paragraphs). Title ״לקרוא לאויב בשמו״. Bio taken from the italic note at the end
+  of the article, not the site's "About" box (they differ). Pinkoski's Washington Post piece the same day: registration wall,
+  marked paywalled.
+- First draft failed qc on connectives (1.4/1,000): short punchy op-eds need the joints rebuilt (״אלא״, ״שכן״, ״שהרי״, ״אמנם…
+  אך״).
+- Pass 2 (4 major): "Name who did this" as ״אמרו בשם מי עשה זאת״ means "on whose behalf" → ״אמרו מי עשה זאת״ (the essay's
+  core demand; caught by the back-translation); "solemn day" as ״החגיגי״ = festive → ״הקודר״; subtitle said "3,000 Americans"
+  where the source says "people on American soil". Minor: "nuance… amnesia" ≠ ״תחכום… שכחה״; "campaigned with" ≠ ran a
+  campaign; "dissent" must not reuse ״חילוקי דעות״ (the excuse the essay rejects) → ״ביקורת מבית״; don't call 9/11 ״יום
+  הזיכרון״ (Israel's civic name); a book title in a bio gets a Hebrew rendering with the English in parentheses.
+
+### 2026-11-26 · 2026-09-11-kennedy-the-heavy-yoke-of-9-11
+- American Mind long essay (6 subheads, 5 block quotes: Codevilla, Helprin, Koran 9:29 and 5:51, the 1991 Brotherhood memo,
+  all translated from the author's English). Title ״העול הכבד של 11 בספטמבר״. The site's disclaimer and related images dropped.
+- qc caught five double possessives from "own": ״מחשבתה שלה״, ״נסיכיו שלו״, ״חיינו שלנו״ (×2), ״מחשבתנו שלנו״ → ״שלה
+  עצמה״, ״אנו״ forms. "Their own" / "our own" is the usual trap; reach for ״עצמו/אנו״ or drop it.
+- Pass 2 (1 major): "Saudi and Gulf donors" as ״מתורמים סעודים וממדינות המפרץ״ turned private donors into states → keep the
+  noun: ״ומתורמים ממדינות המפרץ״. Minor: "heavily outweighed" ≠ ״שקול כאין וכאפס״; "apostasy" ≠ ״כפירה״ next to ״כופר״
+  (unbeliever) → ״נטישת האסלאם״; keep "subdued" = ״מוכנעים״ in the verse to match the author's echo; Treasury Secretary =
+  ״מזכיר האוצר״; Wahhabism = ״והאביה״ (Hebrew Wikipedia), not ״ווהאביה״; "domestic" ≠ ״מקומיים״; ״ברצינות קטלנית״ calque.
+- Swept ״ווהאב״: one more, Hankins (live) ״המלוכה הווהאבית״ → ״הוהאבית״ via state/live-fixes.json (2026-11-26-hankins-wahhabi-1).

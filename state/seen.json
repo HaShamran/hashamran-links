@@ -134,17 +134,20 @@
   "https://americanmind.org/salvo/the-heavy-yoke-of-9-11": {
     "title": "The Heavy Yoke of 9/11",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-26T03:44:09+00:00"
   },
   "https://washingtonpost.com/opinions/2026/09/11/catholic-church-needs-more-nuanced-approach-migration": {
     "title": "This Issue is Splitting the Catholic Church",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-26T03:44:09+00:00"
   },
   "https://amgreatness.com/2026/09/11/name-the-enemy-the-25th-anniversary-of-9-11-still-demands-it": {
     "title": "Name the Enemy: The 25th Anniversary of 9/11 Still Demands it",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-26T03:44:09+00:00"
   },
   "https://dailysignal.com/2026/09/17/sweden-election-lesson-america-first": {
     "title": "Sweden’s Election Has a Harsh Lesson for ‘America First’ Conservatives",

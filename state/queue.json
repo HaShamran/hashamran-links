@@ -555,5 +555,29 @@
     "status": "translated",
     "source": "backfill",
     "post": "posts/2026-09-17-biggs-save-the-constitution-ditch-the-aba/post.json"
+  },
+  {
+    "url": "https://americanmind.org/salvo/the-heavy-yoke-of-9-11",
+    "title": "The Heavy Yoke of 9/11",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-11-kennedy-the-heavy-yoke-of-9-11/post.json"
+  },
+  {
+    "url": "https://washingtonpost.com/opinions/2026/09/11/catholic-church-needs-more-nuanced-approach-migration",
+    "title": "This Issue is Splitting the Catholic Church",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "paywalled",
+    "source": "backfill",
+    "note": "2026-11-26: Washington Post registration/subscription wall (\"Two ways to read this article\"); only the header and footer came through. No bypass."
+  },
+  {
+    "url": "https://amgreatness.com/2026/09/11/name-the-enemy-the-25th-anniversary-of-9-11-still-demands-it",
+    "title": "Name the Enemy: The 25th Anniversary of 9/11 Still Demands it",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-11-fleitz-name-the-enemy-the-25th-anniversary-of-9-11-still-demands-it/post.json"
   }
 ]
