@@ -7,6 +7,9 @@ The second argument is extract.py's output for the essay: the quality check comp
 
 Passing posts become status "ready" and appear in posts/index.json, which the publisher on dud reads.
 Failing posts become "draft_failed_qc" (never published; the morning report and the Action raise an alert).
+A post whose source has a graph or chart we could not get (an interactive embed, a chart image missing from the
+Hebrew or that will not download) becomes "held_missing_graphs" with a `hold_reason` (Hadar's rule, 25 Nov 2026:
+never publish an article with graphs if the graph images can't be fetched). See graphs.py.
 Exit 0 = ready, 2 = failed the check.
 """
 import html
@@ -15,6 +18,7 @@ import pathlib
 import re
 import sys
 
+import graphs
 import qc
 from common import BRAND, PAGES_URL, POSTS, STATE, iso, load_json, save_json, utcnow
 
@@ -66,12 +70,21 @@ def rebuild_index():
     return index
 
 
-def finalize(path, source_markdown, render=True):
+def finalize(path, source, render=True, fetch=graphs.fetch_ok):
+    """`source` is extract.py's JSON for the essay (a plain Markdown string is accepted too)."""
     path = pathlib.Path(path)
     post = load_json(path)
-    report = qc.check(post, source_markdown)
+    src = source if isinstance(source, dict) else {"markdown": source or ""}
+    report = qc.check(post, src.get("markdown", ""))
     post["style"] = report["style"]
-    if not report["pass"]:
+    graph_problems = graphs.check(post, src, fetch)
+    report["graph_problems"] = graph_problems
+    if graph_problems:
+        post["status"] = "held_missing_graphs"
+        post["hold_reason"] = "; ".join(graph_problems)
+        if not report["pass"]:
+            post["qc_problems"] = report["problems"]
+    elif not report["pass"]:
         post["status"] = "draft_failed_qc"
         post["qc_problems"] = report["problems"]
     else:
@@ -85,11 +98,14 @@ def finalize(path, source_markdown, render=True):
         post["status"] = "ready"
         post.setdefault("ready_at", iso(utcnow()))
         post.pop("qc_problems", None)
+        post.pop("hold_reason", None)
     save_json(path, post)
     queue = load_json(STATE / "queue.json", [])
     for q in queue:
         if q["url"] == post.get("source_url") or q["url"] == post.get("queue_url"):
-            q["status"] = "translated" if post["status"] == "ready" else "failed_qc"
+            q["status"] = {"ready": "translated", "held_missing_graphs": "held"}.get(post["status"], "failed_qc")
+            if post["status"] == "held_missing_graphs":
+                q["note"] = f"held: graphs we could not get ({post['hold_reason'][:300]})"
             q["post"] = f"posts/{post['slug']}/post.json"
     save_json(STATE / "queue.json", queue)
     rebuild_index()
@@ -101,7 +117,7 @@ def main(argv=None):
     if len(argv) < 2:
         print("usage: finalize.py posts/<slug>/post.json /tmp/<slug>.src.json (the English is required)")
         return 2
-    source = load_json(pathlib.Path(argv[1])).get("markdown", "")
+    source = load_json(pathlib.Path(argv[1]))
     status, report = finalize(argv[0], source)
     print(json.dumps({"status": status, **report}, ensure_ascii=False, indent=2))
     return 0 if status == "ready" else 2

@@ -6,7 +6,7 @@ Usage:
 Firecrawl renders the page first (passes bot checks, handles PDFs); our own fetch is the fallback.
 
 Prints (or writes) JSON: url, title, author, date, sitename, markdown body,
-images, embeds, word_count and status ("ok", "paywalled", "too_short", "failed").
+images, embeds, graphs (charts found in the page, see graphs.py), word_count and status ("ok", "paywalled", "too_short", "failed").
 """
 import argparse
 import io
@@ -19,6 +19,7 @@ import trafilatura
 
 import detect
 import firecrawl
+import graphs
 from common import BROWSER_UA
 
 MIN_WORDS = 350
@@ -156,6 +157,7 @@ def extract_x(url, out):
     if not out["images"]:
         out["images"] = re.findall(r"!\[[^\]]*\]\(([^)\s]+)", out["markdown"])
     out["embeds"] = [v.get("url") for v in ((t.get("media") or {}).get("videos") or []) if v.get("url")]
+    out["graphs"] = graphs.from_markdown(out["markdown"])
     out["word_count"] = len(re.findall(r"\w+", out["markdown"]))
     out["status"] = "ok" if out["word_count"] >= MIN_WORDS else "too_short"
     return out
@@ -204,6 +206,7 @@ def _extract_firecrawl(url, item=None):
         out["author_bio"], out["author_photo"] = author_bio(html, url, out["author"])
         out["embeds"] = sorted({s for s in EMBED_RE.findall(html) if any(h in s for h in EMBED_HOSTS)})
     out["images"] = re.findall(r"!\[[^\]]*\]\(([^)\s]+)", out["markdown"])
+    out["graphs"] = graphs.find(html, out["markdown"], url)
     out["paywall_marker"] = bool(PAYWALL_MARKERS.search(html or out["markdown"]))
     out["word_count"] = len(re.findall(r"[^\W\d_]{2,}", out["markdown"]))
     if out["word_count"] >= MIN_WORDS:
@@ -253,6 +256,8 @@ def _extract_local(url, item=None):
         out["embeds"] = sorted({s for s in EMBED_RE.findall(html) if any(h in s for h in EMBED_HOSTS)})
         out["paywall_marker"] = bool(PAYWALL_MARKERS.search(html))
         out["source_format"] = "html"
+        out["graphs"] = graphs.find(html, out["markdown"], url)
+    out.setdefault("graphs", graphs.from_markdown(out["markdown"]))
     out["word_count"] = len(re.findall(r"[^\W\d_]{2,}", out["markdown"]))
     if out.get("source_format") == "pdf" and out["word_count"] < MIN_WORDS:
         # A PDF without a text layer comes out as glyph codes ("/12/34/i255"). Find the essay's web page instead.
