@@ -1,9 +1,10 @@
 {
   "newly_live": [],
-  "relays_written": [],
+  "relays_written": [
+    "2026-09-11-fleitz-name-the-enemy-the-25th-anniversary-of-9-11-still-demands-it"
+  ],
   "tweet": null,
   "alerts": [
-    "2026-09-11-fleitz-name-the-enemy-the-25th-anniversary-of-9-11-still-demands-it has waited 1d 6h to be published: check that dud is on and signed in to Substack (run login.cmd)",
     "2026-09-11-kennedy-the-heavy-yoke-of-9-11 has waited 1d 6h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
