@@ -684,3 +684,39 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
   (unbeliever) → ״נטישת האסלאם״; keep "subdued" = ״מוכנעים״ in the verse to match the author's echo; Treasury Secretary =
   ״מזכיר האוצר״; Wahhabism = ״והאביה״ (Hebrew Wikipedia), not ״ווהאביה״; "domestic" ≠ ״מקומיים״; ״ברצינות קטלנית״ calque.
 - Swept ״ווהאב״: one more, Hankins (live) ״המלוכה הווהאבית״ → ״הוהאבית״ via state/live-fixes.json (2026-11-26-hankins-wahhabi-1).
+
+### 2026-11-27 · 2026-07-27-conti-big-techs-war-on-human-achievement
+- Compact essay (17 paragraphs, Rubio block quote). Title ״מלחמתן של ענקיות הטכנולוגיה בהישג האנושי״. Two pull-quote lines
+  that repeat body sentences dropped as site furniture; no bio on the page, none added.
+- Allusions: "the night comes when no man can work" (John 9:4) → ״בא הלילה שבו לא יוכל איש לעשות מלאכה״; "human, all too
+  human" → ״אנושי, אנושי מדי״; findings/finders kept as a pun: ״ממצאים / מוצאים״.
+- qc warned on ״ביותר״ (6.3/1,000 against a median of 1.3): "the latest models" ≠ ״החדשים ביותר״ → ״האחרונים/העדכניים״.
+- Pass 2 (2 major): "Arguably the most important open problem… was solved" as ״ייתכן מאוד שהבעיה… נפתרה״ put the doubt
+  on whether it was solved → hedge the superlative, not the verb; quote 2 skipped a clause without ״[...]״. Minor:
+  "envision" ≠ ״מייעדים״ → ״חוזים״; "pause" ≠ ״עצירה״ → ״השהיה״; "demoralization" ≠ ״שקיעה מוסרית״ → ״שבירת רוח״;
+  "frankly amazing" ≠ ״מדהימים בכנות״; "one fewer" ≠ ״עוד… אחת פחות״; "agentic" has no Hebrew yet → ״סוכני בינה מלאכותית״;
+  Secretary of State → ״שר החוץ האמריקני״; "technological succession" needs a gloss (machines inheriting man's place).
+
+### 2026-11-27 · 2026-11-12-fletcher-is-us-manufacturing-recovering-the-midterm-scorecard
+- Industrial Policy for the United States (Substack) data essay, 73 paragraphs, numbered lists, a Fed chart image kept in
+  place. Title ״האם התעשייה האמריקנית מתאוששת? מאזן אמצע הקדנציה״. Extraction lost every hyperlink, so the bare
+  "(source)" and "here, here, here" markers were dropped or paraphrased (״כפי שטענו רבים״).
+- Pass 2 (1 major): "tariff support for domestic investment" as ״תמיכה במכסים״ = support for tariffs → ״תמיכה באמצעות
+  מכסים״ (and ״תמיכה באמצעות כלי מדיניות״, caught again by the fix-check). Minor: "dollar-denominated" ≠ ״צמודי דולר״ →
+  ״נקובים בדולרים״; Commerce Secretary = ״מזכיר המסחר״ (match ״מזכיר האוצר״); "lumber" ≠ ״עצים״ → ״עץ מנוסר״; "at home" ≠
+  ״בבית״; "dismiss tariffs" ≠ ״לפטור״ (exempt) → ״לפסול״; "prohibitive tariff" → ״חוסם״; "unfounded" ≠ ״מופרכים״.
+- Fix-check: ״עומדים בקצבה״ reads as קִצבה (stipend) → ״בקצב שלה״.
+
+### 2026-11-27 · 2026-11-25-frankopan-the-rise-and-fall-of-the-byzantine-empire
+- Engelsberg Ideas popular history (book chapter, 44 paragraphs). Title ״עלייתה ונפילתה של האימפריה ה״ביזנטית״״ (scare quotes
+  carry the thesis). Standfirst kept as an italic opening line; related-articles list and author box dropped; lead image
+  caption translated. "the 400s / early 600s / 1340s / 1860s" rendered as centuries, listed in fidelity_waivers.
+- qc caught ״אם בשמים אנו אם בארץ״ (a Kyiv visitor at Hagia Sophia, "heaven or earth") → ״על פני האדמה״: ״בארץ״ as "on
+  earth" also trips the ״הארץ״ rule.
+- Pass 2 (1 major): "Perhaps inevitably" as ״וכמעט בלית ברירה״ = "almost with no choice" → ״וכצפוי אולי״. Minor:
+  "excommunicated" ≠ ״החרימו״ (boycotted) → ״הטילו נידוי״; "eulogy" (praise) ≠ ״הספד״ → ״שיר הלל״; "carrot" ≠ ״פיתיון״
+  → ״תמריץ״; "take a long view" ≠ ״להביט למרחוק״; "ironed out" ≠ ״גיהצו״ → ״מיגרו״; "put their money where their mouths
+  were" calqued → ״לגבות את דיבוריהם בכספם״; "much of Italy" ≠ ״רוב״; ארס is masculine (״נשפך״).
+- Not taken: reviewer wanted ״קומנינה״ and ״זדאר״; Hebrew Wikipedia (lookup.py) gives ״אנה קומננה״ and ״זאדאר״.
+- Papadopoulos (Heritage, Thanksgiving proclamations) marked failed: the extraction split the text at every footnote
+  pop-up and lost the words before each italic span, and heritage.org refuses a direct fetch.

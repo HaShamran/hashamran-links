@@ -579,5 +579,69 @@
     "status": "translated",
     "source": "backfill",
     "post": "posts/2026-09-11-fleitz-name-the-enemy-the-25th-anniversary-of-9-11-still-demands-it/post.json"
+  },
+  {
+    "url": "https://engelsbergideas.com/essays/the-rise-and-fall-of-the-byzantine-empire",
+    "title": "The rise and fall of the ‘Byzantine’ Empire",
+    "author": "Peter Frankopan",
+    "publication": "Engelsberg Ideas",
+    "date": "November 25, 2026",
+    "context": "Peter Frankopan, “The rise and fall of the ‘Byzantine’ Empire” Engelsberg Ideas , November 25, 2026",
+    "first_seen": "2026-11-27T03:45:22+00:00",
+    "status": "translated",
+    "post": "posts/2026-11-25-frankopan-the-rise-and-fall-of-the-byzantine-empire/post.json"
+  },
+  {
+    "url": "https://compactmag.com/article/big-techs-war-on-human-achievement",
+    "title": "Big Tech’s War on Human Achievement",
+    "author": "Gregory Conti",
+    "publication": "Compact",
+    "date": "July 27, 2026",
+    "context": "Gregory Conti, “Big Tech’s War on Human Achievement” Compact , July 27, 2026",
+    "first_seen": "2026-11-27T03:45:22+00:00",
+    "status": "translated",
+    "post": "posts/2026-07-27-conti-big-techs-war-on-human-achievement/post.json"
+  },
+  {
+    "url": "https://mattgoodwin.org/p/why-britain-will-vote-to-stay-out?r=xamko",
+    "title": "Why Britain will vote to Stay Out",
+    "author": "Matt Goodwin",
+    "publication": "Matt Goodwin",
+    "date": "“Why Britain will vote to Stay Out” Matt Goodwin , November 25, 2026",
+    "context": "Matt Goodwin, “Why Britain will vote to Stay Out” Matt Goodwin , November 25, 2026",
+    "first_seen": "2026-11-27T03:45:22+00:00",
+    "status": "queued"
+  },
+  {
+    "url": "https://americanaffairsjournal.org/2026/11/the-trowel-and-the-sword-a-new-conservative-attitude-toward-technology",
+    "title": "The Trowel and the Sword: A New Conservative Attitude toward Technology",
+    "author": "Johnnie Moore and E. Glen Weyl",
+    "publication": "American Affairs",
+    "date": "Winter 2026",
+    "context": "Johnnie Moore and E. Glen Weyl, “The Trowel and the Sword: A New Conservative Attitude toward Technology” American Affairs , Winter 2026",
+    "first_seen": "2026-11-27T03:45:22+00:00",
+    "status": "queued"
+  },
+  {
+    "url": "https://heritage.org/american-history/report/the-duty-all-nations-the-american-tradition-presidential-thanksgiving",
+    "title": "“The Duty of All Nations”: The American Tradition of Presidential Thanksgiving Proclamations",
+    "author": "Pavlos Papadopoulos",
+    "publication": "The Heritage Foundation",
+    "date": "November 20, 2026",
+    "context": "Pavlos Papadopoulos, ““The Duty of All Nations”: The American Tradition of Presidential Thanksgiving Proclamations” The Heritage Foundation , November 20, 2026",
+    "first_seen": "2026-11-27T03:45:22+00:00",
+    "status": "failed",
+    "error": "extraction garbled: footnote pop-ups split the text and body sentences were lost before every italic span (e.g. \"*Everson*theory...\"); heritage.org returns 403 to a direct fetch, so no clean source. Retry needs a clean copy (PDF)."
+  },
+  {
+    "url": "https://industrialpolicyus.substack.com/p/is-us-manufacturing-recovering-the",
+    "title": "Is US Manufacturing Recovering? The Midterm Scorecard",
+    "author": "Ian Fletcher and Marc Fasteau",
+    "publication": "Industrial Policy for the United States",
+    "date": "November 12, 2026",
+    "context": "Ian Fletcher and Marc Fasteau, “Is US Manufacturing Recovering? The Midterm Scorecard” Industrial Policy for the United States , November 12, 2026",
+    "first_seen": "2026-11-27T03:45:22+00:00",
+    "status": "translated",
+    "post": "posts/2026-11-12-fletcher-is-us-manufacturing-recovering-the-midterm-scorecard/post.json"
   }
 ]

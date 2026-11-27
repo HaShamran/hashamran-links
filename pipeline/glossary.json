@@ -1276,5 +1276,145 @@
   "he": "חוק רישום סוכנים זרים (FARA)",
   "avoid": [],
   "note": "Kennedy 2026-11-26."
+ },
+ {
+  "en": "artificial general intelligence (AGI)",
+  "he": "בינה מלאכותית כללית",
+  "avoid": [],
+  "note": "Conti 2026-11-27."
+ },
+ {
+  "en": "agentic AI",
+  "he": "סוכני בינה מלאכותית",
+  "avoid": [
+   "בינה מלאכותית סוכנית"
+  ],
+  "note": "Conti 2026-11-27; ״סוכנית״ is not established Hebrew."
+ },
+ {
+  "en": "vocation (calling)",
+  "he": "ייעוד",
+  "avoid": [],
+  "note": "Conti 2026-11-27; 'calling' → שליחות."
+ },
+ {
+  "en": "demoralization",
+  "he": "שבירת רוח",
+  "avoid": [
+   "שקיעה מוסרית"
+  ],
+  "note": "Conti 2026-11-27."
+ },
+ {
+  "en": "pause (AI development)",
+  "he": "השהיה",
+  "avoid": [
+   "עצירה"
+  ],
+  "note": "Conti 2026-11-27."
+ },
+ {
+  "en": "reindustrialization",
+  "he": "תיעוש מחדש",
+  "avoid": [],
+  "note": "Fletcher 2026-11-27."
+ },
+ {
+  "en": "tariff support",
+  "he": "תמיכה באמצעות מכסים",
+  "avoid": [
+   "תמיכה במכסים"
+  ],
+  "note": "Fletcher 2026-11-27; ״תמיכה ב־X״ = supporting X."
+ },
+ {
+  "en": "dollar-denominated",
+  "he": "נקוב בדולרים",
+  "avoid": [
+   "צמוד דולר"
+  ],
+  "note": "Fletcher 2026-11-27."
+ },
+ {
+  "en": "Commerce Secretary",
+  "he": "מזכיר המסחר",
+  "avoid": [
+   "שר המסחר"
+  ],
+  "note": "Fletcher 2026-11-27; match ״מזכיר האוצר״."
+ },
+ {
+  "en": "Countervailing Currency Intervention (CCI)",
+  "he": "התערבות מטבעית נגדית (CCI)",
+  "avoid": [],
+  "note": "Fletcher 2026-11-27."
+ },
+ {
+  "en": "capital controls",
+  "he": "פיקוח על תנועות הון",
+  "avoid": [],
+  "note": "Fletcher 2026-11-27."
+ },
+ {
+  "en": "trade deficit",
+  "he": "גירעון מסחרי",
+  "avoid": [],
+  "note": "Fletcher 2026-11-27."
+ },
+ {
+  "en": "Inflation Reduction Act (IRA)",
+  "he": "חוק הפחתת האינפלציה (IRA)",
+  "avoid": [],
+  "note": "Fletcher 2026-11-27."
+ },
+ {
+  "en": "lumber",
+  "he": "עץ מנוסר",
+  "avoid": [
+   "עצים"
+  ],
+  "note": "Fletcher 2026-11-27."
+ },
+ {
+  "en": "excommunicate",
+  "he": "להטיל נידוי על",
+  "avoid": [
+   "להחרים"
+  ],
+  "note": "Frankopan 2026-11-27; ״להחרים״ reads as boycott."
+ },
+ {
+  "en": "eulogy (praise)",
+  "he": "שיר הלל",
+  "avoid": [
+   "הספד"
+  ],
+  "note": "Frankopan 2026-11-27; הספד = funeral speech."
+ },
+ {
+  "en": "perhaps inevitably",
+  "he": "כצפוי אולי",
+  "avoid": [
+   "כמעט בלית ברירה"
+  ],
+  "note": "Frankopan 2026-11-27."
+ },
+ {
+  "en": "Great Schism (1054)",
+  "he": "הפילוג הגדול",
+  "avoid": [],
+  "note": "Frankopan 2026-11-27."
+ },
+ {
+  "en": "Nicene Creed",
+  "he": "אמונת ניקיאה",
+  "avoid": [],
+  "note": "Frankopan 2026-11-27."
+ },
+ {
+  "en": "tetrarchy",
+  "he": "טטררכיה",
+  "avoid": [],
+  "note": "Frankopan 2026-11-27."
  }
 ]
