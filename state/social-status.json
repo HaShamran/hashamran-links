@@ -1,9 +1,16 @@
 {
   "newly_live": [],
   "relays_written": [],
-  "tweet": null,
+  "tweet": {
+    "slot": "2026-11-27#1",
+    "slug": "2026-09-11-fleitz-name-the-enemy-the-25th-anniversary-of-9-11-still-demands-it",
+    "quote": 0,
+    "text": "״מנהיגי אל־קאעידה אמרו זאת. מסמכיהם אמרו זאת. דרשותיהם אמרו זאת. העמדת פנים שאין זה כך איננה ראייה מורכבת. זו אמנזיה.״ פרד פלייץ במלאת 25 שנה ל־11 בספטמבר.\n\nhttps://hashamran.github.io/hashamran-links/2026-09-11-fleitz-name-the-enemy-the-25th-anniversary-of-9-11-still-demands-it.html",
+    "at": "2026-11-27T14:05:21+00:00",
+    "buffer_id": "6b098e22015034238d2ff2fa"
+  },
   "alerts": [
-    "2026-09-11-kennedy-the-heavy-yoke-of-9-11 has waited 1d 9h to be published: check that dud is on and signed in to Substack (run login.cmd)"
+    "2026-09-11-kennedy-the-heavy-yoke-of-9-11 has waited 1d 10h to be published: check that dud is on and signed in to Substack (run login.cmd)"
   ],
   "substack_unreachable": true
 }
