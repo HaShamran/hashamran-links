@@ -610,7 +610,8 @@
     "date": "“Why Britain will vote to Stay Out” Matt Goodwin , November 25, 2026",
     "context": "Matt Goodwin, “Why Britain will vote to Stay Out” Matt Goodwin , November 25, 2026",
     "first_seen": "2026-11-27T03:45:22+00:00",
-    "status": "queued"
+    "status": "failed",
+    "error": "mattgoodwin.org TLS certificate error (Playwright ERR_CERT_COMMON_NAME_INVALID; Firecrawl HTTP 500 SSL error)"
   },
   {
     "url": "https://americanaffairsjournal.org/2026/11/the-trowel-and-the-sword-a-new-conservative-attitude-toward-technology",
@@ -620,7 +621,8 @@
     "date": "Winter 2026",
     "context": "Johnnie Moore and E. Glen Weyl, “The Trowel and the Sword: A New Conservative Attitude toward Technology” American Affairs , Winter 2026",
     "first_seen": "2026-11-27T03:45:22+00:00",
-    "status": "queued"
+    "status": "paywalled",
+    "note": "only the 43 endnotes are served; the essay body is withheld (new American Affairs issue, subscribers only). No bypass."
   },
   {
     "url": "https://heritage.org/american-history/report/the-duty-all-nations-the-american-tradition-presidential-thanksgiving",
@@ -643,5 +645,13 @@
     "first_seen": "2026-11-27T03:45:22+00:00",
     "status": "translated",
     "post": "posts/2026-11-12-fletcher-is-us-manufacturing-recovering-the-midterm-scorecard/post.json"
+  },
+  {
+    "url": "https://dailysignal.com/2026/09/17/sweden-election-lesson-america-first",
+    "title": "Sweden’s Election Has a Harsh Lesson for ‘America First’ Conservatives",
+    "first_seen": "2026-10-21T23:06:44+00:00",
+    "status": "translated",
+    "source": "backfill",
+    "post": "posts/2026-09-17-mccarthy-swedens-election-has-a-harsh-lesson-for-america-first-conservatives/post.json"
   }
 ]

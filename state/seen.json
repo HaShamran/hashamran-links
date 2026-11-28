@@ -152,7 +152,8 @@
   "https://dailysignal.com/2026/09/17/sweden-election-lesson-america-first": {
     "title": "Sweden’s Election Has a Harsh Lesson for ‘America First’ Conservatives",
     "first_seen": "2026-10-21T23:06:44+00:00",
-    "status": "baseline"
+    "status": "queued",
+    "backfilled_at": "2026-11-28T03:44:33+00:00"
   },
   "https://thefederalist.com/2026/09/17/why-trumps-plan-to-stop-noncitizens-from-rigging-the-census-might-work-this-time": {
     "title": "Why Trump’s Plan to Stop Noncitizens From Rigging the Census Might Work This Time",

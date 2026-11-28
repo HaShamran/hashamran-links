@@ -720,3 +720,13 @@ Eydar essays were restructured in English. Newspaper Hebrew: vocabulary only, ne
 - Not taken: reviewer wanted ״קומנינה״ and ״זדאר״; Hebrew Wikipedia (lookup.py) gives ״אנה קומננה״ and ״זאדאר״.
 - Papadopoulos (Heritage, Thanksgiving proclamations) marked failed: the extraction split the text at every footnote
   pop-up and lost the words before each italic span, and heritage.org refuses a direct fetch.
+
+### 2026-11-28 · 2026-09-17-mccarthy-swedens-election-has-a-harsh-lesson-for-america-first-conservatives
+- Daily Signal op-ed (18 paragraphs, backfill). Title ״הלקח הקשה של הבחירות בשוודיה לשמרני ״אמריקה תחילה״״. The page
+  metadata named "Felix Miller", but the article's own author box (bio and photo) is Paul McCarthy; credited McCarthy,
+  bio as on our earlier McCarthy post. Mid-article "Trending" block and the closing book promo dropped.
+- Pass 2 (1 major): "deportations" as plural ״גירושים״ reads as divorces → ״גירוש מהגרים״. Minor: "heavily immigrant
+  areas" ≠ ״שרוב תושביהם מהגרים״ (overstates) → ״שבהם ריכוז גבוה של מהגרים״; "reverse the consequences" ≠ ״להפוך״ →
+  ״לבטל״; "a close parliamentary system" calqued as ״צמודה״; quote cut a leading ״אבל״ without ״[...]״.
+- Not translated today: Goodwin "Why Britain will vote to Stay Out" (mattgoodwin.org TLS certificate error, failed);
+  Moore & Weyl, American Affairs (only the endnotes are served, paywalled).
